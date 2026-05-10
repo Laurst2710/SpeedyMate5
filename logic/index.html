@@ -24,6 +24,17 @@ body {
     min-height: 100vh;
 }
 
+body.code-red {
+    background-color: #FF0000 !important;
+}
+
+body.code-red .main-content, 
+body.code-red .test-container, 
+body.code-red .results-container {
+    border: 5px solid white !important;
+}
+
+
 body.failure-bg {
     background-color: #742a2a !important; /* Deep Red for Failure */
 }
@@ -514,6 +525,10 @@ h2 {
     letter-spacing: 1px;
     text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
     margin-bottom: 5px;
+}
+
+#progress-val, #accuracy-val {
+    display: none !important; /* Delta Protocol: Fara cifre text */
 }
 
 .progress-bar-wrap, .accuracy-bar-wrap {
@@ -1251,79 +1266,17 @@ h2 {
             }
         ];
 
-        // 2. MOTOR DE GENERARE DINAMICĂ
-        class MotorExercitii {
-            constructor() { this.initializat = true; }
-            randomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-            shuffle(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-                return array;
-            }
-
-            genereazaTestDinamic() {
-                // Colectăm toate exercițiile din baza de date
-                let allEx = [];
-                DATABASE_STANDARD.forEach(c => allEx.push(...c.exercitii));
-                
-                this.shuffle(allEx);
-                const selected = allEx.slice(0, 20);
-                
-                // Permutăm variantele pentru fiecare exercițiu selectat
-                const exercitii = selected.map((ex, idx) => {
-                    const keys = ['a', 'b', 'c', 'd'];
-                    const values = [ex.variante.a, ex.variante.b, ex.variante.c, ex.variante.d];
-                    const correctVal = ex.variante[ex.raspuns_corect];
-                    
-                    // Shuffle values
-                    this.shuffle(values);
-                    
-                    const newVariante = {
-                        a: values[0],
-                        b: values[1],
-                        c: values[2],
-                        d: values[3]
-                    };
-                    
-                    const newCorrectKey = keys[values.findIndex(v => v === correctVal)];
-                    
-                    return {
-                        id: `ex_${Date.now()}_${idx}`,
-                        enunt: ex.enunt,
-                        variante: newVariante,
-                        raspuns_corect: newCorrectKey,
-                        explicatie: ex.explicatie,
-                        ordine: idx + 1
-                    };
-                });
-                
-                return { id_test: 'din_' + Date.now(), exercitii: exercitii, nivel: 'standard', capitol: 'cap_1' };
-            }
-
-            calculeazaPunctaj(test, raspunsuri) {
-                let punctaj = 0; let detalii = []; let wrongAnswers = [];
-                test.exercitii.forEach((p, i) => {
-                    const rU = raspunsuri[p.id]; const isC = rU === p.raspuns_corect;
-                    detalii.push({ ordine: i+1, corect: isC, raspuns_utilizator: rU, raspuns_corect: p.raspuns_corect, explicatie: p.explicatie });
-                    if (isC) punctaj++;
-                    else wrongAnswers.push({ ...p, raspuns_utilizator: rU, ordine: i+1 });
-                });
-                return { punctaj_total: punctaj, punctaj_maxim: 20, procentaj: Math.round((punctaj / 20) * 100), rezultate_detaliate: detalii, wrongAnswers: wrongAnswers };
-            }
-        }
+        // 2. PROTOCOL DELTA - TESTE-100
 
         // 3. APLICAȚIA SPEEDY-MATE5
         class SpeedyMateApp {
             constructor() {
-                this.motor = new MotorExercitii();
                 this.testCurent = null;
                 this.raspunsuri = {};
                 this.timer = null;
                 this.timpStart = null;
                 this.lastWrongAnswers = [];
-                this.incercari = []; // Track attempts: { id: Date.now(), scor: 0 }
+                this.incercari = []; // Track attempts
                 this.init();
             }
 
@@ -1400,21 +1353,55 @@ h2 {
                         <div class="capitol-info"><p>${cap.descriere}</p></div>
                         <div class="capitol-actions" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 20px;">
                             <button class="btn btn-info" onclick="app.deschideTeorie()">RECAPITULARE TEORIE</button>
-                            <button class="btn btn-test" onclick="app.pornesteTestDinamica('${cap.id}')">TESTEAZĂ CUNOȘTINȚELE</button>
+                            <button class="btn btn-test" onclick="app.pornesteTest100()">START TESTE-100</button>
                         </div>
                     `;
                     container.appendChild(div);
                 });
             }
 
-            pornesteTestDinamica(capId) {
-                console.log("Pornire test dinamic nou pentru: " + capId);
-                const tD = this.motor.genereazaTestDinamic();
-                this.testCurent = { ...tD, capitol: capId };
-                this.raspunsuri = {};
-                this.indexCurent = 0;
-                this.afiseazaTest();
-                this.startTimer();
+            async pornesteTest100() {
+                console.log("Protocol Delta: Incarcare TESTE-100...");
+                try {
+                    const response = await fetch('../DateRawClasa5/Standard/baza_date_100_teste_clasa5.json');
+                    const db = await response.json();
+                    
+                    // Flatten all questions from all tests
+                    let allQuestions = [];
+                    db.teste.forEach(t => {
+                        allQuestions = allQuestions.concat(t.itemi);
+                    });
+                    
+                    // Shuffle and pick 20
+                    for (let i = allQuestions.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
+                    }
+                    
+                    this.testCurent = {
+                        id_test: 'DELTA_' + Math.random().toString(36).substr(2, 9),
+                        exercitii: allQuestions.slice(0, 20).map((q, idx) => ({
+                            id: q.id,
+                            enunt: q.enunt,
+                            variante: {
+                                a: q.optiuni.A,
+                                b: q.optiuni.B,
+                                c: q.optiuni.C,
+                                d: q.optiuni.D
+                            },
+                            raspuns_corect: q.raspuns.toLowerCase(),
+                            explicatie: "Rigoare Matematica Protocol Delta."
+                        }))
+                    };
+                    
+                    this.raspunsuri = {};
+                    this.indexCurent = 0;
+                    this.afiseazaTest();
+                    this.startTimer();
+                } catch (e) {
+                    console.error("Eroare Protocol Delta:", e);
+                    alert("Eroare la incarcarea bazei de date TESTE-100!");
+                }
             }
 
             afiseazaTest() {
@@ -1429,6 +1416,9 @@ h2 {
                 const p = this.testCurent.exercitii[idx];
                 
                 this.actualizeazaProgresLive();
+                
+                // Delta Protocol: Urmatorul dezactivat pana la selectie
+                document.getElementById('next-btn').disabled = true;
                 
                 document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
@@ -1447,6 +1437,10 @@ h2 {
                         document.querySelectorAll('.answer-label').forEach(el => el.classList.remove('selected'));
                         label.classList.add('selected');
                         this.raspunsuri[p.id] = lit;
+                        
+                        // Delta Protocol: Activeaza navigarea
+                        document.getElementById('next-btn').disabled = false;
+                        
                         this.actualizeazaButoane(); 
                         this.actualizeazaProgresLive(); // Refresh bars immediately
                         this.saveState();
@@ -1515,8 +1509,33 @@ h2 {
 
             terminaTest() {
                 clearInterval(this.timer);
-                const rezultate = this.motor.calculeazaPunctaj(this.testCurent, this.raspunsuri);
-                this.afiseazaRezultate(rezultate);
+                
+                // Delta Protocol: Calcul punctaj local (eliminam motor "vraja")
+                let corecte = 0;
+                let wrongAnswers = [];
+                this.testCurent.exercitii.forEach(ex => {
+                    const ans = this.raspunsuri[ex.id];
+                    if (ans === ex.raspuns_corect) {
+                        corecte++;
+                    } else {
+                        wrongAnswers.push({
+                            id: ex.id,
+                            enunt: ex.enunt,
+                            raspuns_utilizator: ans || "Niciunul",
+                            raspuns_corect: ex.raspuns_corect,
+                            explicatie: ex.explicatie
+                        });
+                    }
+                });
+                
+                const rez = {
+                    punctaj: corecte,
+                    total: this.testCurent.exercitii.length,
+                    procentaj: Math.round((corecte / this.testCurent.exercitii.length) * 100),
+                    wrongAnswers: wrongAnswers
+                };
+                
+                this.afiseazaRezultate(rez);
             }
 
             afiseazaRezultate(rez) {
@@ -1539,19 +1558,19 @@ h2 {
                 const showExplBtn = document.getElementById('show-explanations-btn');
                 const donutSegment = document.getElementById('donut-segment');
                 
-                // Prag 75% (15/20)
-                const succes = rez.procentaj >= 75;
+                // Prag 75% (15/20) - Protocol Delta
+                const succes = rez.punctaj >= 15;
                 
                 if (succes) {
                     msgEl.textContent = "FELICITĂRI! Ai deblocat simbolic capitolul următor!";
                     msgEl.classList.add('verdict-success');
                     donutSegment.style.stroke = '#00ff88'; // Neon Green
-                    document.body.classList.remove('failure-bg');
+                    document.body.classList.remove('code-red');
                 } else {
-                    msgEl.textContent = "REIA! Scorul este sub pragul de 75%.";
+                    msgEl.textContent = "REIA! Scorul este sub pragul de 75% (15/20).";
                     msgEl.classList.add('verdict-retry');
-                    donutSegment.style.stroke = '#ff0055'; // Neon Red
-                    document.body.classList.add('failure-bg');
+                    donutSegment.style.stroke = '#ffffff'; // White on Red
+                    document.body.classList.add('code-red');
                 }
 
                 // Animare Donut Chart
@@ -1638,10 +1657,9 @@ h2 {
             }
 
             testNou() {
-                // Generăm un test NOU cu numere NOI
                 document.getElementById('results-container').classList.add('hidden');
-                document.getElementById('new-test').textContent = "Generează Test Nou"; // Resetăm textul butonului
-                this.pornesteTestDinamica('cap_1');
+                document.getElementById('new-test').textContent = "START TEST NOU";
+                this.pornesteTest100();
             }
 
             revizuire() {

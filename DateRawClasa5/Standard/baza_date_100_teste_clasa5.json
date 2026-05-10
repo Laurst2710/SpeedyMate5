@@ -1,0 +1,4211 @@
+{
+  "proiect": "Evaluare Matematica Clasa V - 100 Teste",
+  "metadata": {
+    "sursa": "Set Cuprinzator (20) + Culegere (80)",
+    "total_itemi": 100,
+    "format": "JSON Standard pentru AG-Data-Refactor",
+    "logica": "Delta-Ready"
+  },
+  "teste": [
+    {
+      "id": "TEST_001",
+      "nume": "Testul Grila 1",
+      "itemi": [
+        {
+          "id": "TEST_001_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1001, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_001_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 10 + 5:",
+          "optiuni": {
+            "A": "15",
+            "B": "10",
+            "C": "5",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_001_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_002",
+      "nume": "Testul Grila 2",
+      "itemi": [
+        {
+          "id": "TEST_002_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1002, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_002_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 20 + 10:",
+          "optiuni": {
+            "A": "30",
+            "B": "20",
+            "C": "10",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_002_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_003",
+      "nume": "Testul Grila 3",
+      "itemi": [
+        {
+          "id": "TEST_003_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1003, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_003_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 30 + 15:",
+          "optiuni": {
+            "A": "45",
+            "B": "30",
+            "C": "15",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_003_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_004",
+      "nume": "Testul Grila 4",
+      "itemi": [
+        {
+          "id": "TEST_004_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1004, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_004_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 40 + 20:",
+          "optiuni": {
+            "A": "60",
+            "B": "40",
+            "C": "20",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_004_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_005",
+      "nume": "Testul Grila 5",
+      "itemi": [
+        {
+          "id": "TEST_005_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1005, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_005_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 50 + 25:",
+          "optiuni": {
+            "A": "75",
+            "B": "50",
+            "C": "25",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_005_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_006",
+      "nume": "Testul Grila 6",
+      "itemi": [
+        {
+          "id": "TEST_006_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1006, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_006_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 60 + 30:",
+          "optiuni": {
+            "A": "90",
+            "B": "60",
+            "C": "30",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_006_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_007",
+      "nume": "Testul Grila 7",
+      "itemi": [
+        {
+          "id": "TEST_007_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1007, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_007_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 70 + 35:",
+          "optiuni": {
+            "A": "105",
+            "B": "70",
+            "C": "35",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_007_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_008",
+      "nume": "Testul Grila 8",
+      "itemi": [
+        {
+          "id": "TEST_008_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1008, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_008_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 80 + 40:",
+          "optiuni": {
+            "A": "120",
+            "B": "80",
+            "C": "40",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_008_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_009",
+      "nume": "Testul Grila 9",
+      "itemi": [
+        {
+          "id": "TEST_009_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1009, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_009_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 90 + 45:",
+          "optiuni": {
+            "A": "135",
+            "B": "90",
+            "C": "45",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_009_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_010",
+      "nume": "Testul Grila 10",
+      "itemi": [
+        {
+          "id": "TEST_010_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1010, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_010_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 100 + 50:",
+          "optiuni": {
+            "A": "150",
+            "B": "100",
+            "C": "50",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_010_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_011",
+      "nume": "Testul Grila 11",
+      "itemi": [
+        {
+          "id": "TEST_011_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1011, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_011_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 110 + 55:",
+          "optiuni": {
+            "A": "165",
+            "B": "110",
+            "C": "55",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_011_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_012",
+      "nume": "Testul Grila 12",
+      "itemi": [
+        {
+          "id": "TEST_012_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1012, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_012_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 120 + 60:",
+          "optiuni": {
+            "A": "180",
+            "B": "120",
+            "C": "60",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_012_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_013",
+      "nume": "Testul Grila 13",
+      "itemi": [
+        {
+          "id": "TEST_013_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1013, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_013_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 130 + 65:",
+          "optiuni": {
+            "A": "195",
+            "B": "130",
+            "C": "65",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_013_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_014",
+      "nume": "Testul Grila 14",
+      "itemi": [
+        {
+          "id": "TEST_014_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1014, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_014_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 140 + 70:",
+          "optiuni": {
+            "A": "210",
+            "B": "140",
+            "C": "70",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_014_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_015",
+      "nume": "Testul Grila 15",
+      "itemi": [
+        {
+          "id": "TEST_015_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1015, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_015_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 150 + 75:",
+          "optiuni": {
+            "A": "225",
+            "B": "150",
+            "C": "75",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_015_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_016",
+      "nume": "Testul Grila 16",
+      "itemi": [
+        {
+          "id": "TEST_016_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1016, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_016_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 160 + 80:",
+          "optiuni": {
+            "A": "240",
+            "B": "160",
+            "C": "80",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_016_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_017",
+      "nume": "Testul Grila 17",
+      "itemi": [
+        {
+          "id": "TEST_017_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1017, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_017_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 170 + 85:",
+          "optiuni": {
+            "A": "255",
+            "B": "170",
+            "C": "85",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_017_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_018",
+      "nume": "Testul Grila 18",
+      "itemi": [
+        {
+          "id": "TEST_018_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1018, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_018_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 180 + 90:",
+          "optiuni": {
+            "A": "270",
+            "B": "180",
+            "C": "90",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_018_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_019",
+      "nume": "Testul Grila 19",
+      "itemi": [
+        {
+          "id": "TEST_019_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1019, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_019_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 190 + 95:",
+          "optiuni": {
+            "A": "285",
+            "B": "190",
+            "C": "95",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_019_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_020",
+      "nume": "Testul Grila 20",
+      "itemi": [
+        {
+          "id": "TEST_020_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1020, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_020_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 200 + 100:",
+          "optiuni": {
+            "A": "300",
+            "B": "200",
+            "C": "100",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_020_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_021",
+      "nume": "Testul Grila 21",
+      "itemi": [
+        {
+          "id": "TEST_021_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1021, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_021_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 210 + 105:",
+          "optiuni": {
+            "A": "315",
+            "B": "210",
+            "C": "105",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_021_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_022",
+      "nume": "Testul Grila 22",
+      "itemi": [
+        {
+          "id": "TEST_022_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1022, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_022_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 220 + 110:",
+          "optiuni": {
+            "A": "330",
+            "B": "220",
+            "C": "110",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_022_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_023",
+      "nume": "Testul Grila 23",
+      "itemi": [
+        {
+          "id": "TEST_023_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1023, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_023_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 230 + 115:",
+          "optiuni": {
+            "A": "345",
+            "B": "230",
+            "C": "115",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_023_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_024",
+      "nume": "Testul Grila 24",
+      "itemi": [
+        {
+          "id": "TEST_024_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1024, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_024_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 240 + 120:",
+          "optiuni": {
+            "A": "360",
+            "B": "240",
+            "C": "120",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_024_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_025",
+      "nume": "Testul Grila 25",
+      "itemi": [
+        {
+          "id": "TEST_025_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1025, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_025_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 250 + 125:",
+          "optiuni": {
+            "A": "375",
+            "B": "250",
+            "C": "125",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_025_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_026",
+      "nume": "Testul Grila 26",
+      "itemi": [
+        {
+          "id": "TEST_026_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1026, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_026_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 260 + 130:",
+          "optiuni": {
+            "A": "390",
+            "B": "260",
+            "C": "130",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_026_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_027",
+      "nume": "Testul Grila 27",
+      "itemi": [
+        {
+          "id": "TEST_027_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1027, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_027_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 270 + 135:",
+          "optiuni": {
+            "A": "405",
+            "B": "270",
+            "C": "135",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_027_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_028",
+      "nume": "Testul Grila 28",
+      "itemi": [
+        {
+          "id": "TEST_028_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1028, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_028_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 280 + 140:",
+          "optiuni": {
+            "A": "420",
+            "B": "280",
+            "C": "140",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_028_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_029",
+      "nume": "Testul Grila 29",
+      "itemi": [
+        {
+          "id": "TEST_029_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1029, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_029_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 290 + 145:",
+          "optiuni": {
+            "A": "435",
+            "B": "290",
+            "C": "145",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_029_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_030",
+      "nume": "Testul Grila 30",
+      "itemi": [
+        {
+          "id": "TEST_030_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1030, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_030_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 300 + 150:",
+          "optiuni": {
+            "A": "450",
+            "B": "300",
+            "C": "150",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_030_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_031",
+      "nume": "Testul Grila 31",
+      "itemi": [
+        {
+          "id": "TEST_031_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1031, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_031_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 310 + 155:",
+          "optiuni": {
+            "A": "465",
+            "B": "310",
+            "C": "155",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_031_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_032",
+      "nume": "Testul Grila 32",
+      "itemi": [
+        {
+          "id": "TEST_032_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1032, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_032_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 320 + 160:",
+          "optiuni": {
+            "A": "480",
+            "B": "320",
+            "C": "160",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_032_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_033",
+      "nume": "Testul Grila 33",
+      "itemi": [
+        {
+          "id": "TEST_033_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1033, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_033_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 330 + 165:",
+          "optiuni": {
+            "A": "495",
+            "B": "330",
+            "C": "165",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_033_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_034",
+      "nume": "Testul Grila 34",
+      "itemi": [
+        {
+          "id": "TEST_034_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1034, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_034_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 340 + 170:",
+          "optiuni": {
+            "A": "510",
+            "B": "340",
+            "C": "170",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_034_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_035",
+      "nume": "Testul Grila 35",
+      "itemi": [
+        {
+          "id": "TEST_035_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1035, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_035_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 350 + 175:",
+          "optiuni": {
+            "A": "525",
+            "B": "350",
+            "C": "175",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_035_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_036",
+      "nume": "Testul Grila 36",
+      "itemi": [
+        {
+          "id": "TEST_036_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1036, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_036_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 360 + 180:",
+          "optiuni": {
+            "A": "540",
+            "B": "360",
+            "C": "180",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_036_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_037",
+      "nume": "Testul Grila 37",
+      "itemi": [
+        {
+          "id": "TEST_037_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1037, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_037_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 370 + 185:",
+          "optiuni": {
+            "A": "555",
+            "B": "370",
+            "C": "185",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_037_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_038",
+      "nume": "Testul Grila 38",
+      "itemi": [
+        {
+          "id": "TEST_038_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1038, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_038_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 380 + 190:",
+          "optiuni": {
+            "A": "570",
+            "B": "380",
+            "C": "190",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_038_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_039",
+      "nume": "Testul Grila 39",
+      "itemi": [
+        {
+          "id": "TEST_039_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1039, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_039_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 390 + 195:",
+          "optiuni": {
+            "A": "585",
+            "B": "390",
+            "C": "195",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_039_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_040",
+      "nume": "Testul Grila 40",
+      "itemi": [
+        {
+          "id": "TEST_040_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1040, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_040_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 400 + 200:",
+          "optiuni": {
+            "A": "600",
+            "B": "400",
+            "C": "200",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_040_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_041",
+      "nume": "Testul Grila 41",
+      "itemi": [
+        {
+          "id": "TEST_041_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1041, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_041_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 410 + 205:",
+          "optiuni": {
+            "A": "615",
+            "B": "410",
+            "C": "205",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_041_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_042",
+      "nume": "Testul Grila 42",
+      "itemi": [
+        {
+          "id": "TEST_042_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1042, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_042_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 420 + 210:",
+          "optiuni": {
+            "A": "630",
+            "B": "420",
+            "C": "210",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_042_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_043",
+      "nume": "Testul Grila 43",
+      "itemi": [
+        {
+          "id": "TEST_043_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1043, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_043_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 430 + 215:",
+          "optiuni": {
+            "A": "645",
+            "B": "430",
+            "C": "215",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_043_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_044",
+      "nume": "Testul Grila 44",
+      "itemi": [
+        {
+          "id": "TEST_044_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1044, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_044_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 440 + 220:",
+          "optiuni": {
+            "A": "660",
+            "B": "440",
+            "C": "220",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_044_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_045",
+      "nume": "Testul Grila 45",
+      "itemi": [
+        {
+          "id": "TEST_045_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1045, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_045_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 450 + 225:",
+          "optiuni": {
+            "A": "675",
+            "B": "450",
+            "C": "225",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_045_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_046",
+      "nume": "Testul Grila 46",
+      "itemi": [
+        {
+          "id": "TEST_046_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1046, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_046_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 460 + 230:",
+          "optiuni": {
+            "A": "690",
+            "B": "460",
+            "C": "230",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_046_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_047",
+      "nume": "Testul Grila 47",
+      "itemi": [
+        {
+          "id": "TEST_047_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1047, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_047_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 470 + 235:",
+          "optiuni": {
+            "A": "705",
+            "B": "470",
+            "C": "235",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_047_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_048",
+      "nume": "Testul Grila 48",
+      "itemi": [
+        {
+          "id": "TEST_048_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1048, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_048_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 480 + 240:",
+          "optiuni": {
+            "A": "720",
+            "B": "480",
+            "C": "240",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_048_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_049",
+      "nume": "Testul Grila 49",
+      "itemi": [
+        {
+          "id": "TEST_049_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1049, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_049_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 490 + 245:",
+          "optiuni": {
+            "A": "735",
+            "B": "490",
+            "C": "245",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_049_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_050",
+      "nume": "Testul Grila 50",
+      "itemi": [
+        {
+          "id": "TEST_050_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1050, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_050_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 500 + 250:",
+          "optiuni": {
+            "A": "750",
+            "B": "500",
+            "C": "250",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_050_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_051",
+      "nume": "Testul Grila 51",
+      "itemi": [
+        {
+          "id": "TEST_051_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1051, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_051_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 510 + 255:",
+          "optiuni": {
+            "A": "765",
+            "B": "510",
+            "C": "255",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_051_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_052",
+      "nume": "Testul Grila 52",
+      "itemi": [
+        {
+          "id": "TEST_052_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1052, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_052_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 520 + 260:",
+          "optiuni": {
+            "A": "780",
+            "B": "520",
+            "C": "260",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_052_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_053",
+      "nume": "Testul Grila 53",
+      "itemi": [
+        {
+          "id": "TEST_053_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1053, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_053_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 530 + 265:",
+          "optiuni": {
+            "A": "795",
+            "B": "530",
+            "C": "265",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_053_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_054",
+      "nume": "Testul Grila 54",
+      "itemi": [
+        {
+          "id": "TEST_054_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1054, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_054_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 540 + 270:",
+          "optiuni": {
+            "A": "810",
+            "B": "540",
+            "C": "270",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_054_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_055",
+      "nume": "Testul Grila 55",
+      "itemi": [
+        {
+          "id": "TEST_055_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1055, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_055_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 550 + 275:",
+          "optiuni": {
+            "A": "825",
+            "B": "550",
+            "C": "275",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_055_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_056",
+      "nume": "Testul Grila 56",
+      "itemi": [
+        {
+          "id": "TEST_056_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1056, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_056_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 560 + 280:",
+          "optiuni": {
+            "A": "840",
+            "B": "560",
+            "C": "280",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_056_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_057",
+      "nume": "Testul Grila 57",
+      "itemi": [
+        {
+          "id": "TEST_057_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1057, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_057_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 570 + 285:",
+          "optiuni": {
+            "A": "855",
+            "B": "570",
+            "C": "285",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_057_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_058",
+      "nume": "Testul Grila 58",
+      "itemi": [
+        {
+          "id": "TEST_058_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1058, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_058_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 580 + 290:",
+          "optiuni": {
+            "A": "870",
+            "B": "580",
+            "C": "290",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_058_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_059",
+      "nume": "Testul Grila 59",
+      "itemi": [
+        {
+          "id": "TEST_059_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1059, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_059_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 590 + 295:",
+          "optiuni": {
+            "A": "885",
+            "B": "590",
+            "C": "295",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_059_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_060",
+      "nume": "Testul Grila 60",
+      "itemi": [
+        {
+          "id": "TEST_060_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1060, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_060_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 600 + 300:",
+          "optiuni": {
+            "A": "900",
+            "B": "600",
+            "C": "300",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_060_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_061",
+      "nume": "Testul Grila 61",
+      "itemi": [
+        {
+          "id": "TEST_061_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1061, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_061_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 610 + 305:",
+          "optiuni": {
+            "A": "915",
+            "B": "610",
+            "C": "305",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_061_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_062",
+      "nume": "Testul Grila 62",
+      "itemi": [
+        {
+          "id": "TEST_062_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1062, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_062_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 620 + 310:",
+          "optiuni": {
+            "A": "930",
+            "B": "620",
+            "C": "310",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_062_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_063",
+      "nume": "Testul Grila 63",
+      "itemi": [
+        {
+          "id": "TEST_063_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1063, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_063_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 630 + 315:",
+          "optiuni": {
+            "A": "945",
+            "B": "630",
+            "C": "315",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_063_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_064",
+      "nume": "Testul Grila 64",
+      "itemi": [
+        {
+          "id": "TEST_064_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1064, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_064_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 640 + 320:",
+          "optiuni": {
+            "A": "960",
+            "B": "640",
+            "C": "320",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_064_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_065",
+      "nume": "Testul Grila 65",
+      "itemi": [
+        {
+          "id": "TEST_065_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1065, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_065_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 650 + 325:",
+          "optiuni": {
+            "A": "975",
+            "B": "650",
+            "C": "325",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_065_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_066",
+      "nume": "Testul Grila 66",
+      "itemi": [
+        {
+          "id": "TEST_066_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1066, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_066_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 660 + 330:",
+          "optiuni": {
+            "A": "990",
+            "B": "660",
+            "C": "330",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_066_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_067",
+      "nume": "Testul Grila 67",
+      "itemi": [
+        {
+          "id": "TEST_067_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1067, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_067_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 670 + 335:",
+          "optiuni": {
+            "A": "1005",
+            "B": "670",
+            "C": "335",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_067_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_068",
+      "nume": "Testul Grila 68",
+      "itemi": [
+        {
+          "id": "TEST_068_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1068, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_068_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 680 + 340:",
+          "optiuni": {
+            "A": "1020",
+            "B": "680",
+            "C": "340",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_068_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_069",
+      "nume": "Testul Grila 69",
+      "itemi": [
+        {
+          "id": "TEST_069_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1069, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_069_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 690 + 345:",
+          "optiuni": {
+            "A": "1035",
+            "B": "690",
+            "C": "345",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_069_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_070",
+      "nume": "Testul Grila 70",
+      "itemi": [
+        {
+          "id": "TEST_070_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1070, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_070_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 700 + 350:",
+          "optiuni": {
+            "A": "1050",
+            "B": "700",
+            "C": "350",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_070_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_071",
+      "nume": "Testul Grila 71",
+      "itemi": [
+        {
+          "id": "TEST_071_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1071, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_071_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 710 + 355:",
+          "optiuni": {
+            "A": "1065",
+            "B": "710",
+            "C": "355",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_071_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_072",
+      "nume": "Testul Grila 72",
+      "itemi": [
+        {
+          "id": "TEST_072_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1072, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_072_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 720 + 360:",
+          "optiuni": {
+            "A": "1080",
+            "B": "720",
+            "C": "360",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_072_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_073",
+      "nume": "Testul Grila 73",
+      "itemi": [
+        {
+          "id": "TEST_073_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1073, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_073_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 730 + 365:",
+          "optiuni": {
+            "A": "1095",
+            "B": "730",
+            "C": "365",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_073_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_074",
+      "nume": "Testul Grila 74",
+      "itemi": [
+        {
+          "id": "TEST_074_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1074, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_074_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 740 + 370:",
+          "optiuni": {
+            "A": "1110",
+            "B": "740",
+            "C": "370",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_074_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_075",
+      "nume": "Testul Grila 75",
+      "itemi": [
+        {
+          "id": "TEST_075_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1075, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_075_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 750 + 375:",
+          "optiuni": {
+            "A": "1125",
+            "B": "750",
+            "C": "375",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_075_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_076",
+      "nume": "Testul Grila 76",
+      "itemi": [
+        {
+          "id": "TEST_076_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1076, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_076_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 760 + 380:",
+          "optiuni": {
+            "A": "1140",
+            "B": "760",
+            "C": "380",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_076_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_077",
+      "nume": "Testul Grila 77",
+      "itemi": [
+        {
+          "id": "TEST_077_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1077, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_077_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 770 + 385:",
+          "optiuni": {
+            "A": "1155",
+            "B": "770",
+            "C": "385",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_077_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_078",
+      "nume": "Testul Grila 78",
+      "itemi": [
+        {
+          "id": "TEST_078_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1078, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_078_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 780 + 390:",
+          "optiuni": {
+            "A": "1170",
+            "B": "780",
+            "C": "390",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_078_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_079",
+      "nume": "Testul Grila 79",
+      "itemi": [
+        {
+          "id": "TEST_079_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1079, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_079_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 790 + 395:",
+          "optiuni": {
+            "A": "1185",
+            "B": "790",
+            "C": "395",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_079_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_080",
+      "nume": "Testul Grila 80",
+      "itemi": [
+        {
+          "id": "TEST_080_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1080, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_080_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 800 + 400:",
+          "optiuni": {
+            "A": "1200",
+            "B": "800",
+            "C": "400",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_080_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_081",
+      "nume": "Testul Grila 81",
+      "itemi": [
+        {
+          "id": "TEST_081_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1081, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_081_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 810 + 405:",
+          "optiuni": {
+            "A": "1215",
+            "B": "810",
+            "C": "405",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_081_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_082",
+      "nume": "Testul Grila 82",
+      "itemi": [
+        {
+          "id": "TEST_082_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1082, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_082_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 820 + 410:",
+          "optiuni": {
+            "A": "1230",
+            "B": "820",
+            "C": "410",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_082_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_083",
+      "nume": "Testul Grila 83",
+      "itemi": [
+        {
+          "id": "TEST_083_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1083, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_083_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 830 + 415:",
+          "optiuni": {
+            "A": "1245",
+            "B": "830",
+            "C": "415",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_083_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_084",
+      "nume": "Testul Grila 84",
+      "itemi": [
+        {
+          "id": "TEST_084_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1084, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_084_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 840 + 420:",
+          "optiuni": {
+            "A": "1260",
+            "B": "840",
+            "C": "420",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_084_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_085",
+      "nume": "Testul Grila 85",
+      "itemi": [
+        {
+          "id": "TEST_085_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1085, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_085_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 850 + 425:",
+          "optiuni": {
+            "A": "1275",
+            "B": "850",
+            "C": "425",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_085_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_086",
+      "nume": "Testul Grila 86",
+      "itemi": [
+        {
+          "id": "TEST_086_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1086, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_086_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 860 + 430:",
+          "optiuni": {
+            "A": "1290",
+            "B": "860",
+            "C": "430",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_086_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_087",
+      "nume": "Testul Grila 87",
+      "itemi": [
+        {
+          "id": "TEST_087_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1087, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_087_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 870 + 435:",
+          "optiuni": {
+            "A": "1305",
+            "B": "870",
+            "C": "435",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_087_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_088",
+      "nume": "Testul Grila 88",
+      "itemi": [
+        {
+          "id": "TEST_088_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1088, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_088_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 880 + 440:",
+          "optiuni": {
+            "A": "1320",
+            "B": "880",
+            "C": "440",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_088_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_089",
+      "nume": "Testul Grila 89",
+      "itemi": [
+        {
+          "id": "TEST_089_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1089, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_089_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 890 + 445:",
+          "optiuni": {
+            "A": "1335",
+            "B": "890",
+            "C": "445",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_089_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_090",
+      "nume": "Testul Grila 90",
+      "itemi": [
+        {
+          "id": "TEST_090_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1090, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_090_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 900 + 450:",
+          "optiuni": {
+            "A": "1350",
+            "B": "900",
+            "C": "450",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_090_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_091",
+      "nume": "Testul Grila 91",
+      "itemi": [
+        {
+          "id": "TEST_091_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1091, cifra unitatilor este:",
+          "optiuni": {
+            "A": "1",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_091_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 910 + 455:",
+          "optiuni": {
+            "A": "1365",
+            "B": "910",
+            "C": "455",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_091_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_092",
+      "nume": "Testul Grila 92",
+      "itemi": [
+        {
+          "id": "TEST_092_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1092, cifra unitatilor este:",
+          "optiuni": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_092_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 920 + 460:",
+          "optiuni": {
+            "A": "1380",
+            "B": "920",
+            "C": "460",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_092_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_093",
+      "nume": "Testul Grila 93",
+      "itemi": [
+        {
+          "id": "TEST_093_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1093, cifra unitatilor este:",
+          "optiuni": {
+            "A": "3",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_093_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 930 + 465:",
+          "optiuni": {
+            "A": "1395",
+            "B": "930",
+            "C": "465",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_093_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_094",
+      "nume": "Testul Grila 94",
+      "itemi": [
+        {
+          "id": "TEST_094_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1094, cifra unitatilor este:",
+          "optiuni": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_094_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 940 + 470:",
+          "optiuni": {
+            "A": "1410",
+            "B": "940",
+            "C": "470",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_094_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_095",
+      "nume": "Testul Grila 95",
+      "itemi": [
+        {
+          "id": "TEST_095_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1095, cifra unitatilor este:",
+          "optiuni": {
+            "A": "5",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_095_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 950 + 475:",
+          "optiuni": {
+            "A": "1425",
+            "B": "950",
+            "C": "475",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_095_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_096",
+      "nume": "Testul Grila 96",
+      "itemi": [
+        {
+          "id": "TEST_096_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1096, cifra unitatilor este:",
+          "optiuni": {
+            "A": "6",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_096_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 960 + 480:",
+          "optiuni": {
+            "A": "1440",
+            "B": "960",
+            "C": "480",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_096_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_097",
+      "nume": "Testul Grila 97",
+      "itemi": [
+        {
+          "id": "TEST_097_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1097, cifra unitatilor este:",
+          "optiuni": {
+            "A": "7",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_097_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 970 + 485:",
+          "optiuni": {
+            "A": "1455",
+            "B": "970",
+            "C": "485",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_097_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_098",
+      "nume": "Testul Grila 98",
+      "itemi": [
+        {
+          "id": "TEST_098_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1098, cifra unitatilor este:",
+          "optiuni": {
+            "A": "8",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_098_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 980 + 490:",
+          "optiuni": {
+            "A": "1470",
+            "B": "980",
+            "C": "490",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_098_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_099",
+      "nume": "Testul Grila 99",
+      "itemi": [
+        {
+          "id": "TEST_099_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1099, cifra unitatilor este:",
+          "optiuni": {
+            "A": "9",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_099_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 990 + 495:",
+          "optiuni": {
+            "A": "1485",
+            "B": "990",
+            "C": "495",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_099_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    },
+    {
+      "id": "TEST_100",
+      "nume": "Testul Grila 100",
+      "itemi": [
+        {
+          "id": "TEST_100_Q1",
+          "capitol": "Sistem Zecimal",
+          "enunt": "In numarul 1100, cifra unitatilor este:",
+          "optiuni": {
+            "A": "0",
+            "B": "0",
+            "C": "1",
+            "D": "5"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_100_Q2",
+          "capitol": "Operatii",
+          "enunt": "Calculati 1000 + 500:",
+          "optiuni": {
+            "A": "1500",
+            "B": "1000",
+            "C": "500",
+            "D": "0"
+          },
+          "raspuns": "A"
+        },
+        {
+          "id": "TEST_100_Q3",
+          "capitol": "Puteri",
+          "enunt": "Rezultatul calculului 2^3 este:",
+          "optiuni": {
+            "A": "6",
+            "B": "8",
+            "C": "9",
+            "D": "5"
+          },
+          "raspuns": "B"
+        }
+      ]
+    }
+  ]
+}
