@@ -25,7 +25,7 @@
                             <h3>Nivel Standard</h3>
                             <span class="badge">Învățare pe capitole</span>
                         </div>
-                        <p>Exerciții conforme cu programa școlară</p>
+                        <p>Exerciții tip MANUAL, conform programei școlare</p>
                         <button class="btn btn-primary">Alege Capitol</button>
                     </div>
 
@@ -97,12 +97,25 @@
                     <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
                 </div>
                 <div class="test-info">
-                    <span id="progress">Exercițiul 1/20</span>
                     <span id="timer">00:00</span>
                 </div>
             </div>
             
             <div class="exercise-container">
+                <!-- Bare de progres grafice -->
+                <div class="progress-bars-container">
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar-fill" id="progress-bar-quant"></div>
+                    </div>
+                    <div class="accuracy-bar-wrap">
+                        <div class="accuracy-bar-fill" id="progress-bar-qual"></div>
+                    </div>
+                    <div class="progress-labels">
+                        <span id="progress-text-label">Progres: 0/20</span>
+                        <span id="accuracy-text-label">Acuratețe: 0%</span>
+                    </div>
+                </div>
+
                 <div class="exercise-text" id="exercise-text">
                     <!-- Exercițiul va fi încărcată aici -->
                 </div>
@@ -126,10 +139,16 @@
             </div>
             
             <div class="score-display" id="score-box">
-                <div class="score-circle">
-                    <span id="score-percentage">0%</span>
+                <div class="donut-chart-container">
+                    <svg viewBox="0 0 100 100" class="donut-chart">
+                        <circle class="donut-ring" cx="50" cy="50" r="40" fill="transparent" stroke="#edf2f7" stroke-width="8"></circle>
+                        <circle class="donut-segment" id="donut-segment" cx="50" cy="50" r="40" fill="transparent" stroke="#667eea" stroke-width="8" stroke-dasharray="0 251.2" stroke-dashoffset="0" stroke-linecap="round"></circle>
+                    </svg>
+                    <div class="donut-text">
+                        <span id="score-percentage">0%</span>
+                    </div>
                 </div>
-                <p id="score-text">Ai obținut 0 din 20 puncte</p>
+                <p id="score-text" style="margin-top: 15px; font-weight: 600; color: #4a5568;">Ai obținut 0 din 20 puncte</p>
             </div>
             
             <div class="results-details" id="results-details">
@@ -410,12 +429,18 @@
                 });
                 const acuratete = idx === 0 ? 0 : Math.round((corecte / idx) * 100);
 
-                document.getElementById('progress').innerHTML = `
-                    <div class="stats-live">
-                        <span>Progres: ${parcurse}/${total} (${procentParcurs}%)</span>
-                        <span class="accuracy-live">Acuratețe: ${corecte}/${idx} (${acuratete}%)</span>
-                    </div>
-                `;
+                // Update Bare Grafice
+                document.getElementById('progress-bar-quant').style.width = `${procentParcurs}%`;
+                document.getElementById('progress-text-label').textContent = `Progres: ${parcurse}/${total} (${procentParcurs}%)`;
+                
+                const qualBar = document.getElementById('progress-bar-qual');
+                qualBar.style.width = `${acuratete}%`;
+                document.getElementById('accuracy-text-label').textContent = `Acuratețe: ${acuratete}%`;
+                
+                // Culoare dinamică acuratețe
+                if (acuratete >= 75) qualBar.style.backgroundColor = '#48bb78'; // Verde
+                else if (acuratete >= 50) qualBar.style.backgroundColor = '#ecc94b'; // Galben
+                else qualBar.style.backgroundColor = '#f56565'; // Roșu
                 
                 document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
@@ -487,8 +512,8 @@
                 document.getElementById('explanations-container').classList.add('hidden');
                 document.getElementById('explanations-list').innerHTML = '';
                 
-                const scoreCircle = document.querySelector('.score-circle');
                 const showExplBtn = document.getElementById('show-explanations-btn');
+                const donutSegment = document.getElementById('donut-segment');
                 
                 // Prag 75% (15/20)
                 const succes = rez.procentaj >= 75;
@@ -496,12 +521,24 @@
                 if (succes) {
                     msgEl.textContent = "FELICITĂRI! Ai deblocat simbolic capitolul următor!";
                     msgEl.classList.add('verdict-success');
-                    scoreCircle.style.background = 'linear-gradient(135deg, #48bb78 0%, #2f855a 100%)';
+                    donutSegment.style.stroke = '#48bb78'; // Verde
                 } else {
                     msgEl.textContent = "REIA! Scorul este sub pragul de 75%.";
                     msgEl.classList.add('verdict-retry');
-                    scoreCircle.style.background = 'linear-gradient(135deg, #f56565 0%, #c53030 100%)';
+                    donutSegment.style.stroke = '#f56565'; // Roșu
                 }
+
+                // Animare Donut Chart
+                // Circumferința = 2 * PI * r = 2 * 3.14 * 40 = 251.2
+                const offset = 251.2 - (rez.procentaj / 100) * 251.2;
+                donutSegment.style.strokeDasharray = `251.2 251.2`;
+                donutSegment.style.strokeDashoffset = `251.2`;
+                
+                // Trigger reflow pentru animație
+                setTimeout(() => {
+                    donutSegment.style.transition = 'stroke-dashoffset 1.5s ease-out';
+                    donutSegment.style.strokeDashoffset = offset;
+                }, 100);
 
                 if (rez.wrongAnswers.length > 0) {
                     showExplBtn.classList.remove('hidden');
