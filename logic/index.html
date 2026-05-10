@@ -180,60 +180,85 @@
                     <button class="btn btn-secondary btn-sm" onclick="app.inchideTeorie()">ÎNCHIDE</button>
                 </div>
                 <div class="theory-body">
+                    <p style="font-style: italic; color: #718096; margin-bottom: 25px; border-bottom: 1px solid #edf2f7; padding-bottom: 15px;">
+                        Matematica nu este doar o colecție de reguli, ci un limbaj logic care ne permite să modelăm realitatea. Această recapitulare este structurată pentru a transforma cunoștințele teoretice în instrumente de calcul strategic, esențiale pentru programa clasei a V-a.
+                    </p>
+
                     <section class="theory-section">
-                        <h3>I. Adunarea Numerelor Naturale</h3>
+                        <h3>1. Fundamentele Sistemului de Numerație</h3>
+                        <p>Sistemul de numerație pe care îl folosim este <strong>zecimal-pozițional</strong>. „Zecimal” înseamnă că grupăm unitățile câte zece, iar „pozițional” înseamnă că valoarea unei cifre este determinată de locul ei în număr.</p>
+                        <ul>
+                            <li><strong>Cifră vs. Număr:</strong> Cifrele sunt simbolurile {0, 1, ..., 9}, iar numerele sunt cantitățile formate cu ajutorul lor.</li>
+                            <li><strong>Succesor și Predecesor:</strong> Orice număr natural <em>n</em> are un succesor (n + 1) și, dacă n ≠ 0, un predecesor (n - 1).</li>
+                        </ul>
                         <div class="formula-box">
-                            <p><strong>Proprietăți:</strong></p>
-                            <ul>
-                                <li>Comutativitate: a + b = b + a</li>
-                                <li>Asociativitate: a + (b + c) = (a + b) + c</li>
-                                <li>Element neutru: 0 (a + 0 = 0 + a = a)</li>
-                            </ul>
+                            <strong>Aproximări (Regulă):</strong> Dacă cifra ordinului inferior este {0,1,2,3,4} -> rotunjire prin <strong>lipsă</strong>. Dacă este {5,6,7,8,9} -> rotunjire prin <strong>adaos</strong> (+1).
                         </div>
                     </section>
 
                     <section class="theory-section">
-                        <h3>II. Scăderea Numerelor Naturale</h3>
-                        <p><strong>Definiție:</strong> Diferența dintre a și b (a ≥ b) este numărul c, unde a = b + c.</p>
-                        <p><em>Termeni:</em> a - descăzut, b - scăzător, c - diferență.</p>
-                    </section>
-
-                    <section class="theory-section">
-                        <h3>III. Înmulțirea Numerelor Naturale</h3>
+                        <h3>2. Operații de Ordinul I: Adunarea și Scăderea</h3>
                         <div class="formula-box">
+                            <strong>Proprietățile Adunării:</strong>
                             <ul>
-                                <li>Comutativitate, Asociativitate.</li>
-                                <li>Element neutru: 1 (a * 1 = a).</li>
-                                <li>Distributivitate față de adunare/scădere: a * (b ± c) = a * b ± a * c</li>
+                                <li>Comutativitatea: a + b = b + a</li>
+                                <li>Asociativitatea: (a + b) + c = a + (b + c)</li>
+                                <li>Element Neutru: 0</li>
                             </ul>
                         </div>
+                        <p><strong>Rigoarea Scăderii:</strong> În mulțimea numerelor naturale, scăderea (a - b) este posibilă numai dacă <strong>a ≥ b</strong>.</p>
                     </section>
 
                     <section class="theory-section">
-                        <h3>IV. Împărțirea Numerelor Naturale</h3>
+                        <h3>3. Operații de Ordinul II: Înmulțirea și Factorul Comun</h3>
+                        <p><strong>Distributivitatea:</strong> a * (b ± c) = a * b ± a * c. Ne permite să rezolvăm rapid calcule mintale (ex: 7 * 12 = 70 + 14 = 84).</p>
                         <div class="highlight-box">
-                            <strong>Teorema împărțirii cu rest:</strong> D = Î * C + R, unde 0 ≤ R < Î
+                            <strong>Tehnica Factorului Comun:</strong><br>
+                            a * b ± a * c = <strong>a * (b ± c)</strong>
                         </div>
-                        <p class="warning-text">⚠️ Împărțirea la zero este imposibilă!</p>
                     </section>
 
                     <section class="theory-section">
-                        <h3>V. Puterea unui Număr Natural</h3>
+                        <h3>4. Împărțirea Numerelor Naturale</h3>
+                        <div class="highlight-box" style="background: #fff5f5; border-color: var(--neon-red); color: #c53030;">
+                            <strong>Teorema Împărțirii cu Rest:</strong><br>
+                            D = Î * C + R, unde <strong>0 ≤ R < Î</strong>
+                        </div>
+                        <p class="warning-text">⚠️ Împărțirea la zero nu are sens și este interzisă în matematică!</p>
+                    </section>
+
+                    <section class="theory-section">
+                        <h3>5. Puterea cu Exponent Natural</h3>
+                        <p>Puterea reprezintă o înmulțire repetată: <strong>a<sup>n</sup> = a * a * ... * a</strong> (de n ori).</p>
                         <div class="formula-box">
-                            <p><strong>Formula:</strong> a<sup>n</sup> = a * a * ... * a (de n ori)</p>
-                            <p><strong>Cazuri speciale:</strong> a<sup>0</sup> = 1 (a ≠ 0), 0<sup>n</sup> = 0, 1<sup>n</sup> = 1</p>
+                            <strong>Reguli de Calcul:</strong>
+                            <ul>
+                                <li>a<sup>m</sup> * a<sup>n</sup> = a<sup>m+n</sup></li>
+                                <li>a<sup>m</sup> : a<sup>n</sup> = a<sup>m-n</sup></li>
+                                <li>(a<sup>m</sup>)<sup>n</sup> = a<sup>m*n</sup></li>
+                            </ul>
+                        </div>
+                        <div class="theory-example">
+                            <strong>Expert Tip (Pătrate Perfecte):</strong> Un număr care se termină în {2, 3, 7, 8} <strong>NU</strong> poate fi niciodată pătrat perfect.
                         </div>
                     </section>
 
                     <section class="theory-section">
-                        <h3>VI. Ordinea Efectuării Operațiilor</h3>
-                        <ol>
-                            <li><strong>Puteri</strong></li>
-                            <li><strong>Înmulțiri și Împărțiri</strong></li>
-                            <li><strong>Adunări și Scăderi</strong></li>
-                        </ol>
-                        <p><em>Obs:</em> Se lucrează de la stânga la dreapta pentru operații de același ordin.</p>
+                        <h3>6. Ierarhia Calcului și Parantezele</h3>
+                        <div class="formula-box">
+                            <strong>Algoritmul de Prioritate:</strong>
+                            <ol>
+                                <li><strong>Ordinul III:</strong> Puterile (se rezolvă primele).</li>
+                                <li><strong>Ordinul II:</strong> Înmulțirile și Împărțirile (de la stânga la dreapta).</li>
+                                <li><strong>Ordinul I:</strong> Adunările și Scăderile (de la stânga la dreapta).</li>
+                            </ol>
+                        </div>
+                        <p><strong>Paranteze:</strong> Se lucrează întotdeauna din interior spre exterior: ( ) → [ ] → { }.</p>
                     </section>
+                    
+                    <p style="text-align: center; font-weight: bold; color: var(--primary-blue); margin-top: 20px;">
+                        Aceste reguli constituie alfabetul gândirii logice! 🚀
+                    </p>
                 </div>
             </div>
         </div>
