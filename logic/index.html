@@ -1273,6 +1273,8 @@ h2 {
             constructor() {
                 this.testCurent = null;
                 this.raspunsuri = {};
+                this.indexCurent = 0;
+                this.progresMaxim = 0; // High Watermark
                 this.timer = null;
                 this.timpStart = null;
                 this.lastWrongAnswers = [];
@@ -1396,6 +1398,7 @@ h2 {
                     
                     this.raspunsuri = {};
                     this.indexCurent = 0;
+                    this.progresMaxim = 0;
                     this.afiseazaTest();
                     this.startTimer();
                 } catch (e) {
@@ -1414,11 +1417,18 @@ h2 {
 
             afiseazaExercitiu(idx) {
                 const p = this.testCurent.exercitii[idx];
+                this.indexCurent = idx;
+                
+                // High Watermark Progress
+                if (idx > this.progresMaxim) {
+                    this.progresMaxim = idx;
+                }
                 
                 this.actualizeazaProgresLive();
                 
                 // Delta Protocol: Urmatorul dezactivat pana la selectie
-                document.getElementById('next-btn').disabled = true;
+                const raspunsSelectat = !!this.raspunsuri[p.id];
+                document.getElementById('next-btn').disabled = !raspunsSelectat;
                 
                 document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
@@ -1454,26 +1464,24 @@ h2 {
             actualizeazaProgresLive() {
                 if (!this.testCurent) return;
                 const total = this.testCurent.exercitii.length;
-                const parcurse = this.indexCurent + 1;
-                const procentParcurs = Math.round((parcurse / total) * 100);
                 
+                // Progres = High Watermark
+                const procentParcurs = Math.round(((this.progresMaxim + 1) / total) * 100);
+                
+                // Delta Protocol: Recalculare dinamica prin scanare vector (Slot-Based)
                 let corecte = 0;
-                let totalAnsw = 0;
-                this.testCurent.exercitii.forEach((ex, idx) => {
-                    if (this.raspunsuri[ex.id]) {
-                        totalAnsw++;
-                        if (this.raspunsuri[ex.id] === ex.raspuns_corect) corecte++;
-                    }
+                this.testCurent.exercitii.forEach(ex => {
+                    if (this.raspunsuri[ex.id] === ex.raspuns_corect) corecte++;
                 });
-                const acuratete = totalAnsw === 0 ? 0 : Math.round((corecte / totalAnsw) * 100);
+                
+                // Acuratete = Suma Sloturi / Total (Protocol Delta)
+                const acuratete = Math.round((corecte / total) * 100);
 
                 // Update UI
                 document.getElementById('progress-bar-quant').style.width = `${procentParcurs}%`;
-                document.getElementById('progress-val').textContent = `${parcurse}/${total} (${procentParcurs}%)`;
                 
                 const qualBar = document.getElementById('progress-bar-qual');
                 qualBar.style.width = `${acuratete}%`;
-                document.getElementById('accuracy-val').textContent = `${corecte}/${totalAnsw} (${acuratete}%)`;
                 
                 let color = '#ff0055'; 
                 if (acuratete >= 75) color = '#00ff88'; 
@@ -1481,7 +1489,6 @@ h2 {
                 
                 qualBar.style.backgroundColor = color;
                 qualBar.style.boxShadow = `0 0 15px ${color}`;
-                document.getElementById('accuracy-val').style.color = color;
             }
 
             navigatie(dir) {
