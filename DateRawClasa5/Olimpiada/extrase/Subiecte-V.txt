@@ -1,0 +1,52 @@
+--- PAGINA 1 ---
+ 
+    INSPECTORATUL ȘCOLAR JUDEȚEAN   
+                                                                                      BISTRIȚA – NĂSĂUD  
+ 
+ 
+ Str. 1 Decembrie nr.5, Cod 420080, Bistriţa, Jud. B -N 
+     Tel:    +40 (0)263 213529  
+     Fax:   +40 (0)263 216654  
+www.isjbn.ro  
+ 
+MINISTERUL EDUCA ȚIEI ȘI CERCETĂRII   
+OLIMPIADA NAȚIONALĂ DE MATEMATICĂ  
+ETAPA LOCALĂ – 8 februarie 2020  
+ 
+Clasa a V -a 
+ 
+SUBIECTUL 1  
+ 
+Aflați câte numere de forma a5b se pot scrie, știind  că a și b sunt cifre 
+distincte, care  verifică egalitatea:  
+[  (              )  ]               
+ 
+ 
+SUBIECTUL 2  
+ 
+Se consider ă numărul N=7·410+7·49+7·48+…+7·41+7 
+a) Demonstrați că N  este număr impar;  
+b) Determinați ultima cifră a numărului N;  
+c) Arătați că N+52019 este divizibil cu 2 . 
+ 
+ 
+SUBIECTUL 3  
+ 
+a) Calculați 422+162; 
+b) Scrieți numărul 20205 ca o sumă de două pătrate perfecte.  
+ 
+ 
+SUBIECTUL 4  
+ 
+Să se afle trei numere naturale, știind că diferența dintre primul și al 
+treilea este 76, împărțindu -l pe al doilea la al treilea obținem câtul 3 și restul 5, 
+iar împărțindu -l pe primul la diferența dintre al doilea și al treilea obținem câtul 
+2 și restul 6.  
+ 
+ 
+ 
+Notă:  
+ Timp de lucru: 2 ore.  
+ Fiecare problemă este notată cu maxim 7 puncte . 
+ 
+

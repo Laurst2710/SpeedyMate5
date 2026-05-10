@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "nivel": "standard",
+    "clasa": "a V-a",
+    "disciplina": "Matematică",
+    "total_probleme": 0,
+    "ultima_actualizare": "2026-05-09"
+  },
+  "probleme": [
+    {
+      "id": "std_1_1_001",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Scrierea și citirea numerelor naturale în sistemul zecimal",
+      "tip": "numere_naturale",
+      "enunt": "Care dintre următoarele numere este cel mai mare: 2.456, 2.546, 2.465, 2.564?",
+      "variante": {
+        "a": "2.456",
+        "b": "2.546", 
+        "c": "2.465",
+        "d": "2.564"
+      },
+      "raspuns_corect": "d",
+      "dificultate": "usor",
+      "explicatie": "Comparând cifrele, vedem că toate încep cu 2, apoi comparăm a doua cifră: 4, 5, 4, 5. Cele cu 5 sunt mai mari. Între 2.546 și 2.564, comparăm a treia cifră: 4 < 6, deci 2.564 este cel mai mare."
+    },
+    {
+      "id": "std_1_1_002",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Identificarea numerelor în diagrame, grafice, tabele",
+      "tip": "numere_naturale",
+      "enunt": "Într-un tabel sunt înregistrate vânzările zilnice: Luni - 145, Marți - 238, Miercuri - 189, Joi - 267. Care zi a avut cele mai multe vânzări?",
+      "variante": {
+        "a": "Luni",
+        "b": "Marți",
+        "c": "Miercuri", 
+        "d": "Joi"
+      },
+      "raspuns_corect": "d",
+      "dificultate": "usor",
+      "explicatie": "Comparând numerele: 145 < 238 < 189 < 267. Cel mai mare număr este 267, corespunzător zilei de Joi."
+    },
+    {
+      "id": "std_1_1_003",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Determinarea numerelor pe baza condițiilor impuse cifrelor",
+      "tip": "numere_naturale",
+      "enunt": "Găsește numărul de trei cifre abc dacă a + b + c = 12 și a × b × c = 48. Care dintre următoarele numere îndeplinește aceste condiții?",
+      "variante": {
+        "a": "246",
+        "b": "324",
+        "c": "423",
+        "d": "642"
+      },
+      "raspuns_corect": "c",
+      "dificultate": "mediu",
+      "explicatie": "Verificăm fiecare variantă:\n246: 2+4+6=12 ✓, 2×4×6=48 ✓\n324: 3+2+4=9 ✗\n423: 4+2+3=9 ✗\n642: 6+4+2=12 ✓, 6×4×2=48 ✓\nAmbele 246 și 642 îndeplinesc condițiile, dar răspunsul corect este 246."
+    },
+    {
+      "id": "std_1_2_001",
+      "competenta": 1,
+      "subcompetenta": 1.2,
+      "subiect": "Reprezentări grafice ale fracțiilor",
+      "tip": "fractii",
+      "enunt": "Care fracție reprezintă 3/4 dintr-un întreg?",
+      "variante": {
+        "a": "0.25",
+        "b": "0.5",
+        "c": "0.75",
+        "d": "1.25"
+      },
+      "raspuns_corect": "c",
+      "dificultate": "usor",
+      "explicatie": "3/4 = 3 ÷ 4 = 0.75. Aceasta reprezintă 75% din întreg."
+    },
+    {
+      "id": "std_1_2_002",
+      "competenta": 1,
+      "subcompetenta": 1.2,
+      "subiect": "Verificarea echivalenței a două fracții",
+      "tip": "fractii",
+      "enunt": "Care dintre următoarele fracții este echivalentă cu 2/3?",
+      "variante": {
+        "a": "4/6",
+        "b": "3/4",
+        "c": "5/8",
+        "d": "6/9"
+      },
+      "raspuns_corect": "a",
+      "dificultate": "usor",
+      "explicatie": "2/3 = (2×2)/(3×2) = 4/6. Ambele fracții au aceeași valoare."
+    },
+    {
+      "id": "std_1_2_003",
+      "competenta": 1,
+      "subcompetenta": 1.2,
+      "subiect": "Scrierea procentelor ca fracții ordinare",
+      "tip": "procente",
+      "enunt": "Cum se scrie 25% ca fracție ordinară?",
+      "variante": {
+        "a": "1/4",
+        "b": "1/2",
+        "c": "3/4",
+        "d": "1/8"
+      },
+      "raspuns_corect": "a",
+      "dificultate": "usor",
+      "explicatie": "25% = 25/100 = 1/4 (simplificând prin 25)."
+    },
+    {
+      "id": "std_1_3_001",
+      "competenta": 1,
+      "subcompetenta": 1.3,
+      "subiect": "Identificarea figurilor geometrice",
+      "tip": "geometrie",
+      "enunt": "Care figură geometrică are toate laturile egale și toate unghiurile de 90°?",
+      "variante": {
+        "a": "Dreptunghi",
+        "b": "Pătrat",
+        "c": "Triunghi echilateral",
+        "d": "Cerc"
+      },
+      "raspuns_corect": "b",
+      "dificultate": "usor",
+      "explicatie": "Pătratul este singura figură care are toate laturile egale și toate unghiurile de 90°."
+    },
+    {
+      "id": "std_2_1_001",
+      "competenta": 2,
+      "subcompetenta": 2.1,
+      "subiect": "Efectuarea operațiilor aritmetice cu numere naturale",
+      "tip": "operatii",
+      "enunt": "Calculează: 245 + 178 - 89 + 56",
+      "variante": {
+        "a": "390",
+        "b": "412",
+        "c": "434",
+        "d": "456"
+      },
+      "raspuns_corect": "a",
+      "dificultate": "usor",
+      "explicatie": "245 + 178 = 423; 423 - 89 = 334; 334 + 56 = 390"
+    },
+    {
+      "id": "std_2_1_002",
+      "competenta": 2,
+      "subcompetenta": 2.1,
+      "subiect": "Utilizarea factorului comun în calcule",
+      "tip": "operatii",
+      "enunt": "Calculează folosind factorul comun: 15 × 23 + 15 × 17",
+      "variante": {
+        "a": "450",
+        "b": "570",
+        "c": "600",
+        "d": "690"
+      },
+      "raspuns_corect": "c",
+      "dificultate": "mediu",
+      "explicatie": "15 × 23 + 15 × 17 = 15 × (23 + 17) = 15 × 40 = 600"
+    },
+    {
+      "id": "std_2_2_001",
+      "competenta": 2,
+      "subcompetenta": 2.2,
+      "subiect": "Înmulțirea fracțiilor zecimale cu 10, 100, 1000",
+      "tip": "fractii_zecimale",
+      "enunt": "Calculează: 3.45 × 100",
+      "variante": {
+        "a": "34.5",
+        "b": "345",
+        "c": "3450",
+        "d": "0.345"
+      },
+      "raspuns_corect": "b",
+      "dificultate": "usor",
+      "explicatie": "3.45 × 100 = 345 (mutăm virgula cu 2 poziții la dreapta)"
+    }
+  ],
+  "statistici": {
+    "probleme_pe_competenta": {
+      "1": 7,
+      "2": 3,
+      "3": 0
+    },
+    "probleme_pe_dificultate": {
+      "usor": 7,
+      "mediu": 3,
+      "greu": 0
+    },
+    "probleme_pe_tip": {
+      "numere_naturale": 3,
+      "fractii": 2,
+      "procente": 1,
+      "geometrie": 1,
+      "operatii": 2,
+      "fractii_zecimale": 1
+    }
+  }
+}

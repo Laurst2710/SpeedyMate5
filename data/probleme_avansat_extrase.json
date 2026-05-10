@@ -1,0 +1,797 @@
+[
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "1.  Suma ultimelor două cifre ale sumei a 100 numere naturale consecutive  este:   \na) 2    b) 5   c) 0   d)10 \n \n2.",
+    "variante": {
+      "a": "109",
+      "b": "23",
+      "c": "101",
+      "d": "105"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "3.  Se consideră numerele naturale nenule  a şi b astfel încât 59 3 7≤+b a  şi 49 2 6≥+b a .",
+    "variante": {
+      "a": "16",
+      "b": "8",
+      "c": "14",
+      "d": "12"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "4. Câte numere naturale de două cifre au proprietatea că suma cifrelor este mai mare decât produsul lor?",
+    "variante": {
+      "a": "10",
+      "b": "24",
+      "c": "26",
+      "d": "28"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "000. Suma cifrelor numărului A este egală cu:  \na) 18.",
+    "variante": {
+      "b": "8.115",
+      "c": "7",
+      "d": "8.116"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "7. Fie mulţimea () { } / 7  a > c A abc abc cba si= −  .",
+    "variante": {
+      "a": "2",
+      "b": "18",
+      "c": "20",
+      "d": "30"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "8. Dacă  31 32 32 2 2 336kn p+++ += , atunci numărul nk p+−  este:  \na)1    b) 2   c) 3    d) 0  \n \n9.",
+    "variante": {
+      "a": "64"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "10. Ştiind că 3 + 6 + 9 + .",
+    "variante": {
+      "a": "1",
+      "b": "7"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "11. Se consideră mulţimea A = { 1; 3; 5; 7; … ; 2011; 2013 }.",
+    "variante": {
+      "a": "",
+      "b": "1007",
+      "c": "2025078"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "12. La un concurs de matematică participă 400 de elevi, repartiza ţi în mod egal în 20 de săli.",
+    "variante": {
+      "a": "21",
+      "b": "201",
+      "c": "251",
+      "d": "381"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "13. Câte numere naturale de 5 cifre au produsul cifrelor egal cu 9?",
+    "variante": {
+      "a": "10",
+      "b": "12",
+      "c": "15",
+      "d": "18"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "14. Dacă numerele naturale nenule edcba ,,,,  şi n au proprietatea că  \nne d c b a⋅⋅⋅⋅=⋅⋅⋅⋅+321 1175 324, atunci suma edcba ++++  este:  \na) 12   b) 15   c) 11   d) 18 \n \n15.",
+    "variante": {
+      "a": "12348",
+      "b": "12168",
+      "c": "12078",
+      "d": "11358"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "16. Dacă { }Nnnn xNx A ∈+=∈= , 20132 şi { }Nn n n yNy B ∈++=∈= ,1 20132 atunci numărul de \nelemente din BA∩ este:  \na) 1   b) 0   c) 2  d) mai mare decât 2013  \n \n17.",
+    "variante": {
+      "a": "9",
+      "b": "18",
+      "c": "27",
+      "d": "25"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "18.  Suma succesorilor numerelor naturale care împărţite la 1000 dau câtul un cub perfect, iar restul egal cu \npătratul câtului, este:  \na) 45318    b) 36797   c) 45317   d) 36798  \n \n \n \nVarianta 2                                                                            Clasa a 5 -a                                                                             -  pag.",
+    "variante": {
+      "a": ""
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "1. Câte numere naturale de două cifre au proprietatea că suma cifrelor este mai mare decât produsul lor?",
+    "variante": {
+      "a": "26",
+      "b": "28",
+      "c": "10",
+      "d": "24"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "2.  Se consideră numerele naturale nenule  a şi b astfel încât 59 3 7≤+b a  şi 49 2 6≥+b a .",
+    "variante": {
+      "a": "14",
+      "b": "16",
+      "c": "12",
+      "d": "8"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "3. Fie mulţimea () { } / 7  a > c A abc abc cba si= −  .",
+    "variante": {
+      "a": "30",
+      "b": "2",
+      "c": "18",
+      "d": "20"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "4.  Suma ultimelor două cifre ale sumei a 100 numere naturale consecutive  este:   \na) 5    b) 0   c) 2   d)10 \n \n5.",
+    "variante": {
+      "a": "23",
+      "b": "109",
+      "c": "105",
+      "d": "101"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "000. Suma cifrelor numărului A este egală cu:  \na) 8.",
+    "variante": {
+      "b": "7",
+      "c": "18.078",
+      "d": "8.115"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "8. Ştiind că 3 + 6 + 9 + .",
+    "variante": {
+      "a": "21",
+      "b": "2"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "9. La un concurs de matematică participă 400 de elevi, repartiza ţi în mod egal în 20 de săli.",
+    "variante": {
+      "a": "381",
+      "b": "21",
+      "c": "201",
+      "d": "251"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "10. Dacă  31 32 32 2 2 336kn p+++ += , atunci numărul nk p+−  este:  \na) 3   b) 0   c)1    d) 2  \n \n11.",
+    "variante": {
+      "a": "",
+      "b": "15",
+      "c": "12"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "12. Numerele naturale a şi b, nenule şi distincte, sunt cele mai  mici pentru care împărţirile  \n a : 2 : 2 : 2 : 2 şi b : 2 : 2 : 2 : 2 : 2 se efectuează exact şi au rezultate diferite.",
+    "variante": {
+      "a": "80",
+      "b": "64"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "13. Dacă numerele naturale nenule edcba ,,,,  şi n au proprietatea că  \nne d c b a⋅⋅⋅⋅=⋅⋅⋅⋅+321 1175 324, atunci suma edcba ++++  este:  \na) 11   b) 12   c) 18   d) 15 \n \n14.",
+    "variante": {
+      "a": "506521",
+      "b": "2025078",
+      "c": "1006"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "15.  Suma succesorilor numerelor naturale care împărţite la 1000 dau câtul un cub perfect, iar restul egal cu \npătratul câtului, este:  \na) 45317    b) 36798   c) 36797   d) 45318  \n \n16.",
+    "variante": {
+      "a": "12168",
+      "b": "11358",
+      "c": "12348",
+      "d": "12078"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "17. Dacă { }Nnnn xNx A ∈+=∈= , 20132 şi { }Nn n n yNy B ∈++=∈= ,1 20132 atunci numărul de \nelemente din BA∩ este:  \na) 0   b) mai mare decât 2013    c) 1  d) 2 \n \n18.",
+    "variante": {
+      "a": "",
+      "b": "27",
+      "c": "9"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "1.  Se consideră numerele naturale nenule  a şi b astfel încât 59 3 7≤+b a  şi 49 2 6≥+b a .",
+    "variante": {
+      "a": "14",
+      "b": "16",
+      "c": "12",
+      "d": "8"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "2. Fie mulţimea () { } / 7  a > c A abc abc cba si= −  .",
+    "variante": {
+      "a": "20",
+      "b": "2",
+      "c": "30",
+      "d": "18"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "5.  Suma ultimelor două cifre ale sumei a 100 numere naturale consecutive  este:   \na)10   b) 0   c) 5   d) 2 \n \n6.",
+    "variante": {
+      "a": "15",
+      "b": "12",
+      "c": "19",
+      "d": "13"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "7. Câte numere naturale de două cifre au proprietatea că suma cifrelor este mai  mare decât produsul lor?",
+    "variante": {
+      "a": "24",
+      "b": "26",
+      "c": "10",
+      "d": "28"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "8. Se consideră mulţimea A = { 1; 3; 5; 7; … ; 2011; 2013 }.",
+    "variante": {
+      "a": "2025078",
+      "b": "506521",
+      "c": "1007",
+      "d": "1006"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "9. Dacă numerele naturale nenule edcba ,,,,  şi n au proprietatea că  \nne d c b a⋅⋅⋅⋅=⋅⋅⋅⋅+321 1175 324, atunci suma edcba ++++  este:  \na) 11   b) 12   c) 18   d) 15 \n \n10.",
+    "variante": {
+      "a": "2",
+      "b": "0",
+      "c": "3",
+      "d": "1"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "11. La un concurs de matematică participă 400 de elevi, repartiza ţi în mod egal în 20 de săli.",
+    "variante": {
+      "a": "",
+      "b": "21",
+      "c": "251"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "12. Numerele naturale a şi b, nenule şi distincte, sunt cele mai mici pentru care împărţirile  \n a : 2 : 2 : 2 : 2 şi b : 2 : 2 : 2 : 2 : 2 se efectuează exact şi au rezultate diferite.",
+    "variante": {
+      "a": "4",
+      "b": "80"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "13. Ştiind că 3 + 6 + 9 + .",
+    "variante": {
+      "a": "7",
+      "b": "1"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "14. Câte numere naturale de 5 cifre au produsul cifrelor egal cu 9?",
+    "variante": {
+      "a": "10",
+      "b": "18",
+      "c": "12",
+      "d": "15"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "15. Cel mai mic pătrat perfect care poate fi scris ca sumă de 2002 numere naturale consecutive, are suma \ncifrelor:  \n       a)  27   b) 25   c) 18   d) 9 \n \n16.",
+    "variante": {
+      "a": "2",
+      "b": "1",
+      "c": "0"
+    }
+  },
+  {
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf",
+    "enunt": "17.  Suma succesorilor numerelor naturale care împărţite la 1000 dau câtul un cub perfect, iar restul egal cu \npătratul câtului, este:  \na) 36797    b) 36798   c) 45317   d) 45318  \n \n18.",
+    "variante": {
+      "a": "12078",
+      "b": "12348",
+      "c": "11358",
+      "d": "12168"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "1. Rezultatul calculului 02012 2012: 2012 2012   , este:  \na.",
+    "variante": {
+      "b": "2013",
+      "c": "2011",
+      "d": "1"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "3. Dacă 8 2x şi 9 3y, atunci 2 2y xeste:  \na.",
+    "variante": {
+      "b": "25",
+      "c": "18",
+      "d": "17"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "5. Numărul  având suma cifrelor 23, care împ ărţit la 9 dă câtul 96 este: \na.",
+    "variante": {
+      "b": "869",
+      "c": "887",
+      "d": "878"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "6. Suma numerelor naturale de forma abcare verific ă egalitatea 55baab  este: \na.",
+    "variante": {
+      "b": "201",
+      "c": "96",
+      "d": "160"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "7. Suma cifrelor num ărului 2013 20125 211731   este egală cu: \na.",
+    "variante": {
+      "b": "12",
+      "c": "6",
+      "d": "4"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "8. Rezultatul calculului  n n n n n n6:6 32 3 21 3  este: \na.",
+    "variante": {
+      "b": "8",
+      "c": "12",
+      "d": "n3"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "9. Dacă x şi y sunt numere naturale şi xy x12, atunci x + y  este egal cu:  \na.",
+    "variante": {
+      "b": "2",
+      "c": "3",
+      "d": "4"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "11.  \nRestul împ ărţirii numărului 5m + 7n  la 6 este egal cu : \na.",
+    "variante": {
+      "b": "2",
+      "c": "3",
+      "d": "4"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "11. Ultima cifr ă a numărului 2012 4 3 2 1 02 .",
+    "variante": {
+      "a": "8",
+      "b": "6",
+      "c": "4",
+      "d": "2"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "12. Restul ob ţinut prin împ ărţirea numărului 2012 20.",
+    "variante": {
+      "a": "85",
+      "b": "5",
+      "c": "23",
+      "d": "57"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "13. Dacă 427 3ba  şi 232 32cb , atunci c b a 15 162  are valoarea:  \na.",
+    "variante": {
+      "b": "2012",
+      "c": "2013",
+      "d": "2014"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "14. Numărul 505050 1223334444   se formeaz ă astfel: dup ă numărul 1 se adaug ă numărul 2 de 2 ori, \nnumărul 3 de trei ori şi aşa mai departe pân ă la scrierea num ărului 50 de 50 de ori.",
+    "variante": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "15.  Suma a trei numere naturale consecutive este 20123 .",
+    "variante": {
+      "a": "2",
+      "b": "4",
+      "c": "6",
+      "d": "8"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "16. Câtul împ ărţirii numărului  2012 22 17127   n la 201 este:  \na.",
+    "variante": {
+      "b": "2011",
+      "c": "2013",
+      "d": "2019"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "17. Împărţind  numărul natural abc la 3 se ob ţine câtul  cba şi restul 1.",
+    "variante": {
+      "a": "11",
+      "b": "13",
+      "c": "15",
+      "d": "17"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "18. Numărul natural n de 5 cifre este prieten cu TOMIS  dacă în scrierea lui n şi a lui 2n apar toate cifrele \nde la 0 la 9, o singur ă dată.",
+    "variante": {
+      "a": "",
+      "b": "19",
+      "c": "24"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "2. Suma numerelor naturale de forma abcare verific ă egalitatea 55baab  este: \na.",
+    "variante": {
+      "b": "96",
+      "c": ".  201",
+      "d": ".  110"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "3. Rezultatul calculului 02012 2012: 2012 2012   , este:  \na.",
+    "variante": {
+      "b": "1",
+      "c": "2013",
+      "d": "2012"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "4. Suma cifrelor num ărului 2013 20125 211731   este egală cu: \na.",
+    "variante": {
+      "b": "10",
+      "c": ".  12",
+      "d": "6"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "6. Dacă 82x şi 93y, atunci 2 2y xeste:  \na.",
+    "variante": {
+      "b": "25",
+      "c": "13",
+      "d": "18"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "7. Numărul  având suma cifrelor 23, care împ ărţit la 9 dă câtul 96 este: \na.",
+    "variante": {
+      "b": "878",
+      "c": "869",
+      "d": "896"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "8. Restul ob ţinut prin împ ărţirea numărului 2012 20.",
+    "variante": {
+      "a": "57",
+      "b": "23",
+      "c": "85",
+      "d": ".  5"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "9. Numărul 505050 1223334444   se formeaz ă astfel: dup ă numărul 1 se adaug ă numărul 2 de 2 ori, \nnumărul 3 de trei ori şi aşa mai departe pân ă la scrierea num ărului 50 de 50 de ori.",
+    "variante": {
+      "a": "1",
+      "b": "3",
+      "c": "0",
+      "d": ".  2"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "10. Rezultatul calculului  n n n n n n6:6 32 3 21 3  este: \na.",
+    "variante": {
+      "b": "11",
+      "c": ".  8",
+      "d": "12"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "11. Dacă 427 3ba  şi 232 32cb , atunci c b a 15 162  are valoarea:  \na.",
+    "variante": {
+      "b": "2012",
+      "c": "2011",
+      "d": "2013"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "12. Dacă x şi y sunt numere naturale şi xy x12, atunci x + y  este egal cu:  \na.",
+    "variante": {
+      "b": "4",
+      "c": ".  1",
+      "d": ".  2"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "13. Ultima cifr ă a numărului 2012 4 3 2 1 02 .",
+    "variante": {
+      "a": "2",
+      "b": "4",
+      "c": "8",
+      "d": ".  6"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "11.  \nRestul împ ărţirii numărului 5m + 7n  la 6 este egal cu : \na.",
+    "variante": {
+      "b": "1",
+      "c": "4",
+      "d": ".  3"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "15. Câtul împ ărţirii numărului  2012 22 17127   n la 201 este:  \na.",
+    "variante": {
+      "b": "2013",
+      "c": "2007",
+      "d": "2011"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "16. Numărul natural n de 5 cifre este prieten cu TOMIS  dacă în scrierea lui n şi a lui 2n apar toate cifrele \nde la 0 la 9, o singur ă dată.",
+    "variante": {
+      "a": "19",
+      "b": "24",
+      "c": "30",
+      "d": "15"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "17.  Suma a trei numere naturale consecutive este 20123 .",
+    "variante": {
+      "a": "8",
+      "b": "2",
+      "c": "4",
+      "d": ".  6"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "18. Împărţind  numărul natural abc la 3 se ob ţine câtul  cba şi restul 1.",
+    "variante": {
+      "a": "13",
+      "b": "11",
+      "c": "15",
+      "d": "17"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "2. Suma cifrelor num ărului 2013 20125 211731   este egală cu: \na.",
+    "variante": {
+      "b": "4",
+      "c": "10",
+      "d": ".  6"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "3. Suma numerelor naturale de forma abcare verific ă egalitatea 55baab  este: \na.",
+    "variante": {
+      "b": "110",
+      "c": "160",
+      "d": "96"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "4. Dacă 82x şi 93y, atunci 2 2y xeste:  \na.",
+    "variante": {
+      "b": "13",
+      "c": "25",
+      "d": "17"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "5. Rezultatul calculului 02012 2012: 2012 2012   , este:  \na.",
+    "variante": {
+      "b": "1",
+      "c": "2012",
+      "d": "2013"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "7. Numărul  având suma cifrelor 23, care împ ărţit la 9 dă câtul 96 este: \na.",
+    "variante": {
+      "b": "878",
+      "c": "896",
+      "d": "869"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "8. Dacă 427 3ba  şi 232 3 2cb , atunci c b a 15 162  are valoarea:  \na.",
+    "variante": {
+      "b": "2014",
+      "c": "2013",
+      "d": "2012"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "9. Ultima cifr ă a numărului 2012 4 3 2 1 02 .",
+    "variante": {
+      "a": "6",
+      "b": "2",
+      "c": "8",
+      "d": ".  4"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "10. Dacă x şi y sunt numere naturale şi xy x12, atunci x + y  este egal cu:  \na.",
+    "variante": {
+      "b": "3",
+      "c": "2",
+      "d": "1"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "11.  \nRestul împ ărţirii numărului 5m + 7n  la 6 este egal cu : \na.",
+    "variante": {
+      "b": "3",
+      "c": "1",
+      "d": ".  4"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "12. Numărul 505050 1223334444   se formeaz ă astfel: dup ă numărul 1 se adaug ă numărul 2 de 2 ori, \nnumărul 3 de trei ori şi aşa mai departe pân ă la scrierea num ărului 50 de 50 de ori.",
+    "variante": {
+      "a": "3",
+      "b": "2",
+      "c": "1",
+      "d": ".  0"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "13. Rezultatul calculului  n n n n n n6:6 32 3 21 3  este: \n  a.",
+    "variante": {
+      "b": "12",
+      "c": "8",
+      "d": "11"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "14. Restul ob ţinut prin împ ărţirea numărului 2012 20.",
+    "variante": {
+      "a": "23",
+      "b": "57",
+      "c": "85",
+      "d": "5"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "15. Împărţind  numărul natural abc la 3 se ob ţine câtul  cba şi restul 1.",
+    "variante": {
+      "a": "15",
+      "b": "11",
+      "c": "17",
+      "d": "13"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "16.  Suma a trei numere naturale consecutive este 20123 .",
+    "variante": {
+      "a": "6",
+      "b": "8",
+      "c": "2",
+      "d": ".  4"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "17. Numărul natural n de 5 cifre este prieten cu TOMIS  dacă în scrierea lui n şi a lui 2n apar toate cifrele \nde la 0 la 9, o singur ă dată.",
+    "variante": {
+      "a": "24",
+      "b": "30",
+      "c": "15",
+      "d": ".  19"
+    }
+  },
+  {
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf",
+    "enunt": "18. Câtul împ ărţirii numărului  2012 22 17127   n la 201 este:  \na.",
+    "variante": {
+      "b": "2019",
+      "c": "2011",
+      "d": "2013"
+    }
+  }
+]

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedy-MATE5 - Simulator Matematică Clasa a V-a</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Speedy-MATE5 Logo" class="logo">
+            </div>
+            <h1>Speedy-MATE5</h1>
+            <p class="subtitle">Simulator Matematică Clasa a V-a</p>
+        </header>
+
+        <main class="main-content">
+            <section class="nivel-selection">
+                <h2>Alege Nivelul</h2>
+                <div class="nivel-cards">
+                    <div class="nivel-card" data-nivel="standard">
+                        <div class="card-header">
+                            <h3>Nivel Standard</h3>
+                            <span class="badge">Învățare pe capitole</span>
+                        </div>
+                        <p>Exerciții conforme cu programa școlară</p>
+                        <button class="btn btn-primary">Alege Capitol</button>
+                    </div>
+
+                    <div class="nivel-card" data-nivel="avansat" style="display: none !important;">
+                        <div class="card-header">
+                            <h3>Nivel Avansat</h3>
+                            <span class="badge">10 probleme</span>
+                        </div>
+                        <p>Probleme din concursuri județene și locale</p>
+                        <button class="btn btn-primary">Start Test</button>
+                    </div>
+
+                    <div class="nivel-card" data-nivel="olimpiada" style="display: none !important;">
+                        <div class="card-header">
+                            <h3>Nivel Olimpiadă</h3>
+                            <span class="badge">8 probleme</span>
+                        </div>
+                        <p>Probleme ONM reale din etape locale și naționale</p>
+                        <button class="btn btn-primary">Start Test</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secțiune de selecție capitole pentru nivel standard -->
+            <section class="capitol-selection hidden" id="capitol-selection">
+                <h2>Alege Capitolul</h2>
+                <div class="capitol-cards" id="capitol-cards">
+                    <!-- Capitolele vor fi încărcate dinamic -->
+                </div>
+                <div class="test-options">
+                    <button class="btn btn-secondary" id="back-to-nivel">Înapoi la Niveluri</button>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <h2>Statistici Generale</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Probleme</h3>
+                        <p class="stat-number">1000+</p>
+                        <p>Variante Dinamice</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Competențe Acoperite</h3>
+                        <p class="stat-number">Total</p>
+                        <p>Acoperire Cap. 1</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Niveluri Disponibile</h3>
+                        <p class="stat-number">1</p>
+                        <p>Nivel Standard</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="test-container" class="test-container hidden">
+            <div class="test-header">
+                <div class="test-header-left">
+                    <h2 id="test-title">Test</h2>
+                    <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
+                </div>
+                <div class="test-info">
+                    <span id="progress">Problema 1/10</span>
+                    <span id="timer">00:00</span>
+                </div>
+            </div>
+            
+            <div class="problem-container">
+                <div class="problem-text" id="problem-text">
+                    <!-- Problema va fi încărcată aici -->
+                </div>
+                
+                <div class="answers-container" id="answers-container">
+                    <!-- Variantele de răspuns vor fi încărcate aici -->
+                </div>
+                
+                <div class="navigation">
+                    <button class="btn btn-secondary" id="prev-btn" disabled>Anterior</button>
+                    <button class="btn btn-primary" id="next-btn">Următor</button>
+                    <button class="btn btn-success" id="finish-btn" style="display: none;">Termină Test</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-container" class="results-container hidden">
+            <div class="results-header" id="verdict-container">
+                <h2 id="verdict-title">Rezultate Test</h2>
+                <p id="verdict-message"></p>
+            </div>
+            
+            <div class="score-display" id="score-box">
+                <div class="score-circle">
+                    <span id="score-percentage">0%</span>
+                </div>
+                <p id="score-text">Ai obținut 0 din 10 puncte</p>
+            </div>
+            
+            <div class="results-details" id="results-details">
+                <!-- Detaliile rezultatelor vor fi încărcate aici -->
+            </div>
+            
+            <div class="results-actions">
+                <button class="btn btn-primary" id="new-test">Generează Test Nou</button>
+                <button class="btn btn-secondary" id="back-to-chapters">Înapoi la Capitole</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * SPEEDY-MATE5 - UNIFIED CORE SCRIPT
+         * Conține toată logica aplicației într-un singur loc pentru a preveni erorile de încărcare.
+         */
+
+        // 0. Inițializare globală
+        let currentQuestions = [];
+
+        // 1. DATE EMBED (Ex: DATABASE_NIVEL_STANDARD)
+        const DATABASE_NIVEL_STANDARD = {
+            "metadata": { "nivel": "standard", "clasa": "a V-a", "total_probleme": 10 },
+            "probleme": [] // Capitolul 1 este acum complet dinamic
+        };
+
+        const CAPITOLE_STANDARD = [
+            {
+                "id": "cap_1",
+                "nume": "Capitolul 1: Numere Naturale",
+                "subcompetente": [1.1],
+                "tip_activ": "exercitii",
+                "descriere": "Scrierea, citirea și compararea numerelor naturale",
+                "subiecte": ["Sistemul zecimal", "Comparare", "Rotunjire", "Formare numere"]
+            }
+        ];
+
+        // 2. MOTOR DE GENERARE DINAMICĂ
+        class MotorProbleme {
+            constructor() { this.initializat = true; }
+            randomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+            shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            get TemplatesCap1() {
+                return [
+                    // Template-urile de la Capitolul 1
+                    () => {
+                        const x = this.randomInt(100, 999);
+                        let y; do { y = this.randomInt(100, 999); } while (x === y);
+                        const corect = x > y ? x : y; const incorect = x > y ? y : x;
+                        const variante = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: incorect.toString(), val: 'i' }, { text: this.randomInt(100, 999).toString(), val: 'i' }, { text: this.randomInt(100, 999).toString(), val: 'i' }]);
+                        return { id: `din_comp_${Date.now()}`, enunt: `Care dintre numere este mai mare: <strong>${x}</strong> sau <strong>${y}</strong>?`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `${corect} > ${incorect}` };
+                    },
+                    () => {
+                        const x = this.randomInt(1000, 9999);
+                        const variante = this.shuffle([{ text: (x + 1).toString(), val: 'c' }, { text: (x - 1).toString(), val: 'i' }, { text: (x + 10).toString(), val: 'i' }, { text: (x + 2).toString(), val: 'i' }]);
+                        return { id: `din_succ_${Date.now()}`, enunt: `Succesorul lui <strong>${x}</strong> este:`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `${x} + 1 = ${x + 1}` };
+                    },
+                    () => {
+                        const x = this.randomInt(1000, 9999);
+                        const cifre = x.toString().split('');
+                        const pozitii = ['miilor', 'sutelor', 'zecilor', 'unităților'];
+                        const posIdx = this.randomInt(0, 3);
+                        const corect = cifre[posIdx];
+                        const pool = new Set([corect]); while(pool.size < 4) pool.add(this.randomInt(0, 9).toString());
+                        const vArr = this.shuffle(Array.from(pool).map(v => ({ text: v, val: v === corect ? 'c' : 'i' })));
+                        return { id: `din_pos_${Date.now()}`, enunt: `În <strong>${x}</strong>, cifra <strong>${pozitii[posIdx]}</strong> este:`, variante: { a: vArr[0].text, b: vArr[1].text, c: vArr[2].text, d: vArr[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][vArr.findIndex(v => v.val === 'c')], explicatie: `Poziția ${pozitii[posIdx]} corespunde cifrei ${corect}.` };
+                    },
+                    () => {
+                        const x = this.randomInt(1000, 9000); const rest = x % 100; const corect = rest < 50 ? x - rest : x + (100 - rest);
+                        const variante = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: (corect - 100).toString(), val: 'i' }, { text: (corect + 100).toString(), val: 'i' }, { text: (x - (x % 10)).toString(), val: 'i' }]);
+                        return { id: `din_rot_${Date.now()}`, enunt: `Rotunjiți <strong>${x}</strong> la sute:`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `Cifra zecilor fiind ${Math.floor(rest/10)}, rotunjim la ${corect}.` };
+                    },
+                    () => {
+                        const sute = this.randomInt(1, 9); const zeci = this.randomInt(0, 9); const unitati = this.randomInt(0, 9); const corect = sute * 100 + zeci * 10 + unitati;
+                        const variante = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: `${unitati}${zeci}${sute}`, val: 'i' }, { text: `${sute}0${zeci}${unitati}`, val: 'i' }, { text: `${sute}${zeci}0${unitati}`, val: 'i' }]);
+                        return { id: `din_form_${Date.now()}`, enunt: `Numărul format din <strong>${sute} sute</strong>, <strong>${zeci} zeci</strong> și <strong>${unitati} unități</strong>:`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `${sute}00 + ${zeci}0 + ${unitati} = ${corect}` };
+                    },
+                    () => {
+                        const x = this.randomInt(100, 999); const digits = x.toString().split('').map(Number); const corect = digits.reduce((a, b) => a + b, 0);
+                        const pool = new Set([corect]); while(pool.size < 4) pool.add(this.randomInt(1, 27));
+                        const vArr = this.shuffle(Array.from(pool).map(v => ({ text: v.toString(), val: v === corect ? 'c' : 'i' })));
+                        return { id: `din_sumc_${Date.now()}`, enunt: `Suma cifrelor numărului <strong>${x}</strong> este:`, variante: { a: vArr[0].text, b: vArr[1].text, c: vArr[2].text, d: vArr[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][vArr.findIndex(v => v.val === 'c')], explicatie: `${digits.join(' + ')} = ${corect}` };
+                    },
+                    () => {
+                        const tip = Math.random() > 0.5 ? 'par' : 'impar';
+                        let c, i1, i2, i3;
+                        if (tip === 'par') { c = this.randomInt(50, 500) * 2; i1 = c + 1; i2 = c + 3; i3 = c + 5; }
+                        else { c = this.randomInt(50, 500) * 2 + 1; i1 = c - 1; i2 = c + 1; i3 = c + 3; }
+                        const v = this.shuffle([{ text: c.toString(), val: 'c' }, { text: i1.toString(), val: 'i' }, { text: i2.toString(), val: 'i' }, { text: i3.toString(), val: 'i' }]);
+                        return { id: `din_par_${Date.now()}`, enunt: `Alege numărul <strong>${tip}</strong>:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `Un număr ${tip} se termină cu o cifră corespunzătoare.` };
+                    },
+                    () => {
+                        const x = this.randomInt(100, 9999); const corect = x - 1;
+                        const v = this.shuffle([{ text: (x - 1).toString(), val: 'c' }, { text: (x + 1).toString(), val: 'i' }, { text: (x - 10).toString(), val: 'i' }, { text: (x - 2).toString(), val: 'i' }]);
+                        return { id: `din_pred_${Date.now()}`, enunt: `Predecesorul lui <strong>${x}</strong> este:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `${x} - 1 = ${corect}` };
+                    },
+                    () => {
+                        const cifre = [1, 2, 3, 4, 5, 6, 7, 8, 9]; this.shuffle(cifre); const c1 = cifre[0], c2 = cifre[1], c3 = cifre[2];
+                        const nums = [c1, c2, c3].sort((a, b) => b - a); const corect = nums.join('');
+                        const v = this.shuffle([{ text: corect, val: 'c' }, { text: nums.reverse().join(''), val: 'i' }, { text: '999', val: 'i' }, { text: '100', val: 'i' }]);
+                        return { id: `din_maxc_${Date.now()}`, enunt: `Cel mai mare număr cu cifrele: <strong>${c1}, ${c2}, ${c3}</strong> (o singură dată):`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `Cifrele în ordine descrescătoare: ${nums.sort((a,b)=>b-a).join('')}` };
+                    },
+                    () => {
+                        const a = this.randomInt(1, 9); const b = this.randomInt(0, 9); const c = this.randomInt(0, 9);
+                        const num = a * 100 + b * 10 + c; const corect = `${a}x100 + ${b}x10 + ${c}`;
+                        const v = this.shuffle([{ text: corect, val: 'c' }, { text: `${a}x100 + ${b}x100 + ${c}`, val: 'i' }, { text: `${a} + ${b} + ${c}`, val: 'i' }, { text: `${a}x10 + ${b}x10 + ${c}`, val: 'i' }]);
+                        return { id: `din_desc_${Date.now()}`, enunt: `Descompunerea corectă a lui <strong>${num}</strong>:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `${num} = ${a} sute + ${b} zeci + ${c} unități` };
+                    }
+                ];
+            }
+
+            genereazaTestDinamic() {
+                const pool = [...this.TemplatesCap1]; this.shuffle(pool);
+                const probleme = pool.slice(0, 10).map((f, i) => ({ ...f(), ordine: i + 1 }));
+                return { id_test: 'din_' + Date.now(), probleme: probleme, nivel: 'standard', capitol: 'cap_1' };
+            }
+
+            calculeazaPunctaj(test, raspunsuri) {
+                let punctaj = 0; let detalii = [];
+                test.probleme.forEach((p, i) => {
+                    const rU = raspunsuri[p.id]; const isC = rU === p.raspuns_corect;
+                    detalii.push({ ordine: i+1, corect: isC, raspuns_utilizator: rU, raspuns_corect: p.raspuns_corect, explicatie: p.explicatie });
+                    if (isC) punctaj++;
+                });
+                return { punctaj_total: punctaj, punctaj_maxim: 10, procentaj: punctaj * 10, rezultate_detaliate: detalii };
+            }
+        }
+
+        // 3. APLICAȚIA SPEEDY-MATE5
+        class SpeedyMateApp {
+            constructor() {
+                this.motor = new MotorProbleme();
+                this.testCurent = null;
+                this.raspunsuri = {};
+                this.indexCurent = 0;
+                this.timer = null;
+                this.timpStart = null;
+                this.init();
+            }
+
+            init() {
+                this.adaugaEventListeners();
+                console.log("Speedy-MATE5 (Unified) pornit.");
+            }
+
+            adaugaEventListeners() {
+                document.querySelectorAll('.nivel-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const nivel = card.dataset.nivel;
+                        if (nivel === 'standard') this.arataCapitole();
+                    });
+                });
+                document.getElementById('back-to-nivel').onclick = () => this.ascundeCapitole();
+                
+                // Buton Ieșire în timpul testului
+                document.getElementById('exit-test-btn').onclick = () => {
+                    if (confirm('Ești sigur că vrei să părăsești testul? Progresul va fi pierdut.')) {
+                        this.revenireCapitole();
+                    }
+                };
+
+                document.getElementById('prev-btn').onclick = () => this.navigatie(-1);
+                document.getElementById('next-btn').onclick = () => this.navigatie(1);
+                document.getElementById('finish-btn').onclick = () => this.terminaTest();
+                document.getElementById('new-test').onclick = () => this.testNou();
+                document.getElementById('back-to-chapters').onclick = () => this.revenireCapitole();
+            }
+
+            arataCapitole() {
+                document.querySelector('.nivel-selection').classList.add('hidden');
+                document.getElementById('capitol-selection').classList.remove('hidden');
+                this.incarcaCapitole();
+            }
+
+            ascundeCapitole() {
+                document.getElementById('capitol-selection').classList.add('hidden');
+                document.querySelector('.nivel-selection').classList.remove('hidden');
+            }
+
+            incarcaCapitole() {
+                const container = document.getElementById('capitol-cards');
+                container.innerHTML = '';
+                CAPITOLE_STANDARD.forEach(cap => {
+                    const div = document.createElement('div');
+                    div.className = 'capitol-card';
+                    div.innerHTML = `
+                        <div class="capitol-header"><h3>${cap.nume}</h3><span class="badge">ACTIV</span></div>
+                        <div class="capitol-info"><p>${cap.descriere}</p></div>
+                        <div class="capitol-actions" style="justify-content: center; margin-top: 20px;">
+                            <button class="btn btn-test" onclick="app.pornesteTestDinamica('${cap.id}')">TESTEAZĂ CUNOȘTINȚELE</button>
+                        </div>
+                    `;
+                    container.appendChild(div);
+                });
+            }
+
+            pornesteTestDinamica(capId) {
+                console.log("Pornire test dinamic nou pentru: " + capId);
+                const tD = this.motor.genereazaTestDinamic();
+                this.testCurent = { ...tD, capitol: capId };
+                this.raspunsuri = {};
+                this.indexCurent = 0;
+                this.afiseazaTest();
+                this.startTimer();
+            }
+
+            afiseazaTest() {
+                document.querySelector('.main-content').classList.add('hidden');
+                document.getElementById('capitol-selection').classList.add('hidden'); // Ascundem și capitolele
+                document.getElementById('test-container').classList.remove('hidden');
+                document.getElementById('test-title').textContent = "Test Dinamic - Capitolul 1";
+                this.afiseazaProblema(0);
+            }
+
+            afiseazaProblema(idx) {
+                const p = this.testCurent.probleme[idx];
+                document.getElementById('progress').textContent = `Problema ${idx + 1}/10`;
+                document.getElementById('problem-text').innerHTML = `<h3>Problema ${idx + 1}</h3><p>${p.enunt}</p>`;
+                
+                const container = document.getElementById('answers-container');
+                container.innerHTML = '';
+                ['a', 'b', 'c', 'd'].forEach(lit => {
+                    const opt = document.createElement('div');
+                    opt.className = 'answer-option' + (this.raspunsuri[p.id] === lit ? ' selected' : '');
+                    opt.innerHTML = `<input type="radio" name="ans" value="${lit}" id="ans-${lit}" ${this.raspunsuri[p.id] === lit ? 'checked' : ''}>
+                                     <label for="ans-${lit}"><strong>${lit.toUpperCase()}.</strong> ${p.variante[lit]}</label>`;
+                    opt.onclick = () => {
+                        document.querySelectorAll('.answer-option').forEach(el => el.classList.remove('selected'));
+                        opt.classList.add('selected');
+                        this.raspunsuri[p.id] = lit;
+                    };
+                    container.appendChild(opt);
+                });
+                this.actualizeazaButoane();
+            }
+
+            navigatie(dir) {
+                this.indexCurent += dir;
+                this.afiseazaProblema(this.indexCurent);
+            }
+
+            actualizeazaButoane() {
+                document.getElementById('prev-btn').disabled = (this.indexCurent === 0);
+                const isLast = (this.indexCurent === 9);
+                document.getElementById('next-btn').style.display = isLast ? 'none' : 'block';
+                document.getElementById('finish-btn').style.display = isLast ? 'block' : 'none';
+            }
+
+            terminaTest() {
+                clearInterval(this.timer);
+                const rezultate = this.motor.calculeazaPunctaj(this.testCurent, this.raspunsuri);
+                this.afiseazaRezultate(rezultate);
+            }
+
+            afiseazaRezultate(rez) {
+                document.getElementById('test-container').classList.add('hidden');
+                document.getElementById('results-container').classList.remove('hidden');
+                
+                const msgEl = document.getElementById('verdict-message');
+                const det = document.getElementById('results-details');
+                const scoreBox = document.getElementById('score-box');
+                
+                // Resetăm clasele
+                msgEl.className = '';
+                det.innerHTML = '';
+                
+                if (rez.punctaj_total === 10) {
+                    // FELICITĂRI
+                    msgEl.textContent = "FELICITĂRI! Ai obținut punctaj maxim!";
+                    msgEl.classList.add('verdict-success');
+                    scoreBox.style.display = 'flex';
+                    document.getElementById('score-percentage').textContent = "100%";
+                    document.getElementById('score-text').textContent = "10 din 10 corecte!";
+                    
+                    // Afișăm detaliile doar la succes (sau opțional)
+                    rez.rezultate_detaliate.forEach((r, i) => {
+                        const p = this.testCurent.probleme[i];
+                        const div = document.createElement('div');
+                        div.className = 'result-item neutral';
+                        div.innerHTML = `<h4>Exercițiul ${r.ordine}</h4><p>${p.enunt}</p><div class="explanation-box"><strong>Rezolvare:</strong><br>${r.explicatie}</div>`;
+                        det.appendChild(div);
+                    });
+                } else {
+                    // REIA
+                    msgEl.textContent = "REIA!";
+                    msgEl.classList.add('verdict-retry');
+                    scoreBox.style.display = 'none'; // Ascundem cercul de scor la eșec conform directivei "fără jumătăți de măsură"
+                    
+                    // Nu afișăm explicații lungi dacă nu e perfect
+                    det.innerHTML = `<div style="text-align:center; padding: 20px; font-size: 1.2rem; color: #718096;">
+                                        Trebuie să răspunzi corect la toate cele 10 întrebări pentru a trece capitolul.<br>
+                                        Ai reușit ${rez.punctaj_total} din 10. Mai încearcă o dată!
+                                     </div>`;
+                    
+                    // Schimbăm textul butonului de restart pentru a fi mai proeminent
+                    document.getElementById('new-test').textContent = "ÎNCEARCĂ DIN NOU";
+                }
+            }
+
+            testNou() {
+                // Generăm un test NOU cu numere NOI
+                document.getElementById('results-container').classList.add('hidden');
+                document.getElementById('new-test').textContent = "Generează Test Nou"; // Resetăm textul butonului
+                this.pornesteTestDinamica('cap_1');
+            }
+
+            revizuire() {
+                document.getElementById('results-container').classList.add('hidden');
+                document.getElementById('test-container').classList.remove('hidden');
+                this.indexCurent = 0;
+                this.afiseazaProblema(0);
+            }
+
+            revenireCapitole() {
+                document.getElementById('results-container').classList.add('hidden');
+                document.getElementById('capitol-selection').classList.remove('hidden');
+            }
+
+            startTimer() {
+                this.timpStart = Date.now();
+                this.timer = setInterval(() => {
+                    const s = Math.floor((Date.now() - this.timpStart) / 1000);
+                    const m = Math.floor(s / 60);
+                    document.getElementById('timer').textContent = `${m.toString().padStart(2,'0')}:${(s%60).toString().padStart(2,'0')}`;
+                }, 1000);
+            }
+        }
+
+        // 4. Pornire aplicație
+        let app;
+        window.onload = () => {
+            app = new SpeedyMateApp();
+        };
+    </script>
+</body>
+</html>

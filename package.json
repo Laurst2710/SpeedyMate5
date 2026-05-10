@@ -1,0 +1,45 @@
+{
+  "name": "speedy-mate5",
+  "version": "1.2.0",
+  "description": "Speedy-MATE5 - Simulator Matematică Clasa a V-a",
+  "main": "logic/index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 --directory logic",
+    "dev": "python -m http.server 8000 --directory logic",
+    "build": "node scripts/build.js",
+    "deploy": "node scripts/deploy.js",
+    "version": "node scripts/version.js"
+  },
+  "keywords": [
+    "matematica",
+    "clasa-a-v-a",
+    "simulator",
+    "educatie",
+    "olimpiada"
+  ],
+  "author": "Laurentiu",
+  "license": "MIT",
+  "devDependencies": {
+    "fs-extra": "^11.1.1",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Laurst2710/SpeedyMate5.git"
+  },
+  "homepage": "https://laurst2710.github.io/SpeedyMate5/",
+  "config": {
+    "server": {
+      "port": 8000,
+      "directory": "logic"
+    },
+    "build": {
+      "output": "dist",
+      "standalone": "speedy_mate5_standalone.html"
+    },
+    "version": {
+      "file": "VERSION",
+      "format": "v{major}.{minor}.{patch}"
+    }
+  }
+}

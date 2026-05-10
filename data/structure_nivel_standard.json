@@ -1,0 +1,94 @@
+{
+  "nivel": "standard",
+  "clasa": "a V-a",
+  "disciplina": "Matematică",
+  "competente": [
+    {
+      "id": 1,
+      "titlu": "Identificarea datelor, mărimilor și relațiilor matematice",
+      "subcompetente": [
+        {
+          "id": 1.1,
+          "titlu": "Numere naturale",
+          "subiecte": [
+            "Scrierea și citirea numerelor naturale în sistemul zecimal",
+            "Identificarea numerelor în diagrame, grafice, tabele",
+            "Determinarea numerelor pe baza condițiilor impuse cifrelor",
+            "Metode aritmetice adecvate pentru rezolvarea problemelor"
+          ]
+        },
+        {
+          "id": 1.2,
+          "titlu": "Fracții ordinare și zecimale",
+          "subiecte": [
+            "Reprezentări grafice ale fracțiilor echiunitare, subunitare, supraunitare",
+            "Verificarea echivalenței a două fracții",
+            "Scrierea procentelor ca fracții ordinare",
+            "Identificarea datelor statistice din diagrame"
+          ]
+        },
+        {
+          "id": 1.3,
+          "titlu": "Noțiuni geometrice elementare",
+          "subiecte": [
+            "Observarea figurilor geometrice pe modele fizice/desene",
+            "Descrierea elementelor figurilor și corpurilor geometrice",
+            "Identificarea segmentelor congruente și unghiurilor congruente",
+            "Alegerea unităților de măsură pentru estimări"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titlu": "Prelucrarea datelor matematice",
+      "subcompetente": [
+        {
+          "id": 2.1,
+          "titlu": "Calcule cu numere naturale",
+          "subiecte": [
+            "Efectuarea operațiilor aritmetice cu numere naturale",
+            "Utilizarea factorului comun în calcule",
+            "Efectuarea operațiilor cu puteri",
+            "Reprezentarea datelor pentru aplicarea metodelor aritmetice"
+          ]
+        },
+        {
+          "id": 2.2,
+          "titlu": "Calcule cu fracții",
+          "subiecte": [
+            "Introducerea și scoaterea întregilor din fracții ordinare",
+            "Înmulțirea și împărțirea fracțiilor zecimale cu 10, 100, 1000",
+            "Scrierea fracțiilor zecimale ca produs/cât",
+            "Calcularea fracțiilor echivalente prin amplificare/simplificare"
+          ]
+        },
+        {
+          "id": 2.3,
+          "titlu": "Unelte geometrice",
+          "subiecte": [
+            "Construcția figurilor geometrice cu dimensiuni date",
+            "Măsurarea lungimilor pe modele",
+            "Utilizarea instrumentelor geometrice"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titlu": "Utilizarea conceptelor și algoritmilor specifici",
+      "subcompetente": [
+        {
+          "id": 3.1,
+          "titlu": "Reguli de calcul și divizibilitate",
+          "subiecte": [
+            "Utilizarea regulilor de calcul pentru operații cu numere naturale",
+            "Algoritmul împărțirii cu rest",
+            "Criterii de divizibilitate",
+            "Rezolvarea problemelor using metode specifice"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "app": {
+    "name": "Speedy-MATE5",
+    "version": "1.2.0",
+    "description": "Simulator Matematică Clasa a V-a",
+    "author": "Laurentiu"
+  },
+  "server": {
+    "port": 8000,
+    "host": "127.0.0.1",
+    "directory": "logic"
+  },
+  "build": {
+    "input": "logic/index.html",
+    "output": "dist/",
+    "standalone": "speedy_mate5_standalone.html",
+    "minify": false,
+    "embedAssets": true
+  },
+  "deployment": {
+    "github": {
+      "repository": "Laurst2710/SpeedyMate5",
+      "branch": "main",
+      "pages": true
+    },
+    "netlify": {
+      "siteId": "speedy-mate5",
+      "domain": "speedy-mate5.netlify.app"
+    }
+  },
+  "features": {
+    "levels": ["standard"],
+    "chapters": true,
+    "timer": true,
+    "scoring": true,
+    "export": true
+  },
+  "data": {
+    "standardProblems": 10,
+    "advancedProblems": 10,
+    "olympiadProblems": 8,
+    "lastUpdate": "2026-05-10"
+  }
+}

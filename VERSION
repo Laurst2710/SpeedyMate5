@@ -1,0 +1,7 @@
+v1.2.0
+2026-05-10 - Unificare și Stabilitate
+- Implementare Arhitectură Single-File (logică mutată în index.html)
+- Logo forțat la 120px pentru impact vizual maxim
+- Restaurare buton "TESTEAZĂ CUNOȘTINȚELE" cu logică dinamică locală
+- Eliminare erori de dependență între fișiere JS
+- Focus exclusiv pe Nivel Standard - Capitolul 1

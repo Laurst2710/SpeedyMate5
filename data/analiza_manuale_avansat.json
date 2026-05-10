@@ -1,0 +1,35 @@
+{
+  "total_probleme": 0,
+  "manuale": {
+    "AVANSAT JUDETEAN GRILA grila_clasa_a_5-a.pdf": {
+      "nume": "AVANSAT JUDETEAN GRILA grila_clasa_a_5-a.pdf",
+      "numar_probleme": 0,
+      "tipuri": "set()",
+      "competente": "set()",
+      "exemple": []
+    },
+    "clasa_05.pdf": {
+      "nume": "clasa_05.pdf",
+      "numar_probleme": 0,
+      "tipuri": "set()",
+      "competente": "set()",
+      "exemple": []
+    },
+    "Grigore-Gheba-Culegere-Matematica-Clasele-V-IX.pdf": {
+      "nume": "Grigore-Gheba-Culegere-Matematica-Clasele-V-IX.pdf",
+      "numar_probleme": 0,
+      "tipuri": "set()",
+      "competente": "set()",
+      "exemple": []
+    },
+    "pdfcoffee.com_culegere-matematica-clasa-a-5a-pdf-free.pdf": {
+      "nume": "pdfcoffee.com_culegere-matematica-clasa-a-5a-pdf-free.pdf",
+      "numar_probleme": 0,
+      "tipuri": "set()",
+      "competente": "set()",
+      "exemple": []
+    }
+  },
+  "tipuri_identificate": "set()",
+  "competente_acoperite": "set()"
+}

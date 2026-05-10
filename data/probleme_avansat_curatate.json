@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "ava_001",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Suma ultimelor două cifre ale sumei a 100 numere naturale consecutive este: a) 2 b) 5 c) 0 d)10 2.",
+    "variante": {
+      "a": "109",
+      "b": "23",
+      "c": "101",
+      "d": "105"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_002",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Se consideră numerele naturale nenule a şi b astfel încât 59 3 7≤+b a şi 49 2 6≥+b a .",
+    "variante": {
+      "a": "16",
+      "b": "8",
+      "c": "14",
+      "d": "12"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_003",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Câte numere naturale de două cifre au proprietatea că suma cifrelor este mai mare decât produsul lor?",
+    "variante": {
+      "a": "10",
+      "b": "24",
+      "c": "26",
+      "d": "28"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_004",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma cifrelor numărului A este egală cu: a) 18.",
+    "variante": {
+      "b": "8.115",
+      "c": "7",
+      "d": "8.116"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_005",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Fie mulţimea () { } / 7 a > c A abc abc cba si= −  .",
+    "variante": {
+      "a": "2",
+      "b": "18",
+      "c": "20",
+      "d": "30"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_009",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "La un concurs de matematică participă 400 de elevi, repartiza ţi în mod egal în 20 de săli.",
+    "variante": {
+      "a": "21",
+      "b": "201",
+      "c": "251",
+      "d": "381"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_010",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Câte numere naturale de 5 cifre au produsul cifrelor egal cu 9?",
+    "variante": {
+      "a": "10",
+      "b": "12",
+      "c": "15",
+      "d": "18"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_011",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Dacă numerele naturale nenule edcba ,,,, şi n au proprietatea că ne d c b a⋅⋅⋅⋅=⋅⋅⋅⋅+321 1175 324, atunci suma edcba ++++ este: a) 12 b) 15 c) 11 d) 18 15.",
+    "variante": {
+      "a": "12348",
+      "b": "12168",
+      "c": "12078",
+      "d": "11358"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_012",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Dacă { }Nnnn xNx A ∈+=∈= , 20132 şi { }Nn n n yNy B ∈++=∈= ,1 20132 atunci numărul de elemente din BA∩ este: a) 1 b) 0 c) 2 d) mai mare decât 2013 17.",
+    "variante": {
+      "a": "9",
+      "b": "18",
+      "c": "27",
+      "d": "25"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_014",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Câte numere naturale de două cifre au proprietatea că suma cifrelor este mai mare decât produsul lor?",
+    "variante": {
+      "a": "26",
+      "b": "28",
+      "c": "10",
+      "d": "24"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_015",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Se consideră numerele naturale nenule a şi b astfel încât 59 3 7≤+b a şi 49 2 6≥+b a .",
+    "variante": {
+      "a": "14",
+      "b": "16",
+      "c": "12",
+      "d": "8"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_016",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Fie mulţimea () { } / 7 a > c A abc abc cba si= −  .",
+    "variante": {
+      "a": "30",
+      "b": "2",
+      "c": "18",
+      "d": "20"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_017",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Suma ultimelor două cifre ale sumei a 100 numere naturale consecutive este: a) 5 b) 0 c) 2 d)10 5.",
+    "variante": {
+      "a": "23",
+      "b": "109",
+      "c": "105",
+      "d": "101"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_018",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma cifrelor numărului A este egală cu: a) 8.",
+    "variante": {
+      "b": "7",
+      "c": "18.078",
+      "d": "8.115"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_020",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "La un concurs de matematică participă 400 de elevi, repartiza ţi în mod egal în 20 de săli.",
+    "variante": {
+      "a": "381",
+      "b": "21",
+      "c": "201",
+      "d": "251"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_023",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Dacă numerele naturale nenule edcba ,,,, şi n au proprietatea că ne d c b a⋅⋅⋅⋅=⋅⋅⋅⋅+321 1175 324, atunci suma edcba ++++ este: a) 11 b) 12 c) 18 d) 15 14.",
+    "variante": {
+      "a": "506521",
+      "b": "2025078",
+      "c": "1006"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_024",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma succesorilor numerelor naturale care împărţite la 1000 dau câtul un cub perfect, iar restul egal cu pătratul câtului, este: a) 45317 b) 36798 c) 36797 d) 45318 16.",
+    "variante": {
+      "a": "12168",
+      "b": "11358",
+      "c": "12348",
+      "d": "12078"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_026",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Se consideră numerele naturale nenule a şi b astfel încât 59 3 7≤+b a şi 49 2 6≥+b a .",
+    "variante": {
+      "a": "14",
+      "b": "16",
+      "c": "12",
+      "d": "8"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_027",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Fie mulţimea () { } / 7 a > c A abc abc cba si= −  .",
+    "variante": {
+      "a": "20",
+      "b": "2",
+      "c": "30",
+      "d": "18"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_028",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Suma ultimelor două cifre ale sumei a 100 numere naturale consecutive este: a)10 b) 0 c) 5 d) 2 6.",
+    "variante": {
+      "a": "15",
+      "b": "12",
+      "c": "19",
+      "d": "13"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_029",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Câte numere naturale de două cifre au proprietatea că suma cifrelor este mai mare decât produsul lor?",
+    "variante": {
+      "a": "24",
+      "b": "26",
+      "c": "10",
+      "d": "28"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_030",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Se consideră mulţimea A = { 1; 3; 5; 7; … ; 2011; 2013 }.",
+    "variante": {
+      "a": "2025078",
+      "b": "506521",
+      "c": "1007",
+      "d": "1006"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_031",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Dacă numerele naturale nenule edcba ,,,, şi n au proprietatea că ne d c b a⋅⋅⋅⋅=⋅⋅⋅⋅+321 1175 324, atunci suma edcba ++++ este: a) 11 b) 12 c) 18 d) 15 10.",
+    "variante": {
+      "a": "2",
+      "b": "0",
+      "c": "3",
+      "d": "1"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_035",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Câte numere naturale de 5 cifre au produsul cifrelor egal cu 9?",
+    "variante": {
+      "a": "10",
+      "b": "18",
+      "c": "12",
+      "d": "15"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_036",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "geometrie",
+    "enunt": "Cel mai mic pătrat perfect care poate fi scris ca sumă de 2002 numere naturale consecutive, are suma cifrelor: a) 27 b) 25 c) 18 d) 9 16.",
+    "variante": {
+      "a": "2",
+      "b": "1",
+      "c": "0"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_037",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma succesorilor numerelor naturale care împărţite la 1000 dau câtul un cub perfect, iar restul egal cu pătratul câtului, este: a) 36797 b) 36798 c) 45317 d) 45318 18.",
+    "variante": {
+      "a": "12078",
+      "b": "12348",
+      "c": "11358",
+      "d": "12168"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT JUDETEAN subiecte_clasa_a_5-a.pdf"
+  },
+  {
+    "id": "ava_038",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Rezultatul calculului 02012 2012: 2012 2012   , este: a.",
+    "variante": {
+      "b": "2013",
+      "c": "2011",
+      "d": "1"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_039",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Dacă 8 2x şi 9 3y, atunci 2 2y xeste: a.",
+    "variante": {
+      "b": "25",
+      "c": "18",
+      "d": "17"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_040",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Numărul având suma cifrelor 23, care împ ărţit la 9 dă câtul 96 este: a.",
+    "variante": {
+      "b": "869",
+      "c": "887",
+      "d": "878"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_041",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma numerelor naturale de forma abcare verific ă egalitatea 55baab este: a.",
+    "variante": {
+      "b": "201",
+      "c": "96",
+      "d": "160"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_042",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma cifrelor num ărului 2013 20125 211731  este egală cu: a.",
+    "variante": {
+      "b": "12",
+      "c": "6",
+      "d": "4"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_043",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Rezultatul calculului  n n n n n n6:6 32 3 21 3  este: a.",
+    "variante": {
+      "b": "8",
+      "c": "12",
+      "d": "n3"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_044",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Dacă x şi y sunt numere naturale şi xy x12, atunci x + y este egal cu: a.",
+    "variante": {
+      "b": "2",
+      "c": "3",
+      "d": "4"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_045",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Restul împ ărţirii numărului 5m + 7n la 6 este egal cu : a.",
+    "variante": {
+      "b": "2",
+      "c": "3",
+      "d": "4"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_046",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Ultima cifr ă a numărului 2012 4 3 2 1 02 .",
+    "variante": {
+      "a": "8",
+      "b": "6",
+      "c": "4",
+      "d": "2"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_047",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Restul ob ţinut prin împ ărţirea numărului 2012 20.",
+    "variante": {
+      "a": "85",
+      "b": "5",
+      "c": "23",
+      "d": "57"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_048",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Dacă 427 3ba şi 232 32cb , atunci c b a 15 162 are valoarea: a.",
+    "variante": {
+      "b": "2012",
+      "c": "2013",
+      "d": "2014"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_049",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Numărul 505050 1223334444  se formeaz ă astfel: dup ă numărul 1 se adaug ă numărul 2 de 2 ori, numărul 3 de trei ori şi aşa mai departe pân ă la scrierea num ărului 50 de 50 de ori.",
+    "variante": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_050",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Suma a trei numere naturale consecutive este 20123 .",
+    "variante": {
+      "a": "2",
+      "b": "4",
+      "c": "6",
+      "d": "8"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_051",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Câtul împ ărţirii numărului 2012 22 17127   n la 201 este: a.",
+    "variante": {
+      "b": "2011",
+      "c": "2013",
+      "d": "2019"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_052",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Împărţind numărul natural abc la 3 se ob ţine câtul cba şi restul 1.",
+    "variante": {
+      "a": "11",
+      "b": "13",
+      "c": "15",
+      "d": "17"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_054",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma numerelor naturale de forma abcare verific ă egalitatea 55baab este: a.",
+    "variante": {
+      "b": "96",
+      "c": ". 201",
+      "d": ". 110"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_055",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Rezultatul calculului 02012 2012: 2012 2012   , este: a.",
+    "variante": {
+      "b": "1",
+      "c": "2013",
+      "d": "2012"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_056",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma cifrelor num ărului 2013 20125 211731  este egală cu: a.",
+    "variante": {
+      "b": "10",
+      "c": ". 12",
+      "d": "6"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_057",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Dacă 82x şi 93y, atunci 2 2y xeste: a.",
+    "variante": {
+      "b": "25",
+      "c": "13",
+      "d": "18"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_058",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Numărul având suma cifrelor 23, care împ ărţit la 9 dă câtul 96 este: a.",
+    "variante": {
+      "b": "878",
+      "c": "869",
+      "d": "896"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_059",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Restul ob ţinut prin împ ărţirea numărului 2012 20.",
+    "variante": {
+      "a": "57",
+      "b": "23",
+      "c": "85",
+      "d": ". 5"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_060",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Numărul 505050 1223334444  se formeaz ă astfel: dup ă numărul 1 se adaug ă numărul 2 de 2 ori, numărul 3 de trei ori şi aşa mai departe pân ă la scrierea num ărului 50 de 50 de ori.",
+    "variante": {
+      "a": "1",
+      "b": "3",
+      "c": "0",
+      "d": ". 2"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_061",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Rezultatul calculului  n n n n n n6:6 32 3 21 3  este: a.",
+    "variante": {
+      "b": "11",
+      "c": ". 8",
+      "d": "12"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_062",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Dacă 427 3ba şi 232 32cb , atunci c b a 15 162 are valoarea: a.",
+    "variante": {
+      "b": "2012",
+      "c": "2011",
+      "d": "2013"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_063",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Dacă x şi y sunt numere naturale şi xy x12, atunci x + y este egal cu: a.",
+    "variante": {
+      "b": "4",
+      "c": ". 1",
+      "d": ". 2"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_064",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Ultima cifr ă a numărului 2012 4 3 2 1 02 .",
+    "variante": {
+      "a": "2",
+      "b": "4",
+      "c": "8",
+      "d": ". 6"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_065",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Restul împ ărţirii numărului 5m + 7n la 6 este egal cu : a.",
+    "variante": {
+      "b": "1",
+      "c": "4",
+      "d": ". 3"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_066",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Câtul împ ărţirii numărului 2012 22 17127   n la 201 este: a.",
+    "variante": {
+      "b": "2013",
+      "c": "2007",
+      "d": "2011"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_067",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Numărul natural n de 5 cifre este prieten cu TOMIS dacă în scrierea lui n şi a lui 2n apar toate cifrele de la 0 la 9, o singur ă dată.",
+    "variante": {
+      "a": "19",
+      "b": "24",
+      "c": "30",
+      "d": "15"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_068",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Suma a trei numere naturale consecutive este 20123 .",
+    "variante": {
+      "a": "8",
+      "b": "2",
+      "c": "4",
+      "d": ". 6"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_069",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Împărţind numărul natural abc la 3 se ob ţine câtul cba şi restul 1.",
+    "variante": {
+      "a": "13",
+      "b": "11",
+      "c": "15",
+      "d": "17"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_070",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma cifrelor num ărului 2013 20125 211731  este egală cu: a.",
+    "variante": {
+      "b": "4",
+      "c": "10",
+      "d": ". 6"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_071",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Suma numerelor naturale de forma abcare verific ă egalitatea 55baab este: a.",
+    "variante": {
+      "b": "110",
+      "c": "160",
+      "d": "96"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_072",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Dacă 82x şi 93y, atunci 2 2y xeste: a.",
+    "variante": {
+      "b": "13",
+      "c": "25",
+      "d": "17"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_073",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Rezultatul calculului 02012 2012: 2012 2012   , este: a.",
+    "variante": {
+      "b": "1",
+      "c": "2012",
+      "d": "2013"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_074",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Numărul având suma cifrelor 23, care împ ărţit la 9 dă câtul 96 este: a.",
+    "variante": {
+      "b": "878",
+      "c": "896",
+      "d": "869"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_075",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Dacă 427 3ba şi 232 3 2cb , atunci c b a 15 162 are valoarea: a.",
+    "variante": {
+      "b": "2014",
+      "c": "2013",
+      "d": "2012"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_076",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Ultima cifr ă a numărului 2012 4 3 2 1 02 .",
+    "variante": {
+      "a": "6",
+      "b": "2",
+      "c": "8",
+      "d": ". 4"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_077",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Dacă x şi y sunt numere naturale şi xy x12, atunci x + y este egal cu: a.",
+    "variante": {
+      "b": "3",
+      "c": "2",
+      "d": "1"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_078",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "ecuatii",
+    "enunt": "Restul împ ărţirii numărului 5m + 7n la 6 este egal cu : a.",
+    "variante": {
+      "b": "3",
+      "c": "1",
+      "d": ". 4"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_079",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Numărul 505050 1223334444  se formeaz ă astfel: dup ă numărul 1 se adaug ă numărul 2 de 2 ori, numărul 3 de trei ori şi aşa mai departe pân ă la scrierea num ărului 50 de 50 de ori.",
+    "variante": {
+      "a": "3",
+      "b": "2",
+      "c": "1",
+      "d": ". 0"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_080",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "general",
+    "enunt": "Rezultatul calculului  n n n n n n6:6 32 3 21 3  este: a.",
+    "variante": {
+      "b": "12",
+      "c": "8",
+      "d": "11"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_081",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Restul ob ţinut prin împ ărţirea numărului 2012 20.",
+    "variante": {
+      "a": "23",
+      "b": "57",
+      "c": "85",
+      "d": "5"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_082",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Împărţind numărul natural abc la 3 se ob ţine câtul cba şi restul 1.",
+    "variante": {
+      "a": "15",
+      "b": "11",
+      "c": "17",
+      "d": "13"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_083",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "operatii",
+    "enunt": "Suma a trei numere naturale consecutive este 20123 .",
+    "variante": {
+      "a": "6",
+      "b": "8",
+      "c": "2",
+      "d": ". 4"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "mediu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_084",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Numărul natural n de 5 cifre este prieten cu TOMIS dacă în scrierea lui n şi a lui 2n apar toate cifrele de la 0 la 9, o singur ă dată.",
+    "variante": {
+      "a": "24",
+      "b": "30",
+      "c": "15",
+      "d": ". 19"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "greu",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  },
+  {
+    "id": "ava_085",
+    "competenta": 1,
+    "subcompetenta": 1.1,
+    "subiect": "Probleme avansate",
+    "tip": "numere_naturale",
+    "enunt": "Câtul împ ărţirii numărului 2012 22 17127   n la 201 este: a.",
+    "variante": {
+      "b": "2019",
+      "c": "2011",
+      "d": "2013"
+    },
+    "raspuns_corect": "a",
+    "dificultate": "usor",
+    "explicatie": "Explicație în curs de adăugare",
+    "sursa": "AVANSAT LOCAL variante_tomis_5.pdf"
+  }
+]

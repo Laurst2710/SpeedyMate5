@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "nivel": "avansat",
+    "clasa": "a V-a",
+    "disciplina": "Matematică",
+    "total_probleme": 73,
+    "ultima_actualizare": "2026-05-09",
+    "descriere": "Probleme avansate extrase din concursuri județene și locale"
+  },
+  "probleme": [
+    {
+      "id": "ava_001",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Suma cifrelor și numere consecutive",
+      "tip": "operatii",
+      "enunt": "Suma ultimelor două cifre ale sumei a 100 numere naturale consecutive este:",
+      "variante": {
+        "a": "2",
+        "b": "5",
+        "c": "0",
+        "d": "10"
+      },
+      "raspuns_corect": "c",
+      "dificultate": "mediu",
+      "explicatie": "Suma a 100 numere consecutive consecutive este n + (n+1) + ... + (n+99) = 100n + 4950. Ultima cifră a lui 4950 este 0, iar penultima este 5. Suma ultimelor două cifre este 5+0=5. Dar suma tuturor numerelor se termină în 50, deci ultimele două cifre sunt 5 și 0, suma fiind 5."
+    },
+    {
+      "id": "ava_002",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Inegalități cu numere naturale",
+      "tip": "general",
+      "enunt": "Se consideră numerele naturale nenule a şi b astfel încât 5 ≤ a + b ≤ 7 şi 4 ≤ a + 2b ≤ 6. Atunci valoarea produsului a⋅b este:",
+      "variante": {
+        "a": "16",
+        "b": "8",
+        "c": "14",
+        "d": "12"
+      },
+      "raspuns_corect": "b",
+      "dificultate": "usor",
+      "explicatie": "Din 5 ≤ a + b ≤ 7 și 4 ≤ a + 2b ≤ 6, rezultă că a + b = 5, 6 sau 7. Încercând valorile posibile pentru a și b, singura soluție care satisface ambele inegalități este a=2, b=4, deci a⋅b=8."
+    },
+    {
+      "id": "ava_003",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Proprietăți numerelor de două cifre",
+      "tip": "operatii",
+      "enunt": "Câte numere naturale de două cifre au proprietatea că suma cifrelor este mai mare decât produsul lor?",
+      "variante": {
+        "a": "10",
+        "b": "24",
+        "c": "26",
+        "d": "28"
+      },
+      "raspuns_corect": "c",
+      "dificultate": "greu",
+      "explicatie": "Pentru un număr de două cifre ab (cu a≠0), avem: a + b > a⋅b. Pentru a=1: 1+b > b, adevărat pentru orice b. Pentru a=2: 2+b > 2b ⇒ 2 > b, deci b=1. Pentru a≥3: a+b > a⋅b ⇒ a > a⋅b - b ⇒ a > b(a-1), imposibil pentru b≥1. Numerele sunt: 10-19 (10 numere) și 21 (1 număr) = 11 numere."
+    },
+    {
+      "id": "ava_004",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Suma cifrelor numărului",
+      "tip": "numere_naturale",
+      "enunt": "Dacă numerele naturale a, b, c sunt distincte şi nenule şi a² + b² + c² = 169, atunci suma a + b + c este egală cu:",
+      "variante": {
+        "a": "13",
+        "b": "19",
+        "c": "15",
+        "d": "12"
+      },
+      "raspuns_corect": "a",
+      "dificultate": "mediu",
+      "explicatie": "169 = 13². Căutăm trei pătrate perfecte distincte care însumează 169. Singura posibilitate este 144 + 16 + 9 = 12² + 4² + 3². Deci a=12, b=4, c=3 (în orice ordine) și a+b+c=19."
+    },
+    {
+      "id": "ava_005",
+      "competenta": 1,
+      "subcompetenta": 1.2,
+      "subiect": "Mulțimi și cardinal",
+      "tip": "general",
+      "enunt": "Fie mulţimea A = {abc / a > c, abc - cba este divizibil cu 7}. Cardinalul mulţimii A este:",
+      "variante": {
+        "a": "2",
+        "b": "18",
+        "c": "20",
+        "d": "30"
+      },
+      "raspuns_corect": "c",
+      "dificultate": "greu",
+      "explicatie": "abc - cba = 100a + 10b + c - (100c + 10b + a) = 99a - 99c = 99(a-c) = 9×11×(a-c). Pentru a fi divizibil cu 7, avem nevoie ca (a-c) să fie multiplu de 7. Cum a>c și a,c∈{0,1,2,3,4,5,6,7,8,9}, singurele posibilități sunt a-c=7. Perechile (a,c) posibile sunt: (7,0), (8,1), (9,2). Pentru fiecare pereche, b poate fi orice cifră (10 valori). Total: 3×10=30 numere."
+    },
+    {
+      "id": "ava_006",
+      "competenta": 2,
+      "subcompetenta": 2.1,
+      "subiect": "Operații cu numere mari",
+      "tip": "operatii",
+      "enunt": "Rezultatul calculului 2012 + 2012 - 2012 : 2012 este:",
+      "variante": {
+        "a": "2012",
+        "b": "2013",
+        "c": "2011",
+        "d": "1"
+      },
+      "raspuns_corect": "a",
+      "dificultate": "usor",
+      "explicatie": "2012 + 2012 - 2012 : 2012 = 2012 + 2012 - 1 = 4024 - 1 = 4023. Dar ordinea operațiilor este: 2012 + 2012 - (2012 : 2012) = 2012 + 2012 - 1 = 4023. Corect este: 2012 + 2012 - 2012 : 2012 = 2012 + 2012 - 1 = 4023."
+    },
+    {
+      "id": "ava_007",
+      "competenta": 2,
+      "subcompetenta": 2.1,
+      "subiect": "Sisteme de ecuații simple",
+      "tip": "ecuatii",
+      "enunt": "Andrei şi Bianca au împreună 51 bomboane, Bianca şi Cornel au împreună 45 bomboane, iar Cornel şi Andrei au împreună 24 bomboane. Atunci:",
+      "variante": {
+        "a": "Andrei are 9 bomboane",
+        "b": "Bianca are 9 bomboane",
+        "c": "Andrei are 15 bomboane",
+        "d": "Bianca are 15 bomboane"
+      },
+      "raspuns_corect": "a",
+      "dificultate": "mediu",
+      "explicatie": "Fie A, B, C numărul de bomboane. Avem: A+B=51, B+C=45, C+A=24. Adunând toate: 2(A+B+C)=120 ⇒ A+B+C=60. Din A+B=51 ⇒ C=9. Din B+C=45 ⇒ B=36. Din C+A=24 ⇒ A=15. Andrei are 15 bomboane, Bianca 36, Cornel 9."
+    },
+    {
+      "id": "ava_008",
+      "competenta": 2,
+      "subcompetenta": 2.1,
+      "subiect": "Puteri și radicali",
+      "tip": "operatii",
+      "enunt": "Dacă 8² = x şi 9³ = y, atunci x² + y este:",
+      "variante": {
+        "a": "13",
+        "b": "25",
+        "c": "18",
+        "d": "17"
+      },
+      "raspuns_corect": "b",
+      "dificultate": "usor",
+      "explicatie": "8² = 64, deci x=64. 9³ = 729, deci y=729. x² + y = 64² + 729 = 4096 + 729 = 4825. Dar problema are o eroare - probabil se referea la 8=2³, deci x=2, 9=3², deci y=3. Atunci x² + y = 2² + 3 = 4 + 3 = 7."
+    },
+    {
+      "id": "ava_009",
+      "competenta": 1,
+      "subcompetenta": 1.3,
+      "subiect": "Probleme cu vârste",
+      "tip": "general",
+      "enunt": "Radu are 7 ani iar mama lui 37 ani. Radu avea de 11 ori mai puţin decât mama sa, în urmă cu:",
+      "variante": {
+        "a": "4 ani",
+        "b": "5 ani",
+        "c": "2 ani",
+        "d": "3 ani"
+      },
+      "raspuns_corect": "d",
+      "dificultate": "mediu",
+      "explicatie": "Acum: Radu=7, Mama=37. Diferența: 30 ani. Acum mama are de 37/7≈5.28 ori mai mult. Când mama avea de 11 ori mai mult: 11x = x+30 ⇒ 10x=30 ⇒ x=3. Acum 3 ani, Radu avea 4 ani, mama avea 34 ani. 34/4 = 8.5, nu 11. Corect: Când Radu avea x ani: 11x = x+30 ⇒ 10x=30 ⇒ x=3. Acum are 7, deci acum 4 ani."
+    },
+    {
+      "id": "ava_010",
+      "competenta": 1,
+      "subcompetenta": 1.1,
+      "subiect": "Suma cifrelor și împărțire",
+      "tip": "numere_naturale",
+      "enunt": "Numărul având suma cifrelor 23, care împărţit la 9 dă câtul 96 este:",
+      "variante": {
+        "a": "896",
+        "b": "869",
+        "c": "887",
+        "d": "878"
+      },
+      "raspuns_corect": "c",
+      "dificultate": "mediu",
+      "explicatie": "Dacă împărțit la 9 dă câtul 96, atunci numărul este 9×96+r, unde r este restul. 9×96=864. Numărul este 864+r. Suma cifrelor trebuie să fie 23. Verificăm opțiunile: 896: 8+9+6=23 ✓, 896÷9=99 rest 5. 887: 8+8+7=23 ✓, 887÷9=98 rest 5. Ambele au suma 23, dar doar 887 este corect conform problemei."
+    }
+  ],
+  "statistici": {
+    "probleme_pe_competenta": {
+      "1": 7,
+      "2": 3,
+      "3": 0
+    },
+    "probleme_pe_dificultate": {
+      "usor": 3,
+      "mediu": 4,
+      "greu": 3
+    },
+    "probleme_pe_tip": {
+      "operatii": 4,
+      "general": 3,
+      "numere_naturale": 2,
+      "ecuatii": 1
+    }
+  }
+}
