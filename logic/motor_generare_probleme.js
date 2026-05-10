@@ -52,7 +52,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_comp_${Date.now()}`,
+                    id: `din_comp_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Care dintre următoarele numere este mai mare: <strong>${x}</strong> sau <strong>${y}</strong>?`,
                     variante: {
                         a: variante[0].text,
@@ -77,7 +77,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_succ_${Date.now()}`,
+                    id: `din_succ_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Care este numărul care urmează imediat după <strong>${x}</strong> (succesorul)?`,
                     variante: {
                         a: variante[0].text,
@@ -105,7 +105,7 @@ class MotorProbleme {
                 const varianteArr = this.shuffle(Array.from(variantePool).map(v => ({ text: v, val: v === corect ? 'c' : 'i' })));
 
                 return {
-                    id: `din_pos_${Date.now()}`,
+                    id: `din_pos_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `În numărul <strong>${x}</strong>, care este cifra <strong>${pozitii[posIdx]}</strong>?`,
                     variante: {
                         a: varianteArr[0].text,
@@ -132,7 +132,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_rot_${Date.now()}`,
+                    id: `din_rot_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Rotunjiți numărul <strong>${x}</strong> la cea mai apropiată <strong>sută</strong>:`,
                     variante: {
                         a: variante[0].text,
@@ -160,7 +160,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_form_${Date.now()}`,
+                    id: `din_form_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Ce număr este format din <strong>${sute} sute</strong>, <strong>${zeci} zeci</strong> și <strong>${unitati} unități</strong>?`,
                     variante: {
                         a: variante[0].text,
@@ -186,7 +186,7 @@ class MotorProbleme {
                 const varianteArr = this.shuffle(Array.from(variantePool).map(v => ({ text: v.toString(), val: v === corect ? 'c' : 'i' })));
 
                 return {
-                    id: `din_sumc_${Date.now()}`,
+                    id: `din_sumc_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Care este suma cifrelor numărului <strong>${x}</strong>?`,
                     variante: {
                         a: varianteArr[0].text,
@@ -223,7 +223,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_par_${Date.now()}`,
+                    id: `din_par_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Care dintre următoarele numere este un număr <strong>${tip}</strong>?`,
                     variante: {
                         a: variante[0].text,
@@ -248,7 +248,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_pred_${Date.now()}`,
+                    id: `din_pred_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Care este numărul care se află imediat înaintea lui <strong>${x}</strong> (predecesorul)?`,
                     variante: {
                         a: variante[0].text,
@@ -279,7 +279,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_maxc_${Date.now()}`,
+                    id: `din_maxc_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Care este cel mai mare număr care se poate forma folosind exact o singură dată cifrele: <strong>${c1}, ${c2}, ${c3}</strong>?`,
                     variante: {
                         a: variante[0].text,
@@ -308,7 +308,7 @@ class MotorProbleme {
                 ]);
 
                 return {
-                    id: `din_desc_${Date.now()}`,
+                    id: `din_desc_${Math.random().toString(36).substr(2, 9)}`,
                     enunt: `Care este descompunerea corectă a numărului <strong>${num}</strong> în funcție de puterile lui 10?`,
                     variante: {
                         a: variante[0].text,
@@ -319,19 +319,24 @@ class MotorProbleme {
                     raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')],
                     explicatie: `Numărul ${num} are ${a} sute, ${b} zeci și ${c} unități. Deci: ${a}x100 + ${b}x10 + ${c}.`
                 };
-            }
+            },
         ];
     }
 
     /**
-     * Generează un test de 10 probleme folosind template-uri diferite
+     * Generează un test de 20 probleme folosind template-uri diferite
      */
     genereazaTestDinamic() {
         const templatePool = [...this.TemplatesCap1];
-        this.shuffle(templatePool);
         
-        // Luăm primele 10 template-uri (avem exact 10 acum)
-        const probleme = templatePool.slice(0, 10).map((templateFunc, index) => {
+        // Generăm 20 de probleme apelând pool-ul de două ori (sau până la 20)
+        let problemeBrute = [];
+        for (let i = 0; i < 2; i++) {
+            const amestecate = this.shuffle([...templatePool]);
+            problemeBrute = problemeBrute.concat(amestecate);
+        }
+        
+        const probleme = problemeBrute.slice(0, 20).map((templateFunc, index) => {
             const problema = templateFunc();
             return {
                 ...problema,
@@ -340,7 +345,7 @@ class MotorProbleme {
         });
 
         return {
-            id_test: 'din_test_' + Date.now(),
+            id_test: 'din_test_' + Math.random().toString(36).substr(2, 9),
             data_creare: new Date().toISOString(),
             probleme: probleme,
             nivel: 'standard',

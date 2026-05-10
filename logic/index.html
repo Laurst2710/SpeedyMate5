@@ -1459,7 +1459,7 @@ h2 {
 
             actualizeazaProgresLive() {
                 if (!this.testCurent) return;
-                const total = 20;
+                const total = this.testCurent.exercitii.length;
                 const parcurse = this.indexCurent + 1;
                 const procentParcurs = Math.round((parcurse / total) * 100);
                 
@@ -1501,7 +1501,7 @@ h2 {
                 
                 document.getElementById('prev-btn').disabled = (this.indexCurent === 0);
                 
-                const isLast = (this.indexCurent === 19);
+                const isLast = (this.indexCurent === this.testCurent.exercitii.length - 1);
                 const nextBtn = document.getElementById('next-btn');
                 const finishBtn = document.getElementById('finish-btn');
                 
