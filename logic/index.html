@@ -141,12 +141,43 @@
                 <button class="btn btn-primary" id="new-test">Generează Test Nou</button>
                 <button class="btn btn-secondary" id="back-to-chapters">Înapoi la Capitole</button>
             </div>
+
+            <div id="attempts-history" class="attempts-history" style="margin-top: 20px; text-align: center; color: #4a5568;">
+                <!-- Istoricul încercărilor va apărea aici -->
+            </div>
             
             <div id="explanations-container" class="explanations-container hidden" style="margin-top: 30px;">
                 <h3 style="margin-bottom: 20px; color: #2d3748;">Explicațiile Fratelui Mai Mare 🧑‍🏫</h3>
                 <div id="explanations-list"></div>
             </div>
         </div>
+
+        <!-- Panel Recapitulare Teorie -->
+        <div id="theory-panel" class="theory-panel hidden">
+            <div class="theory-content">
+                <div class="theory-header">
+                    <h2>Sinteza Capitolului 1: Numere Naturale</h2>
+                    <button class="btn btn-secondary btn-sm" onclick="app.inchideTeorie()">ÎNCHIDE</button>
+                </div>
+                <div class="theory-body">
+                    <h3>1. Sistemul de numerație zecimal</h3>
+                    <p>Numerele naturale se scriu folosind zece cifre: <strong>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</strong>.</p>
+                    <p>Sistemul este <strong>pozițional</strong>, adică valoarea unei cifre depinde de poziția sa în număr (unități, zeci, sute, mii etc.).</p>
+                    
+                    <h3>2. Compararea numerelor</h3>
+                    <p>Dintre două numere naturale care au un număr diferit de cifre, este mai mare numărul care are mai multe cifre.</p>
+                    <p>Dacă au același număr de cifre, se compară cifrele de pe aceeași poziție, de la stânga la dreapta.</p>
+                    
+                    <h3>3. Rotunjirea numerelor</h3>
+                    <p>Rotunjirea se face la mii, sute sau zeci prin înlocuirea cifrelor de după ordinul respectiv cu zero. Dacă prima cifră înlocuită este ≥ 5, se mărește cu 1 cifra ordinului la care se face rotunjirea.</p>
+                    
+                    <div class="theory-example">
+                        <strong>Exemplu:</strong> Rotunjirea lui 3467 la sute este 3500 (deoarece cifra zecilor este 6 ≥ 5).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script>
@@ -282,10 +313,10 @@
                 this.motor = new MotorExercitii();
                 this.testCurent = null;
                 this.raspunsuri = {};
-                this.indexCurent = 0;
                 this.timer = null;
                 this.timpStart = null;
                 this.lastWrongAnswers = [];
+                this.incercari = []; // Track attempts: { id: Date.now(), scor: 0 }
                 this.init();
             }
 
@@ -338,7 +369,8 @@
                     div.innerHTML = `
                         <div class="capitol-header"><h3>${cap.nume}</h3><span class="badge">ACTIV</span></div>
                         <div class="capitol-info"><p>${cap.descriere}</p></div>
-                        <div class="capitol-actions" style="justify-content: center; margin-top: 20px;">
+                        <div class="capitol-actions" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 20px;">
+                            <button class="btn btn-info" onclick="app.deschideTeorie()">RECAPITULARE TEORIE</button>
                             <button class="btn btn-test" onclick="app.pornesteTestDinamica('${cap.id}')">TESTEAZĂ CUNOȘTINȚELE</button>
                         </div>
                     `;
@@ -366,7 +398,25 @@
 
             afiseazaExercitiu(idx) {
                 const p = this.testCurent.exercitii[idx];
-                document.getElementById('progress').textContent = `Exercițiul ${idx + 1}/20`;
+                
+                // Calcul statistici live
+                const total = 20;
+                const parcurse = idx + 1;
+                const procentParcurs = Math.round((parcurse / total) * 100);
+                
+                let corecte = 0;
+                this.testCurent.exercitii.slice(0, idx).forEach(wa => {
+                    if (this.raspunsuri[wa.id] === wa.raspuns_corect) corecte++;
+                });
+                const acuratete = idx === 0 ? 0 : Math.round((corecte / idx) * 100);
+
+                document.getElementById('progress').innerHTML = `
+                    <div class="stats-live">
+                        <span>Progres: ${parcurse}/${total} (${procentParcurs}%)</span>
+                        <span class="accuracy-live">Acuratețe: ${corecte}/${idx} (${acuratete}%)</span>
+                    </div>
+                `;
+                
                 document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
                 const container = document.getElementById('answers-container');
@@ -428,28 +478,38 @@
                 const det = document.getElementById('results-details');
                 const scoreBox = document.getElementById('score-box');
                 
+                // Adăugăm încercarea în istoric
+                this.incercari.push({ t: Date.now(), scor: rez.procentaj });
+                
                 // Resetăm UI
                 msgEl.className = '';
                 det.innerHTML = '';
                 document.getElementById('explanations-container').classList.add('hidden');
                 document.getElementById('explanations-list').innerHTML = '';
                 
+                const scoreCircle = document.querySelector('.score-circle');
                 const showExplBtn = document.getElementById('show-explanations-btn');
                 
-                if (rez.wrongAnswers.length > 0) {
-                    showExplBtn.classList.remove('hidden');
-                    // Stocăm greșelile pentru afișare ulterioară
-                    this.lastWrongAnswers = rez.wrongAnswers;
+                // Prag 75% (15/20)
+                const succes = rez.procentaj >= 75;
+                
+                if (succes) {
+                    msgEl.textContent = "FELICITĂRI! Ai deblocat simbolic capitolul următor!";
+                    msgEl.classList.add('verdict-success');
+                    scoreCircle.style.background = 'linear-gradient(135deg, #48bb78 0%, #2f855a 100%)';
                 } else {
-                    showExplBtn.classList.add('hidden');
+                    msgEl.textContent = "REIA! Scorul este sub pragul de 75%.";
+                    msgEl.classList.add('verdict-retry');
+                    scoreCircle.style.background = 'linear-gradient(135deg, #f56565 0%, #c53030 100%)';
                 }
 
-                if (rez.punctaj_total === 20) {
-                    msgEl.textContent = "FELICITĂRI! Ai obținut punctaj maxim!";
-                    msgEl.classList.add('verdict-success');
+                if (rez.wrongAnswers.length > 0) {
+                    showExplBtn.classList.remove('hidden');
+                    this.lastWrongAnswers = rez.wrongAnswers;
+                    // Auto-afișare explicații conform directivei
+                    this.toggleExplicații(true);
                 } else {
-                    msgEl.textContent = "REIA!";
-                    msgEl.classList.add('verdict-retry');
+                    showExplBtn.classList.add('hidden');
                 }
 
                 // Întotdeauna afișăm scorul
@@ -457,18 +517,22 @@
                 document.getElementById('score-percentage').textContent = `${rez.procentaj}%`;
                 document.getElementById('score-text').textContent = `${rez.punctaj_total} din 20 corecte!`;
                 
-                if (rez.punctaj_total < 20) {
+                // Afișăm istoricul
+                const historyEl = document.getElementById('attempts-history');
+                historyEl.innerHTML = `<strong>Istoric:</strong> ` + this.incercari.map((inc, i) => `Încercarea ${i+1}: ${inc.scor}%`).join(' | ');
+
+                if (!succes) {
                     document.getElementById('new-test').textContent = "ÎNCEARCĂ DIN NOU";
                 } else {
                     document.getElementById('new-test').textContent = "Generează Test Nou";
                 }
             }
 
-            toggleExplicații() {
+            toggleExplicații(forceShow = false) {
                 const container = document.getElementById('explanations-container');
                 const list = document.getElementById('explanations-list');
                 
-                if (!container.classList.contains('hidden')) {
+                if (container.classList.contains('hidden') === false && !forceShow) {
                     container.classList.add('hidden');
                     return;
                 }
@@ -496,7 +560,17 @@
                 });
                 
                 container.classList.remove('hidden');
-                container.scrollIntoView({ behavior: 'smooth' });
+                if (forceShow) container.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            deschideTeorie() {
+                document.getElementById('theory-panel').classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Stop scroll
+            }
+
+            inchideTeorie() {
+                document.getElementById('theory-panel').classList.add('hidden');
+                document.body.style.overflow = 'auto';
             }
 
             testNou() {
