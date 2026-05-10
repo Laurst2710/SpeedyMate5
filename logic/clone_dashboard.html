@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Repository - SpeedyMATE5 Mirror</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        .terminal-box {
+            background: #1e1e1e;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            border-radius: 10px;
+            height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #333;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            color: #00ff00;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .mirror-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mirror-icon {
+            font-size: 2rem;
+        }
+
+        .mirror-details h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .mirror-details p {
+            margin: 5px 0 0;
+            opacity: 0.7;
+            font-size: 0.8rem;
+        }
+
+        .action-btn {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Înapoi la Simulator</a>
+        
+        <div class="glass-panel fade-in">
+            <div class="status-badge">
+                <span class="loading"></span>
+                SISTEM MIRROR ACTIV
+            </div>
+            
+            <h1>Clone Repository</h1>
+            <p class="subtitle">Gestionarea sincronizării proiectului pe GitHub</p>
+            
+            <div class="mirror-card">
+                <div class="mirror-icon">📦</div>
+                <div class="mirror-details">
+                    <h4>SpeedyMate5</h4>
+                    <p id="repo-url">https://github.com/Laurst2710/SpeedyMate5</p>
+                </div>
+                <div style="margin-left: auto;">
+                    <button class="action-btn" id="sync-btn">
+                        <span>🔄</span> SINCRONIZEAZĂ ACUM
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Status Sincronizare</h3>
+                    <div class="stat-number" style="color: #00ff00;">OK</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Ultima Actualizare</h3>
+                    <div class="stat-number" style="font-size: 1.2rem;" id="last-sync">Astăzi, 22:46</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Fișiere Excluse</h3>
+                    <div class="stat-number">1</div>
+                </div>
+            </div>
+
+            <h3>Consolă Git (Live)</h3>
+            <div class="terminal-box" id="terminal">
+                [SYSTEM] Inițializare modul Mirror...<br>
+                [SYSTEM] Verificare conexiune GitHub...<br>
+                [SYSTEM] Gata pentru sincronizare.<br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sync-btn').addEventListener('click', function() {
+            const term = document.getElementById('terminal');
+            const btn = this;
+            
+            btn.disabled = true;
+            term.innerHTML += `<br>[GIT] Executare: git add .`;
+            
+            setTimeout(() => {
+                term.innerHTML += `<br>[GIT] Executare: git commit -m "Auto-sync from Dashboard"`;
+                term.scrollTo(0, term.scrollHeight);
+            }, 1000);
+
+            setTimeout(() => {
+                term.innerHTML += `<br>[GIT] Executare: git push origin main`;
+                term.scrollTo(0, term.scrollHeight);
+            }, 2500);
+
+            setTimeout(() => {
+                term.innerHTML += `<br><span style="color: #00ff00;">[SUCCESS] Sincronizare finalizată cu succes!</span>`;
+                term.scrollTo(0, term.scrollHeight);
+                btn.disabled = false;
+                document.getElementById('last-sync').innerText = 'Chiar acum';
+            }, 4500);
+        });
+    </script>
+</body>
+</html>

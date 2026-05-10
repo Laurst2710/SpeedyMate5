@@ -355,31 +355,76 @@ h2 {
     margin-bottom: 30px;
 }
 
-.answer-option {
+.answer-label {
     background: white;
     border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 15px 20px;
+    border-radius: 12px;
+    padding: 18px 24px;
     margin-bottom: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
+    width: 100%;
+    user-select: none;
+    position: relative;
 }
 
-.answer-option:hover {
+.answer-label:hover {
     border-color: #667eea;
-    background: #f7fafc;
+    background: #f8faff;
+    transform: translateX(5px);
 }
 
-.answer-option.selected {
+.answer-label.selected {
     border-color: #667eea;
     background: #ebf4ff;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
 }
 
-.answer-option input[type="radio"] {
-    margin-right: 15px;
-    transform: scale(1.2);
+.radio-hidden {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-radio {
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: 2px solid #cbd5e0;
+    border-radius: 50%;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.answer-label:hover .custom-radio {
+    border-color: #667eea;
+}
+
+.radio-hidden:checked + .custom-radio {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+.radio-hidden:checked + .custom-radio::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+.answer-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2d3748;
 }
 
 .navigation {
