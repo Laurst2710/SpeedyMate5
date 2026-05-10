@@ -1,3 +1,34 @@
+# Dependențe
+node_modules/
+
+# Build și output
+dist/
+build/
+temp/
+out/
+
+# Log-uri și erori
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configurații AI (Antigravity/Gemini)
+.gemini/
+.antigravity/
+
+# Fișiere de sistem (Windows/Mac)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Securitate
+.env
+*.pem
+*.key
+
+# Date specifice (fișierele mari menționate de tine)
+DateRawClasa5/Avansat/pdfcoffee.com_culegere-matematica-clasa-a-5a-pdf-free.pdf
 node_modules/
 .DS_Store
 *.log
