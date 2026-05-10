@@ -137,8 +137,14 @@
             </div>
             
             <div class="results-actions">
+                <button class="btn btn-info hidden" id="show-explanations-btn">Vezi explicațiile fratelui mai mare</button>
                 <button class="btn btn-primary" id="new-test">Generează Test Nou</button>
                 <button class="btn btn-secondary" id="back-to-chapters">Înapoi la Capitole</button>
+            </div>
+            
+            <div id="explanations-container" class="explanations-container hidden" style="margin-top: 30px;">
+                <h3 style="margin-bottom: 20px; color: #2d3748;">Explicațiile Fratelui Mai Mare 🧑‍🏫</h3>
+                <div id="explanations-list"></div>
             </div>
         </div>
     </div>
@@ -259,13 +265,14 @@
             }
 
             calculeazaPunctaj(test, raspunsuri) {
-                let punctaj = 0; let detalii = [];
+                let punctaj = 0; let detalii = []; let wrongAnswers = [];
                 test.exercitii.forEach((p, i) => {
                     const rU = raspunsuri[p.id]; const isC = rU === p.raspuns_corect;
                     detalii.push({ ordine: i+1, corect: isC, raspuns_utilizator: rU, raspuns_corect: p.raspuns_corect, explicatie: p.explicatie });
                     if (isC) punctaj++;
+                    else wrongAnswers.push({ ...p, raspuns_utilizator: rU, ordine: i+1 });
                 });
-                return { punctaj_total: punctaj, punctaj_maxim: 20, procentaj: Math.round((punctaj / 20) * 100), rezultate_detaliate: detalii };
+                return { punctaj_total: punctaj, punctaj_maxim: 20, procentaj: Math.round((punctaj / 20) * 100), rezultate_detaliate: detalii, wrongAnswers: wrongAnswers };
             }
         }
 
@@ -278,6 +285,7 @@
                 this.indexCurent = 0;
                 this.timer = null;
                 this.timpStart = null;
+                this.lastWrongAnswers = [];
                 this.init();
             }
 
@@ -307,6 +315,7 @@
                 document.getElementById('finish-btn').onclick = () => this.terminaTest();
                 document.getElementById('new-test').onclick = () => this.testNou();
                 document.getElementById('back-to-chapters').onclick = () => this.revenireCapitole();
+                document.getElementById('show-explanations-btn').onclick = () => this.toggleExplicații();
             }
 
             arataCapitole() {
@@ -419,41 +428,75 @@
                 const det = document.getElementById('results-details');
                 const scoreBox = document.getElementById('score-box');
                 
-                // Resetăm clasele
+                // Resetăm UI
                 msgEl.className = '';
                 det.innerHTML = '';
+                document.getElementById('explanations-container').classList.add('hidden');
+                document.getElementById('explanations-list').innerHTML = '';
                 
+                const showExplBtn = document.getElementById('show-explanations-btn');
+                
+                if (rez.wrongAnswers.length > 0) {
+                    showExplBtn.classList.remove('hidden');
+                    // Stocăm greșelile pentru afișare ulterioară
+                    this.lastWrongAnswers = rez.wrongAnswers;
+                } else {
+                    showExplBtn.classList.add('hidden');
+                }
+
                 if (rez.punctaj_total === 20) {
-                    // FELICITĂRI
                     msgEl.textContent = "FELICITĂRI! Ai obținut punctaj maxim!";
                     msgEl.classList.add('verdict-success');
-                    scoreBox.style.display = 'flex';
-                    document.getElementById('score-percentage').textContent = "100%";
-                    document.getElementById('score-text').textContent = "20 din 20 corecte!";
-                    
-                    // Afișăm detaliile doar la succes (sau opțional)
-                    rez.rezultate_detaliate.forEach((r, i) => {
-                        const p = this.testCurent.exercitii[i];
-                        const div = document.createElement('div');
-                        div.className = 'result-item neutral';
-                        div.innerHTML = `<h4>Exercițiul ${r.ordine}</h4><p>${p.enunt}</p><div class="explanation-box"><strong>Rezolvare:</strong><br>${r.explicatie}</div>`;
-                        det.appendChild(div);
-                    });
                 } else {
-                    // REIA
                     msgEl.textContent = "REIA!";
                     msgEl.classList.add('verdict-retry');
-                    scoreBox.style.display = 'none'; // Ascundem cercul de scor la eșec conform directivei "fără jumătăți de măsură"
-                    
-                    // Nu afișăm explicații lungi dacă nu e perfect
-                    det.innerHTML = `<div style="text-align:center; padding: 20px; font-size: 1.2rem; color: #718096;">
-                                        Trebuie să răspunzi corect la toate cele 20 de exerciții pentru a trece capitolul.<br>
-                                        Ai reușit ${rez.punctaj_total} din 20. Mai încearcă o dată!
-                                     </div>`;
-                    
-                    // Schimbăm textul butonului de restart pentru a fi mai proeminent
-                    document.getElementById('new-test').textContent = "ÎNCEARCĂ DIN NOU";
                 }
+
+                // Întotdeauna afișăm scorul
+                scoreBox.style.display = 'flex';
+                document.getElementById('score-percentage').textContent = `${rez.procentaj}%`;
+                document.getElementById('score-text').textContent = `${rez.punctaj_total} din 20 corecte!`;
+                
+                if (rez.punctaj_total < 20) {
+                    document.getElementById('new-test').textContent = "ÎNCEARCĂ DIN NOU";
+                } else {
+                    document.getElementById('new-test').textContent = "Generează Test Nou";
+                }
+            }
+
+            toggleExplicații() {
+                const container = document.getElementById('explanations-container');
+                const list = document.getElementById('explanations-list');
+                
+                if (!container.classList.contains('hidden')) {
+                    container.classList.add('hidden');
+                    return;
+                }
+                
+                list.innerHTML = '';
+                this.lastWrongAnswers.forEach(wa => {
+                    const div = document.createElement('div');
+                    div.className = 'explanation-card';
+                    div.innerHTML = `
+                        <div class="explanation-card-header">
+                            <h4>Exercițiul ${wa.ordine}</h4>
+                            <span class="wrong-badge">Incorect</span>
+                        </div>
+                        <p class="enunt-mini">${wa.enunt}</p>
+                        <div class="feedback-box">
+                            <p><strong>Răspunsul tău:</strong> ${wa.variante[wa.raspuns_utilizator] || 'Niciunul'}</p>
+                            <p><strong>Răspuns corect:</strong> ${wa.variante[wa.raspuns_corect]}</p>
+                        </div>
+                        <div class="mentor-box">
+                            <strong>💡 Sfatul Fratelui Mai Mare:</strong><br>
+                            ${wa.explicatie}
+                        </div>
+                    `;
+                    list.appendChild(div);
+                });
+                
+                container.classList.remove('hidden');
+                container.scrollIntoView({ behavior: 'smooth' });
             }
 
             testNou() {
