@@ -180,18 +180,17 @@
                 </div>
                 <div class="theory-body">
                     <h3>1. Sistemul de numerație zecimal</h3>
-                    <p>Numerele naturale se scriu folosind zece cifre: <strong>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</strong>.</p>
-                    <p>Sistemul este <strong>pozițional</strong>, adică valoarea unei cifre depinde de poziția sa în număr (unități, zeci, sute, mii etc.).</p>
+                    <p>Sistemul de numerație utilizat în mod curent este <strong>zecimal</strong> și <strong>pozițional</strong>. Acesta folosește zece simboluri numite <em>cifre</em>: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.</p>
+                    <p><strong>Definiție:</strong> Valoarea unei cifre este determinată de poziția sa în scrierea numărului. Zece unități de un anumit ordin formează o unitate de ordin imediat superior (ex: 10 unități = 1 zece, 10 zeci = 1 sută).</p>
                     
-                    <h3>2. Compararea numerelor</h3>
-                    <p>Dintre două numere naturale care au un număr diferit de cifre, este mai mare numărul care are mai multe cifre.</p>
-                    <p>Dacă au același număr de cifre, se compară cifrele de pe aceeași poziție, de la stânga la dreapta.</p>
+                    <h3>2. Compararea și ordonarea numerelor</h3>
+                    <p><strong>Proprietate:</strong> Dintre două numere naturale cu număr diferit de cifre, este mai mare cel care are mai multe cifre. Dacă numerele au același număr de cifre, se compară cifrele de același ordin, începând de la stânga (ordinul cel mai mare).</p>
                     
-                    <h3>3. Rotunjirea numerelor</h3>
-                    <p>Rotunjirea se face la mii, sute sau zeci prin înlocuirea cifrelor de după ordinul respectiv cu zero. Dacă prima cifră înlocuită este ≥ 5, se mărește cu 1 cifra ordinului la care se face rotunjirea.</p>
+                    <h3>3. Sisteme de numerație non-zecimale (Extindere)</h3>
+                    <p>Deși sistemul zecimal este standard, există și alte baze de numerație (ex: baza 2 - binar). În orice bază <em>b</em>, cifrele utilizate sunt de la 0 la <em>b-1</em>.</p>
                     
                     <div class="theory-example">
-                        <strong>Exemplu:</strong> Rotunjirea lui 3467 la sute este 3500 (deoarece cifra zecilor este 6 ≥ 5).
+                        <strong>Exemplu de logică:</strong> Suma cifrelor unui număr <em>abc</em> în baza 10 este a+b+c. Valoarea numărului este 100a + 10b + c.
                     </div>
                 </div>
             </div>
@@ -239,18 +238,17 @@
 
             get TemplatesCap1() {
                 return [
-                    // Template-urile de la Capitolul 1
                     () => {
                         const x = this.randomInt(100, 999);
                         let y; do { y = this.randomInt(100, 999); } while (x === y);
                         const corect = x > y ? x : y; const incorect = x > y ? y : x;
-                        const variante = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: incorect.toString(), val: 'i' }, { text: this.randomInt(100, 999).toString(), val: 'i' }, { text: this.randomInt(100, 999).toString(), val: 'i' }]);
-                        return { id: `din_comp_${Date.now()}`, enunt: `Care dintre numere este mai mare: <strong>${x}</strong> sau <strong>${y}</strong>?`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `${corect} > ${incorect}` };
+                        const v = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: incorect.toString(), val: 'i' }, { text: this.randomInt(100, 999).toString(), val: 'i' }, { text: this.randomInt(100, 999).toString(), val: 'i' }]);
+                        return { id: `din_comp_${Date.now()}`, enunt: `Care dintre numere este mai mare: <strong>${x}</strong> sau <strong>${y}</strong>?`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(v => v.val === 'c')], explicatie: `${corect} > ${incorect}` };
                     },
                     () => {
                         const x = this.randomInt(1000, 9999);
-                        const variante = this.shuffle([{ text: (x + 1).toString(), val: 'c' }, { text: (x - 1).toString(), val: 'i' }, { text: (x + 10).toString(), val: 'i' }, { text: (x + 2).toString(), val: 'i' }]);
-                        return { id: `din_succ_${Date.now()}`, enunt: `Succesorul lui <strong>${x}</strong> este:`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `${x} + 1 = ${x + 1}` };
+                        const v = this.shuffle([{ text: (x + 1).toString(), val: 'c' }, { text: (x - 1).toString(), val: 'i' }, { text: (x + 10).toString(), val: 'i' }, { text: (x + 2).toString(), val: 'i' }]);
+                        return { id: `din_succ_${Date.now()}`, enunt: `Succesorul lui <strong>${x}</strong> este:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(v => v.val === 'c')], explicatie: `${x} + 1 = ${x + 1}` };
                     },
                     () => {
                         const x = this.randomInt(1000, 9999);
@@ -259,58 +257,57 @@
                         const posIdx = this.randomInt(0, 3);
                         const corect = cifre[posIdx];
                         const pool = new Set([corect]); while(pool.size < 4) pool.add(this.randomInt(0, 9).toString());
-                        const vArr = this.shuffle(Array.from(pool).map(v => ({ text: v, val: v === corect ? 'c' : 'i' })));
-                        return { id: `din_pos_${Date.now()}`, enunt: `În <strong>${x}</strong>, cifra <strong>${pozitii[posIdx]}</strong> este:`, variante: { a: vArr[0].text, b: vArr[1].text, c: vArr[2].text, d: vArr[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][vArr.findIndex(v => v.val === 'c')], explicatie: `Poziția ${pozitii[posIdx]} corespunde cifrei ${corect}.` };
+                        const v = this.shuffle(Array.from(pool).map(v => ({ text: v, val: v === corect ? 'c' : 'i' })));
+                        return { id: `din_pos_${Date.now()}`, enunt: `În <strong>${x}</strong>, cifra <strong>${pozitii[posIdx]}</strong> este:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(v => v.val === 'c')], explicatie: `Poziția ${pozitii[posIdx]} corespunde cifrei ${corect}.` };
                     },
                     () => {
                         const x = this.randomInt(1000, 9000); const rest = x % 100; const corect = rest < 50 ? x - rest : x + (100 - rest);
-                        const variante = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: (corect - 100).toString(), val: 'i' }, { text: (corect + 100).toString(), val: 'i' }, { text: (x - (x % 10)).toString(), val: 'i' }]);
-                        return { id: `din_rot_${Date.now()}`, enunt: `Rotunjiți <strong>${x}</strong> la sute:`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `Cifra zecilor fiind ${Math.floor(rest/10)}, rotunjim la ${corect}.` };
+                        const v = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: (corect - 100).toString(), val: 'i' }, { text: (corect + 100).toString(), val: 'i' }, { text: (x - (x % 10)).toString(), val: 'i' }]);
+                        return { id: `din_rot_${Date.now()}`, enunt: `Rotunjiți <strong>${x}</strong> la sute:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(v => v.val === 'c')], explicatie: `Cifra zecilor fiind ${Math.floor(rest/10)}, rotunjim la ${corect}.` };
+                    }
+                ];
+            }
+
+            get TemplatesComplex() {
+                return [
+                    () => {
+                        const b = this.randomInt(2, 9);
+                        return {
+                            id: `complex_base_${Date.now()}`,
+                            enunt: `În sistemul de numerație cu baza <strong>${b}</strong>, care este cea mai mare cifră care poate fi utilizată?`,
+                            variante: { a: `${b}`, b: `${b-1}`, c: `${b+1}`, d: '10' },
+                            raspuns_corect: 'b',
+                            explicatie: `Într-o bază b, cifrele sunt {0, 1, ..., b-1}. Deci cea mai mare cifră este ${b-1}.`
+                        };
                     },
                     () => {
-                        const sute = this.randomInt(1, 9); const zeci = this.randomInt(0, 9); const unitati = this.randomInt(0, 9); const corect = sute * 100 + zeci * 10 + unitati;
-                        const variante = this.shuffle([{ text: corect.toString(), val: 'c' }, { text: `${unitati}${zeci}${sute}`, val: 'i' }, { text: `${sute}0${zeci}${unitati}`, val: 'i' }, { text: `${sute}${zeci}0${unitati}`, val: 'i' }]);
-                        return { id: `din_form_${Date.now()}`, enunt: `Numărul format din <strong>${sute} sute</strong>, <strong>${zeci} zeci</strong> și <strong>${unitati} unități</strong>:`, variante: { a: variante[0].text, b: variante[1].text, c: variante[2].text, d: variante[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][variante.findIndex(v => v.val === 'c')], explicatie: `${sute}00 + ${zeci}0 + ${unitati} = ${corect}` };
+                        return {
+                            id: `complex_logic_${Date.now()}`,
+                            enunt: `Câte numere naturale de 3 cifre au suma cifrelor egală cu 2?`,
+                            variante: { a: '2', b: '3', c: '4', d: '1' },
+                            raspuns_corect: 'b',
+                            explicatie: `Numerele sunt: 101, 110 și 200. În total 3 numere.`
+                        };
                     },
                     () => {
-                        const x = this.randomInt(100, 999); const digits = x.toString().split('').map(Number); const corect = digits.reduce((a, b) => a + b, 0);
-                        const pool = new Set([corect]); while(pool.size < 4) pool.add(this.randomInt(1, 27));
-                        const vArr = this.shuffle(Array.from(pool).map(v => ({ text: v.toString(), val: v === corect ? 'c' : 'i' })));
-                        return { id: `din_sumc_${Date.now()}`, enunt: `Suma cifrelor numărului <strong>${x}</strong> este:`, variante: { a: vArr[0].text, b: vArr[1].text, c: vArr[2].text, d: vArr[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][vArr.findIndex(v => v.val === 'c')], explicatie: `${digits.join(' + ')} = ${corect}` };
-                    },
-                    () => {
-                        const tip = Math.random() > 0.5 ? 'par' : 'impar';
-                        let c, i1, i2, i3;
-                        if (tip === 'par') { c = this.randomInt(50, 500) * 2; i1 = c + 1; i2 = c + 3; i3 = c + 5; }
-                        else { c = this.randomInt(50, 500) * 2 + 1; i1 = c - 1; i2 = c + 1; i3 = c + 3; }
-                        const v = this.shuffle([{ text: c.toString(), val: 'c' }, { text: i1.toString(), val: 'i' }, { text: i2.toString(), val: 'i' }, { text: i3.toString(), val: 'i' }]);
-                        return { id: `din_par_${Date.now()}`, enunt: `Alege numărul <strong>${tip}</strong>:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `Un număr ${tip} se termină cu o cifră corespunzătoare.` };
-                    },
-                    () => {
-                        const x = this.randomInt(100, 9999); const corect = x - 1;
-                        const v = this.shuffle([{ text: (x - 1).toString(), val: 'c' }, { text: (x + 1).toString(), val: 'i' }, { text: (x - 10).toString(), val: 'i' }, { text: (x - 2).toString(), val: 'i' }]);
-                        return { id: `din_pred_${Date.now()}`, enunt: `Predecesorul lui <strong>${x}</strong> este:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `${x} - 1 = ${corect}` };
-                    },
-                    () => {
-                        const cifre = [1, 2, 3, 4, 5, 6, 7, 8, 9]; this.shuffle(cifre); const c1 = cifre[0], c2 = cifre[1], c3 = cifre[2];
-                        const nums = [c1, c2, c3].sort((a, b) => b - a); const corect = nums.join('');
-                        const v = this.shuffle([{ text: corect, val: 'c' }, { text: nums.reverse().join(''), val: 'i' }, { text: '999', val: 'i' }, { text: '100', val: 'i' }]);
-                        return { id: `din_maxc_${Date.now()}`, enunt: `Cel mai mare număr cu cifrele: <strong>${c1}, ${c2}, ${c3}</strong> (o singură dată):`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `Cifrele în ordine descrescătoare: ${nums.sort((a,b)=>b-a).join('')}` };
-                    },
-                    () => {
-                        const a = this.randomInt(1, 9); const b = this.randomInt(0, 9); const c = this.randomInt(0, 9);
-                        const num = a * 100 + b * 10 + c; const corect = `${a}x100 + ${b}x10 + ${c}`;
-                        const v = this.shuffle([{ text: corect, val: 'c' }, { text: `${a}x100 + ${b}x100 + ${c}`, val: 'i' }, { text: `${a} + ${b} + ${c}`, val: 'i' }, { text: `${a}x10 + ${b}x10 + ${c}`, val: 'i' }]);
-                        return { id: `din_desc_${Date.now()}`, enunt: `Descompunerea corectă a lui <strong>${num}</strong>:`, variante: { a: v[0].text, b: v[1].text, c: v[2].text, d: v[3].text }, raspuns_corect: ['a', 'b', 'c', 'd'][v.findIndex(el => el.val === 'c')], explicatie: `${num} = ${a} sute + ${b} zeci + ${c} unități` };
+                        const n = this.randomInt(2, 5);
+                        return {
+                            id: `complex_pow_${Date.now()}`,
+                            enunt: `Valoarea lui <strong>2<sup>${n}</sup> + 1</strong> este:`,
+                            variante: { a: `${Math.pow(2, n) + 1}`, b: `${Math.pow(2, n)}`, c: `${2 * n + 1}`, d: `${Math.pow(2, n) - 1}` },
+                            raspuns_corect: 'a',
+                            explicatie: `2<sup>${n}</sup> = ${Math.pow(2, n)}. ${Math.pow(2, n)} + 1 = ${Math.pow(2, n) + 1}.`
+                        };
                     }
                 ];
             }
 
             genereazaTestDinamic() {
-                const pool = [...this.TemplatesCap1]; 
-                const expandedPool = [...pool, ...pool]; 
-                this.shuffle(expandedPool);
-                const exercitii = expandedPool.slice(0, 20).map((f, i) => ({ ...f(), id: `${f().id}_${i}`, ordine: i + 1 }));
+                const pool = [...this.TemplatesCap1, ...this.TemplatesComplex]; 
+                this.shuffle(pool);
+                const expanded = []; while(expanded.length < 20) expanded.push(...pool);
+                this.shuffle(expanded);
+                const exercitii = expanded.slice(0, 20).map((f, i) => ({ ...f(), ordine: i + 1 }));
                 return { id_test: 'din_' + Date.now(), exercitii: exercitii, nivel: 'standard', capitol: 'cap_1' };
             }
 
@@ -521,11 +518,13 @@
                 if (succes) {
                     msgEl.textContent = "FELICITĂRI! Ai deblocat simbolic capitolul următor!";
                     msgEl.classList.add('verdict-success');
-                    donutSegment.style.stroke = '#48bb78'; // Verde
+                    donutSegment.style.stroke = '#00ff88'; // Neon Green
+                    document.body.classList.remove('failure-bg');
                 } else {
                     msgEl.textContent = "REIA! Scorul este sub pragul de 75%.";
                     msgEl.classList.add('verdict-retry');
-                    donutSegment.style.stroke = '#f56565'; // Roșu
+                    donutSegment.style.stroke = '#ff0055'; // Neon Red
+                    document.body.classList.add('failure-bg');
                 }
 
                 // Animare Donut Chart
