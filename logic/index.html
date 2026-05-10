@@ -97,6 +97,7 @@
                     <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
                 </div>
                 <div class="test-info">
+                    <button class="btn btn-info btn-sm" id="quick-help-btn" style="margin-right: 15px; background: rgba(0, 242, 255, 0.2); border: 1px solid var(--primary-blue);">Quick Help 💡</button>
                     <span id="timer">00:00</span>
                 </div>
             </div>
@@ -179,19 +180,60 @@
                     <button class="btn btn-secondary btn-sm" onclick="app.inchideTeorie()">ÎNCHIDE</button>
                 </div>
                 <div class="theory-body">
-                    <h3>1. Sistemul de numerație zecimal</h3>
-                    <p>Sistemul de numerație utilizat în mod curent este <strong>zecimal</strong> și <strong>pozițional</strong>. Acesta folosește zece simboluri numite <em>cifre</em>: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.</p>
-                    <p><strong>Definiție:</strong> Valoarea unei cifre este determinată de poziția sa în scrierea numărului. Zece unități de un anumit ordin formează o unitate de ordin imediat superior (ex: 10 unități = 1 zece, 10 zeci = 1 sută).</p>
-                    
-                    <h3>2. Compararea și ordonarea numerelor</h3>
-                    <p><strong>Proprietate:</strong> Dintre două numere naturale cu număr diferit de cifre, este mai mare cel care are mai multe cifre. Dacă numerele au același număr de cifre, se compară cifrele de același ordin, începând de la stânga (ordinul cel mai mare).</p>
-                    
-                    <h3>3. Sisteme de numerație non-zecimale (Extindere)</h3>
-                    <p>Deși sistemul zecimal este standard, există și alte baze de numerație (ex: baza 2 - binar). În orice bază <em>b</em>, cifrele utilizate sunt de la 0 la <em>b-1</em>.</p>
-                    
-                    <div class="theory-example">
-                        <strong>Exemplu de logică:</strong> Suma cifrelor unui număr <em>abc</em> în baza 10 este a+b+c. Valoarea numărului este 100a + 10b + c.
-                    </div>
+                    <section class="theory-section">
+                        <h3>I. Adunarea Numerelor Naturale</h3>
+                        <div class="formula-box">
+                            <p><strong>Proprietăți:</strong></p>
+                            <ul>
+                                <li>Comutativitate: a + b = b + a</li>
+                                <li>Asociativitate: a + (b + c) = (a + b) + c</li>
+                                <li>Element neutru: 0 (a + 0 = 0 + a = a)</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="theory-section">
+                        <h3>II. Scăderea Numerelor Naturale</h3>
+                        <p><strong>Definiție:</strong> Diferența dintre a și b (a ≥ b) este numărul c, unde a = b + c.</p>
+                        <p><em>Termeni:</em> a - descăzut, b - scăzător, c - diferență.</p>
+                    </section>
+
+                    <section class="theory-section">
+                        <h3>III. Înmulțirea Numerelor Naturale</h3>
+                        <div class="formula-box">
+                            <ul>
+                                <li>Comutativitate, Asociativitate.</li>
+                                <li>Element neutru: 1 (a * 1 = a).</li>
+                                <li>Distributivitate față de adunare/scădere: a * (b ± c) = a * b ± a * c</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="theory-section">
+                        <h3>IV. Împărțirea Numerelor Naturale</h3>
+                        <div class="highlight-box">
+                            <strong>Teorema împărțirii cu rest:</strong> D = Î * C + R, unde 0 ≤ R < Î
+                        </div>
+                        <p class="warning-text">⚠️ Împărțirea la zero este imposibilă!</p>
+                    </section>
+
+                    <section class="theory-section">
+                        <h3>V. Puterea unui Număr Natural</h3>
+                        <div class="formula-box">
+                            <p><strong>Formula:</strong> a<sup>n</sup> = a * a * ... * a (de n ori)</p>
+                            <p><strong>Cazuri speciale:</strong> a<sup>0</sup> = 1 (a ≠ 0), 0<sup>n</sup> = 0, 1<sup>n</sup> = 1</p>
+                        </div>
+                    </section>
+
+                    <section class="theory-section">
+                        <h3>VI. Ordinea Efectuării Operațiilor</h3>
+                        <ol>
+                            <li><strong>Puteri</strong></li>
+                            <li><strong>Înmulțiri și Împărțiri</strong></li>
+                            <li><strong>Adunări și Scăderi</strong></li>
+                        </ol>
+                        <p><em>Obs:</em> Se lucrează de la stânga la dreapta pentru operații de același ordin.</p>
+                    </section>
                 </div>
             </div>
         </div>
@@ -363,6 +405,7 @@
                 document.getElementById('new-test').onclick = () => this.testNou();
                 document.getElementById('back-to-chapters').onclick = () => this.revenireCapitole();
                 document.getElementById('show-explanations-btn').onclick = () => this.toggleExplicații();
+                document.getElementById('quick-help-btn').onclick = () => this.deschideTeorie();
             }
 
             arataCapitole() {

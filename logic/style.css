@@ -793,6 +793,38 @@ h2 {
     margin-bottom: 15px;
 }
 
+.theory-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.formula-box {
+    background: #f7fafc;
+    border-left: 4px solid var(--primary-blue);
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.highlight-box {
+    background: #ebf8ff;
+    border: 1px solid var(--primary-blue);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #2c5282;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 242, 255, 0.1);
+}
+
+.warning-text {
+    color: var(--neon-red);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
 .theory-example {
     background: #fffaf0;
     border-left: 4px solid #ed8936;
