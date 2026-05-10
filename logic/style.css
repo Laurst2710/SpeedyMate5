@@ -755,7 +755,7 @@ h2 {
 }
 
 .theory-content {
-    background: white;
+    background: #1e2633; /* Dark Navy */
     width: 90%;
     max-width: 800px;
     max-height: 90vh;
@@ -763,14 +763,15 @@ h2 {
     padding: 30px;
     overflow-y: auto;
     position: relative;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--primary-blue);
+    box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
 }
 
 .theory-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #edf2f7;
+    border-bottom: 2px solid rgba(0, 242, 255, 0.2);
     margin-bottom: 20px;
     padding-bottom: 15px;
 }
@@ -778,11 +779,12 @@ h2 {
 .theory-header h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #2d3748;
+    color: var(--primary-blue);
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
 }
 
 .theory-body h3 {
-    color: #4a5568;
+    color: var(--primary-blue);
     margin: 20px 0 10px;
     font-size: 1.2rem;
 }
@@ -800,22 +802,33 @@ h2 {
 }
 
 .formula-box {
-    background: #f7fafc;
+    background: rgba(255, 255, 255, 0.05); /* Darker, semi-transparent background */
     border-left: 4px solid var(--primary-blue);
     padding: 15px;
     border-radius: 4px;
     margin: 10px 0;
+    color: #e2e8f0; /* Light text on dark background */
 }
 
 .highlight-box {
-    background: #ebf8ff;
+    background: rgba(0, 242, 255, 0.1); /* Neon tint background */
     border: 1px solid var(--primary-blue);
     padding: 15px;
     border-radius: 8px;
     font-size: 1.1rem;
-    color: #2c5282;
+    color: var(--primary-blue); /* Neon text */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 242, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.theory-section h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.3);
+}
+
+.theory-body p, .theory-body li {
+    color: #cbd5e0; /* Subtle light gray for readability */
 }
 
 .warning-text {
@@ -826,12 +839,13 @@ h2 {
 }
 
 .theory-example {
-    background: #fffaf0;
-    border-left: 4px solid #ed8936;
+    background: rgba(251, 255, 0, 0.05); /* Very subtle yellow tint */
+    border-left: 4px solid var(--neon-yellow);
     padding: 15px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 4px;
     margin: 20px 0;
-    color: #744210;
+    font-style: italic;
+    color: var(--neon-yellow);
 }
 
 .attempts-history {
