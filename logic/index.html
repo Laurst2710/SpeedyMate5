@@ -111,10 +111,6 @@
                     <div class="accuracy-bar-wrap">
                         <div class="accuracy-bar-fill" id="progress-bar-qual"></div>
                     </div>
-                    <div class="progress-labels">
-                        <span id="progress-text-label">Progres: 0/20</span>
-                        <span id="accuracy-text-label">Acuratețe: 0%</span>
-                    </div>
                 </div>
 
                 <div class="exercise-text" id="exercise-text">
@@ -576,10 +572,12 @@
                 const qualBar = document.getElementById('progress-bar-qual');
                 qualBar.style.width = `${acuratete}%`;
                 
-                // Culoare dinamică acuratețe
-                if (acuratete >= 75) qualBar.style.backgroundColor = '#48bb78'; // Verde
-                else if (acuratete >= 50) qualBar.style.backgroundColor = '#ecc94b'; // Galben
-                else qualBar.style.backgroundColor = '#f56565'; // Roșu
+                // Culoare dinamică acuratețe (Neon)
+                if (acuratete >= 75) qualBar.style.backgroundColor = '#00ff88'; // Neon Green
+                else if (acuratete >= 50) qualBar.style.backgroundColor = '#faff00'; // Neon Yellow
+                else qualBar.style.backgroundColor = '#ff0055'; // Neon Red
+                
+                qualBar.style.boxShadow = `0 0 15px ${qualBar.style.backgroundColor}`;
                 
                 document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
