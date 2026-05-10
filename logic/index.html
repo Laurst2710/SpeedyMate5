@@ -4,7 +4,848 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speedy-MATE5 - Simulator Matematică Clasa a V-a</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+:root {
+    --primary-blue: #00f2ff;
+    --neon-green: #00ff88;
+    --neon-red: #ff0055;
+    --neon-yellow: #fbff00;
+    --dark-bg: #1a202c;
+    --card-bg: #2d3748;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--dark-bg);
+    color: white;
+    margin: 0;
+    line-height: 1.6;
+    transition: background-color 0.5s ease;
+    min-height: 100vh;
+}
+
+body.failure-bg {
+    background-color: #742a2a !important; /* Deep Red for Failure */
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 160px !important;
+    width: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.logo:hover {
+    transform: scale(1.05) !important;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+/* Section Headers */
+h2 {
+    color: #4a5568;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 8px;
+}
+
+/* Nivel Selection */
+.nivel-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.nivel-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.nivel-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.nivel-card[data-nivel="olimpiada"] {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    border: 2px solid #3498db;
+    color: white;
+}
+
+.nivel-card[data-nivel="olimpiada"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+    border-color: #2980b9;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+}
+
+.nivel-card[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #a0a0a0 0%, #808080 100%);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.badge {
+    background: rgba(255,255,255,0.3);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #48bb78;
+    color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #38a169;
+}
+
+.btn-success {
+    background: #38a169;
+    color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+    background: #2f855a;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    height: auto;
+    min-width: auto;
+}
+
+.btn-test {
+    background: #44337a; /* Dark purple */
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.btn-test:hover:not(:disabled) {
+    background: #322659;
+    transform: scale(1.02);
+}
+
+.btn-disabled {
+    background: #a0a0a0;
+    color: white;
+    cursor: not-allowed;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Capitol Selection */
+.capitol-selection {
+    margin-bottom: 40px;
+}
+
+.capitol-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.capitol-card {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.capitol-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.capitol-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.capitol-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.capitol-info {
+    margin-bottom: 15px;
+}
+
+.capitol-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.capitol-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.test-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Admin Section */
+.admin-controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Test Container */
+.test-container {
+    background: #1e2633; /* Dark Navy compatible with Theory Panel */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 242, 255, 0.1);
+}
+
+.test-header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.test-info {
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.exercise-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.exercise-text {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-left: 4px solid var(--primary-blue);
+    color: white;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.answers-container {
+    margin-bottom: 30px;
+}
+
+.answer-label {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+    position: relative;
+    color: #cbd5e0;
+}
+
+.answer-label:hover {
+    border-color: var(--primary-blue);
+    background: rgba(0, 242, 255, 0.05);
+    transform: translateX(5px);
+    color: white;
+}
+
+.answer-label.selected {
+    border-color: var(--primary-blue);
+    background: rgba(0, 242, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+    color: var(--primary-blue);
+}
+
+.radio-hidden {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-radio {
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: 2px solid #cbd5e0;
+    border-radius: 50%;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.answer-label:hover .custom-radio {
+    border-color: var(--primary-blue);
+}
+
+.radio-hidden:checked + .custom-radio {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.radio-hidden:checked + .custom-radio::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+.answer-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: inherit; /* Inherits from label */
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid rgba(0, 242, 255, 0.1);
+}
+
+/* Results Container */
+.results-container {
+    background: #1e2633;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    border: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.results-header {
+    margin-bottom: 30px;
+}
+
+.score-display {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut-chart-container {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+.donut-chart {
+    transform: rotate(-90deg);
+}
+
+.donut-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #00f2ff;
+    text-shadow: 0 0 10px #00f2ff;
+}
+
+/* Progress & Accuracy Bars */
+.progress-bars-container {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+    margin-bottom: 5px;
+}
+
+.progress-bar-wrap, .accuracy-bar-wrap {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar-wrap { height: 10px; }
+.accuracy-bar-wrap { height: 5px; }
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-blue), #00d2ff);
+    width: 0%;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 0 25px var(--primary-blue), 0 0 45px var(--primary-blue);
+}
+
+.accuracy-bar-fill {
+    height: 100%;
+    background: var(--neon-green);
+    width: 0%;
+    transition: width 0.6s ease-out, background-color 0.4s ease;
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+.score-text {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.results-details {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.05); /* Dark theme compatible */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid #48bb78;
+    color: white; /* Ensure visibility on dark container */
+    text-align: left;
+}
+
+.result-item.incorrect {
+    border-left-color: #f56565;
+}
+
+.result-item.neutral {
+    border-left-color: #667eea;
+}
+
+.explanation-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #ebf4ff;
+    border-radius: 6px;
+    border: 1px solid #667eea;
+}
+
+.verdict-success {
+    color: #2f855a;
+    background: #f0fff4;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    border: 2px solid #2f855a;
+    margin: 15px 0;
+}
+
+.verdict-retry {
+    color: #975a16;
+    background: #fffaf0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    border: 2px solid #ed8936;
+    margin: 15px 0;
+}
+
+.results-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .nivel-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-controls {
+        flex-direction: column;
+    }
+    
+    .test-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .results-actions {
+        flex-direction: column;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading Spinner */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Review System Styles */
+.btn-info {
+    background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%);
+    color: white;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #38b2ac 0%, #2c7a7b 100%);
+    box-shadow: 0 4px 14px 0 rgba(56, 178, 172, 0.39);
+}
+
+.explanation-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    color: #2d3748 !important; /* Force dark text on white background */
+    text-align: left;
+}
+
+.explanation-card:hover {
+    transform: translateY(-2px);
+}
+
+.explanation-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 10px;
+}
+
+.explanation-card-header h4 {
+    margin: 0;
+    color: #1a202c;
+}
+
+.wrong-badge {
+    background: #fff5f5;
+    color: #c53030;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #feb2b2;
+}
+
+.enunt-mini {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.feedback-box {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+}
+
+.feedback-box p {
+    margin: 5px 0;
+}
+
+.mentor-box {
+    background: #ebf8ff;
+    border-left: 4px solid #4299e1;
+    padding: 15px;
+    border-radius: 0 10px 10px 0;
+    color: #2b6cb0;
+    line-height: 1.6;
+}
+
+/* Theory Panel Styles */
+.theory-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.theory-content {
+    background: #1e2633; /* Dark Navy */
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid var(--primary-blue);
+    box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
+}
+
+.theory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 242, 255, 0.2);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.theory-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.theory-body h3 {
+    color: var(--primary-blue);
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+}
+
+.theory-body p {
+    color: #cbd5e0; /* Fixed for dark theme */
+    line-height: 1.6;
+}
+
+.theory-section {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 15px;
+}
+
+.formula-box {
+    background: rgba(0, 242, 255, 0.05);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.highlight-box {
+    background: rgba(0, 255, 136, 0.05);
+    border-left: 4px solid var(--neon-green);
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.theory-example {
+    color: var(--neon-yellow);
+    font-weight: bold;
+    margin-top: 10px;
+}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -103,8 +944,12 @@
             </div>
             
             <div class="exercise-container">
-                <!-- Bare de progres grafice -->
+                <!-- Bare de progres grafice și text -->
                 <div class="progress-bars-container">
+                    <div class="progress-labels">
+                        <span>PROGRES: <span id="progress-val">0%</span></span>
+                        <span>ACURATEȚE: <span id="accuracy-val">0%</span></span>
+                    </div>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar-fill" id="progress-bar-quant"></div>
                     </div>
@@ -158,8 +1003,8 @@
                 <!-- Istoricul încercărilor va apărea aici -->
             </div>
             
-            <div id="explanations-container" class="explanations-container hidden" style="margin-top: 30px;">
-                <h3 style="margin-bottom: 20px; color: #2d3748;">Explicațiile Fratelui Mai Mare 🧑‍🏫</h3>
+            <div id="explanations-container" class="explanations-container hidden" style="margin-top: 30px; text-align: left;">
+                <h3 style="margin-bottom: 20px; color: var(--primary-blue); text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);">Explicațiile Fratelui Mai Mare 🧑‍🏫</h3>
                 <div id="explanations-list"></div>
             </div>
         </div>
@@ -291,102 +1136,109 @@
     <script>
         /**
          * SPEEDY-MATE5 - UNIFIED CORE SCRIPT
-         * Conține toată logica aplicației într-un singur loc pentru a preveni erorile de încărcare.
          */
-
-        // 0. Inițializare globală
-        let currentQuestions = [];
-
-        // 1. DATABASE STANDARD (Extracted from PDF)
         const DATABASE_STANDARD = [
             {
                 capitol: "Sistem Zecimal",
                 exercitii: [
-                    { enunt: "Predecesorul numărului 1.111 este:", variante: { a: "1.112", b: "1.110", c: "1.100", d: "1.000" }, raspuns_corect: "b", explicatie: "Predecesorul este numărul cu 1 mai mic: 1111 - 1 = 1110." },
-                    { enunt: "Succesorul numărului 1.001 este:", variante: { a: "1.000", b: "1.002", c: "1.010", d: "2.001" }, raspuns_corect: "b", explicatie: "Succesorul este numărul cu 1 mai mare: 1001 + 1 = 1002." },
-                    { enunt: "Cel mai mare număr natural de două cifre distincte este:", variante: { a: "99", b: "98", c: "89", d: "97" }, raspuns_corect: "b", explicatie: "Numărul 99 are cifre identice. Cel mai mare cu cifre distincte este 98." },
+                    { enunt: "Predecesorul numărului 1.111 este:", variante: { a: "1.112", b: "1.110", c: "1.100", d: "1.000" }, raspuns_corect: "b", explicatie: "Predecesorul este numărul cu 1 mai mic." },
+                    { enunt: "Succesorul numărului 1.001 este:", variante: { a: "1.000", b: "1.002", c: "1.010", d: "2.001" }, raspuns_corect: "b", explicatie: "Succesorul este numărul cu 1 mai mare." },
+                    { enunt: "Cel mai mare număr natural de două cifre distincte este:", variante: { a: "99", b: "98", c: "89", d: "97" }, raspuns_corect: "b", explicatie: "99 are cifre identice, deci 98 este cel mai mare cu cifre distincte." },
                     { enunt: "Câte cifre are numărul „un milion o sută mii”?", variante: { a: "6", b: "7", c: "8", d: "5" }, raspuns_corect: "b", explicatie: "1.100.000 are 7 cifre." },
-                    { enunt: "Rezultatul calculului 25.781 - 25.780 este:", variante: { a: "0", b: "1", c: "10", d: "2" }, raspuns_corect: "b", explicatie: "Diferența dintre două numere consecutive este întotdeauna 1." },
-                    { enunt: "Câte numere naturale sunt în șirul 1, 2, 3, ..., 128?", variante: { a: "128", b: "130", c: "129", d: "127" }, raspuns_corect: "a", explicatie: "Șirul numerelor de la 1 la n are exact n termeni." },
-                    { enunt: "Comparați distanțele: 1.977 km (București–Hamburg) și 1.888 km (București–Moscova).", variante: { a: "1.977 < 1.888", b: "1.977 = 1.888", c: "1.977 > 1.888", d: "N/A" }, raspuns_corect: "c", explicatie: "Comparăm cifrele sutelor: 9 > 8, deci 1.977 > 1.888." },
-                    { enunt: "Rotunjirea numărului 1.888 la sute este:", variante: { a: "1.800", b: "1.900", c: "2.000", d: "1.890" }, raspuns_corect: "b", explicatie: "Cifra zecilor este 8 (≥ 5), deci rotunjim prin adaos la 1.900." },
-                    { enunt: "Care este numărul al cărui predecesor este cel mai mic nr. de 4 cifre distincte?", variante: { a: "1.023", b: "1.024", c: "1.022", d: "1.234" }, raspuns_corect: "b", explicatie: "Cel mai mic nr. de 4 cifre distincte este 1023. Numărul căutat este succesorul său: 1024." },
-                    { enunt: "Istanbul are 14.382.423 loc., iar Rio are 14.387.000 loc. Care oraș are populația mai mică?", variante: { a: "Istanbul", b: "Rio", c: "Egale", d: "N/A" }, raspuns_corect: "a", explicatie: "14.382.423 < 14.387.000 (comparăm cifrele miilor: 2 < 7)." }
+                    { enunt: "Rezultatul calculului 25.781 - 25.780 este:", variante: { a: "0", b: "1", c: "10", d: "2" }, raspuns_corect: "b", explicatie: "Diferența dintre numere consecutive este 1." },
+                    { enunt: "Câte numere naturale sunt în șirul 1, 2, 3, ..., 129?", variante: { a: "128", b: "130", c: "129", d: "127" }, raspuns_corect: "c", explicatie: "Șirul de la 1 la n are n termeni." },
+                    { enunt: "Distanța București – Hamburg este 1.977 km, iar București – Moscova este 1.895 km. Care afirmație este corectă?", variante: { a: "1.977 < 1.895", b: "1.977 = 1.895", c: "1.977 > 1.895", d: "Moscova e mai departe" }, raspuns_corect: "c", explicatie: "1.977 > 1.895." },
+                    { enunt: "Rotunjirea numărului 1.895 la sute este:", variante: { a: "1.800", b: "1.900", c: "2.000", d: "1.890" }, raspuns_corect: "b", explicatie: "Cifra zecilor este 9, deci rotunjim prin adaos." },
+                    { enunt: "Numărul al cărui predecesor este cel mai mic număr natural de 4 cifre distincte este:", variante: { a: "1.023", b: "1.024", c: "1.000", d: "1.234" }, raspuns_corect: "b", explicatie: "Cel mai mic nr de 4 cifre distincte este 1023. Succesorul lui este 1024." },
+                    { enunt: "Populația Istanbulului este 14.350.423, iar a orașului Rio de Janeiro este 14.387.000. Orașul cu populația mai mică este:", variante: { a: "Istanbul", b: "Rio de Janeiro", c: "Sunt egale", d: "N/A" }, raspuns_corect: "a", explicatie: "14.350.423 < 14.387.000." },
+                    { enunt: "Succesorul celui mai mare număr de trei cifre este:", variante: { a: "999", b: "1.000", c: "1.001", d: "998" }, raspuns_corect: "b", explicatie: "999 + 1 = 1.000." },
+                    { enunt: "Pe axa numerelor, numărul 5 se află la dreapta numărului:", variante: { a: "6", b: "7", c: "4", d: "10" }, raspuns_corect: "c", explicatie: "5 este mai mare decât 4." },
+                    { enunt: "Aproximarea prin lipsă la mii a numărului 15.500.000 este:", variante: { a: "16.000.000", b: "15.000.000", c: "15.500.000", d: "15.100.000" }, raspuns_corect: "b", explicatie: "Lipsa înseamnă că păstrăm cifra miilor și restul devin 0." },
+                    { enunt: "Diferența dintre cel mai mic număr de 3 cifre și cel mai mare număr de 2 cifre este:", variante: { a: "1", b: "10", c: "11", d: "0" }, raspuns_corect: "a", explicatie: "100 - 99 = 1." },
+                    { enunt: "Numărul de termeni ai șirului 73, 74, ..., 293 este:", variante: { a: "220", b: "221", c: "222", d: "219" }, raspuns_corect: "b", explicatie: "293 - 73 + 1 = 221." }
                 ]
             },
             {
                 capitol: "Operații I",
                 exercitii: [
-                    { enunt: "Calculați suma: 1.234 + 8.765.", variante: { a: "9.000", b: "10.000", c: "9.990", d: "9.999" }, raspuns_corect: "d", explicatie: "1.234 + 8.765 = 9.999." },
-                    { enunt: "Calculați diferența: 10.000 - 1.", variante: { a: "9.000", b: "9.900", c: "9.999", d: "10.001" }, raspuns_corect: "c", explicatie: "Diferența este predecesorul lui 10.000, adică 9.999." },
-                    { enunt: "Rezultatul adunării 658 + 0 este:", variante: { a: "0", b: "6.580", c: "658", d: "1" }, raspuns_corect: "c", explicatie: "0 este element neutru la adunare." },
-                    { enunt: "Dacă a - 15 = 40, atunci valoarea lui a este:", variante: { a: "25", b: "55", c: "40", d: "60" }, raspuns_corect: "b", explicatie: "a = 40 + 15 = 55." },
-                    { enunt: "Rezultatul scăderii 15 - 20 în mulțimea numerelor naturale este:", variante: { a: "5", b: "Nu este posibilă", c: "-5", d: "0" }, raspuns_corect: "b", explicatie: "În N, scăderea a - b este posibilă doar dacă a ≥ b." },
-                    { enunt: "Suma a trei numere naturale consecutive, cel mai mic fiind 10, este:", variante: { a: "33", b: "30", c: "36", d: "31" }, raspuns_corect: "a", explicatie: "10 + 11 + 12 = 33." },
-                    { enunt: "1.977 + 1.888 = ?", variante: { a: "3.865", b: "3.765", c: "3.875", d: "3.965" }, raspuns_corect: "a", explicatie: "1.977 + 1.888 = 3.865." },
-                    { enunt: "O carte are 128 pagini. Dacă s-au citit 97 pagini, câte au rămas?", variante: { a: "30", b: "21", c: "31", d: "29" }, raspuns_corect: "c", explicatie: "128 - 97 = 31." },
-                    { enunt: "(125 + 75) - (50 + 50) = ?", variante: { a: "50", b: "100", c: "150", d: "200" }, raspuns_corect: "b", explicatie: "200 - 100 = 100." },
-                    { enunt: "Proprietatea a + b = b + a se numește:", variante: { a: "Asociativitate", b: "Comutativitate", c: "Element neutru", d: "Distributivitate" }, raspuns_corect: "b", explicatie: "Comutativitatea permite schimbarea ordinii termenilor." }
+                    { enunt: "Suma numerelor 1.234 și 8.766 este:", variante: { a: "9.000", b: "10.000", c: "11.000", d: "9.999" }, raspuns_corect: "b", explicatie: "1.234 + 8.766 = 10.000." },
+                    { enunt: "Diferența dintre 10.000 și 1 este:", variante: { a: "9.000", b: "9.900", c: "9.999", d: "1.001" }, raspuns_corect: "c", explicatie: "10.000 - 1 = 9.999." },
+                    { enunt: "Rezultatul calculului 456 + 0 este:", variante: { a: "0", b: "457", c: "456", d: "460" }, raspuns_corect: "c", explicatie: "0 este element neutru la adunare." },
+                    { enunt: "Dacă a + 15 = 40, atunci a este:", variante: { a: "55", b: "25", c: "35", d: "15" }, raspuns_corect: "b", explicatie: "a = 40 - 15 = 25." },
+                    { enunt: "Scăderea 15 - 20 în mulțimea numerelor naturale este:", variante: { a: "5", b: "Nu este posibilă", c: "0", d: "35" }, raspuns_corect: "b", explicatie: "Nu putem scădea un număr mai mare dintr-unul mai mic în N." },
+                    { enunt: "Suma a trei numere consecutive, dintre care cel mai mic este 10, este:", variante: { a: "30", b: "33", c: "31", d: "21" }, raspuns_corect: "b", explicatie: "10 + 11 + 12 = 33." },
+                    { enunt: "Distanța rutieră București-Hamburg (1.977 km) plus București-Moscova (1.895 km) este:", variante: { a: "3.872 km", b: "3.772 km", c: "3.972 km", d: "4.000 km" }, raspuns_corect: "a", explicatie: "1.977 + 1.895 = 3.872." },
+                    { enunt: "Un elev are de citit 129 de pagini. Dacă a citit 97 de pagini, mai are:", variante: { a: "31 pagini", b: "32 pagini", c: "33 pagini", d: "22 pagini" }, raspuns_corect: "b", explicatie: "129 - 97 = 32." },
+                    { enunt: "Rezultatul calculului (125 + 75) - (50 + 50) este:", variante: { a: "200", b: "100", c: "150", d: "0" }, raspuns_corect: "b", explicatie: "200 - 100 = 100." },
+                    { enunt: "Proprietatea a + b = b + a se numește:", variante: { a: "Asociativitate", b: "Comutativitate", c: "Element neutru", d: "Distributivitate" }, raspuns_corect: "b", explicatie: "Schimbarea ordinii termenilor nu schimbă suma." },
+                    { enunt: "Dacă suma a două numere este 100 și unul este 36, celălalt este:", variante: { a: "74", b: "64", c: "54", d: "66" }, raspuns_corect: "b", explicatie: "100 - 36 = 64." },
+                    { enunt: "Rezultatul calculului 1 + 2 + 3 + ... + 10 este:", variante: { a: "45", b: "55", c: "60", d: "50" }, raspuns_corect: "b", explicatie: "Suma Gauss: 10*11/2 = 55." },
+                    { enunt: "Dacă x - 100 = 250, atunci x este:", variante: { a: "150", b: "350", c: "250", d: "400" }, raspuns_corect: "b", explicatie: "x = 250 + 100 = 350." },
+                    { enunt: "Suma dintre cel mai mic număr de 4 cifre și cel mai mare număr de 3 cifre este:", variante: { a: "1.999", b: "2.000", c: "1.000", d: "1.998" }, raspuns_corect: "a", explicatie: "1.000 + 999 = 1.999." },
+                    { enunt: "Într-o operație de scădere, descăzutul este 1.500 și diferența este 700. Scăzătorul este:", variante: { a: "800", b: "2.200", c: "700", d: "900" }, raspuns_corect: "a", explicatie: "1.500 - 700 = 800." }
                 ]
             },
             {
                 capitol: "Operații II",
                 exercitii: [
-                    { enunt: "Rezultatul calculului 12 * 10 este:", variante: { a: "12", b: "120", c: "1.200", d: "22" }, raspuns_corect: "b", explicatie: "Înmulțirea cu 10 adaugă un zero la final." },
-                    { enunt: "Calculați 5 * 0.", variante: { a: "0", b: "5", c: "50", d: "1" }, raspuns_corect: "a", explicatie: "Orice număr înmulțit cu zero este zero." },
-                    { enunt: "25 * 4 = ?", variante: { a: "50", b: "75", c: "100", d: "125" }, raspuns_corect: "c", explicatie: "25 * 4 = 100." },
-                    { enunt: "7 * 8 = ?", variante: { a: "54", b: "56", c: "64", d: "49" }, raspuns_corect: "b", explicatie: "Tabăla înmulțirii: 7 * 8 = 56." },
-                    { enunt: "123 * 1 = ?", variante: { a: "1", b: "123", c: "124", d: "0" }, raspuns_corect: "b", explicatie: "1 este element neutru la înmulțire." },
-                    { enunt: "Câtul numerelor 100 și 10 este:", variante: { a: "1", b: "10", c: "100", d: "0" }, raspuns_corect: "b", explicatie: "100 : 10 = 10." },
-                    { enunt: "45 : 9 = ?", variante: { a: "4", b: "5", c: "6", d: "9" }, raspuns_corect: "b", explicatie: "9 * 5 = 45." },
-                    { enunt: "Rezultatul împărțirii 0 : 5 este:", variante: { a: "Nu se poate", b: "0", c: "5", d: "1" }, raspuns_corect: "b", explicatie: "Zero împărțit la orice număr nenul este zero." },
-                    { enunt: "Factorul comun în expresia 4x + 4y este:", variante: { a: "x", b: "4", c: "y", d: "44" }, raspuns_corect: "b", explicatie: "Cifra 4 apare în ambii termeni." },
-                    { enunt: "Calculați prin factor comun: 13 * 99 + 13.", variante: { a: "1.287", b: "1.300", c: "13.000", d: "1.313" }, raspuns_corect: "b", explicatie: "13 * (99 + 1) = 13 * 100 = 1.300." }
+                    { enunt: "Rezultatul calculului 15 * 10 este:", variante: { a: "150", b: "105", c: "15", d: "25" }, raspuns_corect: "a", explicatie: "Înmulțirea cu 10 adaugă un zero." },
+                    { enunt: "Produsul dintre orice număr n și 1 este:", variante: { a: "1", b: "0", c: "n", d: "n+1" }, raspuns_corect: "c", explicatie: "1 este element neutru la înmulțire." },
+                    { enunt: "Utilizând factorul comun, 7 * 12 + 7 * 8 este:", variante: { a: "7 * 20", b: "7 * 4", c: "14 * 20", d: "7 * 96" }, raspuns_corect: "a", explicatie: "7 * (12+8) = 7 * 20." },
+                    { enunt: "Produsul 2 * 5 * 13 este:", variante: { a: "130", b: "103", c: "26", d: "13" }, raspuns_corect: "a", explicatie: "10 * 13 = 130." },
+                    { enunt: "Rezultatul calculului 45 * 0 este:", variante: { a: "45", b: "0", c: "1", d: "450" }, raspuns_corect: "b", explicatie: "Orice număr înmulțit cu zero este zero." },
+                    { enunt: "Dublul numărului 1.234 este:", variante: { a: "2.468", b: "2.466", c: "1.236", d: "617" }, raspuns_corect: "a", explicatie: "1.234 * 2 = 2.468." },
+                    { enunt: "Dacă 3 * a + 3 * b = 30, atunci a + b este:", variante: { a: "10", b: "3", c: "33", d: "90" }, raspuns_corect: "a", explicatie: "3 * (a + b) = 30." },
+                    { enunt: "Triplul lui 33 este:", variante: { a: "66", b: "99", c: "36", d: "30" }, raspuns_corect: "b", explicatie: "33 * 3 = 99." },
+                    { enunt: "Rezultatul calculului 12 * 11 este:", variante: { a: "122", b: "132", c: "112", d: "121" }, raspuns_corect: "b", explicatie: "12 * 11 = 132." },
+                    { enunt: "Proprietatea a * (b + c) = a * b + a * c se numește:", variante: { a: "Comutativitate", b: "Asociativitate", c: "Distributivitate", d: "Element neutru" }, raspuns_corect: "c", explicatie: "Înmulțirea se distribuie peste adunare." },
+                    { enunt: "Calculând 25 * 4 * 17 obținem:", variante: { a: "1.700", b: "170", c: "17.000", d: "400" }, raspuns_corect: "a", explicatie: "100 * 17 = 1.700." },
+                    { enunt: "Produsul cifrelor numărului 245 este:", variante: { a: "11", b: "40", c: "20", d: "10" }, raspuns_corect: "b", explicatie: "2 * 4 * 5 = 40." },
+                    { enunt: "Dacă x * 5 = 105, atunci x este:", variante: { a: "20", b: "21", c: "15", d: "25" }, raspuns_corect: "b", explicatie: "x = 105 / 5 = 21." },
+                    { enunt: "Un număr înmulțit cu 100 devine 1.500. Numărul este:", variante: { a: "15", b: "150", c: "155", d: "1" }, raspuns_corect: "a", explicatie: "1.500 / 100 = 15." },
+                    { enunt: "Valoarea expresiei 15 * 3 - 15 * 2 este:", variante: { a: "15", b: "30", c: "45", d: "1" }, raspuns_corect: "a", explicatie: "15 * (3 - 2) = 15." }
                 ]
             },
             {
                 capitol: "Teorema Împărțirii cu Rest",
                 exercitii: [
-                    { enunt: "17 : 5 dă câtul și restul:", variante: { a: "c=2, r=7", b: "c=3, r=2", c: "c=4, r=1", d: "c=3, r=5" }, raspuns_corect: "b", explicatie: "17 = 5 * 3 + 2. Restul 2 < Împărțitorul 5." },
-                    { enunt: "20 : 6 dă restul:", variante: { a: "1", b: "2", c: "3", d: "4" }, raspuns_corect: "b", explicatie: "20 = 6 * 3 + 2." },
-                    { enunt: "Într-o împărțire cu rest, care este condiția obligatorie pentru rest (R) față de împărțitor (Î)?", variante: { a: "R > Î", b: "0 ≤ R < Î", c: "R = Î", d: "R ≤ Î" }, raspuns_corect: "b", explicatie: "Conform Teoremei Împărțirii cu Rest, restul este strict mai mic decât împărțitorul." },
-                    { enunt: "Formula Teoremei Împărțirii cu Rest este:", variante: { a: "D = Î * C - R", b: "D = Î * C + R", c: "D = Î + C * R", d: "D = Î * R + C" }, raspuns_corect: "b", explicatie: "D = Deîmpărțit, Î = Împărțitor, C = Cât, R = Rest." },
-                    { enunt: "100 : 11 dă câtul:", variante: { a: "8", b: "9", c: "10", d: "11" }, raspuns_corect: "b", explicatie: "100 = 11 * 9 + 1." },
-                    { enunt: "Câtul și restul împărțirii 50 : 7 sunt:", variante: { a: "7 și 1", b: "7 și 7", c: "6 și 8", d: "8 și 1" }, raspuns_corect: "a", explicatie: "50 = 7 * 7 + 1." },
-                    { enunt: "Care este cel mai mare rest posibil la împărțirea prin 9?", variante: { a: "9", b: "8", c: "0", d: "10" }, raspuns_corect: "b", explicatie: "Restul maxim este Î - 1, deci 9 - 1 = 8." },
-                    { enunt: "Dacă D = 25 și Î = 4, atunci restul este:", variante: { a: "0", b: "1", c: "2", d: "3" }, raspuns_corect: "b", explicatie: "25 = 4 * 6 + 1." },
-                    { enunt: "Suma resturilor posibile la împărțirea prin 3 este:", variante: { a: "3", b: "3", c: "0", d: "1" }, raspuns_corect: "b", explicatie: "Resturile sunt 0, 1, 2. Suma: 0 + 1 + 2 = 3." },
-                    { enunt: "Împărțirea la zero este:", variante: { a: "Posibilă", b: "Imposibilă", c: "Egală cu zero", d: "Egală cu numărul" }, raspuns_corect: "b", explicatie: "Împărțirea la zero nu are sens matematic." }
+                    { enunt: "Rezultatul împărțirii 100 : 4 este:", variante: { a: "20", b: "25", c: "50", d: "10" }, raspuns_corect: "b", explicatie: "100 / 4 = 25." },
+                    { enunt: "Restul împărțirii lui 25 la 4 este:", variante: { a: "0", b: "1", c: "6", d: "4" }, raspuns_corect: "b", explicatie: "25 = 4 * 6 + 1." },
+                    { enunt: "Dacă a : 5 = 10, atunci a este:", variante: { a: "2", b: "50", c: "15", d: "5" }, raspuns_corect: "b", explicatie: "a = 10 * 5 = 50." },
+                    { enunt: "Într-o împărțire, restul trebuie să fie întotdeauna:", variante: { a: "Mai mare decât împărțitorul", b: "Mai mic decât împărțitorul", c: "Egal cu împărțitorul", d: "0" }, raspuns_corect: "b", explicatie: "R < Î este regula de aur." },
+                    { enunt: "Rezultatul calculului 0 : 5 este:", variante: { a: "5", b: "0", c: "Nu se poate", d: "1" }, raspuns_corect: "b", explicatie: "0 / orice nr nenul = 0." },
+                    { enunt: "Împărțirea la 0 este:", variante: { a: "0", b: "1", c: "Fără sens", d: "Numărul respectiv" }, raspuns_corect: "c", explicatie: "Nu putem împărți la zero." },
+                    { enunt: "Dacă deîmpărțitul este 27 și împărțitorul este 9, câtul este:", variante: { a: "3", b: "18", c: "243", d: "0" }, raspuns_corect: "a", explicatie: "27 / 9 = 3." },
+                    { enunt: "Estimarea câtului 120 : 11 este aproximativ:", variante: { a: "10", b: "11", c: "12", d: "1" }, raspuns_corect: "b", explicatie: "11 * 11 = 121." },
+                    { enunt: "Jumătatea numărului 1.000 este:", variante: { a: "250", b: "500", c: "100", d: "750" }, raspuns_corect: "b", explicatie: "1.000 / 2 = 500." },
+                    { enunt: "Sfertul numărului 100 este:", variante: { a: "25", b: "50", c: "10", d: "75" }, raspuns_corect: "a", explicatie: "100 / 4 = 25." },
+                    { enunt: "Dacă 210 : x = 7, atunci x este:", variante: { a: "3", b: "30", c: "70", d: "21" }, raspuns_corect: "b", explicatie: "x = 210 / 7 = 30." },
+                    { enunt: "Restul împărțirii oricărui număr par la 2 este:", variante: { a: "1", b: "0", c: "2", d: "5" }, raspuns_corect: "b", explicatie: "Numerele pare se împart exact la 2." },
+                    { enunt: "Câtul împărțirii lui 1.234 la 10 este:", variante: { a: "123", b: "12", c: "123.4", d: "1" }, raspuns_corect: "a", explicatie: "Împărțirea întreagă dă 123." },
+                    { enunt: "Un număr împărțit la 7 dă câtul 10 și restul 3. Numărul este:", variante: { a: "70", b: "73", c: "67", d: "37" }, raspuns_corect: "b", explicatie: "7 * 10 + 3 = 73." },
+                    { enunt: "Cel mai mare rest posibil la împărțirea unui număr la 15 este:", variante: { a: "15", b: "14", c: "0", d: "1" }, raspuns_corect: "b", explicatie: "Restul maxim este Î-1." }
                 ]
             },
             {
                 capitol: "Puteri",
                 exercitii: [
-                    { enunt: "Calculați 2³.", variante: { a: "6", b: "8", c: "9", d: "5" }, raspuns_corect: "b", explicatie: "2 * 2 * 2 = 8." },
-                    { enunt: "5² = ?", variante: { a: "10", b: "25", c: "15", d: "20" }, raspuns_corect: "b", explicatie: "5 * 5 = 25." },
-                    { enunt: "Valoarea lui 10³ este:", variante: { a: "100", b: "1.000", c: "10.000", d: "30" }, raspuns_corect: "b", explicatie: "10 * 10 * 10 = 1.000." },
-                    { enunt: "Orice număr nenul la puterea 0 este egal cu:", variante: { a: "0", b: "1", c: "Numărul respectiv", d: "Eroare" }, raspuns_corect: "b", explicatie: "x⁰ = 1, pentru x ≠ 0." },
-                    { enunt: "x¹ este egal cu:", variante: { a: "1", b: "x", c: "0", d: "x*10" }, raspuns_corect: "b", explicatie: "Orice număr la puterea 1 este el însuși." },
-                    { enunt: "Care este pătratul perfect al lui 4?", variante: { a: "8", b: "16", c: "4", d: "12" }, raspuns_corect: "b", explicatie: "4² = 16." },
-                    { enunt: "9² = ?", variante: { a: "18", b: "81", c: "27", d: "99" }, raspuns_corect: "b", explicatie: "9 * 9 = 81." },
-                    { enunt: "Care dintre următoarele numere este pătrat perfect?", variante: { a: "2", b: "25", c: "3", d: "7" }, raspuns_corect: "b", explicatie: "25 = 5²." },
-                    { enunt: "Șirul pătratelor perfecte începe cu:", variante: { a: "1, 2, 3...", b: "0, 1, 4, 9, 16...", c: "0, 2, 4, 6...", d: "1, 3, 5..." }, raspuns_corect: "b", explicatie: "0², 1², 2², 3², 4²..." },
-                    { enunt: "Un număr care se termină în cifra 2 poate fi pătrat perfect?", variante: { a: "Da", b: "Nu", c: "Uneori", d: "Doar dacă are 2 cifre" }, raspuns_corect: "b", explicatie: "Pătratele perfecte se pot termina doar în 0, 1, 4, 5, 6, 9." }
+                    { enunt: "Rezultatul calculului 2^3 este:", variante: { a: "6", b: "8", c: "5", d: "9" }, raspuns_corect: "b", explicatie: "2*2*2=8." },
+                    { enunt: "Baza puterii 5^2 este:", variante: { a: "2", b: "5", c: "25", d: "10" }, raspuns_corect: "b", explicatie: "5 este baza." },
+                    { enunt: "Exponentul puterii 3^4 este:", variante: { a: "3", b: "4", c: "81", d: "12" }, raspuns_corect: "b", explicatie: "4 este exponentul." },
+                    { enunt: "Orice număr natural nenul ridicat la puterea 0 este:", variante: { a: "0", b: "1", c: "Numărul respectiv", d: "10" }, raspuns_corect: "b", explicatie: "x^0 = 1." },
+                    { enunt: "Rezultatul calculului 10^2 este:", variante: { a: "20", b: "100", c: "1.000", d: "10" }, raspuns_corect: "b", explicatie: "10*10=100." },
+                    { enunt: "Pătratul numărului 6 este:", variante: { a: "12", b: "36", c: "18", d: "66" }, raspuns_corect: "b", explicatie: "6*6=36." },
+                    { enunt: "Regula a^m * a^n = a^(m+n) aplicată pentru 2^3 * 2^2 dă:", variante: { a: "2^5", b: "2^6", c: "4^5", d: "2^1" }, raspuns_corect: "a", explicatie: "Suma exponenților." },
+                    { enunt: "Rezultatul calculului (2^2)^3 este:", variante: { a: "2^5", b: "2^6", c: "2^8", d: "4^3" }, raspuns_corect: "b", explicatie: "Produsul exponenților: 2*3=6." },
+                    { enunt: "Scrierea numărului 8 ca putere cu baza 2 este:", variante: { a: "2^2", b: "2^3", c: "2^4", d: "2^1" }, raspuns_corect: "b", explicatie: "8 = 2^3." },
+                    { enunt: "Ultima cifră a numărului 5^2023 este:", variante: { a: "0", b: "5", c: "1", d: "3" }, raspuns_corect: "b", explicatie: "Cifra terminală pentru puterile lui 5 este mereu 5." },
+                    { enunt: "Comparând 3^20 cu 3^21, avem:", variante: { a: "3^20 > 3^21", b: "3^20 = 3^21", c: "3^20 < 3^21", d: "N/A" }, raspuns_corect: "c", explicatie: "3^21 este clar mai mare." },
+                    { enunt: "Rezultatul calculului 7^2 - 6^2 este:", variante: { a: "1", b: "13", c: "49", d: "36" }, raspuns_corect: "b", explicatie: "49 - 36 = 13." },
+                    { enunt: "Un număr natural n pentru care n^2 = 49 este:", variante: { a: "6", b: "7", c: "8", d: "49" }, raspuns_corect: "b", explicatie: "7^2 = 49." },
+                    { enunt: "Rezultatul calculului 1^100 este:", variante: { a: "100", b: "1", c: "0", d: "1.100" }, raspuns_corect: "b", explicatie: "1 la orice putere = 1." },
+                    { enunt: "Cubul numărului 3 este:", variante: { a: "9", b: "27", c: "6", d: "33" }, raspuns_corect: "b", explicatie: "3*3*3=27." }
                 ]
             }
         ];
-
-        // Completare până la 170 itemi pentru diversitate
-        for(let i = 0; i < 120; i++) {
-            const types = ["Sistem Zecimal", "Operații I", "Operații II", "Teorema Împărțirii cu Rest", "Puteri"];
-            const type = types[i % types.length];
-            DATABASE_STANDARD.find(c => c.capitol === type).exercitii.push({
-                enunt: `[Antrenament ${i+51}] Aplicați regulile de calcul pentru capitolul: ${type}.`,
-                variante: { a: "Varianta A", b: "Varianta Corectă", c: "Varianta C", d: "Varianta D" },
-                raspuns_corect: "b",
-                explicatie: `💡 <strong>Expert Tip:</strong> Consultați secțiunea corespunzătoare din Recapitulare Teorie (Quick Help) pentru a stăpâni proprietățile operației ${type}.`
-            });
-        }
 
         const CAPITOLE_STANDARD = [
             {
@@ -476,8 +1328,29 @@
             }
 
             init() {
+                this.loadState();
                 this.adaugaEventListeners();
                 console.log("Speedy-MATE5 (Unified) pornit.");
+            }
+
+            saveState() {
+                const state = {
+                    testCurent: this.testCurent,
+                    raspunsuri: this.raspunsuri,
+                    indexCurent: this.indexCurent,
+                    incercari: this.incercari
+                };
+                localStorage.setItem('speedy_mate_state', JSON.stringify(state));
+            }
+
+            loadState() {
+                const saved = localStorage.getItem('speedy_mate_state');
+                if (saved) {
+                    const state = JSON.parse(saved);
+                    this.incercari = state.incercari || [];
+                    // We don't restore the active test automatically to avoid UI confusion, 
+                    // but we keep the history.
+                }
             }
 
             adaugaEventListeners() {
@@ -566,18 +1439,22 @@
                 });
                 const acuratete = idx === 0 ? 0 : Math.round((corecte / idx) * 100);
 
-                // Update Bare Grafice
+                // Update Bare Grafice și Text
                 document.getElementById('progress-bar-quant').style.width = `${procentParcurs}%`;
+                document.getElementById('progress-val').textContent = `${procentParcurs}%`;
                 
                 const qualBar = document.getElementById('progress-bar-qual');
                 qualBar.style.width = `${acuratete}%`;
+                document.getElementById('accuracy-val').textContent = `${acuratete}%`;
                 
                 // Culoare dinamică acuratețe (Neon)
-                if (acuratete >= 75) qualBar.style.backgroundColor = '#00ff88'; // Neon Green
-                else if (acuratete >= 50) qualBar.style.backgroundColor = '#faff00'; // Neon Yellow
-                else qualBar.style.backgroundColor = '#ff0055'; // Neon Red
+                let color = '#ff0055'; // Default red
+                if (acuratete >= 75) color = '#00ff88'; // Neon Green
+                else if (acuratete >= 50) color = '#faff00'; // Neon Yellow
                 
-                qualBar.style.boxShadow = `0 0 15px ${qualBar.style.backgroundColor}`;
+                qualBar.style.backgroundColor = color;
+                qualBar.style.boxShadow = `0 0 15px ${color}`;
+                document.getElementById('accuracy-val').style.color = color;
                 
                 document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
@@ -596,11 +1473,47 @@
                         document.querySelectorAll('.answer-label').forEach(el => el.classList.remove('selected'));
                         label.classList.add('selected');
                         this.raspunsuri[p.id] = lit;
-                        this.actualizeazaButoane(); // Validăm butonul imediat ce se alege un răspuns
+                        this.actualizeazaButoane(); 
+                        this.actualizeazaProgresLive(); // Refresh bars immediately
+                        this.saveState();
                     };
                     container.appendChild(label);
                 });
                 this.actualizeazaButoane();
+                this.actualizeazaProgresLive(); // Initial bar update
+            }
+
+            actualizeazaProgresLive() {
+                if (!this.testCurent) return;
+                const total = 20;
+                const parcurse = this.indexCurent + 1;
+                const procentParcurs = Math.round((parcurse / total) * 100);
+                
+                let corecte = 0;
+                let totalAnsw = 0;
+                this.testCurent.exercitii.forEach((ex, idx) => {
+                    if (this.raspunsuri[ex.id]) {
+                        totalAnsw++;
+                        if (this.raspunsuri[ex.id] === ex.raspuns_corect) corecte++;
+                    }
+                });
+                const acuratete = totalAnsw === 0 ? 0 : Math.round((corecte / totalAnsw) * 100);
+
+                // Update UI
+                document.getElementById('progress-bar-quant').style.width = `${procentParcurs}%`;
+                document.getElementById('progress-val').textContent = `${parcurse}/${total} (${procentParcurs}%)`;
+                
+                const qualBar = document.getElementById('progress-bar-qual');
+                qualBar.style.width = `${acuratete}%`;
+                document.getElementById('accuracy-val').textContent = `${corecte}/${totalAnsw} (${acuratete}%)`;
+                
+                let color = '#ff0055'; 
+                if (acuratete >= 75) color = '#00ff88'; 
+                else if (acuratete >= 50) color = '#faff00'; 
+                
+                qualBar.style.backgroundColor = color;
+                qualBar.style.boxShadow = `0 0 15px ${color}`;
+                document.getElementById('accuracy-val').style.color = color;
             }
 
             navigatie(dir) {
