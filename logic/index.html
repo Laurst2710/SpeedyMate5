@@ -32,18 +32,18 @@
                     <div class="nivel-card" data-nivel="avansat" style="display: none !important;">
                         <div class="card-header">
                             <h3>Nivel Avansat</h3>
-                            <span class="badge">10 probleme</span>
+                            <span class="badge">20 exerciții</span>
                         </div>
-                        <p>Probleme din concursuri județene și locale</p>
+                        <p>Exerciții din concursuri județene și locale</p>
                         <button class="btn btn-primary">Start Test</button>
                     </div>
 
                     <div class="nivel-card" data-nivel="olimpiada" style="display: none !important;">
                         <div class="card-header">
                             <h3>Nivel Olimpiadă</h3>
-                            <span class="badge">8 probleme</span>
+                            <span class="badge">20 exerciții</span>
                         </div>
-                        <p>Probleme ONM reale din etape locale și naționale</p>
+                        <p>Exerciții ONM reale din etape locale și naționale</p>
                         <button class="btn btn-primary">Start Test</button>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <h2>Statistici Generale</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <h3>Total Probleme</h3>
+                        <h3>Total Exerciții</h3>
                         <p class="stat-number">1000+</p>
                         <p>Variante Dinamice</p>
                     </div>
@@ -97,14 +97,14 @@
                     <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
                 </div>
                 <div class="test-info">
-                    <span id="progress">Problema 1/10</span>
+                    <span id="progress">Exercițiul 1/20</span>
                     <span id="timer">00:00</span>
                 </div>
             </div>
             
-            <div class="problem-container">
-                <div class="problem-text" id="problem-text">
-                    <!-- Problema va fi încărcată aici -->
+            <div class="exercise-container">
+                <div class="exercise-text" id="exercise-text">
+                    <!-- Exercițiul va fi încărcată aici -->
                 </div>
                 
                 <div class="answers-container" id="answers-container">
@@ -129,7 +129,7 @@
                 <div class="score-circle">
                     <span id="score-percentage">0%</span>
                 </div>
-                <p id="score-text">Ai obținut 0 din 10 puncte</p>
+                <p id="score-text">Ai obținut 0 din 20 puncte</p>
             </div>
             
             <div class="results-details" id="results-details">
@@ -154,8 +154,8 @@
 
         // 1. DATE EMBED (Ex: DATABASE_NIVEL_STANDARD)
         const DATABASE_NIVEL_STANDARD = {
-            "metadata": { "nivel": "standard", "clasa": "a V-a", "total_probleme": 10 },
-            "probleme": [] // Capitolul 1 este acum complet dinamic
+            "metadata": { "nivel": "standard", "clasa": "a V-a", "total_exercitii": 20 },
+            "exercitii": [] // Capitolul 1 este acum complet dinamic
         };
 
         const CAPITOLE_STANDARD = [
@@ -170,7 +170,7 @@
         ];
 
         // 2. MOTOR DE GENERARE DINAMICĂ
-        class MotorProbleme {
+        class MotorExercitii {
             constructor() { this.initializat = true; }
             randomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
             shuffle(array) {
@@ -251,26 +251,28 @@
             }
 
             genereazaTestDinamic() {
-                const pool = [...this.TemplatesCap1]; this.shuffle(pool);
-                const probleme = pool.slice(0, 10).map((f, i) => ({ ...f(), ordine: i + 1 }));
-                return { id_test: 'din_' + Date.now(), probleme: probleme, nivel: 'standard', capitol: 'cap_1' };
+                const pool = [...this.TemplatesCap1]; 
+                const expandedPool = [...pool, ...pool]; 
+                this.shuffle(expandedPool);
+                const exercitii = expandedPool.slice(0, 20).map((f, i) => ({ ...f(), id: `${f().id}_${i}`, ordine: i + 1 }));
+                return { id_test: 'din_' + Date.now(), exercitii: exercitii, nivel: 'standard', capitol: 'cap_1' };
             }
 
             calculeazaPunctaj(test, raspunsuri) {
                 let punctaj = 0; let detalii = [];
-                test.probleme.forEach((p, i) => {
+                test.exercitii.forEach((p, i) => {
                     const rU = raspunsuri[p.id]; const isC = rU === p.raspuns_corect;
                     detalii.push({ ordine: i+1, corect: isC, raspuns_utilizator: rU, raspuns_corect: p.raspuns_corect, explicatie: p.explicatie });
                     if (isC) punctaj++;
                 });
-                return { punctaj_total: punctaj, punctaj_maxim: 10, procentaj: punctaj * 10, rezultate_detaliate: detalii };
+                return { punctaj_total: punctaj, punctaj_maxim: 20, procentaj: Math.round((punctaj / 20) * 100), rezultate_detaliate: detalii };
             }
         }
 
         // 3. APLICAȚIA SPEEDY-MATE5
         class SpeedyMateApp {
             constructor() {
-                this.motor = new MotorProbleme();
+                this.motor = new MotorExercitii();
                 this.testCurent = null;
                 this.raspunsuri = {};
                 this.indexCurent = 0;
@@ -350,13 +352,13 @@
                 document.getElementById('capitol-selection').classList.add('hidden'); // Ascundem și capitolele
                 document.getElementById('test-container').classList.remove('hidden');
                 document.getElementById('test-title').textContent = "Test Dinamic - Capitolul 1";
-                this.afiseazaProblema(0);
+                this.afiseazaExercitiu(0);
             }
 
-            afiseazaProblema(idx) {
-                const p = this.testCurent.probleme[idx];
-                document.getElementById('progress').textContent = `Problema ${idx + 1}/10`;
-                document.getElementById('problem-text').innerHTML = `<h3>Problema ${idx + 1}</h3><p>${p.enunt}</p>`;
+            afiseazaExercitiu(idx) {
+                const p = this.testCurent.exercitii[idx];
+                document.getElementById('progress').textContent = `Exercițiul ${idx + 1}/20`;
+                document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
                 const container = document.getElementById('answers-container');
                 container.innerHTML = '';
@@ -373,6 +375,7 @@
                         document.querySelectorAll('.answer-label').forEach(el => el.classList.remove('selected'));
                         label.classList.add('selected');
                         this.raspunsuri[p.id] = lit;
+                        this.actualizeazaButoane(); // Validăm butonul imediat ce se alege un răspuns
                     };
                     container.appendChild(label);
                 });
@@ -381,14 +384,25 @@
 
             navigatie(dir) {
                 this.indexCurent += dir;
-                this.afiseazaProblema(this.indexCurent);
+                this.afiseazaExercitiu(this.indexCurent);
             }
 
             actualizeazaButoane() {
+                const p = this.testCurent.exercitii[this.indexCurent];
+                const raspunsSelectat = !!this.raspunsuri[p.id];
+                
                 document.getElementById('prev-btn').disabled = (this.indexCurent === 0);
-                const isLast = (this.indexCurent === 9);
-                document.getElementById('next-btn').style.display = isLast ? 'none' : 'block';
-                document.getElementById('finish-btn').style.display = isLast ? 'block' : 'none';
+                
+                const isLast = (this.indexCurent === 19);
+                const nextBtn = document.getElementById('next-btn');
+                const finishBtn = document.getElementById('finish-btn');
+                
+                nextBtn.style.display = isLast ? 'none' : 'block';
+                finishBtn.style.display = isLast ? 'block' : 'none';
+                
+                // Validare obligatorie: Dezactivăm butonul dacă nu s-a selectat nimic
+                nextBtn.disabled = !raspunsSelectat;
+                finishBtn.disabled = !raspunsSelectat;
             }
 
             terminaTest() {
@@ -409,17 +423,17 @@
                 msgEl.className = '';
                 det.innerHTML = '';
                 
-                if (rez.punctaj_total === 10) {
+                if (rez.punctaj_total === 20) {
                     // FELICITĂRI
                     msgEl.textContent = "FELICITĂRI! Ai obținut punctaj maxim!";
                     msgEl.classList.add('verdict-success');
                     scoreBox.style.display = 'flex';
                     document.getElementById('score-percentage').textContent = "100%";
-                    document.getElementById('score-text').textContent = "10 din 10 corecte!";
+                    document.getElementById('score-text').textContent = "20 din 20 corecte!";
                     
                     // Afișăm detaliile doar la succes (sau opțional)
                     rez.rezultate_detaliate.forEach((r, i) => {
-                        const p = this.testCurent.probleme[i];
+                        const p = this.testCurent.exercitii[i];
                         const div = document.createElement('div');
                         div.className = 'result-item neutral';
                         div.innerHTML = `<h4>Exercițiul ${r.ordine}</h4><p>${p.enunt}</p><div class="explanation-box"><strong>Rezolvare:</strong><br>${r.explicatie}</div>`;
@@ -433,8 +447,8 @@
                     
                     // Nu afișăm explicații lungi dacă nu e perfect
                     det.innerHTML = `<div style="text-align:center; padding: 20px; font-size: 1.2rem; color: #718096;">
-                                        Trebuie să răspunzi corect la toate cele 10 întrebări pentru a trece capitolul.<br>
-                                        Ai reușit ${rez.punctaj_total} din 10. Mai încearcă o dată!
+                                        Trebuie să răspunzi corect la toate cele 20 de exerciții pentru a trece capitolul.<br>
+                                        Ai reușit ${rez.punctaj_total} din 20. Mai încearcă o dată!
                                      </div>`;
                     
                     // Schimbăm textul butonului de restart pentru a fi mai proeminent
@@ -453,7 +467,7 @@
                 document.getElementById('results-container').classList.add('hidden');
                 document.getElementById('test-container').classList.remove('hidden');
                 this.indexCurent = 0;
-                this.afiseazaProblema(0);
+                this.afiseazaExercitiu(0);
             }
 
             revenireCapitole() {

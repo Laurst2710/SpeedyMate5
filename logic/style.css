@@ -336,12 +336,12 @@ h2 {
     color: #4a5568;
 }
 
-.problem-container {
+.exercise-container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.problem-text {
+.exercise-text {
     background: #f7fafc;
     padding: 25px;
     border-radius: 10px;
