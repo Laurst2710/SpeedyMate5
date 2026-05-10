@@ -1428,33 +1428,7 @@ h2 {
             afiseazaExercitiu(idx) {
                 const p = this.testCurent.exercitii[idx];
                 
-                // Calcul statistici live
-                const total = 20;
-                const parcurse = idx + 1;
-                const procentParcurs = Math.round((parcurse / total) * 100);
-                
-                let corecte = 0;
-                this.testCurent.exercitii.slice(0, idx).forEach(wa => {
-                    if (this.raspunsuri[wa.id] === wa.raspuns_corect) corecte++;
-                });
-                const acuratete = idx === 0 ? 0 : Math.round((corecte / idx) * 100);
-
-                // Update Bare Grafice și Text
-                document.getElementById('progress-bar-quant').style.width = `${procentParcurs}%`;
-                document.getElementById('progress-val').textContent = `${procentParcurs}%`;
-                
-                const qualBar = document.getElementById('progress-bar-qual');
-                qualBar.style.width = `${acuratete}%`;
-                document.getElementById('accuracy-val').textContent = `${acuratete}%`;
-                
-                // Culoare dinamică acuratețe (Neon)
-                let color = '#ff0055'; // Default red
-                if (acuratete >= 75) color = '#00ff88'; // Neon Green
-                else if (acuratete >= 50) color = '#faff00'; // Neon Yellow
-                
-                qualBar.style.backgroundColor = color;
-                qualBar.style.boxShadow = `0 0 15px ${color}`;
-                document.getElementById('accuracy-val').style.color = color;
+                this.actualizeazaProgresLive();
                 
                 document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
                 
