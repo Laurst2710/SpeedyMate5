@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speedy-MATE5 - Delta Protocol</title>
+    <title>Speedy-MATE5</title>
     <link rel="stylesheet" href="style.css">
     <!-- Integrare Directă Bază de Date (Elimină 404/CORS) -->
     <script src="teste_100_data.js"></script>
@@ -36,7 +36,7 @@
                             <h3>Nivel Standard</h3>
                             <span class="badge">Capitolul 1</span>
                         </div>
-                        <p>Exerciții conform programei școlare (Protocol Delta).</p>
+                        <p>Exerciții conform programei școlare.</p>
                         <button class="btn btn-primary">Selectează</button>
                     </div>
                 </div>
@@ -53,22 +53,25 @@
 
         <div id="test-container" class="test-container hidden">
             <div id="header-capitol">
-                <div class="test-header">
-                    <div class="test-header-left">
-                        <h2 id="test-title">Evaluare Capitolul 1</h2>
-                        <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
+                <h2 id="test-title">Evaluare Capitolul 1</h2>
+                
+                <div id="teorie-container" class="theory-block">
+                    <div class="theory-content">
+                        <p id="teorie-text">Recapitulare rapidă a conceptelor cheie.</p>
                     </div>
-                    <div class="test-info">
-                        <span id="timer">00:00</span>
-                    </div>
+                </div>
+
+                <div class="test-meta">
+                    <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
+                    <span id="timer">00:00</span>
                 </div>
             </div>
             
             <div class="exercise-container">
                 <div class="progress-bars-container">
                     <div class="progress-labels">
-                        <span>PROGRES: <span id="progress-val" class="hidden"></span></span>
-                        <span>ACURATEȚE: <span id="accuracy-val" class="hidden"></span></span>
+                        <span>PROGRES: <span id="progress-val"></span></span>
+                        <span>ACURATEȚE: <span id="accuracy-val"></span></span>
                     </div>
                     <div class="progress-bar-wrap">
                         <div class="progress-bar-fill" id="progress-bar-quant"></div>
@@ -120,14 +123,7 @@
             </div>
         </div>
 
-        <!-- Panel Teorie -->
-        <div id="teorie-container" class="theory-panel hidden">
-            <div class="theory-content">
-                <h2 style="color: var(--primary-blue);">Sinteza: Numere Naturale</h2>
-                <p id="teorie-text">Recapitulare rapidă a conceptelor cheie (Sistem zecimal, Operații, Puteri).</p>
-                <button class="btn btn-secondary" onclick="app.inchideTeorie()" style="margin-top: 20px;">ÎNCHIDE</button>
-            </div>
-        </div>
+
     </div>
 
     <!-- Script Principal Refactorizat -->

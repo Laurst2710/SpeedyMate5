@@ -1,6 +1,6 @@
 /**
- * SPEEDY-MATE5 - REFACTORED ENGINE (DELTA PROTOCOL)
- * Strictly reports to 20 total items. No text labels. Modularized.
+ * SPEEDY-MATE5 - REFACTORED ENGINE
+ * Strictly reports to 20 total items. Centered UI.
  */
 
 class SpeedyMateApp {
@@ -112,7 +112,7 @@ class SpeedyMateApp {
             enunt: q.enunt,
             variante: { a: q.optiuni.A, b: q.optiuni.B, c: q.optiuni.C, d: q.optiuni.D },
             raspuns_corect: q.raspuns.toLowerCase(),
-            explicatie: "Rigoare Matematică Delta Protocol."
+            explicatie: "Rigoare Matematică."
         }));
     }
 
@@ -164,28 +164,33 @@ class SpeedyMateApp {
 
     actualizeazaProgresLive() {
         const total = 20; 
-        
-        // Progres = (Index + 1) / 20 (Directiva Delta: 5% la prima intrebare)
-        const procentParcurs = Math.round(((this.indexCurent + 1) / total) * 100);
+        const totalParcurse = this.indexCurent + 1;
+        const procentParcurs = totalParcurse * 5; // Formula: (Index + 1) * 5
         
         let corecte = 0;
         this.testCurent.exercitii.forEach(ex => {
             if (this.raspunsuri[ex.id] === ex.raspuns_corect) corecte++;
         });
         
-        // Acuratete = Corecte / 20 (Directiva Delta)
-        const acuratete = Math.round((corecte / total) * 100);
+        const acurateteProcent = Math.round((corecte / totalParcurse) * 100);
 
-        // Update Bars Only
+        // Update Text Labels (Strictly format: X/Y, Z%)
+        const progLabel = document.getElementById('progress-val');
+        const accLabel = document.getElementById('accuracy-val');
+        
+        if (progLabel) progLabel.textContent = `${totalParcurse}/20, ${procentParcurs}%`;
+        if (accLabel) accLabel.textContent = `${corecte}/${totalParcurse}, ${acurateteProcent}%`;
+
+        // Update Bars
         const quantBar = document.getElementById('progress-bar-quant');
         const qualBar = document.getElementById('progress-bar-qual');
         
         if (quantBar) quantBar.style.width = `${procentParcurs}%`;
-        if (qualBar) qualBar.style.width = `${acuratete}%`;
+        if (qualBar) qualBar.style.width = `${acurateteProcent}%`;
         
         let color = '#ff0055';
-        if (acuratete >= 75) color = '#00ff88';
-        else if (acuratete >= 50) color = '#faff00';
+        if (acurateteProcent >= 75) color = '#00ff88';
+        else if (acurateteProcent >= 50) color = '#faff00';
         
         if (qualBar) {
             qualBar.style.backgroundColor = color;
@@ -300,10 +305,10 @@ class SpeedyMateApp {
     }
 
     deschideTeorie() { 
-        document.getElementById('teorie-container').classList.remove('hidden'); 
+        // Theory is now a block, we can toggle its content or visibility if needed
+        // but for now it's always visible in test-container as per directives
     }
     inchideTeorie() { 
-        document.getElementById('teorie-container').classList.add('hidden'); 
     }
     revenireCapitole() { 
         document.getElementById('results-container').classList.add('hidden');
