@@ -138,7 +138,7 @@ class SpeedyMateApp {
         if (idx > this.progresMaxim) this.progresMaxim = idx;
         
         const p = this.testCurent.exercitii[idx];
-        document.getElementById('exercise-text').innerHTML = `<h3>Exercițiul ${idx + 1}</h3><p>${p.enunt}</p>`;
+        document.getElementById('exercise-text').innerHTML = `<p>${p.enunt}</p>`;
         
         const container = document.getElementById('answers-container');
         container.innerHTML = '';
@@ -165,7 +165,7 @@ class SpeedyMateApp {
     actualizeazaProgresLive() {
         const total = 20; 
         
-        // Progres = (Index Curent + 1) / 20 (Directivă Neon)
+        // Progres = (Index + 1) / 20 (Directiva Delta: 5% la prima intrebare)
         const procentParcurs = Math.round(((this.indexCurent + 1) / total) * 100);
         
         let corecte = 0;
@@ -173,10 +173,10 @@ class SpeedyMateApp {
             if (this.raspunsuri[ex.id] === ex.raspuns_corect) corecte++;
         });
         
-        // Acuratete = Corecte / 20 (Directivă Neon)
+        // Acuratete = Corecte / 20 (Directiva Delta)
         const acuratete = Math.round((corecte / total) * 100);
 
-        // Update Bars Only (No Text)
+        // Update Bars Only
         const quantBar = document.getElementById('progress-bar-quant');
         const qualBar = document.getElementById('progress-bar-qual');
         
@@ -299,8 +299,12 @@ class SpeedyMateApp {
         container.classList.remove('hidden');
     }
 
-    deschideTeorie() { document.getElementById('theory-panel').classList.remove('hidden'); }
-    inchideTeorie() { document.getElementById('theory-panel').classList.add('hidden'); }
+    deschideTeorie() { 
+        document.getElementById('teorie-container').classList.remove('hidden'); 
+    }
+    inchideTeorie() { 
+        document.getElementById('teorie-container').classList.add('hidden'); 
+    }
     revenireCapitole() { 
         document.getElementById('results-container').classList.add('hidden');
         document.getElementById('test-container').classList.add('hidden');

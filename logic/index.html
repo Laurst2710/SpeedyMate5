@@ -52,13 +52,15 @@
         </main>
 
         <div id="test-container" class="test-container hidden">
-            <div class="test-header">
-                <div class="test-header-left">
-                    <h2 id="test-title">Evaluare Capitolul 1</h2>
-                    <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
-                </div>
-                <div class="test-info">
-                    <span id="timer">00:00</span>
+            <div id="header-capitol">
+                <div class="test-header">
+                    <div class="test-header-left">
+                        <h2 id="test-title">Evaluare Capitolul 1</h2>
+                        <button class="btn btn-secondary btn-sm" id="exit-test-btn">IEȘIRE</button>
+                    </div>
+                    <div class="test-info">
+                        <span id="timer">00:00</span>
+                    </div>
                 </div>
             </div>
             
@@ -76,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="exercise-text" id="exercise-text" style="position: relative; z-index: 10;"></div>
+                <div class="exercise-text" id="exercise-text"></div>
                 <div class="answers-container" id="answers-container"></div>
                 
                 <div class="test-footer">
@@ -119,10 +121,10 @@
         </div>
 
         <!-- Panel Teorie -->
-        <div id="theory-panel" class="theory-panel hidden">
+        <div id="teorie-container" class="theory-panel hidden">
             <div class="theory-content">
                 <h2 style="color: var(--primary-blue);">Sinteza: Numere Naturale</h2>
-                <p>Recapitulare rapidă a conceptelor cheie (Sistem zecimal, Operații, Puteri).</p>
+                <p id="teorie-text">Recapitulare rapidă a conceptelor cheie (Sistem zecimal, Operații, Puteri).</p>
                 <button class="btn btn-secondary" onclick="app.inchideTeorie()" style="margin-top: 20px;">ÎNCHIDE</button>
             </div>
         </div>
