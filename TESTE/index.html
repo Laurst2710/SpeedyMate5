@@ -400,13 +400,6 @@ async function trimiterezultat() {
     observatii: obs || '—'
   };
 
-  if (SHEETS_URL === 'https://script.google.com/macros/s/AKfycby6q5lQXHnmOwKM-Mhs5XoO62d4KvKfbE5UqNxOqrGUkGheiP_kNXDFNGYQBUkm8q2_GA/exec') {
-    status.className = 'send-status ok';
-    status.textContent = '✓ Rezultat inregistrat local (Google Sheets neconfigurat inca).';
-    console.log('Rezultat:', payload);
-    return;
-  }
-
   document.getElementById('send-overlay').classList.add('active');
   try {
     await fetch(SHEETS_URL, {
