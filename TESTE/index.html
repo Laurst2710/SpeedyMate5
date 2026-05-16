@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedyMATE — Matematică Clasa a V-a</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #111318;
+  --surface: #1c1f27;
+  --surface2: #252932;
+  --border: #2e3340;
+  --text: #e8eaf0;
+  --text2: #8b90a0;
+  --green: #2e7d32;
+  --green-light: #81c784;
+  --red: #c62828;
+  --red-light: #ef9a9a;
+  --blue: #1565c0;
+  --blue-light: #64b5f6;
+  --gold: #f59e0b;
+  --gold-light: #fcd34d;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Space Grotesk', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* HEADER */
+header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; }
+.logo { font-size: 1.3rem; font-weight: 600; color: var(--gold); letter-spacing: -.02em; }
+.logo span { color: var(--text2); font-weight: 400; font-size: .9rem; margin-left: .5rem; }
+
+/* SCREENS */
+.screen { display: none; max-width: 680px; margin: 0 auto; padding: 2rem 1.5rem; }
+.screen.active { display: block; }
+
+/* START SCREEN */
+.start-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin-bottom: 1rem; }
+.start-card h2 { font-size: 1.2rem; font-weight: 600; margin-bottom: .3rem; }
+.start-card p { color: var(--text2); font-size: .9rem; margin-bottom: 1.5rem; line-height: 1.6; }
+.field { margin-bottom: 1rem; }
+.field label { display: block; font-size: .8rem; color: var(--text2); margin-bottom: .4rem; letter-spacing: .06em; text-transform: uppercase; }
+.field input, .field select { width: 100%; padding: .75rem 1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .95rem; outline: none; transition: border-color .15s; }
+.field input:focus, .field select:focus { border-color: var(--gold); }
+.field select option { background: var(--surface2); }
+.btn-primary { width: 100%; padding: .9rem; background: var(--gold); border: none; border-radius: 8px; color: #111; font-family: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity .15s; margin-top: .5rem; }
+.btn-primary:hover { opacity: .9; }
+.btn-secondary { padding: .7rem 1.4rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; cursor: pointer; transition: background .15s; }
+.btn-secondary:hover { background: var(--border); }
+
+/* TEST INFO CARDS */
+.test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-bottom: 1.5rem; }
+.info-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .9rem 1rem; }
+.info-card .label { font-size: .75rem; color: var(--text2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .3rem; }
+.info-card .value { font-size: 1rem; font-weight: 500; }
+
+/* QUIZ SCREEN */
+#counter { font-size: .75rem; color: var(--text2); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1rem; }
+.bar-row { margin-bottom: .6rem; }
+.bar-label { display: flex; justify-content: space-between; font-size: .75rem; color: var(--text2); margin-bottom: .3rem; }
+.bar-track { width: 100%; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; transition: width .4s ease; }
+#bar-progres { background: var(--blue-light); }
+#bar-acuratete { background: var(--green); }
+#bars { margin-bottom: 1.2rem; }
+#question { font-size: 1rem; font-weight: 500; color: var(--text); margin-bottom: 1.2rem; line-height: 1.6; padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.opt { width: 100%; text-align: left; padding: .85rem 1rem; margin-bottom: .4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: .95rem; color: var(--text); cursor: pointer; transition: background .12s, border-color .12s; font-family: inherit; }
+.opt:hover:not(:disabled) { background: var(--surface2); border-color: var(--text2); }
+.opt:disabled { cursor: default; }
+.opt.correct { background: var(--green); border-color: var(--green); color: #fff; }
+.opt.wrong { background: var(--red); border-color: var(--red); color: #fff; }
+#feedback { margin-top: .8rem; padding: .9rem 1rem; border-radius: 8px; font-size: .9rem; line-height: 1.6; display: none; color: #fff; }
+#feedback.correct { background: var(--green); }
+#feedback.wrong { background: var(--red); }
+#btn-next { margin-top: 1rem; padding: .7rem 1.4rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; cursor: pointer; display: none; transition: background .12s; }
+#btn-next:hover { background: var(--border); }
+
+/* RESULT SCREEN */
+.result-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; margin-bottom: .75rem; }
+.result-card .rc-label { font-size: .75rem; color: var(--text2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; }
+.result-card .rc-value { font-size: 1.4rem; font-weight: 600; }
+.result-card .rc-sub { font-size: .85rem; color: var(--text2); margin-top: .2rem; }
+.admitted { border-color: var(--green); }
+.admitted .rc-value { color: var(--green-light); }
+.rejected { border-color: var(--red); }
+.rejected .rc-value { color: var(--red-light); }
+.trophy-card { background: var(--surface); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.4rem; text-align: center; margin-bottom: .75rem; }
+.trophy-icon { font-size: 2.5rem; margin-bottom: .4rem; }
+.trophy-name { font-size: 1.1rem; font-weight: 600; color: var(--gold); }
+.trophy-pts { font-size: .85rem; color: var(--text2); margin-top: .3rem; }
+.msg-card { border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: .75rem; font-size: .9rem; line-height: 1.6; }
+.msg-ok { background: #1b4d2e; color: var(--green-light); border: 1px solid var(--green); }
+.msg-fail { background: #4d1b1b; color: var(--red-light); border: 1px solid var(--red); }
+.obs-field { margin-bottom: .75rem; }
+.obs-field label { display: block; font-size: .75rem; color: var(--text2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; }
+.obs-field textarea { width: 100%; padding: .75rem 1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; resize: vertical; min-height: 80px; outline: none; transition: border-color .15s; }
+.obs-field textarea:focus { border-color: var(--gold); }
+.send-status { font-size: .8rem; color: var(--text2); margin-top: .5rem; min-height: 1.2rem; }
+.send-status.ok { color: var(--green-light); }
+.send-status.err { color: var(--red-light); }
+.btn-row { display: flex; gap: .75rem; margin-top: .5rem; }
+.btn-row .btn-primary { margin-top: 0; }
+
+/* SENDING OVERLAY */
+#send-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); align-items: center; justify-content: center; z-index: 100; }
+#send-overlay.active { display: flex; }
+.send-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; text-align: center; }
+.send-box p { color: var(--text2); margin-top: .5rem; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">SpeedyMATE <span>Clasa a V-a · Numere Naturale</span></div>
+</header>
+
+<!-- START SCREEN -->
+<div id="screen-start" class="screen active">
+  <div class="start-card">
+    <h2>Bine ai venit!</h2>
+    <p>Completează datele de mai jos, apoi alege testul pe care vrei să îl susții. Ai nevoie de minim 80% pentru statutul de <strong>Antrenat</strong>.</p>
+    <div class="field">
+      <label>Numele tău</label>
+      <input type="text" id="inp-nume" placeholder="ex: Ion Popescu" />
+    </div>
+    <div class="field">
+      <label>Clasa</label>
+      <input type="text" id="inp-clasa" placeholder="ex: 5A" />
+    </div>
+    <div class="field">
+      <label>Alege testul</label>
+      <select id="inp-test">
+        <option value="T1">T1 — Sistemul zecimal (prima sesiune)</option>
+        <option value="T2">T2 — Sistemul zecimal (a doua sesiune)</option>
+        <option value="T3">T3 — Sistemul zecimal (a treia sesiune)</option>
+        <option value="T4">T4 — Sistemul zecimal (a patra sesiune)</option>
+      </select>
+    </div>
+    <button class="btn-primary" onclick="startTest()">Începe testul →</button>
+  </div>
+  <div style="text-align:center;color:var(--text2);font-size:.8rem;padding:.5rem">
+    Tema 1 · U1 Numere Naturale · Manual · Dificultate 1 · OMENCS 3393/2017
+  </div>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="screen-quiz" class="screen">
+  <div id="bars">
+    <div class="bar-row">
+      <div class="bar-label"><span>Progres</span><span id="lbl-progres">0/10 — 0%</span></div>
+      <div class="bar-track"><div class="bar-fill" id="bar-progres" style="width:0%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Acuratete</span><span id="lbl-acuratete">—</span></div>
+      <div class="bar-track"><div class="bar-fill" id="bar-acuratete" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div id="counter"></div>
+  <div id="question"></div>
+  <div id="options"></div>
+  <div id="feedback"></div>
+  <button id="btn-next" onclick="nextQ()">Urmatoarea intrebare →</button>
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="screen-result" class="screen">
+  <div class="result-card" id="rc-scor">
+    <div class="rc-label">Scor</div>
+    <div class="rc-value" id="rv-scor"></div>
+    <div class="rc-sub" id="rs-scor"></div>
+  </div>
+  <div class="result-card" id="rc-status">
+    <div class="rc-label">Status</div>
+    <div class="rc-value" id="rv-status"></div>
+    <div class="rc-sub">Prag minim de admisibilitate: 80%</div>
+  </div>
+  <div class="result-card" id="rc-puncte" style="display:none">
+    <div class="rc-label">Puncte obtinute</div>
+    <div class="rc-value" id="rv-puncte"></div>
+    <div class="rc-sub">Dificultate 1 · 10 puncte per raspuns corect</div>
+  </div>
+  <div class="trophy-card" id="rc-trofeu" style="display:none">
+    <div class="trophy-icon" id="rv-trofeu-icon"></div>
+    <div class="trophy-name" id="rv-trofeu-name"></div>
+    <div class="trophy-pts" id="rv-trofeu-pts"></div>
+  </div>
+  <div class="msg-card" id="rc-msg"></div>
+  <div class="obs-field">
+    <label>Observatiile tale (optional)</label>
+    <textarea id="inp-obs" placeholder="Ce a fost greu? Ce vrei sa retii? Cum te-ai simtit?"></textarea>
+  </div>
+  <div class="send-status" id="send-status"></div>
+  <div class="btn-row">
+    <button class="btn-primary" onclick="trimiterezultat()">Trimite rezultatul</button>
+    <button class="btn-secondary" onclick="resetApp()">Test nou</button>
+  </div>
+</div>
+
+<div id="send-overlay">
+  <div class="send-box">
+    <div style="font-size:1.5rem">⏳</div>
+    <p>Se trimite rezultatul...</p>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// GOOGLE SHEETS ENDPOINT
+// Inlocuieste cu URL-ul de la Apps Script dupa publicare
+// ============================================================
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycby6q5lQXHnmOwKM-Mhs5XoO62d4KvKfbE5UqNxOqrGUkGheiP_kNXDFNGYQBUkm8q2_GA/exec";
+
+const DIFICULTATE = 1;
+const PTS = 10;
+const PRAG = 0.8;
+const TROFEE = [
+  {min:0,   icon:"🌱", name:"Speedy Inceput"},
+  {min:50,  icon:"⚡", name:"Speedy in Forma"},
+  {min:100, icon:"🏅", name:"Speedy Avansat"},
+  {min:200, icon:"🏆", name:"Speedy Campion"},
+  {min:500, icon:"🌟", name:"Speedy Maestru"},
+];
+
+const TESTS = {
+T1: [
+  {q:"Cifra sutelor in numarul 47 382 este:",opts:["a) 4","b) 7","c) 3","d) 8"],ok:2,exOk:"Corect! Numara de la dreapta: 2=unitati, 8=zeci, 3=sute, 7=mii, 4=zeci de mii.",exGr:"Numara de la dreapta: 2=unitati, 8=zeci, 3=sute, 7=mii, 4=zeci de mii. Cifra sutelor este 3."},
+  {q:"Numarul trei sute douazeci si cinci de mii patruzeci scris cu cifre este:",opts:["a) 325 400","b) 32 540","c) 325 040","d) 305 040"],ok:2,exOk:"Corect! 325 de mii = 325 000, plus patruzeci = 40. Total: 325 040.",exGr:"325 de mii = 325 000, plus patruzeci = 40. Raspuns: 325 040."},
+  {q:"Numarul 406 053 se citeste:",opts:["a) patruzeci de mii sase sute cincizeci si trei","b) patru sute sase mii cincizeci si trei","c) patru sute saizeci de mii cincizeci si trei","d) patru sute sase mii cinci sute trei"],ok:1,exOk:"Corect! 406 mii = patru sute sase mii; 053 = cincizeci si trei.",exGr:"Grupam: 406|053. Se citeste: patru sute sase mii cincizeci si trei."},
+  {q:"Cifra 6 din numarul 364 821 se afla la ordinul:",opts:["a) sutelor","b) miilor","c) zecilor","d) zecilor de mii"],ok:3,exOk:"Corect! 3=sute de mii, 6=zeci de mii, 4=mii, 8=sute, 2=zeci, 1=unitati.",exGr:"Numara de la dreapta: 1=unitati, 2=zeci, 8=sute, 4=mii, 6=zeci de mii."},
+  {q:"Cifra 8 din numarul 384 210 face parte din clasa:",opts:["a) unitatilor","b) miilor","c) milioanelor","d) miliardelor"],ok:1,exOk:"Corect! Cifra 8 este la zeci de mii. Zecile de mii fac parte din clasa miilor.",exGr:"Clasele: unitatilor, miilor, milioanelor, miliardelor. Cifra 8 la zeci de mii = clasa miilor."},
+  {q:"Valoarea cifrei 0 din numarul 6 038 este:",opts:["a) 0 unitati","b) 0 zeci","c) 0 sute","d) 0 mii"],ok:2,exOk:"Corect! 6=mii, 0=sute, 3=zeci, 8=unitati. Cifra 0 se afla la ordinul sutelor.",exGr:"6038: 6=mii, 0=sute, 3=zeci, 8=unitati. Valoarea cifrei 0 este 0 sute."},
+  {q:"Numarul 508 064 are cifra zecilor de mii egala cu:",opts:["a) 5","b) 8","c) 0","d) 6"],ok:2,exOk:"Corect! 5=sute de mii, 0=zeci de mii, 8=mii, 0=sute, 6=zeci, 4=unitati.",exGr:"Numara de la dreapta: 4=unitati, 6=zeci, 0=sute, 8=mii, 0=zeci de mii. Cifra zecilor de mii este 0."},
+  {q:"Numarul 203 450 are cifra sutelor de mii egala cu:",opts:["a) 2","b) 0","c) 3","d) 4"],ok:0,exOk:"Corect! 2=sute de mii, 0=zeci de mii, 3=mii, 4=sute, 5=zeci, 0=unitati.",exGr:"Numara pozitiile de la dreapta: 0=unitati, 5=zeci, 4=sute, 3=mii, 0=zeci de mii, 2=sute de mii."},
+  {q:"Cel mai mic numar natural de 4 cifre cu cifra unitatilor egala cu 7 este:",opts:["a) 9 997","b) 1 070","c) 1 700","d) 1 007"],ok:3,exOk:"Corect! Cel mai mic numar de 4 cifre este 1 000. Cu cifra unitatilor 7: 1 007.",exGr:"Cel mai mic numar de 4 cifre incepe cu 1. Cu cifra unitatilor 7 si restul 0: 1 007."},
+  {q:"Care numar are cifra zecilor de mii egala cu 7 si cifra sutelor egala cu 3?",opts:["a) 47 312","b) 76 384","c) 57 032","d) 17 930"],ok:1,exOk:"Corect! 76 384: 7=zeci de mii, 6=mii, 3=sute, 8=zeci, 4=unitati. Ambele conditii indeplinite.",exGr:"Cauta numarul cu zeci de mii=7 SI sute=3. In 76 384: zeci de mii=7 si sute=3."}
+],
+T2: [
+  {q:"Cifra miilor in numarul 582 306 este:",opts:["a) 5","b) 8","c) 2","d) 3"],ok:2,exOk:"Corect! 5=sute de mii, 8=zeci de mii, 2=mii, 3=sute, 0=zeci, 6=unitati.",exGr:"Numara de la dreapta: 6=unitati, 0=zeci, 3=sute, 2=mii. Cifra miilor este 2."},
+  {q:"Numarul doua milioane cincizeci de mii trei sute scris cu cifre este:",opts:["a) 2 050 300","b) 2 500 300","c) 2 050 030","d) 250 300"],ok:0,exOk:"Corect! 2 milioane + 50 de mii + 300 = 2 050 300.",exGr:"2 milioane = 2 000 000; 50 de mii = 50 000; 300 = 300. Total: 2 050 300."},
+  {q:"Numarul 7 040 005 se citeste:",opts:["a) sapte milioane patruzeci de mii cinci","b) sapte sute patruzeci de mii cinci","c) sapte milioane patru mii cinci","d) sapte milioane patruzeci de mii cincizeci"],ok:0,exOk:"Corect! 7=milioane, 040=mii (patruzeci de mii), 005=unitati (cinci).",exGr:"Grupam: 7 | 040 | 005. Citim: sapte milioane patruzeci de mii cinci."},
+  {q:"Cifra 9 din numarul 195 820 se afla la ordinul:",opts:["a) unitatilor","b) sutelor","c) zecilor de mii","d) sutelor de mii"],ok:2,exOk:"Corect! 1=sute de mii, 9=zeci de mii, 5=mii, 8=sute, 2=zeci, 0=unitati.",exGr:"Numara de la dreapta: 0=unitati, 2=zeci, 8=sute, 5=mii, 9=zeci de mii. Cifra 9 este la zeci de mii."},
+  {q:"Cifra 4 din numarul 3 400 712 face parte din clasa:",opts:["a) unitatilor","b) miliardelor","c) milioanelor","d) miilor"],ok:3,exOk:"Corect! 3=milioane, 4=sute de mii, restul=mii/unitati. Sutele de mii fac parte din clasa miilor.",exGr:"4 se afla la sute de mii. Clasa miilor include: mii, zeci de mii, sute de mii."},
+  {q:"Valoarea cifrei 5 din numarul 45 231 este:",opts:["a) 5 unitati","b) 5 zeci","c) 5 mii","d) 5 zeci de mii"],ok:2,exOk:"Corect! 4=zeci de mii, 5=mii, 2=sute, 3=zeci, 1=unitati. Cifra 5 este la ordinul miilor.",exGr:"Numara de la dreapta: 1=unitati, 3=zeci, 2=sute, 5=mii. Valoarea cifrei 5 este 5 mii."},
+  {q:"Cate cifre are numarul noua sute nouazeci si noua de mii noua sute nouazeci si noua?",opts:["a) 5","b) 6","c) 7","d) 4"],ok:1,exOk:"Corect! 999 999 este un numar de 6 cifre.",exGr:"999 999: noua cifre? Nu. Numara: 9-9-9-9-9-9 = 6 cifre."},
+  {q:"Care este descompunerea zecimala completa a numarului 30 207?",opts:["a) 3x10000+2x100+7","b) 3x10000+0x1000+2x100+0x10+7","c) 3x1000+2x100+7","d) 3x10000+2x10+7"],ok:1,exOk:"Corect! Descompunerea completa include toate ordinele, inclusiv cele cu cifra 0.",exGr:"30 207 are 5 cifre, deci 5 termeni: 3x10000+0x1000+2x100+0x10+7."},
+  {q:"Cel mai mare numar natural de 5 cifre cu cifra sutelor egala cu 0 este:",opts:["a) 99 099","b) 99 900","c) 90 099","d) 99 009"],ok:0,exOk:"Corect! Cu sute=0, maximizam celelalte pozitii: 99 099.",exGr:"Sute=0, deci pozitia sutelor este 0. Maximizam restul: zeci de mii=9, mii=9, zeci=9, unitati=9. Rezultat: 99 099."},
+  {q:"Care numar are cifra sutelor egala cu 3 si cifra zecilor de mii egala cu 7?",opts:["a) 47 312","b) 76 384","c) 57 032","d) 17 930"],ok:1,exOk:"Corect! 76 384: 7=zeci de mii, 6=mii, 3=sute, 8=zeci, 4=unitati.",exGr:"Cauta: zeci de mii=7 SI sute=3. In 76 384: zeci de mii=7 si sute=3. Indeplinite ambele."}
+],
+T3: [
+  {q:"Cifra zecilor din numarul 938 472 este:",opts:["a) 9","b) 4","c) 7","d) 2"],ok:2,exOk:"Corect! 9=sute de mii, 3=zeci de mii, 8=mii, 4=sute, 7=zeci, 2=unitati.",exGr:"Numara de la dreapta: 2=unitati, 7=zeci. Cifra zecilor este 7."},
+  {q:"Numarul saptezeci si doua de mii opt scris cu cifre este:",opts:["a) 720 008","b) 72 080","c) 72 008","d) 70 208"],ok:2,exOk:"Corect! 72 de mii = 72 000, plus opt = 8. Total: 72 008.",exGr:"72 de mii = 72 000; opt = 8. Rezultat: 72 008."},
+  {q:"Numarul 920 034 se citeste:",opts:["a) nouazeci si doua de mii treizeci si patru","b) noua sute douazeci de mii treizeci si patru","c) noua milioane douazeci de mii treizeci si patru","d) noua sute doua mii treizeci si patru"],ok:1,exOk:"Corect! 920 = noua sute douazeci; 034 = treizeci si patru.",exGr:"Grupam: 920 | 034. Clasa miilor: noua sute douazeci de mii. Clasa unitatilor: treizeci si patru."},
+  {q:"Cifra 1 din numarul 210 583 se afla la ordinul:",opts:["a) unitatilor","b) zecilor de mii","c) sutelor de mii","d) miilor"],ok:1,exOk:"Corect! 2=sute de mii, 1=zeci de mii, 0=mii, 5=sute, 8=zeci, 3=unitati.",exGr:"Numara de la dreapta: 3=unitati, 8=zeci, 5=sute, 0=mii, 1=zeci de mii. Cifra 1 este la zeci de mii."},
+  {q:"Cifra 7 din numarul 705 348 face parte din clasa:",opts:["a) miliardelor","b) milioanelor","c) miilor","d) unitatilor"],ok:2,exOk:"Corect! 7 este la sute de mii. Sutele de mii fac parte din clasa miilor.",exGr:"7=sute de mii, 0=zeci de mii, 5=mii. Sute de mii = clasa miilor."},
+  {q:"Valoarea cifrei 8 din numarul 183 450 este:",opts:["a) 8 unitati","b) 8 mii","c) 8 zeci de mii","d) 8 sute de mii"],ok:2,exOk:"Corect! 1=sute de mii, 8=zeci de mii, 3=mii, 4=sute, 5=zeci, 0=unitati.",exGr:"Numara de la dreapta: 0=unitati, 5=zeci, 4=sute, 3=mii, 8=zeci de mii. Valoarea cifrei 8 este 8 zeci de mii."},
+  {q:"Cate cifre are numarul o suta de mii?",opts:["a) 5","b) 6","c) 7","d) 4"],ok:1,exOk:"Corect! 100 000 = 1-0-0-0-0-0 = 6 cifre.",exGr:"100 000: numara cifrele: 1, 0, 0, 0, 0, 0 = 6 cifre."},
+  {q:"Care este descompunerea zecimala completa a numarului 50 306?",opts:["a) 5x10000+3x100+6","b) 5x10000+0x1000+3x100+0x10+6","c) 5x1000+3x100+6","d) 5x10000+3x10+6"],ok:1,exOk:"Corect! Descompunerea completa: 5x10000+0x1000+3x100+0x10+6.",exGr:"50 306 are 5 cifre, deci 5 termeni. Toti trebuie inclusi, chiar daca sunt 0."},
+  {q:"Cel mai mic numar natural de 6 cifre cu cifra unitatilor egala cu 9 este:",opts:["a) 999 999","b) 100 009","c) 100 099","d) 100 900"],ok:1,exOk:"Corect! Cel mai mic numar de 6 cifre este 100 000. Cu unitati=9: 100 009.",exGr:"Cel mai mic 6 cifre = 100 000. Cu cifra unitatilor 9 si restul minimizat: 100 009."},
+  {q:"Care numar are cifra miilor egala cu 8, cifra sutelor egala cu 0 si cifra zecilor de mii egala cu 3?",opts:["a) 48 051","b) 38 041","c) 28 053","d) 58 032"],ok:1,exOk:"Corect! 38 041: 3=zeci de mii, 8=mii, 0=sute, 4=zeci, 1=unitati. Toate 3 conditii indeplinite.",exGr:"Cauta: zeci de mii=3, mii=8, sute=0. In 38 041: 3=zeci de mii, 8=mii, 0=sute. Corect!"}
+],
+T4: [
+  {q:"Cifra sutelor de mii din numarul 731 264 este:",opts:["a) 7","b) 3","c) 1","d) 2"],ok:0,exOk:"Corect! 7=sute de mii, 3=zeci de mii, 1=mii, 2=sute, 6=zeci, 4=unitati.",exGr:"Numara de la dreapta: 4=unitati, 6=zeci, 2=sute, 1=mii, 3=zeci de mii, 7=sute de mii."},
+  {q:"Numarul patru sute sase mii douazeci scris cu cifre este:",opts:["a) 46 020","b) 400 620","c) 406 020","d) 406 200"],ok:2,exOk:"Corect! 406 de mii = 406 000; douazeci = 20. Total: 406 020.",exGr:"406 de mii = 406 000; plus douazeci = 20. Rezultat: 406 020."},
+  {q:"Numarul 1 300 040 se citeste:",opts:["a) un milion trei sute de mii patruzeci","b) treisprezece milioane patruzeci","c) un milion trei mii patruzeci","d) un milion treizeci de mii patruzeci"],ok:0,exOk:"Corect! 1=milion, 300=mii (trei sute de mii), 040=unitati (patruzeci).",exGr:"Grupam: 1 | 300 | 040. Un milion, trei sute de mii, patruzeci."},
+  {q:"Cifra 5 din numarul 456 123 se afla la ordinul:",opts:["a) miilor","b) zecilor de mii","c) sutelor de mii","d) sutelor"],ok:1,exOk:"Corect! 4=sute de mii, 5=zeci de mii, 6=mii, 1=sute, 2=zeci, 3=unitati.",exGr:"Numara de la dreapta: 3=unitati, 2=zeci, 1=sute, 6=mii, 5=zeci de mii. Cifra 5 este la zeci de mii."},
+  {q:"Cifra 2 din numarul 4 200 831 face parte din clasa:",opts:["a) unitatilor","b) miilor","c) milioanelor","d) miliardelor"],ok:1,exOk:"Corect! 4=milioane, 2=sute de mii. Sutele de mii fac parte din clasa miilor.",exGr:"2 se afla la sute de mii. Clasa miilor include sute de mii, zeci de mii, mii."},
+  {q:"Valoarea cifrei 3 din numarul 63 512 este:",opts:["a) 3 unitati","b) 3 sute","c) 3 mii","d) 3 zeci de mii"],ok:2,exOk:"Corect! 6=zeci de mii, 3=mii, 5=sute, 1=zeci, 2=unitati. Cifra 3 = 3 mii.",exGr:"Numara de la dreapta: 2=unitati, 1=zeci, 5=sute, 3=mii. Valoarea cifrei 3 este 3 mii."},
+  {q:"Cate cifre are numarul noua milioane?",opts:["a) 6","b) 7","c) 8","d) 9"],ok:1,exOk:"Corect! 9 000 000 = 9-0-0-0-0-0-0 = 7 cifre.",exGr:"9 000 000: numara cifrele: 9, 0, 0, 0, 0, 0, 0 = 7 cifre."},
+  {q:"Care este descompunerea zecimala completa a numarului 8 050?",opts:["a) 8x1000+5x10","b) 8x1000+0x100+5x10+0","c) 8x100+5x10","d) 8x1000+5x100"],ok:1,exOk:"Corect! Descompunerea completa: 8x1000+0x100+5x10+0.",exGr:"8 050 are 4 cifre, deci 4 termeni: 8x1000+0x100+5x10+0."},
+  {q:"Cel mai mare numar natural de 4 cifre cu cifra miilor egala cu 3 este:",opts:["a) 3 999","b) 3 000","c) 3 900","d) 3 099"],ok:0,exOk:"Corect! Mii=3, maximizam restul: 3 999.",exGr:"Cifra miilor = 3. Maximizam sute, zeci, unitati: 9, 9, 9. Rezultat: 3 999."},
+  {q:"Care numar are cifra zecilor de mii egala cu 4, cifra sutelor egala cu 5 si cifra unitatilor egala cu 1?",opts:["a) 34 581","b) 24 531","c) 14 521","d) 44 551"],ok:3,exOk:"Corect! 44 551: 4=zeci de mii, 4=mii, 5=sute, 5=zeci, 1=unitati. Toate 3 conditii: zeci de mii=4, sute=5, unitati=1.",exGr:"Cauta: zeci de mii=4, sute=5, unitati=1. In 44 551: zeci de mii=4, sute=5, unitati=1. Corect!"}
+]
+};
+
+let session = { nume:'', clasa:'', test:'', q:[], cur:0, score:0, answered:0 };
+
+function startTest() {
+  const n = document.getElementById('inp-nume').value.trim();
+  const c = document.getElementById('inp-clasa').value.trim();
+  const t = document.getElementById('inp-test').value;
+  if (!n || !c) { alert('Completeaza numele si clasa!'); return; }
+  session = { nume:n, clasa:c, test:t, q:TESTS[t], cur:0, score:0, answered:0 };
+  show('screen-quiz');
+  renderQ();
+}
+
+function renderQ() {
+  const q = session.q[session.cur];
+  document.getElementById('counter').textContent = 'INTREBAREA ' + (session.cur+1) + ' DIN ' + session.q.length + ' · ' + session.test;
+  document.getElementById('question').textContent = q.q;
+  const el = document.getElementById('options');
+  el.innerHTML = '';
+  q.opts.forEach((o,i) => {
+    const b = document.createElement('button');
+    b.className = 'opt'; b.textContent = o;
+    b.onclick = () => answer(i);
+    el.appendChild(b);
+  });
+  document.getElementById('feedback').style.display = 'none';
+  document.getElementById('btn-next').style.display = 'none';
+  updateBars();
+}
+
+function answer(i) {
+  const q = session.q[session.cur];
+  document.querySelectorAll('.opt').forEach(b => b.disabled = true);
+  session.answered++;
+  if (i === q.ok) session.score++;
+  updateBars();
+  const fb = document.getElementById('feedback');
+  fb.style.display = 'block';
+  if (i === q.ok) {
+    document.querySelectorAll('.opt')[i].classList.add('correct');
+    fb.className = 'correct'; fb.textContent = q.exOk;
+  } else {
+    document.querySelectorAll('.opt')[i].classList.add('wrong');
+    document.querySelectorAll('.opt')[q.ok].classList.add('correct');
+    fb.className = 'wrong'; fb.textContent = q.exGr;
+  }
+  document.getElementById('btn-next').style.display = 'inline-block';
+}
+
+function nextQ() {
+  session.cur++;
+  if (session.cur < session.q.length) { renderQ(); return; }
+  showResult();
+}
+
+function updateBars() {
+  const pct = Math.round((session.answered / session.q.length) * 100);
+  document.getElementById('bar-progres').style.width = pct + '%';
+  document.getElementById('lbl-progres').textContent = session.answered + '/' + session.q.length + ' — ' + pct + '%';
+  if (session.answered > 0) {
+    const acc = Math.round((session.score / session.answered) * 100);
+    document.getElementById('bar-acuratete').style.width = acc + '%';
+    document.getElementById('lbl-acuratete').textContent = session.score + '/' + session.answered + ' — ' + acc + '%';
+    document.getElementById('bar-acuratete').style.background = acc >= 80 ? 'var(--green)' : 'var(--red)';
+  }
+}
+
+function showResult() {
+  show('screen-result');
+  const acc = session.score / session.q.length;
+  const pct = Math.round(acc * 100);
+  const admis = acc >= PRAG;
+  const puncte = admis ? session.score * PTS : 0;
+
+  document.getElementById('rv-scor').textContent = session.score + ' / ' + session.q.length + ' — ' + pct + '%';
+  document.getElementById('rs-scor').textContent = session.score + ' raspunsuri corecte din ' + session.q.length;
+
+  const rcStatus = document.getElementById('rc-status');
+  const rvStatus = document.getElementById('rv-status');
+  rcStatus.classList.remove('admitted','rejected');
+  if (admis) {
+    rcStatus.classList.add('admitted');
+    rvStatus.textContent = 'Antrenat ✓';
+  } else {
+    rcStatus.classList.add('rejected');
+    rvStatus.textContent = 'Neadmis';
+  }
+
+  if (admis) {
+    document.getElementById('rc-puncte').style.display = 'block';
+    document.getElementById('rv-puncte').textContent = puncte + ' puncte';
+    const t = TROFEE.filter(x => puncte >= x.min).pop();
+    document.getElementById('rc-trofeu').style.display = 'block';
+    document.getElementById('rv-trofeu-icon').textContent = t.icon;
+    document.getElementById('rv-trofeu-name').textContent = t.name;
+    document.getElementById('rv-trofeu-pts').textContent = puncte + ' puncte acumulate';
+    const m = document.getElementById('rc-msg');
+    m.className = 'msg-card msg-ok';
+    m.textContent = 'Felicitari! Ai atins pragul de 80%. ' + session.test + ' este considerat antrenat.';
+  } else {
+    document.getElementById('rc-puncte').style.display = 'none';
+    document.getElementById('rc-trofeu').style.display = 'none';
+    const m = document.getElementById('rc-msg');
+    m.className = 'msg-card msg-fail';
+    m.textContent = 'Nivelul minim de admisibilitate este 80%. Nu se acorda puncte. Reia testul pentru a obtine statutul de antrenat.';
+  }
+}
+
+async function trimiterezultat() {
+  const obs = document.getElementById('inp-obs').value.trim();
+  const status = document.getElementById('send-status');
+  const acc = session.score / session.q.length;
+  const admis = acc >= PRAG;
+  const puncte = admis ? session.score * PTS : 0;
+
+  const payload = {
+    timestamp: new Date().toLocaleString('ro-RO'),
+    nume: session.nume,
+    clasa: session.clasa,
+    test: session.test,
+    scor: session.score + '/' + session.q.length,
+    procent: Math.round(acc*100) + '%',
+    puncte: puncte,
+    status: admis ? 'Antrenat' : 'Neadmis',
+    observatii: obs || '—'
+  };
+
+  if (SHEETS_URL === 'https://script.google.com/macros/s/AKfycby6q5lQXHnmOwKM-Mhs5XoO62d4KvKfbE5UqNxOqrGUkGheiP_kNXDFNGYQBUkm8q2_GA/exec') {
+    status.className = 'send-status ok';
+    status.textContent = '✓ Rezultat inregistrat local (Google Sheets neconfigurat inca).';
+    console.log('Rezultat:', payload);
+    return;
+  }
+
+  document.getElementById('send-overlay').classList.add('active');
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    status.className = 'send-status ok';
+    status.textContent = '✓ Rezultat trimis cu succes in Google Sheets.';
+  } catch(e) {
+    status.className = 'send-status err';
+    status.textContent = '✗ Eroare la trimitere. Verifica conexiunea.';
+  }
+  document.getElementById('send-overlay').classList.remove('active');
+}
+
+window.trimiterezultat = trimiterezultat;
+
+function resetApp() {
+  session = { nume:'', clasa:'', test:'', q:[], cur:0, score:0, answered:0 };
+  document.getElementById('inp-obs').value = '';
+  document.getElementById('send-status').textContent = '';
+  document.getElementById('rc-puncte').style.display = 'none';
+  document.getElementById('rc-trofeu').style.display = 'none';
+  show('screen-start');
+}
+
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
 
