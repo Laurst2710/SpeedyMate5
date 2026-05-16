@@ -138,10 +138,14 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
         <option value="T4">T4 — Sistemul zecimal; cifre, clase, ordine pozitionale</option>
       </select>
     </div>
-    <button class="btn-primary" onclick="startTest()">Începe testul →</button>
+    <div style="background:#1a2a1a;border:1px solid #2e7d32;border-radius:8px;padding:.85rem 1rem;margin-bottom:1rem;font-size:.85rem;color:#81c784;line-height:1.6">
+      <strong>&#9888; Nivel: MANUAL &mdash; Dificultate 1</strong><br>
+      Exercitii directe, un singur pas logic. Prag minim de admisibilitate: <strong>80%</strong>. Sub acest prag nu se acorda puncte.
+    </div>
+    <button class="btn-primary" onclick="startTest()">Incepe testul &rarr;</button>
   </div>
   <div style="text-align:center;color:var(--text2);font-size:.8rem;padding:.5rem">
-    Clasa a V-a · U1: Numere Naturale · Tema 1: Sistemul zecimal; cifre, clase, ordine pozitionale · Continut: Scrierea si citirea · Competente: 1.1, 4.1, 5.1 · Manual · Dificultate 1 · OMENCS 3393/2017
+    Clasa a V-a &middot; U1: Numere Naturale &middot; Tema 1: Sistemul zecimal; cifre, clase, ordine pozitionale &middot; Continut: Scrierea si citirea &middot; Competente: 1.1, 4.1, 5.1 &middot; Manual &middot; Dificultate 1 &middot; OMENCS 3393/2017
   </div>
 </div>
 
@@ -157,11 +161,14 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
       <div class="bar-track"><div class="bar-fill" id="bar-acuratete" style="width:0%"></div></div>
     </div>
   </div>
-  <div id="counter"></div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
+    <div id="counter"></div>
+    <div id="timer" style="font-size:.85rem;color:var(--text2);font-family:'JetBrains Mono',monospace">⏱ 0s</div>
+  </div>
   <div id="question"></div>
   <div id="options"></div>
   <div id="feedback"></div>
-  <button id="btn-next" onclick="nextQ()">Urmatoarea intrebare →</button>
+  <button id="btn-next" onclick="nextQ()">Urmatoarea intrebare &rarr;</button>
 </div>
 
 <!-- RESULT SCREEN -->
@@ -275,6 +282,29 @@ T4: [
 };
 
 let session = { nume:'', clasa:'', test:'', q:[], cur:0, score:0, answered:0 };
+let timerInterval = null;
+let timerSeconds = 0;
+let timings = [];
+
+function startTimer() {
+  timerSeconds = 0;
+  document.getElementById('timer').textContent = '⏱ 0s';
+  document.getElementById('timer').style.color = 'var(--text2)';
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    timerSeconds++;
+    const el = document.getElementById('timer');
+    el.textContent = '⏱ ' + timerSeconds + 's';
+    if (timerSeconds > 30) el.style.color = 'var(--red-light)';
+    else if (timerSeconds > 15) el.style.color = 'var(--gold)';
+    else el.style.color = 'var(--text2)';
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  timings.push(timerSeconds);
+}
 
 function startTest() {
   const n = document.getElementById('inp-nume').value.trim();
@@ -282,6 +312,7 @@ function startTest() {
   const t = document.getElementById('inp-test').value;
   if (!n || !c) { alert('Completeaza numele si clasa!'); return; }
   session = { nume:n, clasa:c, test:t, q:TESTS[t], cur:0, score:0, answered:0 };
+  timings = [];
   show('screen-quiz');
   renderQ();
 }
@@ -300,12 +331,14 @@ function renderQ() {
   });
   document.getElementById('feedback').style.display = 'none';
   document.getElementById('btn-next').style.display = 'none';
+  startTimer();
   updateBars();
 }
 
 function answer(i) {
   const q = session.q[session.cur];
   document.querySelectorAll('.opt').forEach(b => b.disabled = true);
+  stopTimer();
   session.answered++;
   if (i === q.ok) session.score++;
   updateBars();
@@ -397,7 +430,9 @@ async function trimiterezultat() {
     procent: Math.round(acc*100) + '%',
     puncte: puncte,
     status: admis ? 'Antrenat' : 'Neadmis',
-    observatii: obs || '—'
+    observatii: obs || '—',
+    timpi_sec: timings.join(','),
+    timp_mediu_sec: timings.length ? Math.round(timings.reduce((a,b)=>a+b,0)/timings.length) : 0
   };
 
   document.getElementById('send-overlay').classList.add('active');
@@ -421,6 +456,7 @@ window.trimiterezultat = trimiterezultat;
 
 function resetApp() {
   session = { nume:'', clasa:'', test:'', q:[], cur:0, score:0, answered:0 };
+  timings = [];
   document.getElementById('inp-obs').value = '';
   document.getElementById('send-status').textContent = '';
   document.getElementById('rc-puncte').style.display = 'none';
