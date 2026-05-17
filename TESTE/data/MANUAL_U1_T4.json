@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "nivel": "MANUAL",
+    "dificultate": 1,
+    "clasa": 5,
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "T4",
+    "titlu_tema": "Pozitionarea pe axa; succesor, predecesor",
+    "continut": "Axa numerelor",
+    "competente": ["1.1", "4.1", "5.1"],
+    "sursa": "OMENCS 3393/2017",
+    "prag": 0.8,
+    "puncte_per_item": 10,
+    "items_per_test": 10
+  },
+  "teste": {
+    "T1": [
+      {
+        "q": "Succesorul numarului 999 este:",
+        "opts": ["a) 998", "b) 1 000", "c) 1 001", "d) 990"],
+        "ok": 1,
+        "exOk": "Corect! Succesorul lui n este n+1. 999+1=1 000.",
+        "exGr": "Succesorul = numarul imediat urmator. 999+1=1 000."
+      },
+      {
+        "q": "Predecesorul numarului 10 000 este:",
+        "opts": ["a) 10 001", "b) 9 999", "c) 9 000", "d) 1 000"],
+        "ok": 1,
+        "exOk": "Corect! Predecesorul lui n este n-1. 10 000-1=9 999.",
+        "exGr": "Predecesorul = numarul imediat anterior. 10 000-1=9 999."
+      },
+      {
+        "q": "Pe axa numerelor, intre 5 si 7 se afla exact:",
+        "opts": ["a) 0 numere naturale", "b) 1 numar natural", "c) 2 numere naturale", "d) 3 numere naturale"],
+        "ok": 1,
+        "exOk": "Corect! Intre 5 si 7 exista un singur numar natural: 6.",
+        "exGr": "Numerele naturale intre 5 si 7 (exclusiv): doar 6. Un singur numar."
+      },
+      {
+        "q": "Care numar natural se afla la distanta 3 de la 10 pe axa numerelor, in dreapta?",
+        "opts": ["a) 7", "b) 13", "c) 30", "d) 3"],
+        "ok": 1,
+        "exOk": "Corect! In dreapta = mai mare. 10+3=13.",
+        "exGr": "Pe axa numerelor, dreapta = valori mai mari. 10+3=13."
+      },
+      {
+        "q": "Succesorul succesorului lui 48 este:",
+        "opts": ["a) 47", "b) 49", "c) 50", "d) 51"],
+        "ok": 2,
+        "exOk": "Corect! Succesorul lui 48 = 49. Succesorul lui 49 = 50.",
+        "exGr": "Succesorul lui 48 este 49. Succesorul lui 49 este 50. Deci succesorul succesorului lui 48 = 50."
+      },
+      {
+        "q": "Predecesorul predecesorului lui 100 este:",
+        "opts": ["a) 99", "b) 98", "c) 101", "d) 102"],
+        "ok": 1,
+        "exOk": "Corect! Predecesorul lui 100=99. Predecesorul lui 99=98.",
+        "exGr": "100-1=99, 99-1=98. Predecesorul predecesorului lui 100 este 98."
+      },
+      {
+        "q": "Cate numere naturale sunt strict intre 10 si 15?",
+        "opts": ["a) 5", "b) 4", "c) 6", "d) 3"],
+        "ok": 1,
+        "exOk": "Corect! 11, 12, 13, 14 — patru numere naturale strict intre 10 si 15.",
+        "exGr": "Strict intre 10 si 15 (exclusiv capetele): 11, 12, 13, 14 = 4 numere."
+      },
+      {
+        "q": "Pe axa numerelor, numarul 0 se afla:",
+        "opts": ["a) la dreapta lui 1", "b) la stanga oricarui numar natural nenul", "c) intre -1 si 1", "d) nu exista pe axa numerelor naturale"],
+        "ok": 1,
+        "exOk": "Corect! 0 este cel mai mic numar natural, deci se afla la stanga oricarui numar natural nenul.",
+        "exGr": "Pe axa numerelor naturale, 0 este originea — cel mai mic, la stanga tuturor celorlalte."
+      },
+      {
+        "q": "Care numar se afla la mijlocul dintre 20 si 30 pe axa numerelor?",
+        "opts": ["a) 24", "b) 25", "c) 26", "d) 22"],
+        "ok": 1,
+        "exOk": "Corect! Mijlocul = (20+30)/2 = 50/2 = 25.",
+        "exGr": "Mijlocul dintre a si b = (a+b)/2. (20+30)/2 = 25."
+      },
+      {
+        "q": "Succesorul celui mai mare numar de 3 cifre este:",
+        "opts": ["a) 999", "b) 1 000", "c) 998", "d) 9 999"],
+        "ok": 1,
+        "exOk": "Corect! Cel mai mare numar de 3 cifre este 999. Succesorul sau este 1 000.",
+        "exGr": "Cel mai mare numar de 3 cifre = 999. 999+1=1 000. Acesta este primul numar de 4 cifre."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Succesorul numarului 4 999 este:",
+        "opts": ["a) 4 998", "b) 5 000", "c) 4 900", "d) 5 001"],
+        "ok": 1,
+        "exOk": "Corect! 4 999+1=5 000.",
+        "exGr": "Succesorul = n+1. 4 999+1=5 000."
+      },
+      {
+        "q": "Predecesorul numarului 1 000 000 este:",
+        "opts": ["a) 1 000 001", "b) 999 999", "c) 999 000", "d) 100 000"],
+        "ok": 1,
+        "exOk": "Corect! 1 000 000-1=999 999.",
+        "exGr": "Predecesorul = n-1. 1 000 000-1=999 999."
+      },
+      {
+        "q": "Cate numere naturale se afla intre 100 si 200 (incluzand capetele)?",
+        "opts": ["a) 99", "b) 100", "c) 101", "d) 98"],
+        "ok": 2,
+        "exOk": "Corect! De la 100 la 200 inclusiv: 200-100+1=101 numere.",
+        "exGr": "Formula: b-a+1 = 200-100+1 = 101 numere (inclusiv capetele)."
+      },
+      {
+        "q": "Pe axa numerelor, care numar este la distanta 100 in stanga lui 250?",
+        "opts": ["a) 350", "b) 150", "c) 200", "d) 250"],
+        "ok": 1,
+        "exOk": "Corect! Stanga = mai mic. 250-100=150.",
+        "exGr": "Stanga pe axa = valori mai mici. 250-100=150."
+      },
+      {
+        "q": "Succesorul succesorului succesorului lui 997 este:",
+        "opts": ["a) 998", "b) 999", "c) 1 000", "d) 1 001"],
+        "ok": 2,
+        "exOk": "Corect! 997+1=998, 998+1=999, 999+1=1 000.",
+        "exGr": "Adaugam 1 de 3 ori: 997+3=1 000."
+      },
+      {
+        "q": "Predecesorul predecesorului predecesorului lui 1 000 este:",
+        "opts": ["a) 999", "b) 998", "c) 997", "d) 996"],
+        "ok": 2,
+        "exOk": "Corect! 1000-1=999, 999-1=998, 998-1=997.",
+        "exGr": "Scadem 1 de 3 ori: 1 000-3=997."
+      },
+      {
+        "q": "Cate numere naturale sunt strict intre 0 si 100?",
+        "opts": ["a) 100", "b) 99", "c) 101", "d) 98"],
+        "ok": 1,
+        "exOk": "Corect! Strict intre 0 si 100 (exclusiv): 1, 2, ..., 99 = 99 numere.",
+        "exGr": "Strict intre 0 si 100 = excludem capetele. De la 1 la 99: 99 numere."
+      },
+      {
+        "q": "Pe axa numerelor, numerele 50, 100, 150, 200 sunt la distante:",
+        "opts": ["a) diferite intre ele", "b) egale de 50 fiecare", "c) egale de 100 fiecare", "d) neregulate"],
+        "ok": 1,
+        "exOk": "Corect! 100-50=50, 150-100=50, 200-150=50. Distante egale de 50.",
+        "exGr": "Diferentele consecutive: 100-50=50, 150-100=50, 200-150=50. Toate egale cu 50."
+      },
+      {
+        "q": "Care numar se afla la mijlocul dintre 0 si 1 000?",
+        "opts": ["a) 400", "b) 500", "c) 600", "d) 250"],
+        "ok": 1,
+        "exOk": "Corect! (0+1000)/2=500.",
+        "exGr": "Mijlocul = (0+1 000)/2 = 500."
+      },
+      {
+        "q": "Predecesorul celui mai mic numar de 5 cifre este:",
+        "opts": ["a) 10 000", "b) 9 999", "c) 99 999", "d) 1 000"],
+        "ok": 1,
+        "exOk": "Corect! Cel mai mic numar de 5 cifre este 10 000. Predecesorul sau este 9 999.",
+        "exGr": "Cel mai mic numar de 5 cifre = 10 000. 10 000-1=9 999. Acesta este cel mai mare numar de 4 cifre."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Succesorul numarului 99 999 este:",
+        "opts": ["a) 99 998", "b) 100 000", "c) 99 991", "d) 100 001"],
+        "ok": 1,
+        "exOk": "Corect! 99 999+1=100 000.",
+        "exGr": "Succesorul = n+1. 99 999+1=100 000."
+      },
+      {
+        "q": "Predecesorul numarului 10 000 000 este:",
+        "opts": ["a) 10 000 001", "b) 9 999 999", "c) 9 000 000", "d) 10 000 100"],
+        "ok": 1,
+        "exOk": "Corect! 10 000 000-1=9 999 999.",
+        "exGr": "10 000 000-1=9 999 999."
+      },
+      {
+        "q": "Cate numere naturale sunt intre 500 si 600 (exclusiv capetele)?",
+        "opts": ["a) 100", "b) 99", "c) 101", "d) 98"],
+        "ok": 1,
+        "exOk": "Corect! Strict intre 500 si 600: 501, 502,..., 599 = 99 numere.",
+        "exGr": "600-500-1=99. Formula pentru numere strict intre a si b: b-a-1."
+      },
+      {
+        "q": "Pe axa numerelor, la distanta 1 000 in dreapta lui 8 500 se afla:",
+        "opts": ["a) 7 500", "b) 9 500", "c) 8 501", "d) 9 000"],
+        "ok": 1,
+        "exOk": "Corect! 8 500+1 000=9 500.",
+        "exGr": "Dreapta = mai mare. 8 500+1 000=9 500."
+      },
+      {
+        "q": "Care este al treilea succesor al lui 1 997?",
+        "opts": ["a) 1 998", "b) 1 999", "c) 2 000", "d) 2 001"],
+        "ok": 2,
+        "exOk": "Corect! 1997+1=1998, 1998+1=1999, 1999+1=2000. Al treilea succesor: 2 000.",
+        "exGr": "Al n-lea succesor al lui k = k+n. 1997+3=2000."
+      },
+      {
+        "q": "Care este al patrulea predecesor al lui 10 004?",
+        "opts": ["a) 10 003", "b) 10 001", "c) 10 000", "d) 9 999"],
+        "ok": 2,
+        "exOk": "Corect! 10 004-4=10 000.",
+        "exGr": "Al n-lea predecesor al lui k = k-n. 10 004-4=10 000."
+      },
+      {
+        "q": "Cate numere naturale au exact 4 cifre?",
+        "opts": ["a) 999", "b) 9 000", "c) 8 999", "d) 9 999"],
+        "ok": 1,
+        "exOk": "Corect! De la 1 000 la 9 999: 9 999-1 000+1=9 000 numere.",
+        "exGr": "Numerele de 4 cifre: 1000, 1001,..., 9999. Numar total: 9999-1000+1=9000."
+      },
+      {
+        "q": "Pe axa numerelor, care pereche de numere este distantata egal de 500?",
+        "opts": ["a) 250 si 700", "b) 100 si 600", "c) 300 si 850", "d) 200 si 750"],
+        "ok": 1,
+        "exOk": "Corect! 600-100=500. Distanta = 500.",
+        "exGr": "Verificam: 600-100=500. Celelalte: 700-250=450, 850-300=550, 750-200=550."
+      },
+      {
+        "q": "Care numar se afla la mijlocul dintre 1 000 si 3 000?",
+        "opts": ["a) 1 500", "b) 2 000", "c) 2 500", "d) 1 750"],
+        "ok": 1,
+        "exOk": "Corect! (1 000+3 000)/2=2 000.",
+        "exGr": "Mijlocul = (1 000+3 000)/2 = 4 000/2 = 2 000."
+      },
+      {
+        "q": "Succesorul celui mai mare numar de 6 cifre este:",
+        "opts": ["a) 999 999", "b) 1 000 000", "c) 999 998", "d) 9 999 999"],
+        "ok": 1,
+        "exOk": "Corect! Cel mai mare numar de 6 cifre = 999 999. 999 999+1=1 000 000.",
+        "exGr": "999 999+1=1 000 000. Acesta este primul numar de 7 cifre (un milion)."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Succesorul numarului 999 999 999 este:",
+        "opts": ["a) 999 999 998", "b) 1 000 000 000", "c) 999 000 000", "d) 1 000 000 001"],
+        "ok": 1,
+        "exOk": "Corect! 999 999 999+1=1 000 000 000 (un miliard).",
+        "exGr": "999 999 999+1=1 000 000 000. Este primul numar de 10 cifre."
+      },
+      {
+        "q": "Predecesorul numarului 100 000 000 este:",
+        "opts": ["a) 100 000 001", "b) 99 999 999", "c) 99 000 000", "d) 100 000 100"],
+        "ok": 1,
+        "exOk": "Corect! 100 000 000-1=99 999 999.",
+        "exGr": "100 000 000-1=99 999 999."
+      },
+      {
+        "q": "Cate numere naturale sunt strict intre 1 000 000 si 1 000 010?",
+        "opts": ["a) 10", "b) 9", "c) 11", "d) 8"],
+        "ok": 1,
+        "exOk": "Corect! Strict intre 1 000 000 si 1 000 010: 1 000 001,...,1 000 009 = 9 numere.",
+        "exGr": "1 000 010-1 000 000-1=9 numere strict intre cele doua."
+      },
+      {
+        "q": "Pe axa numerelor, la distanta 1 000 000 in stanga lui 5 000 000 se afla:",
+        "opts": ["a) 6 000 000", "b) 4 000 000", "c) 5 100 000", "d) 4 900 000"],
+        "ok": 1,
+        "exOk": "Corect! Stanga = mai mic. 5 000 000-1 000 000=4 000 000.",
+        "exGr": "Stanga pe axa = scadem. 5 000 000-1 000 000=4 000 000."
+      },
+      {
+        "q": "Al cincilea succesor al lui 99 996 este:",
+        "opts": ["a) 100 000", "b) 100 001", "c) 99 991", "d) 100 002"],
+        "ok": 1,
+        "exOk": "Corect! 99 996+5=100 001.",
+        "exGr": "Al 5-lea succesor = +5. 99 996+5=100 001."
+      },
+      {
+        "q": "Al saselea predecesor al lui 1 000 006 este:",
+        "opts": ["a) 1 000 005", "b) 999 999", "c) 1 000 000", "d) 999 994"],
+        "ok": 2,
+        "exOk": "Corect! 1 000 006-6=1 000 000.",
+        "exGr": "Al 6-lea predecesor = -6. 1 000 006-6=1 000 000."
+      },
+      {
+        "q": "Cate numere naturale au exact 7 cifre?",
+        "opts": ["a) 9 000 000", "b) 8 999 999", "c) 10 000 000", "d) 7 000 000"],
+        "ok": 0,
+        "exOk": "Corect! De la 1 000 000 la 9 999 999: 9 999 999-1 000 000+1=9 000 000.",
+        "exGr": "Numerele de 7 cifre: 1 000 000 pana la 9 999 999. Total: 9 000 000."
+      },
+      {
+        "q": "Care numar se afla la mijlocul dintre 0 si 1 000 000?",
+        "opts": ["a) 100 000", "b) 500 000", "c) 250 000", "d) 750 000"],
+        "ok": 1,
+        "exOk": "Corect! (0+1 000 000)/2=500 000.",
+        "exGr": "Mijlocul = (0+1 000 000)/2 = 500 000."
+      },
+      {
+        "q": "Pe axa numerelor, 0, 1000, 2000, 3000 sunt puncte:",
+        "opts": ["a) neregulat distribuite", "b) egal distantate cu pasul 1 000", "c) egal distantate cu pasul 100", "d) egal distantate cu pasul 500"],
+        "ok": 1,
+        "exOk": "Corect! 1000-0=1000, 2000-1000=1000, 3000-2000=1000. Pas constant de 1 000.",
+        "exGr": "Diferentele consecutive sunt toate 1 000. Puncte egal distantate cu pasul 1 000."
+      },
+      {
+        "q": "Cel mai mic numar natural cu succesorul egal cu 10 000 este:",
+        "opts": ["a) 10 001", "b) 9 999", "c) 9 998", "d) 10 000"],
+        "ok": 1,
+        "exOk": "Corect! Daca succesorul lui n = 10 000, atunci n+1=10 000, deci n=9 999.",
+        "exGr": "n+1=10 000 → n=9 999."
+      }
+    ]
+  }
+}

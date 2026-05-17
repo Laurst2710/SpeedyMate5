@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "nivel": "MANUAL",
+    "dificultate": 1,
+    "clasa": 5,
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "T3",
+    "titlu_tema": "Cifre romane: I,V,X,L,C,D,M; reguli scriere/citire",
+    "continut": "Scrierea si citirea",
+    "competente": ["1.1", "4.1"],
+    "sursa": "OMENCS 3393/2017",
+    "prag": 0.8,
+    "puncte_per_item": 10,
+    "items_per_test": 10
+  },
+  "teste": {
+    "T1": [
+      {
+        "q": "Valoarea cifrei romane L este:",
+        "opts": ["a) 5", "b) 50", "c) 500", "d) 100"],
+        "ok": 1,
+        "exOk": "Corect! L = 50. Retine: I=1, V=5, X=10, L=50, C=100, D=500, M=1000.",
+        "exGr": "Cele 7 cifre romane: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. L = 50."
+      },
+      {
+        "q": "Numarul roman XIV reprezinta:",
+        "opts": ["a) 16", "b) 14", "c) 6", "d) 11"],
+        "ok": 1,
+        "exOk": "Corect! X=10, I=1, V=5. IV = 4 (I inaintea lui V = scadere). X + IV = 10 + 4 = 14.",
+        "exGr": "XIV: X=10, IV=4 (I inainte de V = 5-1=4). Total: 10+4=14."
+      },
+      {
+        "q": "Numarul 9 scris in cifre romane este:",
+        "opts": ["a) VIIII", "b) IIX", "c) IX", "d) XI"],
+        "ok": 2,
+        "exOk": "Corect! 9 = 10 - 1 = IX. I inaintea lui X indica scadere.",
+        "exGr": "9 nu se scrie VIIII (max 3 I consecutivi). Corect: IX = 10-1 = 9."
+      },
+      {
+        "q": "Care scrierea romana este corecta pentru 40?",
+        "opts": ["a) XXXX", "b) XL", "c) XXXX", "d) LL"],
+        "ok": 1,
+        "exOk": "Corect! 40 = 50 - 10 = XL. X inainte de L indica scadere.",
+        "exGr": "Nu se pot scrie 4 de X consecutivi. 40 = XL (X inaintea lui L = 50-10=40)."
+      },
+      {
+        "q": "MCMXCIX reprezinta:",
+        "opts": ["a) 1989", "b) 1999", "c) 1909", "d) 1899"],
+        "ok": 1,
+        "exOk": "Corect! M=1000, CM=900, XC=90, IX=9. Total: 1000+900+90+9=1999.",
+        "exGr": "MCMXCIX: M=1000, CM=900(1000-100), XC=90(100-10), IX=9(10-1). Suma=1999."
+      },
+      {
+        "q": "Numarul roman XLVII reprezinta:",
+        "opts": ["a) 37", "b) 57", "c) 47", "d) 42"],
+        "ok": 2,
+        "exOk": "Corect! XL=40, V=5, II=2. 40+5+2=47.",
+        "exGr": "XLVII: XL=40(50-10), V=5, II=2. Total: 40+5+2=47."
+      },
+      {
+        "q": "Cum se scrie 2024 in cifre romane?",
+        "opts": ["a) MMXXIV", "b) MMXXIIII", "c) MMDXXIV", "d) MMXXVI"],
+        "ok": 0,
+        "exOk": "Corect! 2000=MM, 24=XXIV(XX=20, IV=4). Total: MMXXIV.",
+        "exGr": "2024: MM=2000, XX=20, IV=4. Combinat: MMXXIV."
+      },
+      {
+        "q": "Care numar NU poate fi scris corect in sistemul roman?",
+        "opts": ["a) VV", "b) XIV", "c) MCM", "d) XLII"],
+        "ok": 0,
+        "exOk": "Corect! VV nu este permis. V nu se poate repeta. Cifrele V, L, D se scriu o singura data.",
+        "exGr": "V, L, D nu se repeta niciodata in sistemul roman. VV este incorect."
+      },
+      {
+        "q": "DCCCXLVIII reprezinta:",
+        "opts": ["a) 748", "b) 848", "c) 948", "d) 648"],
+        "ok": 1,
+        "exOk": "Corect! D=500, CCC=300, XL=40, VIII=8. 500+300+40+8=848.",
+        "exGr": "DCCCXLVIII: D=500, CCC=300, XL=40, VIII=8. Suma: 500+300+40+8=848."
+      },
+      {
+        "q": "Numarul 3999 scris in cifre romane este:",
+        "opts": ["a) MMMCMXCIX", "b) MMMIM", "c) IIIIM", "d) MMMXCIX"],
+        "ok": 0,
+        "exOk": "Corect! MMM=3000, CM=900, XC=90, IX=9. Total: MMMCMXCIX=3999.",
+        "exGr": "3999: MMM=3000, CM=900, XC=90, IX=9. Combinat: MMMCMXCIX."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Valoarea cifrei romane D este:",
+        "opts": ["a) 50", "b) 100", "c) 500", "d) 5000"],
+        "ok": 2,
+        "exOk": "Corect! D = 500. I=1, V=5, X=10, L=50, C=100, D=500, M=1000.",
+        "exGr": "D = 500. Retine toate cele 7: I=1, V=5, X=10, L=50, C=100, D=500, M=1000."
+      },
+      {
+        "q": "Numarul roman XIX reprezinta:",
+        "opts": ["a) 21", "b) 14", "c) 19", "d) 16"],
+        "ok": 2,
+        "exOk": "Corect! X=10, IX=9. 10+9=19.",
+        "exGr": "XIX: X=10, IX=9(10-1). Total: 10+9=19."
+      },
+      {
+        "q": "Numarul 4 scris in cifre romane este:",
+        "opts": ["a) IIII", "b) VX", "c) IV", "d) VI"],
+        "ok": 2,
+        "exOk": "Corect! 4 = 5-1 = IV. I inaintea lui V indica scadere.",
+        "exGr": "4 nu se scrie IIII (max 3 consecutivi de acelasi fel, si doar pentru I, X, C, M). Corect: IV."
+      },
+      {
+        "q": "Care scriere romana este corecta pentru 90?",
+        "opts": ["a) LXXXX", "b) XC", "c) DCCCC", "d) CX"],
+        "ok": 1,
+        "exOk": "Corect! 90 = 100-10 = XC. X inaintea lui C indica scadere.",
+        "exGr": "90 = XC (X inainte de C = 100-10=90). LXXXX gresit — max 3 X consecutivi."
+      },
+      {
+        "q": "CDXLIV reprezinta:",
+        "opts": ["a) 344", "b) 454", "c) 444", "d) 434"],
+        "ok": 2,
+        "exOk": "Corect! CD=400, XL=40, IV=4. 400+40+4=444.",
+        "exGr": "CDXLIV: CD=400(500-100), XL=40(50-10), IV=4(5-1). Suma: 444."
+      },
+      {
+        "q": "Numarul roman LXXXIX reprezinta:",
+        "opts": ["a) 79", "b) 89", "c) 99", "d) 69"],
+        "ok": 1,
+        "exOk": "Corect! L=50, XXX=30, IX=9. 50+30+9=89.",
+        "exGr": "LXXXIX: L=50, XXX=30, IX=9(10-1). Total: 50+30+9=89."
+      },
+      {
+        "q": "Cum se scrie 1776 in cifre romane?",
+        "opts": ["a) MDCCLXXVI", "b) MDCCXXVI", "c) MCCCLXXVI", "d) MDCCLXVI"],
+        "ok": 0,
+        "exOk": "Corect! M=1000, DCC=700, LXX=70, VI=6. MDCCLXXVI.",
+        "exGr": "1776: M=1000, DCC=700(500+200), LXXVI=76(50+20+6). Total: MDCCLXXVI."
+      },
+      {
+        "q": "Care scriere romana este GRESITA?",
+        "opts": ["a) XIV", "b) IIX", "c) XL", "d) CM"],
+        "ok": 1,
+        "exOk": "Corect! IIX este gresit. Numai o singura cifra mai mica poate preceda una mai mare.",
+        "exGr": "Regula: doar I, X, C pot preceda o cifra mai mare, si numai una singura. IIX incalca aceasta regula."
+      },
+      {
+        "q": "MCCCXXXIII reprezinta:",
+        "opts": ["a) 1333", "b) 1033", "c) 1303", "d) 1330"],
+        "ok": 0,
+        "exOk": "Corect! M=1000, CCC=300, XXX=30, III=3. 1000+300+30+3=1333.",
+        "exGr": "MCCCXXXIII: M=1000, CCC=300, XXX=30, III=3. Suma: 1333."
+      },
+      {
+        "q": "Cum se scrie 2500 in cifre romane?",
+        "opts": ["a) MMD", "b) MMCCC", "c) MMDC", "d) MMMD"],
+        "ok": 0,
+        "exOk": "Corect! MM=2000, D=500. 2000+500=2500. MMD.",
+        "exGr": "2500: MM=2000, D=500. Combinat: MMD."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Valoarea cifrei romane C este:",
+        "opts": ["a) 10", "b) 50", "c) 100", "d) 1000"],
+        "ok": 2,
+        "exOk": "Corect! C = 100 (de la latinescul centum). I=1, V=5, X=10, L=50, C=100, D=500, M=1000.",
+        "exGr": "C vine de la 'centum' = 100 in latina. D = 500, M = 1000."
+      },
+      {
+        "q": "Numarul roman XXIX reprezinta:",
+        "opts": ["a) 31", "b) 29", "c) 21", "d) 39"],
+        "ok": 1,
+        "exOk": "Corect! XX=20, IX=9. 20+9=29.",
+        "exGr": "XXIX: XX=20, IX=9(10-1). Total: 20+9=29."
+      },
+      {
+        "q": "Numarul 900 scris in cifre romane este:",
+        "opts": ["a) DCCCC", "b) CM", "c) DC", "d) MC"],
+        "ok": 1,
+        "exOk": "Corect! 900 = 1000-100 = CM. C inaintea lui M indica scadere.",
+        "exGr": "900 = CM (C inainte de M = 1000-100=900). DCCCC gresit — max 3 C consecutivi."
+      },
+      {
+        "q": "Care scriere romana este corecta pentru 400?",
+        "opts": ["a) CCCC", "b) DC", "c) CD", "d) CDCD"],
+        "ok": 2,
+        "exOk": "Corect! 400 = 500-100 = CD. C inaintea lui D indica scadere.",
+        "exGr": "400 = CD (C inainte de D = 500-100=400). CCCC gresit — max 3 C consecutivi."
+      },
+      {
+        "q": "MMXXI reprezinta:",
+        "opts": ["a) 2011", "b) 2021", "c) 2121", "d) 2111"],
+        "ok": 1,
+        "exOk": "Corect! MM=2000, XX=20, I=1. 2000+20+1=2021.",
+        "exGr": "MMXXI: MM=2000, XX=20, I=1. Total: 2021."
+      },
+      {
+        "q": "Numarul roman DLXVIII reprezinta:",
+        "opts": ["a) 468", "b) 568", "c) 678", "d) 558"],
+        "ok": 1,
+        "exOk": "Corect! D=500, L=50, X=10, VIII=8. 500+50+10+8=568.",
+        "exGr": "DLXVIII: D=500, L=50, X=10, VIII=8. Suma: 568."
+      },
+      {
+        "q": "Cum se scrie 1492 in cifre romane?",
+        "opts": ["a) MCDXCII", "b) MCDXCIII", "c) MCCCXCII", "d) MCDLXII"],
+        "ok": 0,
+        "exOk": "Corect! M=1000, CD=400, XC=90, II=2. MCDXCII=1492.",
+        "exGr": "1492: M=1000, CD=400, XC=90, II=2. Total: MCDXCII."
+      },
+      {
+        "q": "Care este regula pentru cifrele I, X, C, M in sistemul roman?",
+        "opts": ["a) se pot repeta de maxim 2 ori", "b) se pot repeta de maxim 3 ori consecutiv", "c) nu se pot repeta niciodata", "d) se pot repeta de maxim 5 ori"],
+        "ok": 1,
+        "exOk": "Corect! I, X, C, M se pot repeta de maxim 3 ori consecutiv. V, L, D nu se repeta.",
+        "exGr": "Regula de baza: I, X, C, M se repeta max 3 ori (III, XXX, CCC, MMM). V, L, D nu se repeta."
+      },
+      {
+        "q": "DCCCXCIX reprezinta:",
+        "opts": ["a) 799", "b) 899", "c) 999", "d) 889"],
+        "ok": 1,
+        "exOk": "Corect! DCCC=800, XC=90, IX=9. 800+90+9=899.",
+        "exGr": "DCCCXCIX: D=500, CCC=300, XC=90, IX=9. Suma: 500+300+90+9=899."
+      },
+      {
+        "q": "Cum se scrie 3888 in cifre romane?",
+        "opts": ["a) MMMDCCCLXXXVIII", "b) MMMDCCCLXXXIX", "c) MMMCCCXXXVIII", "d) MMMDCCCXCVIII"],
+        "ok": 0,
+        "exOk": "Corect! MMM=3000, DCCC=800, LXXX=80, VIII=8. MMMDCCCLXXXVIII.",
+        "exGr": "3888: MMM=3000, DCCC=800(500+300), LXXX=80(50+30), VIII=8. Total: MMMDCCCLXXXVIII."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Valoarea cifrei romane M este:",
+        "opts": ["a) 100", "b) 500", "c) 1000", "d) 10000"],
+        "ok": 2,
+        "exOk": "Corect! M = 1000 (de la latinescul mille). I=1, V=5, X=10, L=50, C=100, D=500, M=1000.",
+        "exGr": "M vine de la 'mille' = 1000 in latina."
+      },
+      {
+        "q": "Numarul roman XLIV reprezinta:",
+        "opts": ["a) 54", "b) 34", "c) 44", "d) 46"],
+        "ok": 2,
+        "exOk": "Corect! XL=40, IV=4. 40+4=44.",
+        "exGr": "XLIV: XL=40(50-10), IV=4(5-1). Total: 40+4=44."
+      },
+      {
+        "q": "Numarul 500 scris in cifre romane este:",
+        "opts": ["a) CCCCC", "b) D", "c) LD", "d) DC"],
+        "ok": 1,
+        "exOk": "Corect! D = 500. Este o cifra romana de sine statatoare.",
+        "exGr": "D = 500. Nu se scrie CCCCC (max 3 C). Cifra romana D reprezinta direct 500."
+      },
+      {
+        "q": "Care scriere romana este corecta pentru 49?",
+        "opts": ["a) XXXXIX", "b) IL", "c) XLIX", "d) XXXIX"],
+        "ok": 2,
+        "exOk": "Corect! 49 = XL + IX = 40 + 9 = XLIX.",
+        "exGr": "49: XL=40, IX=9. XLIX=49. IL este gresit (I poate preceda doar V si X)."
+      },
+      {
+        "q": "MMCDXLVII reprezinta:",
+        "opts": ["a) 2347", "b) 2447", "c) 2547", "d) 2437"],
+        "ok": 1,
+        "exOk": "Corect! MM=2000, CD=400, XL=40, VII=7. 2000+400+40+7=2447.",
+        "exGr": "MMCDXLVII: MM=2000, CD=400, XL=40, VII=7. Suma: 2447."
+      },
+      {
+        "q": "Numarul roman CCCXCVI reprezinta:",
+        "opts": ["a) 296", "b) 396", "c) 496", "d) 386"],
+        "ok": 1,
+        "exOk": "Corect! CCC=300, XC=90, VI=6. 300+90+6=396.",
+        "exGr": "CCCXCVI: CCC=300, XC=90(100-10), VI=6. Total: 396."
+      },
+      {
+        "q": "Cum se scrie 1066 in cifre romane?",
+        "opts": ["a) MLXVI", "b) MLXIV", "c) MXLVI", "d) MLXXVI"],
+        "ok": 0,
+        "exOk": "Corect! M=1000, L=50, X=10, VI=6. MLXVI=1066.",
+        "exGr": "1066: M=1000, LX=60(50+10), VI=6. Total: MLXVI."
+      },
+      {
+        "q": "Care cifra romana poate preceda M pentru scadere?",
+        "opts": ["a) I", "b) X", "c) C", "d) D"],
+        "ok": 2,
+        "exOk": "Corect! C poate preceda M: CM=900. Regula: I precede V si X; X precede L si C; C precede D si M.",
+        "exGr": "Perechi de scadere permise: IV=4, IX=9, XL=40, XC=90, CD=400, CM=900."
+      },
+      {
+        "q": "MMMCMXCIX reprezinta:",
+        "opts": ["a) 3899", "b) 3909", "c) 3989", "d) 3999"],
+        "ok": 3,
+        "exOk": "Corect! MMM=3000, CM=900, XC=90, IX=9. 3000+900+90+9=3999.",
+        "exGr": "MMMCMXCIX: MMM=3000, CM=900, XC=90, IX=9. Suma: 3999. Cel mai mare numar roman standard."
+      },
+      {
+        "q": "Cum se scrie 1918 in cifre romane?",
+        "opts": ["a) MCMXVIII", "b) MDCCCCXVIII", "c) MCMXIX", "d) MCMXCVIII"],
+        "ok": 0,
+        "exOk": "Corect! M=1000, CM=900, X=10, VIII=8. MCMXVIII=1918.",
+        "exGr": "1918: M=1000, CM=900, X=10, VIII=8. Total: MCMXVIII."
+      }
+    ]
+  }
+}

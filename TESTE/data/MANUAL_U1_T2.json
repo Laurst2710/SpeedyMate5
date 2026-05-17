@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "nivel": "MANUAL",
+    "dificultate": 1,
+    "clasa": 5,
+    "unitate": "U1",
+    "titlu_unitate": "Numere Naturale",
+    "tema": "T2",
+    "titlu_tema": "Scrierea/citirea pana la miliarde; descompunere pozitionala",
+    "continut": "Scrierea si citirea",
+    "competente": ["1.1", "4.1", "5.1"],
+    "sursa": "OMENCS 3393/2017",
+    "prag": 0.8,
+    "puncte_per_item": 10,
+    "items_per_test": 10
+  },
+  "teste": {
+    "T1": [
+      {
+        "q": "Numarul 5 000 000 000 se citeste:",
+        "opts": ["a) cinci milioane", "b) cinci miliarde", "c) cinci sute de milioane", "d) cincizeci de milioane"],
+        "ok": 1,
+        "exOk": "Corect! 5 000 000 000 are 10 cifre. Clasa miliardelor incepe de la pozitia a 10-a. 5 miliarde.",
+        "exGr": "Numara cifrele: 5-0-0-0-0-0-0-0-0-0 = 10 cifre. 1 miliard = 1 000 000 000. Raspuns: cinci miliarde."
+      },
+      {
+        "q": "Descompunerea pozitionala a numarului 3 040 007 este:",
+        "opts": ["a) 3x1000000+4x10000+7", "b) 3x1000000+0x100000+4x10000+0x1000+0x100+0x10+7", "c) 3x100000+4x10000+7", "d) 3x1000000+4x1000+7"],
+        "ok": 1,
+        "exOk": "Corect! Descompunerea completa include toti termenii, chiar cei cu cifra 0.",
+        "exGr": "3 040 007: 3=milioane, 0=sute de mii, 4=zeci de mii, 0=mii, 0=sute, 0=zeci, 7=unitati. Toti 7 termeni."
+      },
+      {
+        "q": "Numarul format din 2 miliarde, 3 milioane si 15 este:",
+        "opts": ["a) 2 003 000 015", "b) 2 300 000 015", "c) 2 030 000 015", "d) 2 003 000 150"],
+        "ok": 0,
+        "exOk": "Corect! 2 miliarde = 2 000 000 000; 3 milioane = 3 000 000; 15 = 15. Total: 2 003 000 015.",
+        "exGr": "2 000 000 000 + 3 000 000 + 15 = 2 003 000 015. Atentie la pozitionarea corecta a fiecarei clase."
+      },
+      {
+        "q": "Cifra 7 din numarul 7 284 306 000 se afla la ordinul:",
+        "opts": ["a) milioanelor", "b) sutelor de milioane", "c) miliardelor", "d) zecilor de miliarde"],
+        "ok": 2,
+        "exOk": "Corect! 7 284 306 000 are 10 cifre. Prima cifra (7) este la ordinul miliardelor.",
+        "exGr": "Numara de la dreapta: pozitia 10 = miliarde. Cifra 7 este la ordinul miliardelor."
+      },
+      {
+        "q": "Numarul opt sute douazeci si trei de milioane patru sute de mii doua sute scris cu cifre este:",
+        "opts": ["a) 823 400 200", "b) 8 234 002 00", "c) 823 040 200", "d) 823 400 020"],
+        "ok": 0,
+        "exOk": "Corect! 823 milioane + 400 mii + 200 = 823 400 200.",
+        "exGr": "823 000 000 + 400 000 + 200 = 823 400 200. Grupam: 823|400|200."
+      },
+      {
+        "q": "In descompunerea 6x10^6 + 5x10^4 + 3x10^2, cifra zecilor de mii este:",
+        "opts": ["a) 6", "b) 5", "c) 3", "d) 0"],
+        "ok": 1,
+        "exOk": "Corect! 10^4 = 10 000 = zeci de mii. Coeficientul este 5.",
+        "exGr": "10^4 = 10 000, deci 5x10^4 inseamna 5 la ordinul zecilor de mii. Cifra zecilor de mii = 5."
+      },
+      {
+        "q": "Numarul 900 060 000 se citeste:",
+        "opts": ["a) noua sute de milioane saizeci de mii", "b) noua miliarde saizeci de mii", "c) noua sute saizeci de mii", "d) noua sute de mii saizeci"],
+        "ok": 0,
+        "exOk": "Corect! 900 000 000 = noua sute de milioane; 60 000 = saizeci de mii.",
+        "exGr": "Grupam: 900|060|000. Clasa milioanelor: noua sute de milioane. Clasa miilor: saizeci de mii."
+      },
+      {
+        "q": "Cate clase are numarul 45 302 817 900?",
+        "opts": ["a) 3", "b) 4", "c) 5", "d) 2"],
+        "ok": 1,
+        "exOk": "Corect! 45 302 817 900 are 11 cifre = 4 clase: miliardelor, milioanelor, miilor, unitatilor.",
+        "exGr": "Grupam de la dreapta cate 3: 900 | 817 | 302 | 45. Patru grupe = 4 clase."
+      },
+      {
+        "q": "Suma 4x10^9 + 2x10^6 + 7x10^3 + 5 reprezinta numarul:",
+        "opts": ["a) 4 002 007 005", "b) 4 207 005", "c) 4 020 070 050", "d) 4 200 700 500"],
+        "ok": 0,
+        "exOk": "Corect! 4x10^9=4 000 000 000; 2x10^6=2 000 000; 7x10^3=7 000; 5=5. Total: 4 002 007 005.",
+        "exGr": "10^9=miliard, 10^6=milion, 10^3=mie. Adunam: 4 000 000 000+2 000 000+7 000+5=4 002 007 005."
+      },
+      {
+        "q": "Care numar are 9 cifre si incepe cu clasa milioanelor egala cu 305?",
+        "opts": ["a) 305 000 000", "b) 3 050 000 000", "c) 30 500 000", "d) 305 000"],
+        "ok": 0,
+        "exOk": "Corect! 9 cifre = 3 clase. Clasa milioanelor=305 → 305 000 000 (completam cu 000 pentru mii si unitati).",
+        "exGr": "9 cifre: xxx|xxx|xxx. Clasa milioanelor (primele 3): 305. Restul: 000|000. Rezultat: 305 000 000."
+      }
+    ],
+    "T2": [
+      {
+        "q": "Numarul 12 000 000 000 se citeste:",
+        "opts": ["a) doisprezece milioane", "b) o suta douazeci de milioane", "c) doisprezece miliarde", "d) o suta douazeci de miliarde"],
+        "ok": 2,
+        "exOk": "Corect! 12 000 000 000 = 12 x 1 000 000 000 = doisprezece miliarde.",
+        "exGr": "1 miliard = 1 000 000 000. 12 000 000 000 = 12 miliarde = doisprezece miliarde."
+      },
+      {
+        "q": "Descompunerea pozitionala a numarului 8 005 000 060 este:",
+        "opts": ["a) 8x10^9+5x10^6+6x10", "b) 8x10^9+5x10^5+6x10", "c) 8x10^9+5x10^6+6x1", "d) 8x10^9+5x10^7+6x10"],
+        "ok": 0,
+        "exOk": "Corect! 8=miliarde(10^9), 5=milioane(10^6), 6=zeci(10^1=10). Termen 10^1 inseamna 10x1.",
+        "exGr": "8 005 000 060: 8=10^9, 0=10^8, 0=10^7, 5=10^6, 0=10^5, 0=10^4, 0=10^3, 0=10^2, 6=10^1, 0=10^0."
+      },
+      {
+        "q": "Numarul format din 5 sute de milioane si 3 zeci este:",
+        "opts": ["a) 500 000 030", "b) 5 000 000 030", "c) 500 030", "d) 500 000 300"],
+        "ok": 0,
+        "exOk": "Corect! 5 sute de milioane = 500 000 000; 3 zeci = 30. Total: 500 000 030.",
+        "exGr": "500 000 000 + 30 = 500 000 030. Atentie: sute de milioane, nu miliarde."
+      },
+      {
+        "q": "Cifra sutelor de milioane din numarul 2 834 567 901 este:",
+        "opts": ["a) 2", "b) 8", "c) 3", "d) 4"],
+        "ok": 1,
+        "exOk": "Corect! 2=miliarde, 8=sute de milioane, 3=zeci de milioane, 4=milioane...",
+        "exGr": "Numara de la dreapta: pozitia 9 = sute de milioane. In 2 834 567 901, cifra a 9-a de la dreapta este 8."
+      },
+      {
+        "q": "Numarul doua miliarde opt sute de milioane scris cu cifre este:",
+        "opts": ["a) 2 800 000", "b) 2 800 000 000", "c) 28 000 000 000", "d) 2 080 000 000"],
+        "ok": 1,
+        "exOk": "Corect! 2 miliarde = 2 000 000 000; 800 milioane = 800 000 000. Total: 2 800 000 000.",
+        "exGr": "2 000 000 000 + 800 000 000 = 2 800 000 000."
+      },
+      {
+        "q": "In descompunerea 7x10^8 + 4x10^5 + 9x10^0, cifra unitatilor este:",
+        "opts": ["a) 7", "b) 4", "c) 9", "d) 0"],
+        "ok": 2,
+        "exOk": "Corect! 10^0 = 1. Deci 9x10^0 = 9x1 = 9 unitati.",
+        "exGr": "10^0 = 1, deci 9x10^0 = 9. Cifra unitatilor este 9."
+      },
+      {
+        "q": "Numarul 1 000 010 001 se citeste:",
+        "opts": ["a) un miliard zece mii unu", "b) un miliard o suta o mie unu", "c) un miliard zece unu", "d) un miliard o suta unu"],
+        "ok": 0,
+        "exOk": "Corect! 1 000 000 000=un miliard; 10 000=zece mii; 1=unu. Total: un miliard zece mii unu.",
+        "exGr": "Grupam: 1|000|010|001. Miliarde:1, milioane:000, mii:010=zece mii, unitati:001=unu."
+      },
+      {
+        "q": "Cate cifre are numarul trei miliarde?",
+        "opts": ["a) 9", "b) 10", "c) 11", "d) 7"],
+        "ok": 1,
+        "exOk": "Corect! 3 000 000 000: numara cifrele: 3-0-0-0-0-0-0-0-0-0 = 10 cifre.",
+        "exGr": "3 miliarde = 3 000 000 000. Numara: 1 cifra + 9 zerouri = 10 cifre."
+      },
+      {
+        "q": "Suma 3x10^9 + 3x10^6 + 3x10^3 + 3 reprezinta numarul:",
+        "opts": ["a) 3 333 000 000", "b) 3 003 003 003", "c) 3 030 030 030", "d) 3 300 330 000"],
+        "ok": 1,
+        "exOk": "Corect! 3 000 000 000 + 3 000 000 + 3 000 + 3 = 3 003 003 003.",
+        "exGr": "Fiecare termen are 3 la o putere diferita a lui 10: miliard, milion, mie, unitate."
+      },
+      {
+        "q": "Care numar are clasa miliardelor egala cu 4, clasa milioanelor egala cu 200 si clasa unitatilor egala cu 050?",
+        "opts": ["a) 4 200 000 050", "b) 4 002 000 050", "c) 4 200 050 000", "d) 4 020 000 050"],
+        "ok": 0,
+        "exOk": "Corect! Clasa miliardelor=4(004), milioanelor=200, miilor=000, unitatilor=050. Rezultat: 4 200 000 050.",
+        "exGr": "Asezam clasele: 004|200|000|050 = 4 200 000 050."
+      }
+    ],
+    "T3": [
+      {
+        "q": "Valoarea pozitionala a cifrei 6 in numarul 6 000 000 000 este:",
+        "opts": ["a) 6 milioane", "b) 6 sute de milioane", "c) 6 miliarde", "d) 6 zeci de miliarde"],
+        "ok": 2,
+        "exOk": "Corect! 6 000 000 000 = 6 x 1 000 000 000 = 6 miliarde.",
+        "exGr": "1 miliard = 10^9 = 1 000 000 000. Deci 6 se afla la ordinul miliardelor."
+      },
+      {
+        "q": "Numarul 40 700 000 000 se citeste:",
+        "opts": ["a) patruzeci de milioane sapte sute de mii", "b) patruzeci de miliarde sapte sute de milioane", "c) patru sute sapte miliarde", "d) patruzeci si sapte de miliarde"],
+        "ok": 1,
+        "exOk": "Corect! 40 000 000 000 = patruzeci de miliarde; 700 000 000 = sapte sute de milioane.",
+        "exGr": "Grupam: 40|700|000|000. Miliarde: 40, Milioane: 700, Mii: 000, Unitati: 000."
+      },
+      {
+        "q": "Descompunerea numarului 500 040 000 este:",
+        "opts": ["a) 5x10^8+4x10^4", "b) 5x10^7+4x10^4", "c) 5x10^8+4x10^3", "d) 5x10^9+4x10^4"],
+        "ok": 0,
+        "exOk": "Corect! 500 000 000=5x10^8; 40 000=4x10^4. Suma: 5x10^8+4x10^4.",
+        "exGr": "10^8=100 000 000 (sute de milioane). 10^4=10 000 (zeci de mii). Deci 5x10^8+4x10^4."
+      },
+      {
+        "q": "Numarul format din 1 miliard, 5 sute de milioane si 20 de mii este:",
+        "opts": ["a) 1 500 020 000", "b) 1 500 000 020", "c) 1 050 020 000", "d) 15 000 200 000"],
+        "ok": 0,
+        "exOk": "Corect! 1 000 000 000 + 500 000 000 + 20 000 = 1 500 020 000.",
+        "exGr": "1 miliard + 5 sute de milioane + 20 mii = 1 000 000 000 + 500 000 000 + 20 000 = 1 500 020 000."
+      },
+      {
+        "q": "Cifra zecilor de milioane din numarul 3 256 871 493 este:",
+        "opts": ["a) 3", "b) 2", "c) 5", "d) 6"],
+        "ok": 2,
+        "exOk": "Corect! 3=miliarde, 2=sute de milioane, 5=zeci de milioane, 6=milioane...",
+        "exGr": "Pozitia 8 de la dreapta = zeci de milioane. In 3 256 871 493, cifra a 8-a de la dreapta este 5."
+      },
+      {
+        "q": "Numarul 9 009 009 009 se citeste:",
+        "opts": ["a) noua miliarde noua milioane noua mii noua", "b) noua sute noua milioane noua mii noua", "c) noua miliarde noua sute noua mii noua", "d) noua miliarde noua sute de milioane noua mii noua"],
+        "ok": 0,
+        "exOk": "Corect! 9|009|009|009 = noua miliarde, noua milioane, noua mii, noua.",
+        "exGr": "Grupam: 9|009|009|009. Miliarde:9, Milioane:009=noua, Mii:009=noua, Unitati:009=noua."
+      },
+      {
+        "q": "Care este al doilea termen din descompunerea numarului 7 050 300 008?",
+        "opts": ["a) 5x10^7", "b) 5x10^8", "c) 5x10^6", "d) 5x10^5"],
+        "ok": 0,
+        "exOk": "Corect! 7 050 300 008: 7=10^9, 5=10^7 (zeci de milioane). Al doilea termen nenul: 5x10^7.",
+        "exGr": "Termeni nenuli: 7x10^9, 5x10^7, 3x10^5, 8x10^0. Al doilea este 5x10^7."
+      },
+      {
+        "q": "Numarul cu descompunerea 2x10^9 + 0x10^8 + ... + 0x10^1 + 2x10^0 este:",
+        "opts": ["a) 2 000 000 002", "b) 2 200 000 000", "c) 22 000 000 000", "d) 2 000 000 020"],
+        "ok": 0,
+        "exOk": "Corect! 2x10^9 = 2 000 000 000; 2x10^0 = 2. Total: 2 000 000 002.",
+        "exGr": "10^9=miliard, 10^0=unitate. 2 000 000 000 + 2 = 2 000 000 002."
+      },
+      {
+        "q": "Suma cifrelor numarului 1 010 101 010 este:",
+        "opts": ["a) 4", "b) 5", "c) 6", "d) 3"],
+        "ok": 0,
+        "exOk": "Corect! 1+0+1+0+1+0+1+0+1+0 = 4.",
+        "exGr": "1 010 101 010: cifrele sunt 1,0,1,0,1,0,1,0,1,0. Suma: 1+1+1+1=4."
+      },
+      {
+        "q": "Cel mai mare numar de 9 cifre cu suma claselor egala cu 999 este:",
+        "opts": ["a) 999 999 999", "b) 900 090 009", "c) 990 099 000", "d) 999 000 000"],
+        "ok": 0,
+        "exOk": "Corect! Cel mai mare numar de 9 cifre cu toate cifrele egale cu 9 este 999 999 999.",
+        "exGr": "Maximizam fiecare cifra la 9: 999 999 999. Suma claselor: 999+999+999 = 2997, dar suma cifrelor = 81."
+      }
+    ],
+    "T4": [
+      {
+        "q": "Numarul 2 000 000 000 are clasa miliardelor egala cu:",
+        "opts": ["a) 200", "b) 020", "c) 002", "d) 020"],
+        "ok": 2,
+        "exOk": "Corect! Clasa miliardelor se citeste cu 3 cifre: 002 (adica valoarea 2).",
+        "exGr": "Grupam: 002|000|000|000. Clasa miliardelor = 002."
+      },
+      {
+        "q": "Descompunerea pozitionala completa a numarului 10 000 000 001 are cati termeni?",
+        "opts": ["a) 10", "b) 11", "c) 2", "d) 9"],
+        "ok": 1,
+        "exOk": "Corect! 10 000 000 001 are 11 cifre, deci descompunerea completa are 11 termeni.",
+        "exGr": "Numarul are 11 cifre (zeci de miliarde). Descompunerea completa: 1x10^10 + 0x...+ 1x10^0 = 11 termeni."
+      },
+      {
+        "q": "Numarul format din 3 miliarde si 3 unitati este:",
+        "opts": ["a) 3 000 000 003", "b) 3 300 000 000", "c) 3 000 003 000", "d) 3 000 000 300"],
+        "ok": 0,
+        "exOk": "Corect! 3 000 000 000 + 3 = 3 000 000 003.",
+        "exGr": "3 miliarde = 3 000 000 000. Plus 3 unitati = 3 000 000 003."
+      },
+      {
+        "q": "Cifra milioanelor din numarul 8 164 397 025 este:",
+        "opts": ["a) 8", "b) 1", "c) 6", "d) 4"],
+        "ok": 3,
+        "exOk": "Corect! 8=miliarde, 1=sute de milioane, 6=zeci de milioane, 4=milioane.",
+        "exGr": "Pozitia 7 de la dreapta = milioane. In 8 164 397 025, cifra a 7-a de la dreapta este 4."
+      },
+      {
+        "q": "Numarul doua sute de milioane doua sute de mii doua sute scris cu cifre este:",
+        "opts": ["a) 200 200 200", "b) 2 002 002 000", "c) 200 020 200", "d) 200 200 020"],
+        "ok": 0,
+        "exOk": "Corect! 200 000 000 + 200 000 + 200 = 200 200 200.",
+        "exGr": "Sute de milioane: 200 000 000. Sute de mii: 200 000. Sute: 200. Total: 200 200 200."
+      },
+      {
+        "q": "In descompunerea 6x10^8 + 7x10^6 + 8x10^3 + 9x10^0, cati termeni sunt?",
+        "opts": ["a) 4", "b) 9", "c) 6", "d) 8"],
+        "ok": 0,
+        "exOk": "Corect! Descompunerea are exact 4 termeni nenuli.",
+        "exGr": "Numaram termenii scrisi: 6x10^8, 7x10^6, 8x10^3, 9x10^0. Sunt 4 termeni."
+      },
+      {
+        "q": "Numarul 5 555 555 555 se citeste:",
+        "opts": ["a) cinci miliarde cinci sute de milioane cinci zeci de milioane cinci milioane cinci sute de mii cinci zeci de mii cinci mii cinci sute cinci zeci cinci", "b) cinci miliarde cinci sute cincizeci si cinci de milioane cinci sute cincizeci si cinci de mii cinci sute cincizeci si cinci", "c) cincizeci si cinci de miliarde cinci sute cincizeci si cinci de milioane", "d) cinci miliarde cinci milioane cinci mii cinci"],
+        "ok": 1,
+        "exOk": "Corect! Grupam: 5|555|555|555 = 5 miliarde, 555 milioane, 555 mii, 555.",
+        "exGr": "Citim pe clase: 5 miliarde, cinci sute cincizeci si cinci de milioane, cinci sute cincizeci si cinci de mii, cinci sute cincizeci si cinci."
+      },
+      {
+        "q": "Care este numarul cu descompunerea 9x10^9 + 9x10^0?",
+        "opts": ["a) 9 000 000 009", "b) 9 900 000 000", "c) 9 090 000 000", "d) 90 000 000 090"],
+        "ok": 0,
+        "exOk": "Corect! 9x10^9 = 9 000 000 000; 9x10^0 = 9. Total: 9 000 000 009.",
+        "exGr": "10^9 = miliard, 10^0 = unitate. 9 000 000 000 + 9 = 9 000 000 009."
+      },
+      {
+        "q": "Suma cifrelor numarului 2 000 000 002 este:",
+        "opts": ["a) 2", "b) 4", "c) 20", "d) 22"],
+        "ok": 1,
+        "exOk": "Corect! 2+0+0+0+0+0+0+0+0+2 = 4.",
+        "exGr": "2 000 000 002: suma cifrelor = 2 + 2 = 4."
+      },
+      {
+        "q": "Cel mai mic numar de 10 cifre cu prima cifra egala cu 1 este:",
+        "opts": ["a) 1 000 000 001", "b) 1 000 000 000", "c) 1 111 111 111", "d) 1 100 000 000"],
+        "ok": 1,
+        "exOk": "Corect! Cel mai mic numar de 10 cifre care incepe cu 1 este 1 000 000 000 (un miliard).",
+        "exGr": "Minimizam toate celelalte cifre la 0: 1 000 000 000."
+      }
+    ]
+  }
+}
