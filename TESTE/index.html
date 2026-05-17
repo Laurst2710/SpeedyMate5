@@ -352,10 +352,10 @@ async function startTest() {
   const c = document.getElementById('inp-clasa').value.trim();
   const nivel = document.getElementById('inp-nivel').value;
   const unitate = document.getElementById('inp-unitate').value;
-  if (!n || !c) { alert('Completează numele și clasa!'); return; }
+  if (!n || !c) { showError('Completează numele și clasa!'); return; }
   const tema = document.getElementById('inp-tema').value;
   const test = document.getElementById('inp-test').value;
-  if (!tema) { alert('Selecteaza o tema disponibila!'); return; }
+  if (!tema) { showError('Selectează o temă disponibilă!'); return; }
 
   const path = `https://laurst2710.github.io/SpeedyMate5/TESTE/data/${nivel}_${unitate}_${tema}.json`;
   document.getElementById('loading-overlay').classList.add('active');
@@ -384,7 +384,7 @@ async function startTest() {
     renderQ();
   } catch(e) {
     document.getElementById('loading-overlay').classList.remove('active');
-    alert('Conținut indisponibil pentru această selecție. În curând!');
+    showError('Conținut indisponibil. Verifică că JSON-ul există în data/.');
   }
 }
 
@@ -570,6 +570,19 @@ function resetApp() {
 function show(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+}
+
+function showError(msg) {
+  let el = document.getElementById('inline-error');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'inline-error';
+    el.style.cssText = 'background:#4d1b1b;color:#ef9a9a;border:1px solid #c62828;border-radius:8px;padding:.75rem 1rem;margin-bottom:1rem;font-size:.9rem;';
+    document.querySelector('.btn-primary').before(el);
+  }
+  el.textContent = msg;
+  el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 4000);
 }
 
 // Initializare la incarcare
