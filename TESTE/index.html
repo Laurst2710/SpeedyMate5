@@ -148,14 +148,21 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
       </div>
     </div>
 
-    <div class="field">
-      <label>Temă / Test</label>
-      <select id="inp-tema-test" onchange="updateTemaTest()">
-        <option value="T1|T1">T1 — Sistemul zecimal · Test 1</option>
-        <option value="T1|T2">T1 — Sistemul zecimal · Test 2</option>
-        <option value="T1|T3">T1 — Sistemul zecimal · Test 3</option>
-        <option value="T1|T4">T1 — Sistemul zecimal · Test 4</option>
-      </select>
+    <div class="selector-row">
+      <div class="field">
+        <label>Temă</label>
+        <select id="inp-tema" onchange="updateTemaTest()">
+        </select>
+      </div>
+      <div class="field">
+        <label>Test</label>
+        <select id="inp-test">
+          <option value="T1">Test 1</option>
+          <option value="T2">Test 2</option>
+          <option value="T3">Test 3</option>
+          <option value="T4">Test 4</option>
+        </select>
+      </div>
     </div>
 
     <div id="nivel-info" class="MANUAL">
@@ -277,11 +284,12 @@ const TROFEE = [
 const CATALOG = {
   MANUAL: {
     U1: [
-      { val: "T1", label: "T1 — Sistemul zecimal; cifre, clase, ordine" }
-      // T2, T3 ... se adaugă pe măsură ce JSON-urile sunt generate
+      { val: "T1", label: "T1 — Sistemul zecimal; cifre, clase, ordine" },
+      { val: "T2", label: "T2 — Scrierea/citirea pana la miliarde; descompunere" },
+      { val: "T3", label: "T3 — Cifre romane: I,V,X,L,C,D,M" },
+      { val: "T4", label: "T4 — Pozitionarea pe axa; succesor, predecesor" }
     ]
   }
-  // AVANSAT, OLIMPIADA, EN — se adaugă ulterior
 };
 
 // ============================================================
@@ -307,19 +315,17 @@ function updateNivel() {
 function updateUnitate() {
   const nivel = document.getElementById('inp-nivel').value;
   const unitate = document.getElementById('inp-unitate').value;
-  const sel = document.getElementById('inp-tema-test');
+  const sel = document.getElementById('inp-tema');
   sel.innerHTML = '';
   const teme = (CATALOG[nivel] && CATALOG[nivel][unitate]) || [];
   if (teme.length === 0) {
-    sel.innerHTML = '<option value="">— Fără conținut disponibil —</option>';
+    sel.innerHTML = '<option value="">— Fara continut disponibil —</option>';
   } else {
     teme.forEach(t => {
-      [1,2,3,4].forEach(nr => {
-        const opt = document.createElement('option');
-        opt.value = `${t.val}|T${nr}`;
-        opt.textContent = `${t.label} · Test ${nr}`;
-        sel.appendChild(opt);
-      });
+      const opt = document.createElement('option');
+      opt.value = t.val;
+      opt.textContent = t.label;
+      sel.appendChild(opt);
     });
   }
   updateTemaTest();
@@ -328,8 +334,7 @@ function updateUnitate() {
 function updateTemaTest() {
   const nivel = document.getElementById('inp-nivel').value;
   const unitate = document.getElementById('inp-unitate').value;
-  const val = document.getElementById('inp-tema-test').value;
-  const tema = val ? val.split('|')[0] : '';
+  const tema = document.getElementById('inp-tema').value || '';
   const footer = document.getElementById('meta-footer');
   footer.textContent = `${unitate}: ${getUnitateLabel(unitate)} · ${tema} · ${nivel} · OMENCS 3393/2017`;
 }
@@ -348,9 +353,9 @@ async function startTest() {
   const nivel = document.getElementById('inp-nivel').value;
   const unitate = document.getElementById('inp-unitate').value;
   if (!n || !c) { alert('Completează numele și clasa!'); return; }
-  const val = document.getElementById('inp-tema-test').value;
-  if (!val) { alert('Selectează o temă disponibilă!'); return; }
-  const [tema, test] = val.split('|');
+  const tema = document.getElementById('inp-tema').value;
+  const test = document.getElementById('inp-test').value;
+  if (!tema) { alert('Selecteaza o tema disponibila!'); return; }
 
   const path = `https://laurst2710.github.io/SpeedyMate5/TESTE/data/${nivel}_${unitate}_${tema}.json`;
   document.getElementById('loading-overlay').classList.add('active');
