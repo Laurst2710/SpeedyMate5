@@ -7,33 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #111318;
-  --surface: #1c1f27;
-  --surface2: #252932;
-  --border: #2e3340;
-  --text: #e8eaf0;
-  --text2: #8b90a0;
-  --green: #2e7d32;
-  --green-light: #81c784;
-  --red: #c62828;
-  --red-light: #ef9a9a;
-  --blue: #1565c0;
-  --blue-light: #64b5f6;
-  --gold: #f59e0b;
-  --gold-light: #fcd34d;
+  --bg: #111318; --surface: #1c1f27; --surface2: #252932; --border: #2e3340;
+  --text: #e8eaf0; --text2: #8b90a0;
+  --green: #2e7d32; --green-light: #81c784;
+  --red: #c62828; --red-light: #ef9a9a;
+  --blue: #1565c0; --blue-light: #64b5f6;
+  --gold: #f59e0b; --gold-light: #fcd34d;
   --radius: 10px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Space Grotesk', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-.mono { font-family: 'JetBrains Mono', monospace; }
-
 header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; }
 .logo { font-size: 1.3rem; font-weight: 600; color: var(--gold); letter-spacing: -.02em; }
 .logo span { color: var(--text2); font-weight: 400; font-size: .9rem; margin-left: .5rem; }
-
+.topnav { background: var(--surface); border-bottom: 1px solid var(--border); padding: .5rem 2rem; display: flex; gap: 1.5rem; align-items: center; }
+.topnav a { font-size: .85rem; text-decoration: none; color: var(--text2); transition: color .15s; }
+.topnav a:hover { color: var(--text); }
+.topnav a.activ { color: var(--gold); font-weight: 600; }
 .screen { display: none; max-width: 680px; margin: 0 auto; padding: 2rem 1.5rem; }
 .screen.active { display: block; }
-
 .start-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin-bottom: 1rem; }
 .start-card h2 { font-size: 1.2rem; font-weight: 600; margin-bottom: .3rem; }
 .start-card p { color: var(--text2); font-size: .9rem; margin-bottom: 1.5rem; line-height: 1.6; }
@@ -41,29 +33,11 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
 .field label { display: block; font-size: .8rem; color: var(--text2); margin-bottom: .4rem; letter-spacing: .06em; text-transform: uppercase; }
 .field input, .field select { width: 100%; padding: .75rem 1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .95rem; outline: none; transition: border-color .15s; }
 .field input:focus, .field select:focus { border-color: var(--gold); }
-.field select option { background: var(--surface2); }
-.field select option:disabled { color: var(--text2); }
-
 .selector-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-bottom: 1rem; }
-
 .btn-primary { width: 100%; padding: .9rem; background: var(--gold); border: none; border-radius: 8px; color: #111; font-family: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity .15s; margin-top: .5rem; }
 .btn-primary:hover { opacity: .9; }
-.btn-secondary { padding: .7rem 1.4rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; cursor: pointer; transition: background .15s; }
-.btn-secondary:hover { background: var(--border); }
-
-.nivel-badge { display: inline-block; padding: .25rem .7rem; border-radius: 20px; font-size: .75rem; font-weight: 600; margin-bottom: .75rem; }
-.nivel-MANUAL { background: #1a2a1a; color: var(--green-light); border: 1px solid var(--green); }
-.nivel-AVANSAT { background: #1a1f3a; color: var(--blue-light); border: 1px solid var(--blue); }
-.nivel-OLIMPIADA { background: #2a1f0a; color: var(--gold-light); border: 1px solid var(--gold); }
-.nivel-EN { background: #2a0a0a; color: var(--red-light); border: 1px solid var(--red); }
-
-#nivel-info { padding: .85rem 1rem; border-radius: 8px; font-size: .85rem; line-height: 1.6; margin-bottom: 1rem; }
-#nivel-info.MANUAL { background: #1a2a1a; border: 1px solid var(--green); color: var(--green-light); }
-#nivel-info.AVANSAT { background: #1a1f3a; border: 1px solid var(--blue); color: var(--blue-light); }
-#nivel-info.OLIMPIADA { background: #2a1f0a; border: 1px solid var(--gold); color: var(--gold-light); }
-#nivel-info.EN { background: #2a0a0a; border: 1px solid var(--red); color: var(--red-light); }
-
-#counter { font-size: .75rem; color: var(--text2); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1rem; }
+.btn-secondary { padding: .7rem 1.4rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; cursor: pointer; }
+#nivel-info { padding: .85rem 1rem; border-radius: 8px; font-size: .85rem; line-height: 1.6; margin-bottom: 1rem; background: #1a2a1a; border: 1px solid var(--green); color: var(--green-light); }
 .bar-row { margin-bottom: .6rem; }
 .bar-label { display: flex; justify-content: space-between; font-size: .75rem; color: var(--text2); margin-bottom: .3rem; }
 .bar-track { width: 100%; height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
@@ -71,26 +45,22 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
 #bar-progres { background: var(--blue-light); }
 #bar-acuratete { background: var(--green); }
 #bars { margin-bottom: 1.2rem; }
-#question { font-size: 1rem; font-weight: 500; color: var(--text); margin-bottom: 1.2rem; line-height: 1.6; padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
-.opt { width: 100%; text-align: left; padding: .85rem 1rem; margin-bottom: .4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: .95rem; color: var(--text); cursor: pointer; transition: background .12s, border-color .12s; font-family: inherit; }
-.opt:hover:not(:disabled) { background: var(--surface2); border-color: var(--text2); }
+#question { font-size: 1rem; font-weight: 500; margin-bottom: 1.2rem; line-height: 1.6; padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.opt { width: 100%; text-align: left; padding: .85rem 1rem; margin-bottom: .4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: .95rem; color: var(--text); cursor: pointer; font-family: inherit; }
+.opt:hover:not(:disabled) { background: var(--surface2); }
 .opt:disabled { cursor: default; }
 .opt.correct { background: var(--green); border-color: var(--green); color: #fff; }
 .opt.wrong { background: var(--red); border-color: var(--red); color: #fff; }
 #feedback { margin-top: .8rem; padding: .9rem 1rem; border-radius: 8px; font-size: .9rem; line-height: 1.6; display: none; color: #fff; }
 #feedback.correct { background: var(--green); }
 #feedback.wrong { background: var(--red); }
-#btn-next { margin-top: 1rem; padding: .7rem 1.4rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; cursor: pointer; display: none; transition: background .12s; }
-#btn-next:hover { background: var(--border); }
-
+#btn-next { margin-top: 1rem; padding: .7rem 1.4rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; cursor: pointer; display: none; }
 .result-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; margin-bottom: .75rem; }
-.result-card .rc-label { font-size: .75rem; color: var(--text2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; }
-.result-card .rc-value { font-size: 1.4rem; font-weight: 600; }
-.result-card .rc-sub { font-size: .85rem; color: var(--text2); margin-top: .2rem; }
-.admitted { border-color: var(--green); }
-.admitted .rc-value { color: var(--green-light); }
-.rejected { border-color: var(--red); }
-.rejected .rc-value { color: var(--red-light); }
+.rc-label { font-size: .75rem; color: var(--text2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; }
+.rc-value { font-size: 1.4rem; font-weight: 600; }
+.rc-sub { font-size: .85rem; color: var(--text2); margin-top: .2rem; }
+.admitted { border-color: var(--green); } .admitted .rc-value { color: var(--green-light); }
+.rejected { border-color: var(--red); } .rejected .rc-value { color: var(--red-light); }
 .trophy-card { background: var(--surface); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.4rem; text-align: center; margin-bottom: .75rem; }
 .trophy-icon { font-size: 2.5rem; margin-bottom: .4rem; }
 .trophy-name { font-size: 1.1rem; font-weight: 600; color: var(--gold); }
@@ -100,19 +70,16 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
 .msg-fail { background: #4d1b1b; color: var(--red-light); border: 1px solid var(--red); }
 .obs-field { margin-bottom: .75rem; }
 .obs-field label { display: block; font-size: .75rem; color: var(--text2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; }
-.obs-field textarea { width: 100%; padding: .75rem 1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; resize: vertical; min-height: 80px; outline: none; transition: border-color .15s; }
-.obs-field textarea:focus { border-color: var(--gold); }
-.send-status { font-size: .8rem; color: var(--text2); margin-top: .5rem; min-height: 1.2rem; }
-.send-status.ok { color: var(--green-light); }
-.send-status.err { color: var(--red-light); }
+.obs-field textarea { width: 100%; padding: .75rem 1rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: inherit; font-size: .9rem; resize: vertical; min-height: 80px; outline: none; }
+.send-status { font-size: .8rem; color: var(--text2); margin-top: .5rem; }
+.send-status.ok { color: var(--green-light); } .send-status.err { color: var(--red-light); }
 .btn-row { display: flex; gap: .75rem; margin-top: .5rem; }
 .btn-row .btn-primary { margin-top: 0; }
-#send-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); align-items: center; justify-content: center; z-index: 100; }
-#send-overlay.active { display: flex; }
+#send-overlay, #loading-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); align-items: center; justify-content: center; z-index: 100; }
+#send-overlay.active, #loading-overlay.active { display: flex; }
 .send-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; text-align: center; }
 .send-box p { color: var(--text2); margin-top: .5rem; font-size: .9rem; }
-#loading-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); align-items: center; justify-content: center; z-index: 100; }
-#loading-overlay.active { display: flex; }
+#counter { font-size: .75rem; color: var(--text2); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1rem; }
 </style>
 </head>
 <body>
@@ -121,20 +88,25 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
   <div class="logo">SpeedyMATE <span id="header-sub">Matematică Gimnaziu</span></div>
 </header>
 
-<!-- START SCREEN -->
+<nav class="topnav">
+  <a href="index.html" class="activ">📖 Manual</a>
+  <a href="concurs.html">🏆 Concursuri</a>
+  <a href="olimpiada.html">★ Olimpiadă</a>
+  <a href="en.html">📋 Eval. Națională</a>
+</nav>
+
 <div id="screen-start" class="screen active">
   <div class="start-card">
     <h2>Bine ai venit!</h2>
     <p>Alege nivelul, unitatea și tema, apoi completează datele tale. Ai nevoie de minim <strong>80%</strong> pentru statutul de <strong>Antrenat</strong>.</p>
-
     <div class="selector-row">
       <div class="field">
         <label>Nivel</label>
         <select id="inp-nivel" onchange="updateNivel()">
           <option value="MANUAL">MANUAL — Dificultate 1</option>
-          <option value="AVANSAT" disabled>AVANSAT — În curând</option>
-          <option value="OLIMPIADA" disabled>OLIMPIADĂ — În curând</option>
-          <option value="EN" disabled>EVAL. NAȚIONALĂ — În curând</option>
+          <option value="CONCURS">🏆 Concursuri → concurs.html</option>
+          <option value="OLIMPIADA">★ Olimpiadă → olimpiada.html</option>
+          <option value="EN">📋 Eval. Națională → en.html</option>
         </select>
       </div>
       <div class="field">
@@ -147,12 +119,10 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
         </select>
       </div>
     </div>
-
     <div class="selector-row">
       <div class="field">
         <label>Temă</label>
-        <select id="inp-tema" onchange="updateTemaTest()">
-        </select>
+        <select id="inp-tema" onchange="updateTemaTest()"></select>
       </div>
       <div class="field">
         <label>Test</label>
@@ -164,12 +134,10 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
         </select>
       </div>
     </div>
-
-    <div id="nivel-info" class="MANUAL">
+    <div id="nivel-info">
       <strong>⚠ Nivel: MANUAL — Dificultate 1</strong><br>
       Exerciții directe, un singur pas logic. Prag minim de admisibilitate: <strong>80%</strong>.
     </div>
-
     <div class="field">
       <label>Numele tău</label>
       <input type="text" id="inp-nume" placeholder="ex: Ion Popescu" />
@@ -178,15 +146,11 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
       <label>Clasa</label>
       <input type="text" id="inp-clasa" placeholder="ex: 5A" />
     </div>
-
     <button class="btn-primary" onclick="startTest()">Începe testul →</button>
   </div>
-  <div id="meta-footer" style="text-align:center;color:var(--text2);font-size:.8rem;padding:.5rem">
-    Clasa a V-a · U1: Numere Naturale · T1: Sistemul zecimal · MANUAL · Dif. 1 · OMENCS 3393/2017
-  </div>
+  <div id="meta-footer" style="text-align:center;color:var(--text2);font-size:.8rem;padding:.5rem"></div>
 </div>
 
-<!-- QUIZ SCREEN -->
 <div id="screen-quiz" class="screen">
   <div id="bars">
     <div class="bar-row">
@@ -208,33 +172,13 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
   <button id="btn-next" onclick="nextQ()">Următoarea întrebare →</button>
 </div>
 
-<!-- RESULT SCREEN -->
 <div id="screen-result" class="screen">
-  <div class="result-card" id="rc-scor">
-    <div class="rc-label">Scor</div>
-    <div class="rc-value" id="rv-scor"></div>
-    <div class="rc-sub" id="rs-scor"></div>
-  </div>
-  <div class="result-card" id="rc-status">
-    <div class="rc-label">Status</div>
-    <div class="rc-value" id="rv-status"></div>
-    <div class="rc-sub">Prag minim de admisibilitate: 80%</div>
-  </div>
-  <div class="result-card" id="rc-puncte" style="display:none">
-    <div class="rc-label">Puncte obținute</div>
-    <div class="rc-value" id="rv-puncte"></div>
-    <div class="rc-sub" id="rs-puncte"></div>
-  </div>
-  <div class="trophy-card" id="rc-trofeu" style="display:none">
-    <div class="trophy-icon" id="rv-trofeu-icon"></div>
-    <div class="trophy-name" id="rv-trofeu-name"></div>
-    <div class="trophy-pts" id="rv-trofeu-pts"></div>
-  </div>
+  <div class="result-card" id="rc-scor"><div class="rc-label">Scor</div><div class="rc-value" id="rv-scor"></div><div class="rc-sub" id="rs-scor"></div></div>
+  <div class="result-card" id="rc-status"><div class="rc-label">Status</div><div class="rc-value" id="rv-status"></div><div class="rc-sub">Prag minim: 80%</div></div>
+  <div class="result-card" id="rc-puncte" style="display:none"><div class="rc-label">Puncte obținute</div><div class="rc-value" id="rv-puncte"></div><div class="rc-sub" id="rs-puncte"></div></div>
+  <div class="trophy-card" id="rc-trofeu" style="display:none"><div class="trophy-icon" id="rv-trofeu-icon"></div><div class="trophy-name" id="rv-trofeu-name"></div><div class="trophy-pts" id="rv-trofeu-pts"></div></div>
   <div class="msg-card" id="rc-msg"></div>
-  <div class="obs-field">
-    <label>Observațiile tale (opțional)</label>
-    <textarea id="inp-obs" placeholder="Ce a fost greu? Ce vrei să reții? Cum te-ai simțit?"></textarea>
-  </div>
+  <div class="obs-field"><label>Observațiile tale (opțional)</label><textarea id="inp-obs" placeholder="Ce a fost greu? Ce vrei să reții?"></textarea></div>
   <div class="send-status" id="send-status"></div>
   <div class="btn-row">
     <button class="btn-primary" onclick="trimiteRezultat()">Trimite rezultatul</button>
@@ -242,350 +186,213 @@ header { padding: 1.2rem 2rem; border-bottom: 1px solid var(--border); display: 
   </div>
 </div>
 
-<div id="send-overlay">
-  <div class="send-box">
-    <div style="font-size:1.5rem">⏳</div>
-    <p>Se trimite rezultatul...</p>
-  </div>
-</div>
-
-<div id="loading-overlay">
-  <div class="send-box">
-    <div style="font-size:1.5rem">⏳</div>
-    <p>Se încarcă testul...</p>
-  </div>
-</div>
+<div id="send-overlay"><div class="send-box"><div style="font-size:1.5rem">⏳</div><p>Se trimite rezultatul...</p></div></div>
+<div id="loading-overlay"><div class="send-box"><div style="font-size:1.5rem">⏳</div><p>Se încarcă testul...</p></div></div>
 
 <script>
-// ============================================================
-// CONFIG
-// ============================================================
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycby6q5lQXHnmOwKM-Mhs5XoO62d4KvKfbE5UqNxOqrGUkGheiP_kNXDFNGYQBUkm8q2_GA/exec";
 
-const NIVEL_INFO = {
-  MANUAL:   { label: "MANUAL — Dificultate 1",       desc: "Exerciții directe, un singur pas logic.",         cls: "MANUAL",   dif: 1,  pts: 10 },
-  AVANSAT:  { label: "AVANSAT — Dificultate 2",       desc: "Raționament compus, două–trei etape logice.",     cls: "AVANSAT",  dif: 2,  pts: 20 },
-  OLIMPIADA:{ label: "OLIMPIADĂ — Dificultate 3",     desc: "Probleme creative, gândire non-standard.",        cls: "OLIMPIADA",dif: 3,  pts: 30 },
-  EN:       { label: "EVALUARE NAȚIONALĂ",            desc: "Format oficial EN, timp limitat, barem complet.", cls: "EN",       dif: 4,  pts: 10 }
-};
-
 const TROFEE = [
-  {min:0,   icon:"🌱", name:"Speedy Început"},
-  {min:50,  icon:"⚡", name:"Speedy în Formă"},
-  {min:100, icon:"🏅", name:"Speedy Avansat"},
-  {min:200, icon:"🏆", name:"Speedy Campion"},
-  {min:500, icon:"🌟", name:"Speedy Maestru"},
+  {min:0,icon:"🌱",name:"Speedy Început"},
+  {min:50,icon:"⚡",name:"Speedy în Formă"},
+  {min:100,icon:"🏅",name:"Speedy Avansat"},
+  {min:200,icon:"🏆",name:"Speedy Campion"},
+  {min:500,icon:"🌟",name:"Speedy Maestru"},
 ];
 
-// ============================================================
-// CATALOG — Teme disponibile per Nivel/Unitate
-// Adaugă o intrare când JSON-ul e disponibil în data/
-// ============================================================
 const CATALOG = {
   MANUAL: {
     U1: [
-      { val: "T1", label: "T1 — Sistemul zecimal; cifre, clase, ordine" },
-      { val: "T2", label: "T2 — Scrierea/citirea pana la miliarde; descompunere" },
-      { val: "T3", label: "T3 — Cifre romane: I,V,X,L,C,D,M" },
-      { val: "T4", label: "T4 — Pozitionarea pe axa; succesor, predecesor" }
+      {val:"T1",label:"T1 — Sistemul zecimal; cifre, clase, ordine"},
+      {val:"T2",label:"T2 — Scrierea/citirea pana la miliarde; descompunere"},
+      {val:"T3",label:"T3 — Cifre romane: I,V,X,L,C,D,M"},
+      {val:"T4",label:"T4 — Pozitionarea pe axa; succesor, predecesor"}
     ]
   }
 };
 
-// ============================================================
-// STATE
-// ============================================================
-let session = { nume:'', clasa:'', label:'', q:[], cur:0, score:0, answered:0, meta:{} };
-let timerInterval = null;
-let timerSeconds = 0;
-let timings = [];
+let session = {q:[],cur:0,score:0,answered:0,meta:{}};
+let timerInterval=null,timerSeconds=0,timings=[];
 
-// ============================================================
-// SELECTORS — UI update
-// ============================================================
-function updateNivel() {
-  const nivel = document.getElementById('inp-nivel').value;
-  const info = NIVEL_INFO[nivel];
-  const el = document.getElementById('nivel-info');
-  el.className = nivel;
-  el.innerHTML = `<strong>⚠ Nivel: ${info.label}</strong><br>${info.desc} Prag: <strong>80%</strong>. Puncte/item: <strong>${info.pts}</strong>.`;
+function updateNivel(){
+  const nivel=document.getElementById('inp-nivel').value;
+  if(nivel==='CONCURS'){window.location.href='concurs.html';return;}
+  if(nivel==='OLIMPIADA'){window.location.href='olimpiada.html';return;}
+  if(nivel==='EN'){window.location.href='en.html';return;}
   updateUnitate();
 }
 
-function updateUnitate() {
-  const nivel = document.getElementById('inp-nivel').value;
-  const unitate = document.getElementById('inp-unitate').value;
-  const sel = document.getElementById('inp-tema');
-  sel.innerHTML = '';
-  const teme = (CATALOG[nivel] && CATALOG[nivel][unitate]) || [];
-  if (teme.length === 0) {
-    sel.innerHTML = '<option value="">— Fara continut disponibil —</option>';
-  } else {
-    teme.forEach(t => {
-      const opt = document.createElement('option');
-      opt.value = t.val;
-      opt.textContent = t.label;
-      sel.appendChild(opt);
-    });
-  }
+function updateUnitate(){
+  const nivel=document.getElementById('inp-nivel').value;
+  const unitate=document.getElementById('inp-unitate').value;
+  const sel=document.getElementById('inp-tema');
+  sel.innerHTML='';
+  const teme=(CATALOG[nivel]&&CATALOG[nivel][unitate])||[];
+  if(!teme.length){sel.innerHTML='<option value="">— Fara continut disponibil —</option>';}
+  else teme.forEach(t=>{const o=document.createElement('option');o.value=t.val;o.textContent=t.label;sel.appendChild(o);});
   updateTemaTest();
 }
 
-function updateTemaTest() {
-  const nivel = document.getElementById('inp-nivel').value;
-  const unitate = document.getElementById('inp-unitate').value;
-  const tema = document.getElementById('inp-tema').value || '';
-  const footer = document.getElementById('meta-footer');
-  footer.textContent = `${unitate}: ${getUnitateLabel(unitate)} · ${tema} · ${nivel} · OMENCS 3393/2017`;
+function updateTemaTest(){
+  const u=document.getElementById('inp-unitate').value;
+  const t=document.getElementById('inp-tema').value||'';
+  const map={U1:'Numere Naturale',U2:'Divizibilitate',U3:'Fracții',U4:'Geometrie'};
+  document.getElementById('meta-footer').textContent=`${u}: ${map[u]||u} · ${t} · MANUAL · OMENCS 3393/2017`;
 }
 
-function getUnitateLabel(u) {
-  const map = { U1:'Numere Naturale', U2:'Divizibilitate', U3:'Fracții', U4:'Geometrie' };
-  return map[u] || u;
-}
-
-// ============================================================
-// START TEST — fetch JSON din data/
-// ============================================================
-async function startTest() {
-  const n = document.getElementById('inp-nume').value.trim();
-  const c = document.getElementById('inp-clasa').value.trim();
-  const nivel = document.getElementById('inp-nivel').value;
-  const unitate = document.getElementById('inp-unitate').value;
-  if (!n || !c) { showError('Completează numele și clasa!'); return; }
-  const tema = document.getElementById('inp-tema').value;
-  const test = document.getElementById('inp-test').value;
-  if (!tema) { showError('Selectează o temă disponibilă!'); return; }
-
-  const path = `https://laurst2710.github.io/SpeedyMate5/TESTE/data/${nivel}_${unitate}_${tema}.json`;
+async function startTest(){
+  const n=document.getElementById('inp-nume').value.trim();
+  const c=document.getElementById('inp-clasa').value.trim();
+  if(!n||!c){showError('Completează numele și clasa!');return;}
+  const nivel=document.getElementById('inp-nivel').value;
+  const unitate=document.getElementById('inp-unitate').value;
+  const tema=document.getElementById('inp-tema').value;
+  const test=document.getElementById('inp-test').value;
+  if(!tema){showError('Selectează o temă disponibilă!');return;}
+  const path=`./data/${nivel}_${unitate}_${tema}.json`;
   document.getElementById('loading-overlay').classList.add('active');
-
-  try {
-    const res = await fetch(path);
-    if (!res.ok) throw new Error('not found');
-    const data = await res.json();
-    const questions = data.teste[test];
-    if (!questions || questions.length === 0) throw new Error('empty');
-
-    const info = NIVEL_INFO[nivel];
-    session = {
-      nume: n,
-      clasa: c,
-      label: `${nivel}/${unitate}/${tema}/${test}`,
-      nivel, unitate, tema, test,
-      q: questions,
-      cur: 0, score: 0, answered: 0,
-      meta: data.meta
-    };
-    timings = [];
+  try{
+    const res=await fetch(path);
+    if(!res.ok)throw new Error('not found');
+    const data=await res.json();
+    const questions=data.teste[test];
+    if(!questions||!questions.length)throw new Error('empty');
+    session={nume:n,clasa:c,label:`${nivel}/${unitate}/${tema}/${test}`,nivel,unitate,tema,test,q:questions,cur:0,score:0,answered:0,meta:data.meta};
+    timings=[];
     document.getElementById('loading-overlay').classList.remove('active');
-    document.getElementById('header-sub').textContent = `${getUnitateLabel(unitate)} · ${tema} · ${nivel}`;
-    show('screen-quiz');
-    renderQ();
-  } catch(e) {
+    const map={U1:'Numere Naturale',U2:'Divizibilitate',U3:'Fracții',U4:'Geometrie'};
+    document.getElementById('header-sub').textContent=`${map[unitate]||unitate} · ${tema} · ${nivel}`;
+    show('screen-quiz');renderQ();
+  }catch(e){
     document.getElementById('loading-overlay').classList.remove('active');
     showError('Conținut indisponibil. Verifică că JSON-ul există în data/.');
   }
 }
 
-// ============================================================
-// QUIZ ENGINE — neschimbat față de v2
-// ============================================================
-function renderQ() {
-  const q = session.q[session.cur];
-  document.getElementById('counter').textContent =
-    'ÎNTREBAREA ' + (session.cur+1) + ' DIN ' + session.q.length + ' · ' + session.test;
-  document.getElementById('question').textContent = q.q;
-  const el = document.getElementById('options');
-  el.innerHTML = '';
-  q.opts.forEach((o,i) => {
-    const b = document.createElement('button');
-    b.className = 'opt'; b.textContent = o;
-    b.onclick = () => answer(i);
-    el.appendChild(b);
-  });
-  document.getElementById('feedback').style.display = 'none';
-  document.getElementById('btn-next').style.display = 'none';
-  startTimer();
+function renderQ(){
+  const q=session.q[session.cur];
+  document.getElementById('counter').textContent='ÎNTREBAREA '+(session.cur+1)+' DIN '+session.q.length;
+  document.getElementById('question').textContent=q.q;
+  const el=document.getElementById('options');el.innerHTML='';
+  q.opts.forEach((o,i)=>{const b=document.createElement('button');b.className='opt';b.textContent=o;b.onclick=()=>answer(i);el.appendChild(b);});
+  document.getElementById('feedback').style.display='none';
+  document.getElementById('btn-next').style.display='none';
+  startTimer();updateBars();
+}
+
+function answer(i){
+  const q=session.q[session.cur];
+  document.querySelectorAll('.opt').forEach(b=>b.disabled=true);
+  stopTimer();session.answered++;
+  if(i===q.ok)session.score++;
   updateBars();
+  const fb=document.getElementById('feedback');
+  fb.style.display='block';
+  if(i===q.ok){document.querySelectorAll('.opt')[i].classList.add('correct');fb.className='correct';fb.textContent=q.exOk;}
+  else{document.querySelectorAll('.opt')[i].classList.add('wrong');document.querySelectorAll('.opt')[q.ok].classList.add('correct');fb.className='wrong';fb.textContent=q.exGr;}
+  document.getElementById('btn-next').style.display='inline-block';
 }
 
-function answer(i) {
-  const q = session.q[session.cur];
-  document.querySelectorAll('.opt').forEach(b => b.disabled = true);
-  stopTimer();
-  session.answered++;
-  if (i === q.ok) session.score++;
-  updateBars();
-  const fb = document.getElementById('feedback');
-  fb.style.display = 'block';
-  if (i === q.ok) {
-    document.querySelectorAll('.opt')[i].classList.add('correct');
-    fb.className = 'correct'; fb.textContent = q.exOk;
-  } else {
-    document.querySelectorAll('.opt')[i].classList.add('wrong');
-    document.querySelectorAll('.opt')[q.ok].classList.add('correct');
-    fb.className = 'wrong'; fb.textContent = q.exGr;
-  }
-  document.getElementById('btn-next').style.display = 'inline-block';
-}
+function nextQ(){session.cur++;if(session.cur<session.q.length){renderQ();return;}showResult();}
 
-function nextQ() {
-  session.cur++;
-  if (session.cur < session.q.length) { renderQ(); return; }
-  showResult();
-}
-
-function updateBars() {
-  const pct = Math.round((session.answered / session.q.length) * 100);
-  document.getElementById('bar-progres').style.width = pct + '%';
-  document.getElementById('lbl-progres').textContent = session.answered + '/' + session.q.length + ' — ' + pct + '%';
-  if (session.answered > 0) {
-    const acc = Math.round((session.score / session.answered) * 100);
-    document.getElementById('bar-acuratete').style.width = acc + '%';
-    document.getElementById('lbl-acuratete').textContent = session.score + '/' + session.answered + ' — ' + acc + '%';
-    document.getElementById('bar-acuratete').style.background = acc >= 80 ? 'var(--green)' : 'var(--red)';
+function updateBars(){
+  const pct=Math.round((session.answered/session.q.length)*100);
+  document.getElementById('bar-progres').style.width=pct+'%';
+  document.getElementById('lbl-progres').textContent=session.answered+'/'+session.q.length+' — '+pct+'%';
+  if(session.answered>0){
+    const acc=Math.round((session.score/session.answered)*100);
+    document.getElementById('bar-acuratete').style.width=acc+'%';
+    document.getElementById('lbl-acuratete').textContent=session.score+'/'+session.answered+' — '+acc+'%';
+    document.getElementById('bar-acuratete').style.background=acc>=80?'var(--green)':'var(--red)';
   }
 }
 
-function startTimer() {
-  timerSeconds = 0;
-  document.getElementById('timer').textContent = '⏱ 0s';
-  document.getElementById('timer').style.color = 'var(--text2)';
+function startTimer(){
+  timerSeconds=0;document.getElementById('timer').textContent='⏱ 0s';
   clearInterval(timerInterval);
-  timerInterval = setInterval(() => {
+  timerInterval=setInterval(()=>{
     timerSeconds++;
-    const el = document.getElementById('timer');
-    el.textContent = '⏱ ' + timerSeconds + 's';
-    if (timerSeconds > 30) el.style.color = 'var(--red-light)';
-    else if (timerSeconds > 15) el.style.color = 'var(--gold)';
-    else el.style.color = 'var(--text2)';
-  }, 1000);
+    const el=document.getElementById('timer');
+    el.textContent='⏱ '+timerSeconds+'s';
+    el.style.color=timerSeconds>30?'var(--red-light)':timerSeconds>15?'var(--gold)':'var(--text2)';
+  },1000);
 }
+function stopTimer(){clearInterval(timerInterval);timings.push(timerSeconds);}
 
-function stopTimer() {
-  clearInterval(timerInterval);
-  timings.push(timerSeconds);
-}
-
-function showResult() {
+function showResult(){
   show('screen-result');
-  const info = NIVEL_INFO[session.nivel];
-  const PRAG = session.meta.prag || 0.8;
-  const PTS = session.meta.puncte_per_item || info.pts;
-  const acc = session.score / session.q.length;
-  const pct = Math.round(acc * 100);
-  const admis = acc >= PRAG;
-  const puncte = admis ? session.score * PTS : 0;
-
-  document.getElementById('rv-scor').textContent = session.score + ' / ' + session.q.length + ' — ' + pct + '%';
-  document.getElementById('rs-scor').textContent = session.score + ' răspunsuri corecte din ' + session.q.length;
-
-  const rcStatus = document.getElementById('rc-status');
-  const rvStatus = document.getElementById('rv-status');
-  rcStatus.classList.remove('admitted','rejected');
-  if (admis) {
-    rcStatus.classList.add('admitted');
-    rvStatus.textContent = 'Antrenat ✓';
-  } else {
-    rcStatus.classList.add('rejected');
-    rvStatus.textContent = 'Neadmis';
-  }
-
-  if (admis) {
-    document.getElementById('rc-puncte').style.display = 'block';
-    document.getElementById('rv-puncte').textContent = puncte + ' puncte';
-    document.getElementById('rs-puncte').textContent = `Dificultate ${info.dif} · ${PTS} puncte per răspuns corect`;
-    const t = TROFEE.filter(x => puncte >= x.min).pop();
-    document.getElementById('rc-trofeu').style.display = 'block';
-    document.getElementById('rv-trofeu-icon').textContent = t.icon;
-    document.getElementById('rv-trofeu-name').textContent = t.name;
-    document.getElementById('rv-trofeu-pts').textContent = puncte + ' puncte acumulate';
-    const m = document.getElementById('rc-msg');
-    m.className = 'msg-card msg-ok';
-    m.textContent = 'Felicitări! Ai atins pragul de 80%. ' + session.label + ' este considerat antrenat.';
-  } else {
-    document.getElementById('rc-puncte').style.display = 'none';
-    document.getElementById('rc-trofeu').style.display = 'none';
-    const m = document.getElementById('rc-msg');
-    m.className = 'msg-card msg-fail';
-    m.textContent = 'Nivelul minim de admisibilitate este 80%. Nu se acordă puncte. Reia testul pentru a obține statutul de antrenat.';
+  const PRAG=session.meta.prag||0.8;
+  const PTS=session.meta.puncte_per_item||10;
+  const acc=session.score/session.q.length;
+  const pct=Math.round(acc*100);
+  const admis=acc>=PRAG;
+  const puncte=admis?session.score*PTS:0;
+  document.getElementById('rv-scor').textContent=session.score+' / '+session.q.length+' — '+pct+'%';
+  document.getElementById('rs-scor').textContent=session.score+' răspunsuri corecte din '+session.q.length;
+  const rcS=document.getElementById('rc-status');
+  rcS.classList.remove('admitted','rejected');
+  if(admis){
+    rcS.classList.add('admitted');document.getElementById('rv-status').textContent='Antrenat ✓';
+    document.getElementById('rc-puncte').style.display='block';
+    document.getElementById('rv-puncte').textContent=puncte+' puncte';
+    document.getElementById('rs-puncte').textContent='Dificultate 1 · '+PTS+' puncte per răspuns corect';
+    const t=TROFEE.filter(x=>puncte>=x.min).pop();
+    document.getElementById('rc-trofeu').style.display='block';
+    document.getElementById('rv-trofeu-icon').textContent=t.icon;
+    document.getElementById('rv-trofeu-name').textContent=t.name;
+    document.getElementById('rv-trofeu-pts').textContent=puncte+' puncte acumulate';
+    const m=document.getElementById('rc-msg');m.className='msg-card msg-ok';
+    m.textContent='Felicitări! Ai atins pragul de 80%. '+session.label+' este considerat antrenat.';
+  }else{
+    rcS.classList.add('rejected');document.getElementById('rv-status').textContent='Neadmis';
+    document.getElementById('rc-puncte').style.display='none';
+    document.getElementById('rc-trofeu').style.display='none';
+    const m=document.getElementById('rc-msg');m.className='msg-card msg-fail';
+    m.textContent='Nivelul minim de admisibilitate este 80%. Nu se acordă puncte. Reia testul.';
   }
 }
 
-async function trimiteRezultat() {
-  const obs = document.getElementById('inp-obs').value.trim();
-  const status = document.getElementById('send-status');
-  const info = NIVEL_INFO[session.nivel];
-  const PRAG = session.meta.prag || 0.8;
-  const PTS = session.meta.puncte_per_item || info.pts;
-  const acc = session.score / session.q.length;
-  const admis = acc >= PRAG;
-  const puncte = admis ? session.score * PTS : 0;
-
-  const payload = {
-    timestamp: new Date().toLocaleString('ro-RO'),
-    nume: session.nume,
-    clasa: session.clasa,
-    test: session.label,
-    nivel: session.nivel,
-    unitate: session.unitate,
-    tema: session.tema,
-    scor: session.score + '/' + session.q.length,
-    procent: Math.round(acc*100) + '%',
-    puncte,
-    status: admis ? 'Antrenat' : 'Neadmis',
-    observatii: obs || '—',
-    timpi_sec: timings.join(','),
-    timp_mediu_sec: timings.length ? Math.round(timings.reduce((a,b)=>a+b,0)/timings.length) : 0
-  };
-
+async function trimiteRezultat(){
+  const obs=document.getElementById('inp-obs').value.trim();
+  const status=document.getElementById('send-status');
+  const PRAG=session.meta.prag||0.8;const PTS=session.meta.puncte_per_item||10;
+  const acc=session.score/session.q.length;const admis=acc>=PRAG;
+  const puncte=admis?session.score*PTS:0;
+  const payload={timestamp:new Date().toLocaleString('ro-RO'),nume:session.nume,clasa:session.clasa,
+    test:session.label,nivel:session.nivel,unitate:session.unitate,tema:session.tema,
+    scor:session.score+'/'+session.q.length,procent:Math.round(acc*100)+'%',
+    puncte,status:admis?'Antrenat':'Neadmis',observatii:obs||'—',
+    timpi_sec:timings.join(','),
+    timp_mediu_sec:timings.length?Math.round(timings.reduce((a,b)=>a+b,0)/timings.length):0};
   document.getElementById('send-overlay').classList.add('active');
-  try {
-    await fetch(SHEETS_URL, {
-      method: 'POST', mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    status.className = 'send-status ok';
-    status.textContent = '✓ Rezultat trimis cu succes în Google Sheets.';
-  } catch(e) {
-    status.className = 'send-status err';
-    status.textContent = '✗ Eroare la trimitere. Verifică conexiunea.';
-  }
+  try{
+    await fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    status.className='send-status ok';status.textContent='✓ Rezultat trimis cu succes în Google Sheets.';
+  }catch(e){status.className='send-status err';status.textContent='✗ Eroare la trimitere.';}
   document.getElementById('send-overlay').classList.remove('active');
 }
 
-function resetApp() {
-  session = { nume:'', clasa:'', label:'', q:[], cur:0, score:0, answered:0, meta:{} };
-  timings = [];
-  document.getElementById('inp-obs').value = '';
-  document.getElementById('send-status').textContent = '';
-  document.getElementById('rc-puncte').style.display = 'none';
-  document.getElementById('rc-trofeu').style.display = 'none';
-  document.getElementById('header-sub').textContent = 'Matematică Gimnaziu';
+function resetApp(){
+  session={q:[],cur:0,score:0,answered:0,meta:{}};timings=[];
+  document.getElementById('inp-obs').value='';
+  document.getElementById('send-status').textContent='';
+  document.getElementById('rc-puncte').style.display='none';
+  document.getElementById('rc-trofeu').style.display='none';
+  document.getElementById('header-sub').textContent='Matematică Gimnaziu';
   show('screen-start');
 }
 
-function show(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+
+function showError(msg){
+  let el=document.getElementById('inline-error');
+  if(!el){el=document.createElement('div');el.id='inline-error';
+    el.style.cssText='background:#4d1b1b;color:#ef9a9a;border:1px solid #c62828;border-radius:8px;padding:.75rem 1rem;margin-bottom:1rem;font-size:.9rem;';
+    document.querySelector('.btn-primary').before(el);}
+  el.textContent=msg;el.style.display='block';
+  setTimeout(()=>{el.style.display='none';},4000);
 }
 
-function showError(msg) {
-  let el = document.getElementById('inline-error');
-  if (!el) {
-    el = document.createElement('div');
-    el.id = 'inline-error';
-    el.style.cssText = 'background:#4d1b1b;color:#ef9a9a;border:1px solid #c62828;border-radius:8px;padding:.75rem 1rem;margin-bottom:1rem;font-size:.9rem;';
-    document.querySelector('.btn-primary').before(el);
-  }
-  el.textContent = msg;
-  el.style.display = 'block';
-  setTimeout(() => { el.style.display = 'none'; }, 4000);
-}
-
-// Initializare la incarcare
 updateUnitate();
 </script>
 </body>
