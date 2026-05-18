@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "id": "OLIMPIADA_JUD_V_2014",
+    "tip": "Olimpiada",
+    "etapa": "Judeteana",
+    "etapa_display": "Etapa Județeană și a Municipiului București",
+    "clasa": "V",
+    "an": 2014,
+    "data": "8 Martie 2014",
+    "sursa": "Olimpiada Națională de Matematică",
+    "organizator": "Soluții și Bareme Orientative",
+    "total_puncte": 28,
+    "oficiu": 2,
+    "nota_maxima": 10
+  },
+  "probleme": [
+    {
+      "nr": 1,
+      "punctaj_total": 7,
+      "enunt": "Determinați numerele de forma $\\overline{abc}$ care verifică relația $b \\cdot \\overline{ac} = c \\cdot \\overline{ab} + 10$.",
+      "subpuncte": [
+        {
+          "id": "1",
+          "enunt": "Determinați numerele de forma $\\overline{abc}$ care verifică relația $b \\cdot \\overline{ac} = c \\cdot \\overline{ab} + 10$.",
+          "punctaj": 7,
+          "raspuns_final": "Numerele căutate sunt: $110, 121, 132, 143, 154, 165, 176, 187, 198$.",
+          "solutie": [
+            { "pas": "Relația din ipoteză revine la $b(10a + c) = c(10a + b) + 10 \\Leftrightarrow ab = ac + 1$.", "punctaj": 3 },
+            { "pas": "Obținem că $a(b - c) = 1$, de unde $a = 1$ și $b - c = 1$.", "punctaj": 2 },
+            { "pas": "Deci $a = 1$, $b = c + 1$, cu $b, c \\in \\{0,1,...,9\\}$ și $c \\geq 0$, $b \\leq 9$. Numerele căutate sunt: $110, 121, 132, 143, 154, 165, 176, 187, 198$.", "punctaj": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 2,
+      "punctaj_total": 7,
+      "enunt": "Fie $M$ mulțimea numerelor palindrom de forma $5n + 4$, unde $n \\in \\mathbb{N}$. (Un număr natural se numește palindrom dacă este egal cu răsturnatul său. De exemplu, numerele $7$, $191$, $23532$, $3770773$ sunt numere palindrom.)\na) Dacă scriem în ordine crescătoare elementele mulțimii $M$, stabiliți care este al 50-lea număr scris.\nb) Determinați cel mai mic și cel mai mare dintre elementele mulțimii $M$ care se scriu cu cifre nenule și au suma cifrelor $2014$.",
+      "subpuncte": [
+        {
+          "id": "2a",
+          "enunt": "Care este al 50-lea număr din $M$ scris în ordine crescătoare?",
+          "punctaj": 3,
+          "raspuns_final": "Al 50-lea număr din $M$ este $40504$.",
+          "solutie": [
+            { "pas": "Numerele din $M$ au ultima cifră $4$ sau $9$. Există: $2$ numere de o cifră ($4$ și $9$), $2$ numere de două cifre ($44$ și $99$), $20$ numere de trei cifre ($404, 414, \\ldots, 494, 909, 919, \\ldots, 999$), $20$ numere de patru cifre ($4004, 4114, \\ldots, 4994, 9009, 9119, \\ldots, 9999$).", "punctaj": 2 },
+            { "pas": "Total până la 4 cifre: $2 + 2 + 20 + 20 = 44$ numere. Al 50-lea este al 6-lea număr de cinci cifre. Numerele de cinci cifre din $M$ încep cu: $40004, 40104, 40204, 40304, 40404, 40504, \\ldots$ Al 6-lea este $\\mathbf{40504}$.", "punctaj": 1 }
+          ]
+        },
+        {
+          "id": "2b",
+          "enunt": "Determinați cel mai mic și cel mai mare element din $M$ cu cifre nenule și suma cifrelor $2014$.",
+          "punctaj": 4,
+          "raspuns_final": "Cel mai mic: $\\underbrace{9 8 \\overbrace{99\\ldots9}^{220} 8 9}$; cel mai mare: $4\\underbrace{11\\ldots1}_{2006}4$.",
+          "solutie": [
+            { "pas": "Pentru cel mai mic număr dorim cât mai puține cifre, deci cât mai multe cifre de $9$. Cu $222$ cifre de $9$ obținem suma $1998$, rămân $16$ — imposibil cu o singură cifră în față și spate. Cu $220$ cifre de $9$ suma este $1980$, rămân $34$ distribuite simetric: $\\frac{34}{2} = 17$, imposibil cu o singură cifră. Cel mai mic număr din $M$ cu suma cifrelor $2014$ și cifre nenule este $9\\underbrace{8\\overbrace{99\\ldots9}^{220}8}9$.", "punctaj": 2 },
+            { "pas": "Pentru cel mai mare număr dorim cât mai multe cifre, deci cât mai multe cifre de $1$. Scriem cifra $4$ pe prima și ultima poziție (suma $8$), rămân $2014 - 8 = 2006$ distribuite ca cifre de $1$. Cel mai mare număr este $4\\underbrace{11\\ldots1}_{2006}4$.", "punctaj": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 3,
+      "punctaj_total": 7,
+      "enunt": "Se consideră mulțimea $A = \\{1, 3, 3^2, 3^3, \\ldots, 3^{2014}\\}$. Spunem că se realizează o partiție a lui $A$ dacă mulțimea $A$ este scrisă ca o reuniune de submulțimi nevide ale sale, disjuncte două câte două.\na) Demonstrați că nu există o partiție a lui $A$ astfel încât produsul elementelor fiecărei submulțimi din partiție să fie pătrat perfect.\nb) Arătați că există o partiție a lui $A$ astfel încât suma elementelor fiecărei submulțimi din partiție să fie pătrat perfect.",
+      "subpuncte": [
+        {
+          "id": "3a",
+          "enunt": "Demonstrați că nu există o partiție a lui $A$ astfel încât produsul elementelor fiecărei submulțimi să fie pătrat perfect.",
+          "punctaj": 3,
+          "raspuns_final": "Nu există o astfel de partiție.",
+          "solutie": [
+            { "pas": "Presupunem că există o astfel de partiție. Atunci produsul tuturor elementelor din $A$ (egal cu produsul produselor din fiecare submulțime) ar fi pătrat perfect.", "punctaj": 1 },
+            { "pas": "Produsul elementelor lui $A$ este $3^{1+2+3+\\cdots+2014} = 3^{2015 \\cdot 1007} = 3^{2029105}$. Deoarece exponentul $2029105$ este impar, acest număr nu este pătrat perfect.", "punctaj": 2 }
+          ]
+        },
+        {
+          "id": "3b",
+          "enunt": "Arătați că există o partiție a lui $A$ astfel încât suma elementelor fiecărei submulțimi să fie pătrat perfect.",
+          "punctaj": 4,
+          "raspuns_final": "$A = \\{1, 3\\} \\cup \\{3^2, 3^3\\} \\cup \\cdots \\cup \\{3^{2012}, 3^{2013}\\} \\cup \\{3^{2014}\\}$.",
+          "solutie": [
+            { "pas": "Observăm că $3^{2n} + 3^{2n+1} = 3^{2n}(1 + 3) = 4 \\cdot 3^{2n} = (2 \\cdot 3^n)^2$, deci suma oricăror două elemente consecutive de indici $2n$ și $2n+1$ este pătrat perfect.", "punctaj": 2 },
+            { "pas": "O partiție posibilă: $A = \\{1, 3\\} \\cup \\{3^2, 3^3\\} \\cup \\cdots \\cup \\{3^{2012}, 3^{2013}\\} \\cup \\{3^{2014}\\}$. Suma ultimei mulțimi $\\{3^{2014}\\} = 3^{2014} = (3^{1007})^2$ este pătrat perfect. Fiecare pereche $\\{3^{2n}, 3^{2n+1}\\}$ are suma $(2 \\cdot 3^n)^2$ — pătrat perfect.", "punctaj": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 4,
+      "punctaj_total": 7,
+      "enunt": "Un număr natural de 10 cifre se numește **dichisit** dacă cifrele sale aparțin mulțimii $\\{1, 2, 3\\}$ și oricare două cifre consecutive diferă prin $1$.\na) Arătați că un număr dichisit conține în scrierea sa exact cinci cifre de $2$.\nb) Stabiliți câte numere dichisite există.\nc) Demonstrați că suma tuturor numerelor dichisite se divide cu $1408$.",
+      "subpuncte": [
+        {
+          "id": "4a",
+          "enunt": "Arătați că un număr dichisit conține exact cinci cifre de $2$.",
+          "punctaj": 1,
+          "raspuns_final": "Un număr dichisit conține exact cinci cifre de $2$.",
+          "solutie": [
+            { "pas": "În scrierea unui număr dichisit cifrele pare alternează cu cele impare (deoarece orice două consecutive diferă prin $1$). Cum numărul are $10$ cifre, conține exact $5$ cifre pare, deci exact cinci cifre de $2$.", "punctaj": 1 }
+          ]
+        },
+        {
+          "id": "4b",
+          "enunt": "Câte numere dichisite există?",
+          "punctaj": 2,
+          "raspuns_final": "Există $64$ de numere dichisite.",
+          "solutie": [
+            { "pas": "Numerele dichisite sunt de forma $2a2b2c2d2e$ sau $a2b2c2d2e2$. În primul caz, fiecare dintre $a, b, c, d, e \\in \\{1, 3\\}$ — $2^5 = 32$ numere. La fel pentru forma a doua. Total: $32 + 32 = \\mathbf{64}$ numere dichisite.", "punctaj": 2 }
+          ]
+        },
+        {
+          "id": "4c",
+          "enunt": "Demonstrați că suma tuturor numerelor dichisite se divide cu $1408$.",
+          "punctaj": 4,
+          "raspuns_final": "Suma tuturor numerelor dichisite este $1408 \\cdot 101010101$.",
+          "solutie": [
+            { "pas": "Dacă numărul $\\overline{a_1 a_2 \\ldots a_{10}}$ este dichisit, atunci și numărul $\\overline{(4-a_1)(4-a_2)\\ldots(4-a_{10})}$ este dichisit (cifrele $1$ devin $3$ și invers, cifra $2$ rămâne $2$) și este distinct de primul.", "punctaj": 2 },
+            { "pas": "Suma fiecărei astfel de perechi este $\\underbrace{44\\ldots4}_{10} = 4444444444$. Grupăm cele $64$ de numere dichisite în $32$ perechi. Suma totală este $32 \\cdot 4444444444 = 2^7 \\cdot 11 \\cdot 101010101 \\cdot 4 = 1408 \\cdot 101010101$. Deci suma se divide cu $1408$.", "punctaj": 2 }
+          ]
+        }
+      ]
+    }
+  ]
+}

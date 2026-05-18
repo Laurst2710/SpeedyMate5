@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "id": "OLIMPIADA_JUD_V_2013",
+    "tip": "Olimpiada",
+    "etapa": "Judeteana",
+    "etapa_display": "Etapa Județeană și a Municipiului București",
+    "clasa": "V",
+    "an": 2013,
+    "data": "9 Martie 2013",
+    "sursa": "Olimpiada Națională de Matematică",
+    "organizator": "Societatea de Științe Matematice din România / Gazeta Matematică",
+    "total_puncte": 28,
+    "oficiu": 2,
+    "nota_maxima": 10
+  },
+  "probleme": [
+    {
+      "nr": 1,
+      "punctaj_total": 7,
+      "enunt": "a) Calculați $5^3 + 6^3 + 7^3 + 11^3$;\nb) Arătați că numărul $2015^{2014}$ poate fi scris ca o sumă de patru cuburi perfecte.",
+      "subpuncte": [
+        {
+          "id": "1a",
+          "enunt": "Calculați $5^3 + 6^3 + 7^3 + 11^3$.",
+          "punctaj": 2,
+          "strategie_gandire": "Calcul direct — ridici fiecare număr la cub separat, apoi aduni. Nu există scurtătură; verifică fiecare cub: $5^3 = 5 \\cdot 5 \\cdot 5$, $6^3 = 6 \\cdot 36$, $7^3 = 7 \\cdot 49$, $11^3 = 11 \\cdot 121$. Suma trebuie să iasă un număr frumos — semn că ești pe drumul bun.",
+          "raspuns_final": "$5^3 + 6^3 + 7^3 + 11^3 = 125 + 216 + 343 + 1331 = 2015$",
+          "solutie": [
+            { "pas": "$5^3 = 125$; $6^3 = 216$; $7^3 = 343$; $11^3 = 1331$", "punctaj": 1 },
+            { "pas": "$125 + 216 + 343 + 1331 = 2015$", "punctaj": 1 }
+          ]
+        },
+        {
+          "id": "1b",
+          "enunt": "Arătați că numărul $2015^{2014}$ poate fi scris ca o sumă de patru cuburi perfecte.",
+          "punctaj": 5,
+          "strategie_gandire": "Ideea cheie: rezultatul de la (a) nu e întâmplător — $5^3+6^3+7^3+11^3 = 2015$. Acum trebuie să apară $2015$ undeva în $2015^{2014}$. Desparte: $2015^{2014} = 2015^{2013} \\cdot 2015$. Înlocuiești $2015$ cu suma de cuburi de la (a). Distribui $2015^{2013}$ în interiorul fiecărui cub — folosești $a^3 \\cdot b^3 = (ab)^3$ și $2015^{2013} = (2015^{671})^3$.",
+          "raspuns_final": "$2015^{2014} = (2015^{671} \\cdot 5)^3 + (2015^{671} \\cdot 6)^3 + (2015^{671} \\cdot 7)^3 + (2015^{671} \\cdot 11)^3$",
+          "solutie": [
+            { "pas": "$2015^{2014} = 2015^{2013} \\cdot 2015 = 2015^{2013}(5^3 + 6^3 + 7^3 + 11^3)$", "punctaj": 2 },
+            { "pas": "$= 2015^{2013} \\cdot 5^3 + 2015^{2013} \\cdot 6^3 + 2015^{2013} \\cdot 7^3 + 2015^{2013} \\cdot 11^3$", "punctaj": 1 },
+            { "pas": "$= (2015^{671} \\cdot 5)^3 + (2015^{671} \\cdot 6)^3 + (2015^{671} \\cdot 7)^3 + (2015^{671} \\cdot 11)^3$", "punctaj": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 2,
+      "punctaj_total": 7,
+      "enunt": "Determinați cifrele nenule $a$, $b$, $c$ astfel încât $\\overline{ab}^2 = \\overline{cab}$.",
+      "subpuncte": [
+        {
+          "id": "2",
+          "enunt": "Determinați cifrele nenule $a$, $b$, $c$ astfel încât $\\overline{ab}^2 = \\overline{cab}$.",
+          "punctaj": 7,
+          "strategie_gandire": "Când ai o egalitate între numere cu cifre, primul reflex este să te uiți la **ultima cifră**. Ultima cifră a lui $\\overline{ab}^2$ depinde doar de $b$ — nu de $a$. Asta îți dă imediat restricții pe $b$: care cifre, ridicate la pătrat, dau ultima cifră egală cu ele înseși? Sunt puține — $b \\in \\{0,1,5,6\\}$, iar $b \\neq 0$ (cifre nenule). De acolo, pentru fiecare valoare a lui $b$, restricționezi $a$ astfel încât $\\overline{ab}^2$ să aibă exact 3 cifre (altfel $\\overline{cab}$ nu există ca număr de 3 cifre).",
+          "raspuns_final": "$a = 2$, $b = 5$, $c = 6$, adică $25^2 = 625$.",
+          "solutie": [
+            { "pas": "Ultima cifră a lui $\\overline{ab}^2$ trebuie să fie $b$. Rezultă $b \\in \\{1, 5, 6\\}$.", "punctaj": 1 },
+            { "pas": "Pentru $b = 1$ și $a \\geq 4$: $\\overline{a1}^2 \\geq 41^2 = 1681$ — 4 cifre, imposibil.", "punctaj": 1 },
+            { "pas": "Pentru $b = 1$ și $a \\in \\{1, 2, 3\\}$: relația nu se verifică în niciunul dintre cazuri.", "punctaj": 1 },
+            { "pas": "Pentru $b = 5$ și $a \\geq 3$: $\\overline{a5}^2 \\geq 35^2 = 1225$ — 4 cifre, imposibil.", "punctaj": 1 },
+            { "pas": "Pentru $b = 5$, $a = 2$: $25^2 = 625$ → $c=6$, $a=2$ ✓. Soluție găsită.", "punctaj": 1 },
+            { "pas": "Pentru $b = 6$ și $a \\geq 3$: $\\overline{a6}^2 \\geq 36^2 = 1296$ — 4 cifre, imposibil.", "punctaj": 1 },
+            { "pas": "Pentru $b = 6$ și $a \\in \\{1, 2\\}$: relația nu se verifică. Concluzie: unica soluție este $25^2 = 625$.", "punctaj": 1 }
+          ],
+          "solutie_alternativa": {
+            "descriere": "Relația se scrie $\\overline{ab}(\\overline{ab}-1) = 100c$. Produs de două numere consecutive = $100c$. Singura factorizare: $25 \\cdot 24 = 600$, deci $c=6$ și $\\overline{ab}=25$.",
+            "punctaj": "7p"
+          }
+        }
+      ]
+    },
+    {
+      "nr": 3,
+      "punctaj_total": 7,
+      "enunt": "Se consideră un număr natural $A$ scris cu $n$ cifre nenule, $n \\geq 1$. Numărul $B$ este obținut din numărul $A$ prin rearanjarea cifrelor acestuia. Știind că $A + B = 10^n$, se cere:\na) Pentru $n = 3$, dați un exemplu de numere $A$ și $B$ cu proprietatea din enunț.\nb) Arătați că $n$ este număr impar.\nc) Demonstrați că în scrierea lui $A$ există cel puțin o cifră egală cu $5$.",
+      "subpuncte": [
+        {
+          "id": "3a",
+          "enunt": "Pentru $n = 3$, dați un exemplu de numere $A$ și $B$ cu proprietatea din enunț.",
+          "punctaj": 2,
+          "strategie_gandire": "Ai nevoie de două numere de 3 cifre cu aceleași cifre (rearanjate) a căror sumă să fie $10^3 = 1000$. Încearcă: dacă $A = \\overline{abc}$ și $B = \\overline{cba}$, suma lor este $101(a+c) + 20b$. Vrei asta egal cu $1000$. Sau mai simplu: încearcă direct — $A = 365$, $B = 635$ sunt rearanjări și $365 + 635 = 1000$.",
+          "raspuns_final": "$A = 365$, $B = 635$, deoarece $365 + 635 = 1000 = 10^3$.",
+          "solutie": [
+            { "pas": "Un exemplu: $A = 365$, $B = 635$. Verificare: $365 + 635 = 1000 = 10^3$ ✓", "punctaj": 2 }
+          ]
+        },
+        {
+          "id": "3b",
+          "enunt": "Arătați că $n$ este număr impar.",
+          "punctaj": 3,
+          "strategie_gandire": "Scrie adunarea coloană cu coloană. $A + B = 10^n$ înseamnă că suma coloană cu coloană produce exact $n$ zerouri și un $1$ în față. Gândește-te ce se întâmplă pe fiecare coloană: suma cifrelor plus eventualul transport trebuie să dea $0$ (cu transport) sau $10$. Pe coloana unităților suma e $10$ (transport $1$). Pe celelalte coloane suma e $9$ (cu transport $1$, dă $0$). Acum: cifrele lui $B$ sunt o rearanjare a cifrelor lui $A$, deci fiecare cifră din $A$ apare și în $B$. Analizează ce se întâmplă cu cifra de pe coloana unităților — ea apare și pe altă coloană în $B$, formând perechi. Perechile sunt în număr par → numărul de coloane fără coloana unităților e par → $n$ e impar.",
+          "raspuns_final": "$n$ este impar.",
+          "solutie": [
+            { "pas": "Pe coloana unităților suma cifrelor este $10$ (cu transport $1$). Pe orice altă coloană suma cifrelor este $9$.", "punctaj": 1 },
+            { "pas": "Cifra $a$ (ultima din $A$) apare și în $B$, grupându-se cu cifra $b-1$ pe altă coloană. Aceasta generează perechi — fiecare pereche ocupă un număr par de coloane.", "punctaj": 1 },
+            { "pas": "Toate coloanele (mai puțin coloana unităților) sunt grupate în perechi — număr par. Deci $n = \\text{par} + 1$ este impar.", "punctaj": 1 }
+          ]
+        },
+        {
+          "id": "3c",
+          "enunt": "Demonstrați că în scrierea lui $A$ există cel puțin o cifră egală cu $5$.",
+          "punctaj": 2,
+          "strategie_gandire": "Din analiza de la (b) știi că cifrele se grupează în perechi $(c, d)$ cu $c + d = 9$, mai puțin cifra de pe coloana unităților care se sumează cu ea însăși (suma $= 10$). Dacă o cifră se sumează cu ea însăși și dă $10$, atunci cifra e $5$. Demonstrează prin reducere la absurd că nu poate fi altfel.",
+          "raspuns_final": "În scrierea lui $A$ există cel puțin o cifră egală cu $5$.",
+          "solutie": [
+            { "pas": "Dacă cifra $a$ (ultima din $A$) ar fi diferită de cifra $b$ corespunzătoare din $B$, procesul de perechi ar fi infinit — contradicție.", "punctaj": 1 },
+            { "pas": "Deci $a = b$ și $a + b = 10$, deci $a = 5$. Cifra $5$ există în $A$.", "punctaj": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "nr": 4,
+      "punctaj_total": 7,
+      "enunt": "Se consideră mulțimea $M = \\{2^1, 2^2, 2^3, \\ldots, 2^{15}\\}$.\na) Dați un exemplu de trei mulțimi $A$, $B$, $C$, nevide și disjuncte două câte două, astfel încât $A \\cup B \\cup C = M$, iar produsul elementelor fiecărei mulțimi să fie același.\nb) Arătați că nu există trei mulțimi $X$, $Y$, $Z$, nevide și disjuncte două câte două, astfel încât $X \\cup Y \\cup Z = M$, iar suma elementelor fiecărei mulțimi să fie aceeași.",
+      "subpuncte": [
+        {
+          "id": "4a",
+          "enunt": "Dați un exemplu de trei mulțimi $A$, $B$, $C$ cu produsul elementelor egal.",
+          "punctaj": 3,
+          "strategie_gandire": "Produsele elementelor din $M$ sunt puteri ale lui $2$: $2^1 \\cdot 2^2 \\cdots 2^{15} = 2^{1+2+\\ldots+15} = 2^{120}$. Ca produsele să fie egale, fiecare trebuie să fie $2^{40}$. Problema devine: împarte mulțimea $\\{1, 2, 3, \\ldots, 15\\}$ în trei submulțimi cu suma $40$ fiecare. E o problemă de partiție a numerelor — încearcă prin trial and error sau sistematic.",
+          "raspuns_final": "$A = \\{2^1, 2^6, 2^9, 2^{10}, 2^{14}\\}$, $B = \\{2^2, 2^3, 2^4, 2^8, 2^{11}, 2^{12}\\}$, $C = \\{2^5, 2^7, 2^{13}, 2^{15}\\}$. Fiecare are produsul $2^{40}$.",
+          "nota": "Numai prezentarea exemplului (fără demonstrație) se apreciază cu 3 puncte.",
+          "solutie": [
+            { "pas": "$p(M) = 2^{1+2+\\ldots+15} = 2^{120}$, deci $p(A) = p(B) = p(C) = 2^{40}$.", "punctaj": 1 },
+            { "pas": "Trebuie partiționat $\\{1,...,15\\}$ în trei submulțimi cu suma $40$.", "punctaj": 1 },
+            { "pas": "$A$: exponenți $\\{1,6,9,10,14\\}$ — sumă $40$ ✓; $B$: $\\{2,3,4,8,11,12\\}$ — sumă $40$ ✓; $C$: $\\{5,7,13,15\\}$ — sumă $40$ ✓.", "punctaj": 1 }
+          ]
+        },
+        {
+          "id": "4b",
+          "enunt": "Arătați că nu există trei mulțimi $X$, $Y$, $Z$ cu suma elementelor egală.",
+          "punctaj": 4,
+          "strategie_gandire": "Tehnica: **cel mai mic element controlează divizibilitatea**. Dacă $2^x$ e cel mai mic element din $X$, atunci $2^x$ divide suma $s(X)$, dar $2^{x+1}$ nu divide $s(X)$ (toți ceilalți termeni sunt multipli de $2^{x+1}$, dar $2^x$ nu e). Acum, dacă $x < y$ (cel mai mic din $Y$), atunci $2^{x+1}$ divide $s(Y)$ — dar nu divide $s(X)$. Deci $s(X) \\neq s(Y)$. Contradicție.",
+          "raspuns_final": "Nu există o astfel de partiție.",
+          "solutie": [
+            { "pas": "Fie $2^x, 2^y, 2^z$ cele mai mici elemente din $X, Y, Z$, cu $x < y < z$. Atunci $2^x | s(X)$ dar $2^{x+1} \\nmid s(X)$.", "punctaj": 0 },
+            { "pas": "Deoarece $x+1 \\leq y$, avem $2^{x+1} | s(Y)$. Deci $s(X) \\neq s(Y)$ — contradicție.", "punctaj": 2 },
+            { "pas": "Prin urmare nu există partiția cerută.", "punctaj": 2 }
+          ]
+        }
+      ]
+    }
+  ]
+}
