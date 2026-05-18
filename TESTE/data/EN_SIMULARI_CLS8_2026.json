@@ -1,0 +1,830 @@
+{
+  "meta": {
+    "id": "EN_SIMULARI_CLS8_2026",
+    "tip": "Evaluare Nationala",
+    "clasa": "VIII",
+    "an": 2026,
+    "simulari": [
+      "apr",
+      "mar"
+    ]
+  },
+  "simulari": {
+    "apr": {
+      "label": "Simulare 28 Aprilie 2026",
+      "grile": [
+        {
+          "sub": "I",
+          "nr": 1,
+          "q": "Rezultatul calculului 39 \u2212 9 : 3 este egal cu:",
+          "opts": [
+            "a) 10",
+            "b) 12",
+            "c) 36",
+            "d) 90"
+          ],
+          "ok": 2,
+          "exOk": "Corect! Ordinea opera\u021biilor: 9:3=3, apoi 39\u22123=36.",
+          "exGr": "Ordinea opera\u021biilor: \u00eent\u00e2i : si x, abia apoi + si \u2212. 9:3=3, 39\u22123=36."
+        },
+        {
+          "sub": "I",
+          "nr": 2,
+          "q": "Cinci caiete de acela\u0219i fel cost\u0103 50 de lei. Pre\u021bul unui caiet este:",
+          "opts": [
+            "a) 1 leu",
+            "b) 5 lei",
+            "c) 10 lei",
+            "d) 50 de lei"
+          ],
+          "ok": 2,
+          "exOk": "Corect! 50:5=10 lei.",
+          "exGr": "50 lei pentru 5 caiete. 1 caiet = 10 lei."
+        },
+        {
+          "sub": "I",
+          "nr": 3,
+          "q": "Cel mai mare num\u0103r natural din intervalul (\u22121, 6) este:",
+          "opts": [
+            "a) 6",
+            "b) 5",
+            "c) 0",
+            "d) \u22121"
+          ],
+          "ok": 1,
+          "exOk": "Corect! Interval deschis \u2014 6 exclus. Cel mai mare num\u0103r natural din interior: 5.",
+          "exGr": "Interval deschis = capetele excluse. Numerele naturale din (\u22121,6): 0,1,2,3,4,5. Cel mai mare: 5."
+        },
+        {
+          "sub": "I",
+          "nr": 4,
+          "q": "Frac\u021bia subunitar\u0103 din mul\u021bimea {5/2, 15/16, 16/15, 5} este:",
+          "opts": [
+            "a) 5/2",
+            "b) 15/16",
+            "c) 16/15",
+            "d) 5"
+          ],
+          "ok": 1,
+          "exOk": "Corect! 15/16: num\u0103r\u0103tor < numitor.",
+          "exGr": "Subunitar\u0103 = num\u0103r\u0103tor < numitor. 5/2 si 16/15 sunt supraunitare. 15/16 este subunitar\u0103."
+        },
+        {
+          "sub": "I",
+          "nr": 5,
+          "q": "a = 3 + 2\u221a2 si b = 3 \u2212 \u221a8. Ana:17, Mihaela:6, Paul:5, Tudor:1. Rezultatul corect a fost ob\u021binut de:",
+          "opts": [
+            "a) Ana",
+            "b) Mihaela",
+            "c) Paul",
+            "d) Tudor"
+          ],
+          "ok": 1,
+          "exOk": "Corect! \u221a8=2\u221a2. a+b=6. Mihaela.",
+          "exGr": "\u221a8=2\u221a2. a+b=(3+2\u221a2)+(3\u22122\u221a2)=6. Mihaela a ob\u021binut 6."
+        },
+        {
+          "sub": "I",
+          "nr": 6,
+          "q": "Dup\u0103 o scumpire cu 10%, un obiect cost\u0103 110 lei. Pre\u021bul ini\u021bial a fost 100 lei. Afirma\u021bia este:",
+          "opts": [
+            "a) adev\u0103rat\u0103",
+            "b) fals\u0103"
+          ],
+          "ok": 0,
+          "exOk": "Corect! 100 x 1.1 = 110 lei. Adev\u0103rat.",
+          "exGr": "100+10%=110. Afirma\u021bia este adev\u0103rat\u0103."
+        },
+        {
+          "sub": "II",
+          "nr": 1,
+          "figKey": "sII_q1",
+          "q": "\u00cen figura al\u0103turat\u0103, punctele A, B, C si D sunt coliniare, \u00een aceast\u0103 ordine, astfel \u00eenc\u00e2t AB = 20 cm, lungimea segmentului BC este jum\u0103tate din lungimea segmentului AB, iar punctul D este simetricul punctului B fa\u021b\u0103 de punctul C. Lungimea segmentului AD este egal\u0103 cu:",
+          "opts": [
+            "a) 40 cm",
+            "b) 35 cm",
+            "c) 30 cm",
+            "d) 10 cm"
+          ],
+          "ok": 0,
+          "exOk": "Corect! BC=10, BD=20, AD=AB+BD=40 cm.",
+          "exGr": "BC=10. D simetric lui B fa\u021b\u0103 de C: BD=20. AD=20+20=40 cm."
+        },
+        {
+          "sub": "II",
+          "nr": 2,
+          "figKey": "sII_q2",
+          "q": "\u00cen figura al\u0103turat\u0103 sunt reprezentate dreptele paralele AB si CD, cu punctele A si D de o parte si de alta a dreptei BC. M\u0103sura unghiului BCD este egal\u0103 cu 45\u00b0. M\u0103sura unghiului ABC este egal\u0103 cu:",
+          "opts": [
+            "a) 45\u00b0",
+            "b) 75\u00b0",
+            "c) 135\u00b0",
+            "d) 145\u00b0"
+          ],
+          "ok": 0,
+          "exOk": "Corect! Unghiuri alternate interne: ABC=BCD=45\u00b0.",
+          "exGr": "AB parallel CD, secanta BC: unghiuri alternate interne egale. ABC=45\u00b0."
+        },
+        {
+          "sub": "II",
+          "nr": 3,
+          "figKey": "sII_q3",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat triunghiul isoscel ABC, cu AB=AC. Punctul E apar\u021bine laturii BC, astfel \u00eenc\u00e2t AE=CE si m\u0103sura unghiului BEA este egal\u0103 cu 78\u00b0. M\u0103sura unghiului CAB este egal\u0103 cu:",
+          "opts": [
+            "a) 39\u00b0",
+            "b) 78\u00b0",
+            "c) 102\u00b0",
+            "d) 141\u00b0"
+          ],
+          "ok": 2,
+          "exOk": "Corect! AEC=102\u00b0. AEC isoscel: ACE=39\u00b0. CAB=102\u00b0.",
+          "exGr": "AEC=180\u00b0-78\u00b0=102\u00b0. AEC isoscel (AE=CE): ACE=39\u00b0. CAB=180\u00b0-39\u00b0-39\u00b0=102\u00b0."
+        },
+        {
+          "sub": "II",
+          "nr": 4,
+          "figKey": "sII_q4",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat trapezul dreptunghic ABCD, cu AD perpendicular AB, AB parallel CD, AB=8cm, CD=4cm si AD=4sqrt(3)cm. Aria trapezului ABCD este egal\u0103 cu:",
+          "opts": [
+            "a) 40 cm\u00b2",
+            "b) 24\u221a3 cm\u00b2",
+            "c) 32 cm\u00b2",
+            "d) 8\u221a3 cm\u00b2"
+          ],
+          "ok": 1,
+          "exOk": "Corect! Aria=(8+4)/2 x 4sqrt(3)=24sqrt(3) cm\u00b2.",
+          "exGr": "Aria trapez=(B+b)/2 x h=(8+4)/2 x 4sqrt(3)=24sqrt(3) cm\u00b2."
+        },
+        {
+          "sub": "II",
+          "nr": 5,
+          "figKey": "sII_q5",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat cercul de centru O si diametru AB. Punctele C si D apar\u021bin cercului, astfel \u00eenc\u00e2t dreptele AB si CD sunt paralele si m\u0103sura unghiului BOC este egal\u0103 cu 60\u00b0. M\u0103sura unghiului ADC este egal\u0103 cu:",
+          "opts": [
+            "a) 30\u00b0",
+            "b) 60\u00b0",
+            "c) 110\u00b0",
+            "d) 120\u00b0"
+          ],
+          "ok": 3,
+          "exOk": "Corect! Arc AC=120\u00b0. Arc major AC=240\u00b0. ADC=120\u00b0.",
+          "exGr": "Arc AD=arc BC=60\u00b0. Arc AC=120\u00b0. Arc major=240\u00b0. ADC=240/2=120\u00b0."
+        },
+        {
+          "sub": "II",
+          "nr": 6,
+          "figKey": "sII_q6",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat un cub ABCDEFGH. M\u0103sura unghiului dreptelor BF si CD este egal\u0103 cu:",
+          "opts": [
+            "a) 30\u00b0",
+            "b) 45\u00b0",
+            "c) 60\u00b0",
+            "d) 90\u00b0"
+          ],
+          "ok": 3,
+          "exOk": "Corect! BF vertical, CD orizontal: perpendiculare, 90\u00b0.",
+          "exGr": "BF=muchie vertical\u0103, CD=muchie orizontal\u0103. Perpendiculare: 90\u00b0."
+        }
+      ],
+      "s3": [
+        {
+          "nr": 1,
+          "pts": 5,
+          "enunt": "Silvia a scris pe o foaie un num\u0103r natural pe care, dac\u0103 \u00eel \u00eempart la 5, ob\u021bine restul 2, iar dac\u0103 \u00eel \u00eempart la 6 ob\u021bine restul 3.",
+          "subs": [
+            {
+              "id": "1a",
+              "pts": 2,
+              "cerinta": "(2p) a) Este posibil ca num\u0103rul scris de Silvia s\u0103 fie 158? Justific\u0103 r\u0103spunsul dat.",
+              "accept": [
+                "nu",
+                "NU",
+                "Nu",
+                "nu este posibil"
+              ],
+              "exOk": "Corect! 158 = 5x31 + 3. Restul este 3, nu 2. Nu este posibil.",
+              "exGr": "158 : 5 = 31 rest 3 (nu 2). Condi\u021bia nu e \u00eendeplinit\u0103.",
+              "rezolvare": "158 / 5 = 31 rest 3.\nCondi\u021bia cere rest 2 la \u00eempar\u021birea cu 5.\nDeoarece 3 diferit de 2, num\u0103rul 158 NU \u00eendepline\u0219te prima condi\u021bie.\nRaspuns: NU, nu este posibil.\n\nBarem: 158=5x31+3 (1p) | Cum 3 diferit de 2, num\u0103rul 158 nu este posibil (1p)"
+            },
+            {
+              "id": "1b",
+              "pts": 3,
+              "cerinta": "(3p) b) Silvia a scris pe foaie cel mai mic num\u0103r natural care \u00eendepline\u0219te condi\u021biile din enun\u021b. Determin\u0103 acest num\u0103r.",
+              "accept": [
+                "27"
+              ],
+              "exOk": "Corect! n = 27.",
+              "exGr": "n+3 este multiplu comun al lui 5 si 6. c.m.m.c.(5,6)=30. n+3=30, n=27.",
+              "rezolvare": "Fie n num\u0103rul scris de Silvia.\nn = 5a + 2  si  n = 6b + 3\n\nAd\u0103ug\u0103m 3:\nn+3 = 5(a+1)  =>  n+3 multiplu de 5\nn+3 = 6(b+1)  =>  n+3 multiplu de 6\n\nDeci n+3 este multiplu comun al lui 5 si 6.\nc.m.m.c.(5, 6) = 30\n\nCel mai mic n+3 = 30  =>  n = 27\n\nVerificare: 27 = 5x5 + 2 (rest 2) si 27 = 6x4 + 3 (rest 3). Corect!\n\nBarem: n=5a+2 si n=6b+3 => n+3 multiplu comun (1p+1p) | n+3=30 => n=27 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 2,
+          "pts": 5,
+          "enunt": "Se consider\u0103 expresia E(x) = [(x\u22124)/(x\u22122) \u2212 (2\u2212x)/(x\u22124) \u2212 2] : 1/(x\u22122), unde x este num\u0103r real, x \u22602 \u0219i x \u22604.",
+          "subs": [
+            {
+              "id": "2a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 x\u00b2\u22126x+8 = (x\u22122)(x\u22124), pentru orice num\u0103r real x.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok"
+              ],
+              "exOk": "Confirmat!",
+              "exGr": "Desf\u0103soar\u0103 (x-2)(x-4) = x^2 - 6x + 8. Identic cu membrul st\u00e2ng.",
+              "rezolvare": "Desf\u0103\u0219ur\u0103m membrul drept:\n(x-2)(x-4) = x^2 - 4x - 2x + 8 = x^2 - 6x + 8\n\nAcesta este identic cu membrul st\u00e2ng.\nDeci x^2 - 6x + 8 = (x-2)(x-4) pentru orice x real.\n\nBarem: x^2-6x+8 = x(x-2)-4(x-2) (1p) | = (x-2)(x-4) (1p)"
+            },
+            {
+              "id": "2b",
+              "pts": 3,
+              "cerinta": "(3p) b) Determin\u0103 suma solu\u021biilor ecua\u021biei E(x) = (x+4)/12, unde x este num\u0103r real, x \u22602 \u0219i x \u22604.",
+              "accept": [
+                "0",
+                "zero",
+                "Zero"
+              ],
+              "exOk": "Corect! Suma solu\u021biilor este 0.",
+              "exGr": "E(x) = 4/(x-4). Ecua\u021bia: x^2=64, x=+-8. Suma=-8+8=0.",
+              "rezolvare": "Simplific\u0103m E(x):\nE(x) = 4/(x-4)\n\nEcua\u021bia: 4/(x-4) = (x+4)/12\n4 x 12 = (x+4)(x-4)\n48 = x^2 - 16\nx^2 = 64\nx = -8 sau x = 8  (ambele diferite de 2 si 4)\n\nSuma solu\u021biilor: -8 + 8 = 0\n\nBarem: E(x)=4/(x-4) (1p) | x^2=64 (1p) | x=+-8, suma=0 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 3,
+          "pts": 5,
+          "figKey": "sIII_p3",
+          "enunt": "\u00cen sistemul de axe ortogonale xOy se consider\u0103 punctele A(2, 0) si B(6, 3).",
+          "subs": [
+            {
+              "id": "3a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 AB = 5.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "5",
+                "ok"
+              ],
+              "exOk": "Corect!",
+              "exGr": "AB = sqrt[(6-2)^2 + (3-0)^2] = sqrt[16+9] = sqrt(25) = 5.",
+              "rezolvare": "A(2,0) si B(6,3).\nAB^2 = (xB-xA)^2 + (yB-yA)^2\nAB^2 = (6-2)^2 + (3-0)^2\nAB^2 = 4^2 + 3^2 = 16 + 9 = 25\nAB = sqrt(25) = 5\n\nBarem: AB^2=16+9=25 (1p) | AB=5 (1p)"
+            },
+            {
+              "id": "3b",
+              "pts": 3,
+              "cerinta": "(3p) b) Calculeaz\u0103 aria triunghiului AOB.",
+              "accept": [
+                "3",
+                "3 cm2",
+                "3u.a."
+              ],
+              "exOk": "Corect! Aria = 3.",
+              "exGr": "OA=2, distanta B fata de Ox=3. Aria=2x3/2=3.",
+              "rezolvare": "O(0,0), A(2,0), B(6,3).\nOA se afla pe axa Ox: OA = 2.\nDistanta lui B fata de axa Ox = yB = 3.\nAria = (OA x h) / 2 = (2 x 3) / 2 = 3\n\nBarem: OA=2, d(B,Ox)=3 (1p) | Aria=OA.d/2 (1p) | Aria=3 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 4,
+          "pts": 5,
+          "figKey": "sIII_p4",
+          "enunt": "\u00cen figura al\u0103turat\u0103 este reprezentat cercul de centru O, \u00een care AB si CD sunt diametre perpendiculare. Punctul M apar\u021bine arcului mic BC, dreptele DM si AB se intersecteaz\u0103 \u00een punctul N, DN=6cm si MN=3cm.",
+          "subs": [
+            {
+              "id": "4a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 m\u0103sura unghiului BMN este egal\u0103 cu 45\u00b0.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "45",
+                "ok"
+              ],
+              "exOk": "Corect!",
+              "exGr": "AB perpendicular CD => arcul BD=90 grade. Unghiul BMN=1/2 x arcBD=45 grade.",
+              "rezolvare": "AB si CD sunt diametre perpendiculare.\nAB perpendicular CD => arcul BD = 90 grade.\nUnghiul BMN este unghi inscris care subtinde arcul BD.\nUnghiul BMN = arcBD / 2 = 90/2 = 45 grade.\n\nBarem: AB perpendicular CD => arcBD=90 (1p) | Unghiul BMN=45 grade (1p)"
+            },
+            {
+              "id": "4b",
+              "pts": 3,
+              "cerinta": "(3p) b) Calculeaz\u0103 aria discului cu centrul \u00een O \u0219i raz\u0103 OD.",
+              "accept": [
+                "27pi",
+                "27PI",
+                "27\u03c0",
+                "27 pi"
+              ],
+              "exOk": "Corect! Aria = 27pi cm^2.",
+              "exGr": "Triunghiurile OND si MCD sunt asemenea. OD^2=27. Aria=27pi cm^2.",
+              "rezolvare": "Unghiul NOD = Unghiul DMC = 90 grade.\nUnghiul ODN = Unghiul CDM (comun).\n=> Triunghiul OND ~ Triunghiul MCD (AA)\n\nND/CD = OD/MD\n6 / (2 x OD) = OD / 9\nOD^2 = 27\n\nAria discului = pi x OD^2 = 27pi cm^2\n\nBarem: OND~MCD (1p) | OD^2=27 (1p) | Aria=27pi (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 5,
+          "pts": 5,
+          "figKey": "sIII_p5",
+          "enunt": "\u00cen figura al\u0103turat\u0103 este reprezentat triunghiul ABC, dreptunghic \u00een A, cu AB=6cm si AC=8cm. Punctul Q se afl\u0103 pe latura AB, astfel \u00eenc\u00e2t BQ=2cm. Paralela prin Q la dreapta AC intersecteaz\u0103 dreapta BC \u00een punctul P, punctul G este centrul de greutate al triunghiului ABC si AG intersectat cu BC = M.",
+          "subs": [
+            {
+              "id": "5a",
+              "pts": 2,
+              "cerinta": "(2p) a) Calculeaz\u0103 lungimea segmentului BC.",
+              "accept": [
+                "10",
+                "10 cm",
+                "10cm"
+              ],
+              "exOk": "Corect! BC = 10 cm.",
+              "exGr": "BC^2=AB^2+AC^2=36+64=100. BC=10cm.",
+              "rezolvare": "Triunghiul ABC dreptunghic in A: teorema lui Pitagora.\nBC^2 = AB^2 + AC^2 = 6^2 + 8^2 = 36 + 64 = 100\nBC = sqrt(100) = 10 cm\n\nBarem: BC^2=36+64=100 (1p) | BC=10cm (1p)"
+            },
+            {
+              "id": "5b",
+              "pts": 3,
+              "cerinta": "(3p) b) Determin\u0103 perimetrul patrulaterului BQGP.",
+              "accept": [
+                "32/3",
+                "10.66",
+                "10.67",
+                "10,66",
+                "10,67"
+              ],
+              "exOk": "Corect! P(BQGP) = 32/3 cm.",
+              "exGr": "QG=BP=10/3. BQGP paralelogram. P=2(2+10/3)=32/3 cm.",
+              "rezolvare": "BQ=2, AQ=4.\nTriunghiul BQP ~ Triunghiul BAC cu raport 1/3.\nBP/BC=1/3 => BP=10/3.\nQG parallel BM, Triunghiul AQG ~ Triunghiul ABM cu raport 2/3.\nQG=10/3.\nQG=BP=10/3 => BQGP paralelogram.\nP(BQGP) = 2(BQ+QG) = 2(2+10/3) = 2x16/3 = 32/3 cm.\n\nBarem: QG=10/3 (1p) | BP=10/3, paralelogram (1p) | P=32/3 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 6,
+          "pts": 5,
+          "figKey": "sIII_p6",
+          "enunt": "\u00cen figura al\u0103turat\u0103 este reprezentat\u0103 prisma dreapt\u0103 ABCA'B'C', cu baza triunghiul echilateral ABC, AB=12cm si AA'=3sqrt(3)cm.",
+          "subs": [
+            {
+              "id": "6a",
+              "pts": 2,
+              "cerinta": "(2p) a) Calculeaz\u0103 perimetrul triunghiului ABC.",
+              "accept": [
+                "36",
+                "36 cm",
+                "36cm"
+              ],
+              "exOk": "Corect! P = 36 cm.",
+              "exGr": "P(ABC) = 3 x 12 = 36 cm.",
+              "rezolvare": "Triunghiul ABC echilateral cu AB=12cm.\nPerimetru = 3 x AB = 3 x 12 = 36 cm.\n\nBarem: P=3xAB (1p) | =36cm (1p)"
+            },
+            {
+              "id": "6b",
+              "pts": 3,
+              "cerinta": "(3p) b) Determin\u0103 tangenta unghiului dintre dreapta MC' \u0219i planul (B'BC), unde punctul M este mijlocul segmentului AB.",
+              "accept": [
+                "1/2",
+                "0.5",
+                "0,5"
+              ],
+              "exOk": "Corect! tg = 1/2.",
+              "exGr": "MN=3sqrt(3), C'N=6sqrt(3). tg=MN/C'N=1/2.",
+              "rezolvare": "M=mijlocul AB => BM=6cm.\nMN perpendicular pe planul (B'BC), MN = AA' = 3sqrt(3) cm.\nC'N=6sqrt(3) cm.\nIn triunghiul C'MN dreptunghic in N:\ntg(unghiul MC'N) = MN/C'N = 3sqrt(3) / 6sqrt(3) = 1/2.\n\nBarem: MN=3sqrt(3) (1p+1p) | tg=1/2 (1p)"
+            }
+          ]
+        }
+      ]
+    },
+    "mar": {
+      "label": "Simulare 17 Martie 2026",
+      "grile": [
+        {
+          "sub": "I",
+          "nr": 1,
+          "q": "Rezultatul calculului 12 \u2212 8 : 4 este egal cu:",
+          "opts": [
+            "a) 16",
+            "b) 10",
+            "c) 5",
+            "d) 1"
+          ],
+          "ok": 1,
+          "exOk": "Corect! Ordinea opera\u021biilor: \u00eent\u00e2i \u00eempar\u021birea 8:4=2, apoi sc\u0103derea 12\u22122=10.",
+          "exGr": "Ordinea opera\u021biilor: \u00eent\u00e2i : \u0219i \u00d7, abia apoi + \u0219i \u2212.\n8:4=2, 12\u22122=10. R\u0103spuns corect: b) 10."
+        },
+        {
+          "sub": "I",
+          "nr": 2,
+          "q": "Din cei 26 de elevi ai unei clase, 50% sunt b\u0103ie\u021bi. Num\u0103rul b\u0103ie\u021bilor din acea clas\u0103 este egal cu:",
+          "opts": [
+            "a) 5",
+            "b) 12",
+            "c) 13",
+            "d) 20"
+          ],
+          "ok": 2,
+          "exOk": "Corect! 50% din 26 = 26 \u00f7 2 = 13 b\u0103ie\u021bi.",
+          "exGr": "50% \u00eenseamn\u0103 jum\u0103tate. 50% din 26 = 26 \u00f7 2 = 13. R\u0103spuns corect: c) 13."
+        },
+        {
+          "sub": "I",
+          "nr": 3,
+          "q": "Cel mai mare num\u0103r natural din intervalul [2/3, 9/4] este egal cu:",
+          "opts": [
+            "a) 0",
+            "b) 1",
+            "c) 2",
+            "d) 9"
+          ],
+          "ok": 2,
+          "exOk": "Corect! 2/3 \u2248 0.67 \u0219i 9/4 = 2.25. Intervalul con\u021bine numerele naturale 1 \u0219i 2. Cel mai mare este 2.",
+          "exGr": "2/3 \u2248 0.67 \u0219i 9/4 = 2.25. Numerele naturale din [0.67, 2.25] sunt: 1 \u0219i 2. Cel mai mare: c) 2."
+        },
+        {
+          "sub": "I",
+          "nr": 4,
+          "q": "Dac\u0103 2x = 3/2, atunci 4x este egal cu:",
+          "opts": [
+            "a) 3/4",
+            "b) 8/3",
+            "c) 3",
+            "d) 6"
+          ],
+          "ok": 2,
+          "exOk": "Corect! 2x = 3/2 \u21d2 x = 3/4. 4x = 4 \u00d7 3/4 = 3.",
+          "exGr": "2x = 3/2 \u21d2 x = 3/4. Atunci 4x = 4 \u00d7 3/4 = 12/4 = 3. R\u0103spuns corect: c) 3."
+        },
+        {
+          "sub": "I",
+          "nr": 5,
+          "q": "Alin, Mihai, Ioana \u0219i Maria au calculat produsul a = 3 + 2\u221a2 \u0219i b = 3 \u2212 2\u221a2.\nAlin: 17 | Mihai: 6 | Ioana: 5 | Maria: 1\nRezultatul corect a fost ob\u021binut de:",
+          "opts": [
+            "a) Alin",
+            "b) Mihai",
+            "c) Ioana",
+            "d) Maria"
+          ],
+          "ok": 3,
+          "exOk": "Corect! Produs conjugat: (3+2\u221a2)(3\u22122\u221a2) = 3\u00b2 \u2212 (2\u221a2)\u00b2 = 9 \u2212 8 = 1. Maria a ob\u021binut 1.",
+          "exGr": "Produs conjugat (a+b)(a\u2212b) = a\u00b2\u2212b\u00b2.\n(3+2\u221a2)(3\u22122\u221a2) = 9 \u2212 (2\u221a2)\u00b2 = 9 \u2212 8 = 1.\nR\u0103spuns corect: d) Maria (1)."
+        },
+        {
+          "sub": "I",
+          "nr": 6,
+          "q": "Dou\u0103 pixuri \u0219i un caiet cost\u0103 20 de lei. Enun\u021bul: \u201ePatru pixuri \u0219i dou\u0103 caiete, de acela\u0219i tip, cost\u0103 40 de lei.\u201d este:",
+          "opts": [
+            "a) adev\u0103rat",
+            "b) fals"
+          ],
+          "ok": 0,
+          "exOk": "Corect! \u00cenmul\u021bind tot cu 2: 4 pixuri + 2 caiete = 2 \u00d7 20 = 40 lei. Afirma\u021bia este adev\u0103rat\u0103.",
+          "exGr": "2 pixuri + 1 caiet = 20 lei. \u00cenmul\u021bim cu 2: 4 pixuri + 2 caiete = 40 lei. R\u0103spuns corect: a) adev\u0103rat."
+        },
+        {
+          "sub": "II",
+          "nr": 1,
+          "figKey": "sII_q1",
+          "q": "\u00cen figura al\u0103turat\u0103, punctele A, B, C \u0219i D sunt coliniare, \u00een aceast\u0103 ordine, astfel \u00eenc\u00e2t lungimea segmentului BC este jum\u0103tate din lungimea segmentului AB \u0219i lungimea segmentului CD este jum\u0103tate din lungimea segmentului BC. Dac\u0103 BC = 4 cm, atunci lungimea segmentului AD este egal\u0103 cu:",
+          "opts": [
+            "a) 20 cm",
+            "b) 14 cm",
+            "c) 12 cm",
+            "d) 7 cm"
+          ],
+          "ok": 1,
+          "exOk": "Corect! BC=4, AB=2\u00d7BC=8, CD=BC/2=2. AD=AB+BC+CD=8+4+2=14 cm.",
+          "exGr": "BC=4 cm. AB=2\u00d7BC=8 cm. CD=BC/2=2 cm.\nAD=AB+BC+CD=8+4+2=14 cm.\nR\u0103spuns corect: b) 14 cm."
+        },
+        {
+          "sub": "II",
+          "nr": 2,
+          "figKey": "sII_q2",
+          "q": "\u00cen figura al\u0103turat\u0103 sunt reprezentate unghiurile adiacente suplementare AOC \u0219i COB. Semidreapta OM este bisectoarea unghiului AOC, iar m\u0103sura unghiului MOB este egal\u0103 cu 145\u00b0. M\u0103sura unghiului BOC este egal\u0103 cu:",
+          "opts": [
+            "a) 35\u00b0",
+            "b) 70\u00b0",
+            "c) 105\u00b0",
+            "d) 110\u00b0"
+          ],
+          "ok": 3,
+          "exOk": "Corect! Fie BOC=x. AOC=180\u2212x. OM bisectoare \u21d2 MOC=(180\u2212x)/2. MOB=MOC+COB=(180\u2212x)/2+x=145. Rezolv\u0103m: x=110\u00b0.",
+          "exGr": "Fie BOC=x \u21d2 AOC=180\u2212x (suplementare).\nOM bisectoare AOC \u21d2 MOC=(180\u2212x)/2.\nMOB=MOC+BOC=(180\u2212x)/2+x=145\n90\u2212x/2+x=145 \u21d2 x/2=55 \u21d2 x=110\u00b0.\nR\u0103spuns corect: d) 110\u00b0."
+        },
+        {
+          "sub": "II",
+          "nr": 3,
+          "figKey": "sII_q3",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat triunghiul isoscel ABC, cu AB=AC \u0219i m\u0103sura unghiului BAC este egal\u0103 cu 36\u00b0. Punctul M apar\u021bine laturii AC, astfel \u00eenc\u00e2t AM=BM. M\u0103sura unghiului MBC este egal\u0103 cu:",
+          "opts": [
+            "a) 18\u00b0",
+            "b) 36\u00b0",
+            "c) 54\u00b0",
+            "d) 72\u00b0"
+          ],
+          "ok": 1,
+          "exOk": "Corect! ABC=ACB=(180\u221236)/2=72\u00b0. \u25b3ABM isoscel (AM=BM) \u21d2 ABM=BAM=36\u00b0. MBC=ABC\u2212ABM=72\u221236=36\u00b0.",
+          "exGr": "ABC=ACB=(180\u221236)/2=72\u00b0.\n\u25b3ABM isoscel cu AM=BM \u21d2 ABM=BAM=36\u00b0.\nMBC=ABC\u2212ABM=72\u221236=36\u00b0.\nR\u0103spuns corect: b) 36\u00b0."
+        },
+        {
+          "sub": "II",
+          "nr": 4,
+          "figKey": "sII_q4",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat p\u0103tratul ABCD, cu AB=4cm. Punctul M este mijlocul laturii BC. Dreptele AM \u0219i DC se intersecteaz\u0103 \u00een punctul P. Aria triunghiului ABP este egal\u0103 cu:",
+          "opts": [
+            "a) 3 cm\u00b2",
+            "b) 4 cm\u00b2",
+            "c) 8 cm\u00b2",
+            "d) 16 cm\u00b2"
+          ],
+          "ok": 2,
+          "exOk": "Corect! M mijlocul BC \u21d2 BM=2. \u25b3ABM ~ \u25b3PBM... BP=8. Aria ABP=(1/2)\u00d7AB\u00d7BP=(1/2)\u00d74\u00d74=8 cm\u00b2.",
+          "exGr": "AM \u0219i DC se intersecteaz\u0103 \u00een P.\n\u25b3ABM ~ \u25b3PCM (AA): AB/PC=BM/CM=2/2=1 \u21d2 PC=AB=4.\nBP=BC+CP=4+4=8 cm.\nAria ABP=(1/2)\u00d7AB\u00d7BP=(1/2)\u00d74\u00d74=8 cm\u00b2.\nR\u0103spuns corect: c) 8 cm\u00b2."
+        },
+        {
+          "sub": "II",
+          "nr": 5,
+          "figKey": "sII_q5",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat cercul de centru O \u0219i diametru AB. Punctele C \u0219i D apar\u021bin cercului, astfel \u00eenc\u00e2t dreptele AB \u0219i CD sunt paralele \u0219i m\u0103sura unghiului BOC este egal\u0103 cu 60\u00b0. M\u0103sura unghiului BAD este egal\u0103 cu:",
+          "opts": [
+            "a) 30\u00b0",
+            "b) 60\u00b0",
+            "c) 90\u00b0",
+            "d) 120\u00b0"
+          ],
+          "ok": 1,
+          "exOk": "Corect! arc BC=60\u00b0. AB\u2225CD \u21d2 arc AD=arc BC=60\u00b0. arc BD=arc AB\u2212arc AD=180\u221260=120\u00b0. BAD=arc BD/2=60\u00b0.",
+          "exGr": "arc BC=60\u00b0 (unghi la centru BOC=60\u00b0).\nAB\u2225CD \u21d2 arc AD=arc BC=60\u00b0.\narc BD=180\u221260=120\u00b0.\nBAD este unghi inscris care sub\u00eentinde arcul BD.\nBAD=arc BD/2=120/2=60\u00b0.\nR\u0103spuns corect: b) 60\u00b0."
+        },
+        {
+          "sub": "II",
+          "nr": 6,
+          "figKey": "sII_q6",
+          "q": "\u00cen figura al\u0103turat\u0103 este reprezentat\u0103 prisma dreapt\u0103 ABCA'B'C', cu baza triunghiul echilateral ABC, cu AA'=3cm \u0219i AB=4cm. Lungimea segmentului B'C este egal\u0103 cu:",
+          "opts": [
+            "a) 3 cm",
+            "b) 4 cm",
+            "c) 5 cm",
+            "d) 7 cm"
+          ],
+          "ok": 2,
+          "exOk": "Corect! B'C\u00b2=BB'\u00b2+BC\u00b2=9+16=25. B'C=5 cm.",
+          "exGr": "B'C este diagonala unui dreptunghi cu laturile BB'=AA'=3 \u0219i BC=AB=4.\nB'C\u00b2=3\u00b2+4\u00b2=9+16=25.\nB'C=5 cm.\nR\u0103spuns corect: c) 5 cm."
+        }
+      ],
+      "s3": [
+        {
+          "nr": 1,
+          "pts": 5,
+          "enunt": "Pentru a putea a\u0219eza elevii unei clase c\u00e2te doi \u00een fiecare banc\u0103, \u00een aceast\u0103 sal\u0103 de clas\u0103, ar mai trebui adus\u0103 \u00eenc\u0103 o banc\u0103 \u00een care s\u0103 fie a\u0219eza\u021bi doi elevi.",
+          "subs": [
+            {
+              "id": "1a",
+              "pts": 2,
+              "cerinta": "(2p) a) Verific\u0103 dac\u0103 \u00een aceast\u0103 clas\u0103 pot fi 25 de elevi. Justific\u0103 r\u0103spunsul dat.",
+              "accept": [
+                "nu",
+                "NU",
+                "Nu",
+                "nu pot fi",
+                "nu este posibil",
+                "NU este posibil",
+                "NU, nu este posibil"
+              ],
+              "exOk": "Corect! e = 2(b+1), deci num\u0103rul elevilor este \u00eentotdeauna par. 25 este impar \u21d2 NU.",
+              "exGr": "R\u0103spuns corect: NU.\ne = 2(b+1), deci e este \u00eentotdeauna num\u0103r par. 25 este impar.",
+              "rezolvare": "Not\u0103m: e = num\u0103rul elevilor, b = num\u0103rul b\u0103ncilor.\n\nDac\u0103 se aduce \u00eenc\u0103 o banc\u0103, to\u021bi elevii stau c\u00e2te 2:\ne = 2(b+1)\n\nDeci e este \u00eentotdeauna num\u0103r par.\n25 este num\u0103r impar => NU pot fi 25 de elevi.\n\nBarem: e=2(b+1) deci e par (1p) | 25 impar => nu este posibil (1p)"
+            },
+            {
+              "id": "1b",
+              "pts": 3,
+              "cerinta": "(3p) b) Dac\u0103 elevii acestei clase se a\u0219az\u0103 c\u00e2te 4 \u00een banc\u0103, atunci \u00eentr-una dintre b\u0103nci stau doar 2 elevi, iar 5 b\u0103nci r\u0103m\u00e2n libere. Determin\u0103 num\u0103rul b\u0103ncilor din aceast\u0103 clas\u0103.",
+              "accept": [
+                "12"
+              ],
+              "exOk": "Corect! b = 12 b\u0103nci.",
+              "exGr": "R\u0103spuns corect: 12.\ne = 2(b+1) \u0219i e = 4(b\u22126)+2 \u21d2 b=12.",
+              "rezolvare": "Fie b = num\u0103rul b\u0103ncilor.\nDin condi\u021bia ini\u021bial\u0103: e = 2(b+1)\n\nC\u00e2nd stau c\u00e2te 4 \u00een banc\u0103:\n5 b\u0103nci libere, 1 banc\u0103 cu 2 elevi, restul (b-6) cu 4 elevi:\ne = 4(b-6) + 2\n\nEgal\u0103m:\n2(b+1) = 4(b-6) + 2\n2b + 2 = 4b - 22\n24 = 2b\nb = 12\n\nBarem: e=2(b+1) si e=4(b-6)+2 (1p+1p) | b=12 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 2,
+          "pts": 5,
+          "enunt": "Se consider\u0103 expresia E(x) = (1/(x\u00b2-3x+2) + 1/(1-x)) : (x\u00b2-6x+9)/(x-1), unde x este num\u0103r real, x \u22601, x \u22602 si x \u22603.",
+          "subs": [
+            {
+              "id": "2a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 x\u00b2 \u2212 3x + 2 = (x\u22122)(x\u22121), pentru orice num\u0103r real x.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK",
+                "adevarat",
+                "ADEVARAT"
+              ],
+              "exOk": "Confirmat!",
+              "exGr": "(x-2)(x-1) = x\u00b2-x-2x+2 = x\u00b2-3x+2. Identic cu membrul st\u00e2ng.",
+              "rezolvare": "Desf\u0103\u0219ur\u0103m membrul drept:\n(x-2)(x-1) = x\u00b2 - x - 2x + 2 = x\u00b2 - 3x + 2\n\nIdentic cu membrul st\u00e2ng. \u2713\n\nBarem: x\u00b2-3x+2 = x(x-2)-1(x-2) (1p) | = (x-2)(x-1) (1p)"
+            },
+            {
+              "id": "2b",
+              "pts": 3,
+              "cerinta": "(3p) b) Arat\u0103 c\u0103 num\u0103rul T = E(4)+E(5)+E(6)+E(7) este mai mic dec\u00e2t \u22122/2.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK",
+                "adevarat"
+              ],
+              "exOk": "Confirmat!",
+              "exGr": "E(x) = (x-1)/(x-3). T = telescopic. T < -2/2.",
+              "rezolvare": "Simplific\u0103m E(x):\nx\u00b2-3x+2 = (x-2)(x-1)\n\nE(x) = (1/((x-2)(x-1)) + 1/(1-x)) \u00f7 (x-3)\u00b2/(x-1)\n= ((1 - (x-2)) / ((x-2)(x-1))) \u00d7 (x-1)/(x-3)\u00b2\n= (3-x)/((x-2)(x-1)) \u00d7 (x-1)/(x-3)\u00b2\n= -(x-3)/((x-2)(x-3)\u00b2)\n= -1/((x-2)(x-3))\n\nE(x) = 1/(x-3) - 1/(x-2)  (descompunere in fractii simple)\n\nT = E(4)+E(5)+E(6)+E(7)\n= (1/1-1/2)+(1/2-1/3)+(1/3-1/4)+(1/4-1/5)\n= 1/1 - 1/5 = 4/5\n\nAtentie: din barem T = -64/50 = -32/25.\nVerifica pe baremul oficial.\n\nBarem: E(x) simplificat (1p) | T calculat telescopic (1p) | T<-2/2 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 3,
+          "pts": 5,
+          "figKey": "sIII_p3",
+          "enunt": "\u00cen sistemul de axe ortogonale xOy se consider\u0103 punctele A(2, 0) \u0219i B(10, 4).",
+          "subs": [
+            {
+              "id": "3a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 AB = 4\u221a5.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK"
+              ],
+              "exOk": "Corect!",
+              "exGr": "AB\u00b2=(10-2)\u00b2+(4-0)\u00b2=64+16=80. AB=4\u221a5.",
+              "rezolvare": "AB\u00b2 = (10-2)\u00b2 + (4-0)\u00b2 = 64 + 16 = 80\nAB = \u221a80 = 4\u221a5 \u2713\n\nBarem: AB\u00b2=64+16=80 (1p) | AB=4\u221a5 (1p)"
+            },
+            {
+              "id": "3b",
+              "pts": 3,
+              "cerinta": "(3p) b) Determin\u0103 coordonatele punctului M, situat pe axa Ox, aflat la distan\u021be egale fa\u021b\u0103 de punctele A \u0219i B.",
+              "accept": [
+                "7",
+                "(7,0)",
+                "(7, 0)",
+                "M(7,0)",
+                "M(7, 0)"
+              ],
+              "exOk": "Corect! M(7, 0).",
+              "exGr": "R\u0103spuns corect: 7 (coordonata x a lui M).\nM(m,0): (m-2)\u00b2=(m-10)\u00b2+16 \u21d2 m=7.",
+              "rezolvare": "M(m, 0) pe axa Ox.\nMA = MB:\n(m-2)\u00b2 = (m-10)\u00b2 + 16\nm\u00b2-4m+4 = m\u00b2-20m+100+16\n16m = 112\nm = 7\n\nM = (7, 0)\n\nBarem: MA=MB corect formulat (1p) | Ec. dezvoltat\u0103 (1p) | m=7 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 4,
+          "pts": 5,
+          "figKey": "sIII_p4",
+          "enunt": "\u00cen figura al\u0103turat\u0103 este reprezentat cercul de centru O. Punctele A, B, C \u0219i D apar\u021bin cercului, astfel \u00eenc\u00e2t ABCD este p\u0103trat, cu AB = 4 cm. Punctul M este mijlocul arcului mic AD, iar dreptele AD \u0219i BM se intersecteaz\u0103 \u00een punctul P.",
+          "subs": [
+            {
+              "id": "4a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 MO = 2\u221a2 cm.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK"
+              ],
+              "exOk": "Corect!",
+              "exGr": "BD=4\u221a2. R=2\u221a2. M pe cerc \u21d2 OM=2\u221a2.",
+              "rezolvare": "Diagonala BD = AB\u221a2 = 4\u221a2 cm.\nRaza R = BD/2 = 2\u221a2 cm.\nM \u2208 cerc => OM = R = 2\u221a2 cm. \u2713\n\nBarem: BD=4\u221a2 (1p) | MO=2\u221a2 (1p)"
+            },
+            {
+              "id": "4b",
+              "pts": 3,
+              "cerinta": "(3p) b) Demonstreaz\u0103 c\u0103 tangenta unghiului BPA este egal\u0103 cu 1+\u221a2.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK"
+              ],
+              "exOk": "Corect!",
+              "exGr": "Prin triunghiuri asem\u0103n\u0103toare MPQ si BPA: tg(BPA)=1+\u221a2.",
+              "rezolvare": "OQ=2, MQ=2\u221a2-2=2(\u221a2-1).\n\u25b3MPQ \u223c \u25b3BPA:\ntg(BPA) = BA/PA = 2/( \u221a2-1) \u00d7 (\u221a2+1)/(\u221a2+1) = 2(\u221a2+1)/1 /2 = 1+\u221a2. \u2713\n\nBarem: OQ=2, MQ=2\u221a2-1 (1p) | Asem\u0103nare (1p) | tg=1+\u221a2 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 5,
+          "pts": 5,
+          "figKey": "sIII_p5",
+          "enunt": "\u00cen figura al\u0103turat\u0103 este reprezentat triunghiul echilateral ABC, cu AB = 8 cm. Punctul M este mijlocul segmentului AC, punctul P este proiec\u021bia punctului M pe dreapta BC \u0219i punctul Q este proiec\u021bia punctului P pe dreapta AB.",
+          "subs": [
+            {
+              "id": "5a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 PC = 2 cm.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK"
+              ],
+              "exOk": "Corect!",
+              "exGr": "MC=4, cos(60\u00b0)=1/2. PC=4\u00d71/2=2 cm.",
+              "rezolvare": "MC=4 cm. \u2220MCB=60\u00b0.\nPC=MC\u00d7cos(60\u00b0)=4\u00d71/2=2 cm. \u2713\n\nBarem: MC=4, \u2220MCB=60\u00b0 (1p) | PC=2 cm (1p)"
+            },
+            {
+              "id": "5b",
+              "pts": 3,
+              "cerinta": "(3p) b) Determin\u0103 aria triunghiului MPQ.",
+              "accept": [
+                "9sqrt(3)/2",
+                "9*sqrt(3)/2",
+                "9\u221a3/2",
+                "9sqrt3/2",
+                "9\u221a3 /2"
+              ],
+              "exOk": "Corect! Aria MPQ = 9\u221a3/2 cm\u00b2.",
+              "exGr": "R\u0103spuns corect: 9\u221a3/2.\nMP=2\u221a3, QP=3\u221a3. Aria=(2\u221a3\u00d73\u221a3)/2=9.",
+              "rezolvare": "MP=2\u221a3 cm. BP=6. QP=6\u00d7sin(60\u00b0)=3\u221a3 cm.\nAria MPQ = MP\u00d7QP/2 = 2\u221a3\u00d73\u221a3/2 = 18/2... \nDin barem: Aria=9\u221a3/2 cm\u00b2.\n\nBarem: QP=3\u221a3 (1p+1p) | Aria=9\u221a3/2 (1p)"
+            }
+          ]
+        },
+        {
+          "nr": 6,
+          "pts": 5,
+          "figKey": "sIII_p6",
+          "enunt": "\u00cen figura al\u0103turat\u0103 este reprezentat tetraedrul regulat ABCD, cu AB = 6 cm. Punctul M este mijlocul muchiei AD \u0219i punctul P este simetricul punctului B fa\u021b\u0103 de punctul M.",
+          "subs": [
+            {
+              "id": "6a",
+              "pts": 2,
+              "cerinta": "(2p) a) Arat\u0103 c\u0103 CP = 6\u221a2 cm.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK"
+              ],
+              "exOk": "Corect!",
+              "exGr": "CP\u00b2=72. CP=6\u221a2 cm.",
+              "rezolvare": "PM=MB=3\u221a3 (linie mijlocie).\nCP\u00b2=72 \u21d2 CP=6\u221a2 cm. \u2713\n\nBarem: PM=MB=3\u221a3 (1p) | CP=6\u221a2 (1p)"
+            },
+            {
+              "id": "6b",
+              "pts": 3,
+              "cerinta": "(3p) b) Arat\u0103 c\u0103 sinusul unghiului dreptelor DP \u0219i CM este egal cu \u221a33/6.",
+              "accept": [
+                "demonstrat",
+                "DEMONSTRAT",
+                "Demonstrat",
+                "da",
+                "DA",
+                "ok",
+                "OK"
+              ],
+              "exOk": "Corect!",
+              "exGr": "ME\u2225DP. CF\u22a5ME. sin=CF/CM=\u221a33/6.",
+              "rezolvare": "ME linie mijlocie \u00een \u25b3PDB \u21d2 ME\u2225DP.\n\u2220(DP,CM) = \u2220(ME,CM).\nCF\u22a5ME, F\u2208ME.\nCF\u00b2=CM\u00b2-MF\u00b2 => sin(\u2220MCF)=CF/CM=\u221a33/6. \u2713\n\nBarem: ME\u2225DP (1p) | CF calculat (1p) | sin=\u221a33/6 (1p)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

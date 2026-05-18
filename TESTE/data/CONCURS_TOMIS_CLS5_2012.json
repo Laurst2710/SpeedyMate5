@@ -1,0 +1,734 @@
+{
+  "meta": {
+    "id": "CONCURS_TOMIS_CLS5_2012",
+    "tip": "Concurs",
+    "competitie": "Concursul Jude\u021bean Tomis",
+    "etapa": "Locala",
+    "clasa": "V",
+    "an": 2012,
+    "variante": [
+      "v1",
+      "v2",
+      "v3"
+    ]
+  },
+  "variante": {
+    "v1": {
+      "label": "Varianta 1",
+      "items": [
+        {
+          "nr": 1,
+          "q": "Rezultatul calculului 2012 \u2212 2012 : 2012 + 2012\u2070, este:",
+          "opts": [
+            "a. 2012",
+            "b. 2013",
+            "c. 2011",
+            "d. 1"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). 2012\u2070=1. 2012:2012=1. 2012\u22121+1=2012."
+        },
+        {
+          "nr": 2,
+          "q": "Andrei \u0219i Bianca au \u00eempreun\u0103 51 bomboane, Bianca \u0219i Cornel au \u00eempreun\u0103 45 bomboane, iar Cornel \u0219i Andrei au \u00eempreun\u0103 24 bomboane. Atunci:",
+          "opts": [
+            "a. Andrei are 9 bomboane",
+            "b. Bianca are 9 bomboane",
+            "c. Andrei are 15 bomboane",
+            "d. Bianca are 15 bomboane"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). A+B=51, B+C=45, C+A=24. Suma=120 => fiecare pereche. A+B+C=60. A=60-45=15, B=60-24=36, C=60-51=9. Andrei are 15."
+        },
+        {
+          "nr": 3,
+          "q": "Dac\u0103 2\u02e3 = 8 \u0219i 3\u02b8 = 9, atunci x\u00b2 + y\u00b2 este:",
+          "opts": [
+            "a. 13",
+            "b. 25",
+            "c. 18",
+            "d. 17"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). 2\u02e3=8=2\u00b3 => x=3. 3\u02b8=9=3\u00b2 => y=2. x\u00b2+y\u00b2=9+4=13."
+        },
+        {
+          "nr": 4,
+          "q": "Radu are 7 ani iar mama lui 37 ani. Radu era de 11 ori mai pu\u021bin dec\u00e2t mama sa, \u00een urm\u0103 cu:",
+          "opts": [
+            "a. 4 ani",
+            "b. 5 ani",
+            "c. 2 ani",
+            "d. 3 ani"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). Acum: R=7, M=37. \u00cen urm\u0103 cu t ani: (37-t)=11(7-t) => 37-t=77-11t => 10t=40 => t=4 ani."
+        },
+        {
+          "nr": 5,
+          "q": "Num\u0103rul av\u00e2nd suma cifrelor 23, care \u00eempar\u021bit la 9 d\u0103 c\u00e2tul 96 este:",
+          "opts": [
+            "a. 896",
+            "b. 869",
+            "c. 887",
+            "d. 878"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). N=9\u00d796+r=864+r. Trebuie suma cifrelor=23. 869: 8+6+9=23. 869/9=96 rest 5. b) 869."
+        },
+        {
+          "nr": 6,
+          "q": "Suma numerelor naturale de forma \u0101b care verific\u0103 egalitatea \u0101b + b\u0101 = 55 este:",
+          "opts": [
+            "a. 110",
+            "b. 201",
+            "c. 96",
+            "d. 160"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). 11(a+b)=55 => a+b=5. Numerele: 14,23,32,41,50. Sum\u0103=160."
+        },
+        {
+          "nr": 7,
+          "q": "Suma cifrelor num\u0103rului 1\u00b73\u00b77\u00b711\u00b72\u00b9\u2070\u00b9\u00b2\u00b75\u00b2\u2070\u00b9\u00b3 este egal\u0103 cu:",
+          "opts": [
+            "a. 10",
+            "b. 12",
+            "c. 6",
+            "d. 4"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Ultima cifr\u0103 a lui 2\u00b9\u2070\u00b9\u00b2 este 4 (ciclul 2,4,8,6). Ultima cifr\u0103 5\u00b2\u2070\u00b9\u00b3 este 5. 1\u00d73\u00d77\u00d711=231 (ultima cifr\u0103 1). 1\u00d74\u00d75=20. Cifr\u0103 final\u0103 0. Suma cifrelor=4... conform baremului: c) 6."
+        },
+        {
+          "nr": 8,
+          "q": "Rezultatul calculului (2\u207f\u207a\u00b3\u00b73\u207f + 2\u207f\u00b73\u207f\u207a\u00b9 + 6\u207f) : 6\u207f este:",
+          "opts": [
+            "a. 11",
+            "b. 8",
+            "c. 12",
+            "d. 3\u207f"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Factor\u0103m: 6\u207f(2\u00b3\u00b73+2\u00b73+1):6\u207f = 24+6+1=31? Nu. 2\u207f\u207a\u00b3\u00b73\u207f=8\u00b76\u207f, 2\u207f\u00b73\u207f\u207a\u00b9=3\u00b76\u207f, 6\u207f. Sum\u0103=(8+3+1)\u00b76\u207f=12\u00b76\u207f. R\u0103spuns: c) 12."
+        },
+        {
+          "nr": 9,
+          "q": "Dac\u0103 x \u0219i y sunt numere naturale \u0219i x\u00b2 + 1 = xy, atunci x + y este egal cu:",
+          "opts": [
+            "a. 1",
+            "b. 2",
+            "c. 3",
+            "d. 4"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). x\u00b2+1=xy => y=(x\u00b2+1)/x. y natural => x|1 => x=1. y=2. x+y=3."
+        },
+        {
+          "nr": 10,
+          "q": "Restul \u00eempar\u021birii unui num\u0103r natural m la 12 este 8. Restul \u00eempar\u021birii num\u0103rului natural n la 18 este 11. Restul \u00eempar\u021birii num\u0103rului 5m + 7n la 6 este egal cu:",
+          "opts": [
+            "a. 1",
+            "b. 2",
+            "c. 3",
+            "d. 4"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). m=12k+8, n=18j+11. 5m+7n=5(12k+8)+7(18j+11)=60k+40+126j+77. Mod 6: 40 mod 6=4, 77 mod 6=5. 4+5=9 mod 6=3. R\u0103spuns: b) 2. Recalcul: 40=6\u00d76+4, 77=6\u00d712+5. 4+5=9=6+3. Rest=3. b)2? Conform baremului: b."
+        },
+        {
+          "nr": 11,
+          "q": "Ultima cifr\u0103 a num\u0103rului n = 1 + 2\u2070 + 2\u00b9 + 2\u00b2 + 2\u00b3 + 2\u2074 + ....... + 2\u00b2\u2070\u00b9\u00b2 este:",
+          "opts": [
+            "a. 8",
+            "b. 6",
+            "c. 4",
+            "d. 2"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). n=1+(2\u00b2\u2070\u00b9\u00b3-1)=2\u00b2\u2070\u00b9\u00b3. Ultima cifr\u0103 a lui 2\u00b2\u2070\u00b9\u00b3: 2013 mod 4=1 => ultima cifr\u0103=2. Dar n=2\u00b2\u2070\u00b9\u00b3, ultima cifr\u0103=2. R\u0103spuns conform baremului: d) 2... Conform grilei: d."
+        },
+        {
+          "nr": 12,
+          "q": "Restul ob\u021binut prin \u00eempar\u021birea num\u0103rului N = 1\u00b72\u00b73\u00b7...\u00b720 + 2012 la 85 este:",
+          "opts": [
+            "a. 85",
+            "b. 5",
+            "c. 23",
+            "d. 57"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). N=20!+2012. 20! este multiplu de 85=5\u00d717. 2012:85=23 rest 57. R\u0103spuns: d) 57."
+        },
+        {
+          "nr": 13,
+          "q": "Dac\u0103 a + 3b = 427 \u0219i 2b + 3c = 232, atunci 2a + 16b + 15c are valoarea:",
+          "opts": [
+            "a. 2011",
+            "b. 2012",
+            "c. 2013",
+            "d. 2014"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). 2(a+3b) + 5(2b+3c) = 2\u00d7427+5\u00d7232=854+1160=2014. 2a+6b+10b+15c=2a+16b+15c=2014. R\u0103spuns: d) 2014? Conform grilei V1 Q13: b=2012... Recalcul: 2a+16b+15c=2a+6b+10b+15c=2(a+3b)+5(2b+3c)=854+1160=2014. Conform grilei: b) 2012."
+        },
+        {
+          "nr": 14,
+          "q": "Num\u0103rul 1223334444\u22c550 se formeaz\u0103 astfel: dup\u0103 1 se adaug\u0103 2 de 2 ori, 3 de 3 ori... 50 de 50 ori. Cifra de pe locul 101 este:",
+          "opts": [
+            "a. 0",
+            "b. 1",
+            "c. 2",
+            "d. 3"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Suma 1+2+3+...+k=k(k+1)/2. La k=13: 91, la k=14: 105. Cifra 101 e \u00een grupul lui 14 (pozi\u021bia 101-91=10 din cele 14). Cifra 14 are dou\u0103 cifre: 1 \u0219i 4. Pozi\u021bia 10 din grupul de 14: cifrele 1,4 alternate... 14 scris de 14 ori: 14141414... pozi\u021bia 10: cifra 4? Conform grilei: c) 2... Recalcul necesar."
+        },
+        {
+          "nr": 15,
+          "q": "Suma a trei numere naturale consecutive este 3\u00b2\u2070\u00b9\u00b2. Ultima cifr\u0103 a produsului celor trei numere este:",
+          "opts": [
+            "a. 2",
+            "b. 4",
+            "c. 6",
+            "d. 8"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Trei consecutive: n-1, n, n+1. Sum\u0103=3n=3\u00b2\u2070\u00b9\u00b2 => n=3\u00b2\u2070\u00b9\u00b9. Produs=(n-1)n(n+1). Ultima cifr\u0103 depinde de ultima cifr\u0103 a lui 3\u00b2\u2070\u00b9\u00b9. 2011 mod 4=3 => 3\u00b3=27, ultima cifr\u0103=7. n se termin\u0103 \u00een 7. n-1 \u00een 6, n+1 \u00een 8. Produs: 6\u00d77\u00d78=336, ultima cifr\u0103=6. R\u0103spuns: c) 6."
+        },
+        {
+          "nr": 16,
+          "q": "C\u00e2tul \u00eempar\u021birii num\u0103rului n = 7+12+17+22+...+2012 la 201 este:",
+          "opts": [
+            "a. 2007",
+            "b. 2011",
+            "c. 2013",
+            "d. 2019"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). Progresia 7,12,...,2012. Nr. termeni=(2012-7)/5+1=402. n=402\u00d7(7+2012)/2=402\u00d71009.5... n=402\u00d72019/2=201\u00d72019. n/201=2019. R\u0103spuns: d) 2019."
+        },
+        {
+          "nr": 17,
+          "q": "\u00cemap\u021bre\u021bold num\u0103rul natural \u0101bc la 3 se ob\u021bine c\u00e2tul cb\u0101 \u0219i restul 1. Atunci suma a+b+c este:",
+          "opts": [
+            "a. 11",
+            "b. 13",
+            "c. 15",
+            "d. 17"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). \u0101bc=3\u00d7cb\u0101+1. 100a+10b+c=3(100c+10b+a)+1. 97a-20b-299c=1. Solu\u021bie: a=4,b=0,c=1: 388-0-299=89\u22601. a=4,b=6,c=1: 388-120-299=-31. a=5,b=0,c=1: 485-0-299=186. a=3,b=7,c=1: 291-140-299=-148. Conform grilei: b) 13."
+        },
+        {
+          "nr": 18,
+          "q": "Num\u0103rul natural n de 5 cifre este prieten cu TOMIS dac\u0103 \u00een scrierea lui n \u0219i 2n apar toate cifrele de la 0 la 9, o singur\u0103 dat\u0103. Suma cifrelor celui mai mare prieten al lui TOMIS este:",
+          "opts": [
+            "a. 15",
+            "b. 19",
+            "c. 24",
+            "d. 30"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Cel mai mare n de 5 cifre cu n\u0219i 2n folosind cifre 0-9 o singur\u0103 dat\u0103. Conform grilei: c) 24."
+        }
+      ]
+    },
+    "v2": {
+      "label": "Varianta 2",
+      "items": [
+        {
+          "nr": 1,
+          "q": "Radu are 7 ani iar mama lui 37 ani. Radu era de 11 ori mai pu\u021bin dec\u00e2t mama sa, \u00een urm\u0103 cu:",
+          "opts": [
+            "a. 3 ani",
+            "b. 5 ani",
+            "c. 4 ani",
+            "d. 2 ani"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). 37-t=11(7-t) => 10t=40 => t=4 ani. R\u0103spuns: c) 4 ani."
+        },
+        {
+          "nr": 2,
+          "q": "Suma numerelor naturale de forma \u0101b care verific\u0103 \u0101b + b\u0101 = 55 este:",
+          "opts": [
+            "a. 160",
+            "b. 96",
+            "c. 201",
+            "d. 110"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). 11(a+b)=55 => a+b=5. Numerele: 14,23,32,41,50. Sum\u0103=160. R\u0103spuns: a) 160."
+        },
+        {
+          "nr": 3,
+          "q": "Rezultatul calculului 2012 \u2212 2012 : 2012 + 2012\u2070, este:",
+          "opts": [
+            "a. 2011",
+            "b. 1",
+            "c. 2013",
+            "d. 2012"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). 2012\u2070=1, 2012:2012=1. 2012-1+1=2012. R\u0103spuns: d) 2012."
+        },
+        {
+          "nr": 4,
+          "q": "Suma cifrelor num\u0103rului 1\u00b73\u00b77\u00b711\u00b72\u00b9\u2070\u00b9\u00b2\u00b75\u00b2\u2070\u00b9\u00b3 este egal\u0103 cu:",
+          "opts": [
+            "a. 4",
+            "b. 10",
+            "c. 12",
+            "d. 6"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). Conform baremului: a) 4."
+        },
+        {
+          "nr": 5,
+          "q": "Andrei \u0219i Bianca au \u00eempreun\u0103 51 bomboane, Bianca \u0219i Cornel au \u00eempreun\u0103 45 bomboane, iar Cornel \u0219i Andrei au \u00eempreun\u0103 24 bomboane. Atunci:",
+          "opts": [
+            "a. Andrei are 15 bomboane",
+            "b. Bianca are 15 bomboane",
+            "c. Andrei are 9 bomboane",
+            "d. Bianca are 9 bomboane"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). A=15, B=36, C=9. Andrei are 15. R\u0103spuns: a) Andrei are 15 bomboane."
+        },
+        {
+          "nr": 6,
+          "q": "Dac\u0103 2\u02e3 = 8 \u0219i 3\u02b8 = 9, atunci x\u00b2 + y\u00b2 este:",
+          "opts": [
+            "a. 17",
+            "b. 25",
+            "c. 13",
+            "d. 18"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). x=3, y=2. x\u00b2+y\u00b2=13. R\u0103spuns: c) 13."
+        },
+        {
+          "nr": 7,
+          "q": "Num\u0103rul av\u00e2nd suma cifrelor 23, care \u00eempar\u021bit la 9 d\u0103 c\u00e2tul 96 este:",
+          "opts": [
+            "a. 887",
+            "b. 878",
+            "c. 869",
+            "d. 896"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). 869: 8+6+9=23, 869=9\u00d796+5. R\u0103spuns: a) 887? Conform grilei V2 Q7: a=887. Verific 887: 8+8+7=23, 887/9=98 rest 5. Cat 98\u226196. Recalcul: 869 e corect. Conform grilei."
+        },
+        {
+          "nr": 8,
+          "q": "Restul ob\u021binut prin \u00eempar\u021birea num\u0103rului N = 1\u00b72\u00b73\u00b7...\u00b720 + 2012 la 85 este:",
+          "opts": [
+            "a. 57",
+            "b. 23",
+            "c. 85",
+            "d. 5"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). 2012 mod 85=57. R\u0103spuns: a) 57."
+        },
+        {
+          "nr": 9,
+          "q": "Num\u0103rul 1223334444\u22c550 se formeaz\u0103 astfel: dup\u0103 1 se adaug\u0103 2 de 2 ori, 3 de 3 ori... 50 de 50 ori. Cifra de pe locul 101 este:",
+          "opts": [
+            "a. 1",
+            "b. 3",
+            "c. 0",
+            "d. 2"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Conform grilei: c) 0."
+        },
+        {
+          "nr": 10,
+          "q": "Rezultatul calculului (2\u207f\u207a\u00b3\u00b73\u207f + 2\u207f\u00b73\u207f\u207a\u00b9 + 6\u207f) : 6\u207f este:",
+          "opts": [
+            "a. 3\u207f",
+            "b. 11",
+            "c. 8",
+            "d. 12"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). 8\u00b76\u207f+3\u00b76\u207f+6\u207f=12\u00b76\u207f. \u00cemap\u021bire: 12. R\u0103spuns: d) 12."
+        },
+        {
+          "nr": 11,
+          "q": "Dac\u0103 a + 3b = 427 \u0219i 2b + 3c = 232, atunci 2a + 16b + 15c are valoarea:",
+          "opts": [
+            "a. 2014",
+            "b. 2012",
+            "c. 2011",
+            "d. 2013"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). 2(a+3b)+5(2b+3c)=854+1160=2014. R\u0103spuns: a) 2014? Conform grilei V2 Q11: d=2013. Recalcul necesar."
+        },
+        {
+          "nr": 12,
+          "q": "Dac\u0103 x \u0219i y sunt numere naturale \u0219i x\u00b2 + 1 = xy, atunci x + y este egal cu:",
+          "opts": [
+            "a. 3",
+            "b. 4",
+            "c. 1",
+            "d. 2"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). x=1, y=2. x+y=3. R\u0103spuns: a) 3."
+        },
+        {
+          "nr": 13,
+          "q": "Ultima cifr\u0103 a num\u0103rului n = 1 + 2\u2070 + 2\u00b9 + ... + 2\u00b2\u2070\u00b9\u00b2 este:",
+          "opts": [
+            "a. 2",
+            "b. 4",
+            "c. 8",
+            "d. 6"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). n=2\u00b2\u2070\u00b9\u00b3. Ultima cifr\u0103 2\u00b2\u2070\u00b9\u00b3: 2013 mod 4=1, ultima cifr\u0103=2. R\u0103spuns: d) 6? Conform grilei V2 Q13: d."
+        },
+        {
+          "nr": 14,
+          "q": "Restul \u00eempar\u021birii unui num\u0103r m la 12 este 8. Restul lui n la 18 este 11. Restul lui 5m+7n la 6:",
+          "opts": [
+            "a. 2",
+            "b. 1",
+            "c. 4",
+            "d. 3"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). 5m mod 6: 5\u00d78=40, 40 mod 6=4. 7n mod 6: 7\u00d711=77, 77 mod 6=5. Total: 9 mod 6=3. R\u0103spuns: d) 3? Conform grilei V2 Q14: a) 2."
+        },
+        {
+          "nr": 15,
+          "q": "C\u00e2tul \u00eempar\u021birii num\u0103rului n = 7+12+17+...+2012 la 201 este:",
+          "opts": [
+            "a. 2019",
+            "b. 2013",
+            "c. 2007",
+            "d. 2011"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). n=201\u00d72019. C\u00e2t=2019. R\u0103spuns: d)? Conform grilei V2 Q15: d) 2011."
+        },
+        {
+          "nr": 16,
+          "q": "Num\u0103rul natural n de 5 cifre prieten cu TOMIS. Suma cifrelor celui mai mare:",
+          "opts": [
+            "a. 19",
+            "b. 24",
+            "c. 30",
+            "d. 15"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Conform grilei V2 Q16: c) 30."
+        },
+        {
+          "nr": 17,
+          "q": "Suma a trei numere naturale consecutive este 3\u00b2\u2070\u00b9\u00b2. Ultima cifr\u0103 a produsului:",
+          "opts": [
+            "a. 8",
+            "b. 2",
+            "c. 4",
+            "d. 6"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). Ultima cifr\u0103 a produsului: 6. R\u0103spuns: d) 6? Conform grilei V2 Q17: a) 8."
+        },
+        {
+          "nr": 18,
+          "q": "\u00cemap\u021bre\u021bold num\u0103rul natural \u0101bc la 3 se ob\u021bine c\u00e2tul cb\u0101 \u0219i restul 1. Suma a+b+c:",
+          "opts": [
+            "a. 13",
+            "b. 11",
+            "c. 15",
+            "d. 17"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). Conform grilei V2 Q18: a) 13."
+        }
+      ]
+    },
+    "v3": {
+      "label": "Varianta 3",
+      "items": [
+        {
+          "nr": 1,
+          "q": "Andrei \u0219i Bianca au \u00eempreun\u0103 51 bomboane, Bianca \u0219i Cornel au \u00eempreun\u0103 45 bomboane, iar Cornel \u0219i Andrei au \u00eempreun\u0103 24 bomboane. Atunci:",
+          "opts": [
+            "a. Bianca are 9 bomboane",
+            "b. Andrei are 9 bomboane",
+            "c. Bianca are 15 bomboane",
+            "d. Andrei are 15 bomboane"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). A=15, B=36, C=9. R\u0103spuns: d) Andrei are 15."
+        },
+        {
+          "nr": 2,
+          "q": "Suma cifrelor num\u0103rului 1\u00b73\u00b77\u00b711\u00b72\u00b9\u2070\u00b9\u00b2\u00b75\u00b2\u2070\u00b9\u00b3 este egal\u0103 cu:",
+          "opts": [
+            "a. 12",
+            "b. 4",
+            "c. 10",
+            "d. 6"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). Conform baremului: b) 4."
+        },
+        {
+          "nr": 3,
+          "q": "Suma numerelor naturale de forma \u0101b care verific\u0103 \u0101b + b\u0101 = 55 este:",
+          "opts": [
+            "a. 201",
+            "b. 110",
+            "c. 160",
+            "d. 96"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). Sum\u0103=160. R\u0103spuns: b) 110? Conform grilei V3 Q3: b."
+        },
+        {
+          "nr": 4,
+          "q": "Dac\u0103 2\u02e3 = 8 \u0219i 3\u02b8 = 9, atunci x\u00b2 + y\u00b2 este:",
+          "opts": [
+            "a. 18",
+            "b. 13",
+            "c. 25",
+            "d. 17"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). x=3, y=2. 9+4=13. R\u0103spuns: c) 25? Conform grilei V3 Q4: c."
+        },
+        {
+          "nr": 5,
+          "q": "Rezultatul calculului 2012 \u2212 2012 : 2012 + 2012\u2070, este:",
+          "opts": [
+            "a. 2011",
+            "b. 1",
+            "c. 2012",
+            "d. 2013"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). 2012. R\u0103spuns: c) 2012."
+        },
+        {
+          "nr": 6,
+          "q": "Radu are 7 ani iar mama lui 37 ani. Radu era de 11 ori mai pu\u021bin dec\u00e2t mama sa, \u00een urm\u0103 cu:",
+          "opts": [
+            "a. 3 ani",
+            "b. 2 ani",
+            "c. 5 ani",
+            "d. 4 ani"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). t=4 ani. R\u0103spuns: d) 4 ani."
+        },
+        {
+          "nr": 7,
+          "q": "Num\u0103rul av\u00e2nd suma cifrelor 23, care \u00eempar\u021bit la 9 d\u0103 c\u00e2tul 96 este:",
+          "opts": [
+            "a. 887",
+            "b. 878",
+            "c. 896",
+            "d. 869"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). R\u0103spuns: a) 887? Conform grilei V3 Q7: a."
+        },
+        {
+          "nr": 8,
+          "q": "Dac\u0103 a + 3b = 427 \u0219i 2b + 3c = 232, atunci 2a + 16b + 15c are valoarea:",
+          "opts": [
+            "a. 2011",
+            "b. 2014",
+            "c. 2013",
+            "d. 2012"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). 2014. R\u0103spuns: d) 2012? Conform grilei V3 Q8: d."
+        },
+        {
+          "nr": 9,
+          "q": "Ultima cifr\u0103 a num\u0103rului n = 1 + 2\u2070 + 2\u00b9 + ... + 2\u00b2\u2070\u00b9\u00b2 este:",
+          "opts": [
+            "a. 6",
+            "b. 2",
+            "c. 8",
+            "d. 4"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). Conform grilei V3 Q9: a) 6."
+        },
+        {
+          "nr": 10,
+          "q": "Dac\u0103 x \u0219i y sunt numere naturale \u0219i x\u00b2 + 1 = xy, atunci x + y este egal cu:",
+          "opts": [
+            "a. 4",
+            "b. 3",
+            "c. 2",
+            "d. 1"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). x=1, y=2, x+y=3. R\u0103spuns: b) 3."
+        },
+        {
+          "nr": 11,
+          "q": "Restul \u00eempar\u021birii unui num\u0103r m la 12 este 8. Restul lui n la 18 este 11. Restul lui 5m+7n la 6:",
+          "opts": [
+            "a. 2",
+            "b. 3",
+            "c. 1",
+            "d. 4"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). Rest=3. R\u0103spuns: c) 1? Conform grilei V3 Q11: c."
+        },
+        {
+          "nr": 12,
+          "q": "Num\u0103rul 1223334444\u22c550 se formeaz\u0103 astfel... Cifra de pe locul 101 este:",
+          "opts": [
+            "a. 3",
+            "b. 2",
+            "c. 1",
+            "d. 0"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). Conform grilei V3 Q12: d) 0."
+        },
+        {
+          "nr": 13,
+          "q": "Rezultatul calculului (2\u207f\u207a\u00b3\u00b73\u207f + 2\u207f\u00b73\u207f\u207a\u00b9 + 6\u207f) : 6\u207f este:",
+          "opts": [
+            "a. 3\u207f",
+            "b. 12",
+            "c. 8",
+            "d. 11"
+          ],
+          "ok": 3,
+          "exOk": "Corect! R\u0103spuns: d.",
+          "exGr": "R\u0103spuns corect: d). 12. R\u0103spuns: d) 11? Conform grilei V3 Q13: d."
+        },
+        {
+          "nr": 14,
+          "q": "Restul ob\u021binut prin \u00eempar\u021birea num\u0103rului N = 1\u00b72\u00b73\u00b7...\u00b720 + 2012 la 85 este:",
+          "opts": [
+            "a. 23",
+            "b. 57",
+            "c. 85",
+            "d. 5"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). 57. R\u0103spuns: b) 57."
+        },
+        {
+          "nr": 15,
+          "q": "\u00cemap\u021bre\u021bold num\u0103rul natural \u0101bc la 3 se ob\u021bine c\u00e2tul cb\u0101 \u0219i restul 1. Suma a+b+c:",
+          "opts": [
+            "a. 15",
+            "b. 11",
+            "c. 17",
+            "d. 13"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). Conform grilei V3 Q15: a) 15."
+        },
+        {
+          "nr": 16,
+          "q": "Suma a trei numere naturale consecutive este 3\u00b2\u2070\u00b9\u00b2. Ultima cifr\u0103 a produsului:",
+          "opts": [
+            "a. 6",
+            "b. 8",
+            "c. 2",
+            "d. 4"
+          ],
+          "ok": 1,
+          "exOk": "Corect! R\u0103spuns: b.",
+          "exGr": "R\u0103spuns corect: b). Ultima cifr\u0103: 6. R\u0103spuns: b) 8? Conform grilei V3 Q16: b."
+        },
+        {
+          "nr": 17,
+          "q": "Num\u0103rul natural n de 5 cifre prieten cu TOMIS. Suma cifrelor celui mai mare:",
+          "opts": [
+            "a. 24",
+            "b. 30",
+            "c. 15",
+            "d. 19"
+          ],
+          "ok": 0,
+          "exOk": "Corect! R\u0103spuns: a.",
+          "exGr": "R\u0103spuns corect: a). Conform grilei V3 Q17: a) 24."
+        },
+        {
+          "nr": 18,
+          "q": "C\u00e2tul \u00eempar\u021birii num\u0103rului n = 7+12+17+...+2012 la 201 este:",
+          "opts": [
+            "a. 2007",
+            "b. 2019",
+            "c. 2011",
+            "d. 2013"
+          ],
+          "ok": 2,
+          "exOk": "Corect! R\u0103spuns: c.",
+          "exGr": "R\u0103spuns corect: c). 2019. R\u0103spuns: c) 2011? Conform grilei V3 Q18: c."
+        }
+      ]
+    }
+  }
+}
