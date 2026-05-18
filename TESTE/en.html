@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedyMATE — Simulări EN Matematică</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0f13;--s1:#17171e;--s2:#1f1f28;--bd:#2a2a38;--tx:#e8e6f0;--tx2:#7a7890;--gold:#c9a84c;--gr:#2e7d32;--gr2:#81c784;--rd:#8b3d3d;--rd2:#ef9a9a;--r:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--bg);color:var(--tx);min-height:100vh;font-size:17px}
+header{padding:.9rem 1.5rem;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;background:var(--s1);position:sticky;top:0;z-index:40}
+.brand{font-size:1rem;font-weight:600}.brand em{color:var(--gold);font-style:normal}
+#hdr-info{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--tx2);max-width:60%;text-align:right}
+#timer{font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--tx2);padding:.25rem .7rem;border:1px solid var(--bd);border-radius:20px;display:none}
+#timer.urgent{color:var(--rd2);border-color:var(--rd)}
+.screen{display:none;max-width:720px;margin:0 auto;padding:2rem 1.5rem}
+.screen.active{display:block}
+/* START */
+.big-title{font-size:1.8rem;font-weight:600;margin-bottom:.25rem}
+.sub-title{color:var(--tx2);font-size:.85rem;font-family:'JetBrains Mono',monospace;margin-bottom:1.5rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);margin-bottom:.4rem;font-family:'JetBrains Mono',monospace}
+.field input,.field select{width:100%;padding:.75rem 1rem;background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);color:var(--tx);font-family:inherit;font-size:1rem;outline:none;transition:border-color .15s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:var(--gold)}
+.field select option{background:var(--s2);color:var(--tx)}
+.test-card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:1.2rem 1.4rem;margin-bottom:1.2rem}
+.test-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
+.test-badge{font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:.2rem .6rem;border-radius:20px;border:1px solid var(--gold);color:var(--gold);letter-spacing:.06em}
+.test-info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-bottom:1rem}
+.ti{text-align:center;padding:.6rem;background:var(--s2);border-radius:6px}
+.ti-l{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--tx2);letter-spacing:.08em;margin-bottom:.2rem}
+.ti-v{font-size:.95rem;font-weight:600;color:var(--gold)}
+.btn-primary{width:100%;padding:1rem;background:var(--gold);border:none;border-radius:var(--r);color:#111;font-family:'Crimson Pro',serif;font-size:1.1rem;font-weight:600;cursor:pointer;transition:opacity .15s}
+.btn-primary:hover{opacity:.9}
+.btn-sec{padding:.7rem 1.3rem;background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);color:var(--tx);font-family:inherit;font-size:.95rem;cursor:pointer;transition:background .12s}
+.btn-sec:hover{background:var(--bd)}
+/* QUIZ */
+.prog-wrap{margin-bottom:1.5rem}
+.prog-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+.prog-badge{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:.2rem .6rem;border-radius:20px;border:1px solid var(--gold);color:var(--gold);letter-spacing:.06em}
+.prog-ctr{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--tx2)}
+.prog-track{width:100%;height:3px;background:var(--s2);border-radius:2px}
+.prog-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .4s ease}
+.q-card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:1.4rem;margin-bottom:1.2rem}
+.q-lbl{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--tx2);letter-spacing:.08em;margin-bottom:.6rem}
+.q-text{font-size:1.05rem;line-height:1.8;white-space:pre-wrap}
+.opts{display:grid;gap:.45rem;margin-bottom:.9rem}
+.opt{width:100%;text-align:left;padding:.85rem 1.1rem;background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);color:var(--tx);cursor:pointer;font-family:'Crimson Pro',serif;font-size:1rem;line-height:1.5;transition:background .1s,border-color .1s}
+.opt:hover:not(:disabled){background:var(--s2);border-color:var(--tx2)}
+.opt:disabled{cursor:default}
+.opt.correct{background:var(--gr);border-color:var(--gr2);color:#fff}
+.opt.wrong{background:var(--rd);border-color:var(--rd2);color:#fff}
+.fb{padding:.9rem 1.1rem;border-radius:var(--r);font-size:.92rem;line-height:1.6;display:none;margin-bottom:.8rem;white-space:pre-wrap}
+.fb.ok{background:#1b4d1e;border:1px solid var(--gr);color:var(--gr2)}
+.fb.err{background:#4d1b1b;border:1px solid var(--rd);color:var(--rd2)}
+/* MODAL */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:50;align-items:center;justify-content:center;padding:1rem}
+.overlay.active{display:flex}
+.modal{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:1.5rem;max-width:680px;width:100%;max-height:92vh;overflow-y:auto}
+.modal-ttl{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--gold);letter-spacing:.08em;margin-bottom:1rem}
+.fig-wrap{background:#fff;border-radius:6px;padding:8px;margin-bottom:1rem;text-align:center}
+.fig-wrap img{max-width:100%;height:auto}
+/* S.III */
+.s3-card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:1.4rem;margin-bottom:1.2rem}
+.s3-enunt{font-size:1rem;line-height:1.8;margin-bottom:1rem}
+.sub-q{margin-bottom:1rem;padding:1rem;background:var(--s2);border-radius:var(--r);border:1px solid var(--bd)}
+.sub-q-text{font-size:.98rem;line-height:1.7;margin-bottom:.9rem}
+.ans-row{display:flex;gap:.6rem;align-items:center}
+.ans-input{flex:1;padding:.65rem .9rem;background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);color:var(--tx);font-family:'JetBrains Mono',monospace;font-size:.95rem;outline:none;transition:border-color .15s}
+.ans-input:focus{border-color:var(--gold)}
+.ans-input:disabled{opacity:.6}
+.btn-trimite{padding:.65rem 1.4rem;background:var(--gold);border:none;border-radius:var(--r);color:#111;font-family:'Crimson Pro',serif;font-size:.95rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn-trimite:disabled{opacity:.4;cursor:default}
+.s3-fb{padding:1rem 1.2rem;border-radius:var(--r);font-size:.92rem;line-height:1.7;display:none;margin-top:.75rem}
+.s3-fb.ok{background:#1b4d1e;border:1px solid var(--gr);color:var(--gr2)}
+.s3-fb.err{background:#4d1b1b;border:1px solid var(--rd);color:var(--rd2)}
+.s3-fb .corect-lbl{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;margin-bottom:.5rem;font-weight:600}
+.s3-fb .fb-msg{margin-bottom:.5rem}
+.rezolvare-box{margin-top:.75rem;padding:.9rem 1rem;background:rgba(0,0,0,.3);border-radius:6px;font-size:.85rem;line-height:1.7;white-space:pre-wrap;border-left:3px solid var(--gold);color:#ccc}
+/* RESULT */
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.5rem}
+.rc{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:1rem 1.2rem}
+.rc-l{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--tx2);letter-spacing:.08em;margin-bottom:.35rem}
+.rc-v{font-size:1.5rem;font-weight:600}
+.rc-v.gold{color:var(--gold)}.rc-v.gr{color:var(--gr2)}
+.rmsg{padding:1rem 1.2rem;border-radius:var(--r);font-size:.93rem;line-height:1.6;margin-bottom:1rem}
+.rmsg.ok{background:#1b4d1e;border:1px solid var(--gr);color:var(--gr2)}
+.rmsg.fail{background:#4d1b1b;border:1px solid var(--rd);color:var(--rd2)}
+.detail-list{display:grid;gap:.35rem;margin-bottom:1.5rem}
+.dl-item{display:flex;align-items:center;gap:.7rem;padding:.5rem .8rem;border-radius:6px;font-size:.88rem}
+.dl-item.ok{background:#1b4d1e;color:var(--gr2)}
+.dl-item.err{background:#4d1b1b;color:var(--rd2)}
+.dl-nr{font-family:'JetBrains Mono',monospace;font-size:.7rem;min-width:55px}
+.sec-title{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--tx2);letter-spacing:.1em;margin:.5rem 0 .6rem}
+#err-start{display:none;margin-top:.75rem;padding:.75rem 1rem;background:#4d1b1b;color:var(--rd2);border:1px solid var(--rd);border-radius:var(--r);font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><em>SpeedyMATE</em> — EN</div>
+  <div id="hdr-info"></div>
+  <div id="timer">120:00</div>
+</header>
+
+<!-- START -->
+<div id="scr-start" class="screen active">
+  <div class="big-title">Simulări Evaluare Națională</div>
+  <div class="sub-title">Matematică · Clasa VIII · bacplus.ro / CNCE</div>
+
+  <div class="test-card">
+    <div class="test-card-header">
+      <span class="test-badge">SELECTEAZĂ SIMULAREA</span>
+    </div>
+    <div class="field">
+      <label>Simulare disponibilă</label>
+      <select id="inp-test" onchange="updateTestInfo()">
+        <option value="apr">Simulare Națională II — 28 Aprilie 2026</option>
+        <option value="mar">Simulare Națională I — 17 Martie 2026</option>
+      </select>
+    </div>
+    <div class="test-info">
+      <div class="ti"><div class="ti-l">STRUCTURĂ</div><div class="ti-v" style="font-size:.8rem;color:var(--tx)">S.I+S.II grilă · S.III deschis</div></div>
+      <div class="ti"><div class="ti-l">TIMP</div><div class="ti-v">120 min</div></div>
+      <div class="ti"><div class="ti-l">PUNCTAJ MAX</div><div class="ti-v">100 p</div></div>
+    </div>
+  </div>
+
+  <div class="field"><label>Numele tău</label><input type="text" id="inp-n" placeholder="ex: Ion Popescu"></div>
+  <div class="field"><label>Clasa</label><input type="text" id="inp-c" placeholder="ex: 8A"></div>
+  <button class="btn-primary" onclick="startTest()">Începe simularea →</button>
+  <div id="err-start"></div>
+</div>
+
+<!-- QUIZ -->
+<div id="scr-quiz" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-hdr"><span class="prog-badge" id="sub-badge">SUBIECTUL I</span><span class="prog-ctr" id="q-ctr">1 / 12</span></div>
+    <div class="prog-track"><div class="prog-fill" id="prog" style="width:0%"></div></div>
+  </div>
+  <div class="q-card"><div class="q-lbl" id="q-lbl"></div><div class="q-text" id="q-text"></div></div>
+  <div class="opts" id="opts"></div>
+  <div class="fb" id="fb"></div>
+  <button class="btn-sec" id="btn-next" style="display:none" onclick="nextGrila()">Următoarea →</button>
+</div>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-ttl" id="m-ttl"></div>
+    <div class="fig-wrap" id="m-fig" style="display:none"><img id="m-img" src="" alt="figura"></div>
+    <div class="q-text" id="m-q" style="margin-bottom:1.2rem;font-size:1.05rem;line-height:1.8"></div>
+    <div class="opts" id="m-opts"></div>
+    <div class="fb" id="m-fb"></div>
+    <button class="btn-sec" id="m-next" style="display:none;margin-top:.5rem" onclick="nextGrila()">Următoarea →</button>
+  </div>
+</div>
+
+<!-- S.III -->
+<div id="scr-s3" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-hdr">
+      <span class="prog-badge" style="border-color:#6b8fc4;color:#6b8fc4">SUBIECTUL III</span>
+      <span class="prog-ctr">Rezolvă pe hârtie · Trimite · Compară rezolvarea</span>
+    </div>
+  </div>
+  <div id="s3-cards"></div>
+  <button class="btn-primary" onclick="showResult()" style="margin-top:.5rem">Vezi rezultatul final →</button>
+</div>
+
+<!-- RESULT -->
+<div id="scr-result" class="screen">
+  <div class="big-title" style="margin-bottom:.25rem">Rezultat simulare</div>
+  <div class="sub-title" id="res-sub"></div>
+  <div class="res-grid">
+    <div class="rc"><div class="rc-l">PUNCTAJ TOTAL</div><div class="rc-v gold" id="rv-total">—</div></div>
+    <div class="rc"><div class="rc-l">NOTĂ ESTIMATĂ</div><div class="rc-v gr" id="rv-nota">—</div></div>
+    <div class="rc"><div class="rc-l">S.I + S.II</div><div class="rc-v" id="rv-grila">—</div></div>
+    <div class="rc"><div class="rc-l">S.III</div><div class="rc-v" id="rv-s3">—</div></div>
+  </div>
+  <div class="rmsg" id="res-msg"></div>
+  <div class="sec-title">DETALIU S.I + S.II</div>
+  <div class="detail-list" id="dl-grila"></div>
+  <div class="sec-title">DETALIU S.III</div>
+  <div class="detail-list" id="dl-s3"></div>
+  <div style="display:flex;gap:.75rem;margin-top:1rem">
+    <button class="btn-primary" onclick="resetAll()">Test nou</button>
+  </div>
+</div>
+
+<script>
+// GRILE_apr — incarcat din JSON
+// S3_apr — incarcat din JSON
+// FIGS_apr — incarcat din JSON
+// GRILE_mar — incarcat din JSON
+// S3_mar — incarcat din JSON
+// FIGS_mar — incarcat din JSON
+
+
+// ============================================================
+// TEST REGISTRY
+// ============================================================
+let TESTS = null;
+
+async function loadData() {
+  try {
+    const res = await fetch('./data/EN_SIMULARI_CLS8_2026.json');
+    const data = await res.json();
+    TESTS = {};
+    for(const [k,v] of Object.entries(data.simulari)) {
+      TESTS[k] = {
+        label: v.label,
+        grile: v.grile,
+        s3: v.s3,
+        figs: v.figs || {}
+      };
+    }
+    // init dropdown
+    const sel = document.getElementById('sel-sim');
+    if(sel) { sel.innerHTML = ''; Object.entries(TESTS).forEach(([k,v]) => { const o=document.createElement('option'); o.value=k; o.textContent=v.label; sel.appendChild(o); }); }
+  } catch(e) {
+    document.body.innerHTML += '<div style="color:red;padding:1rem">Eroare la incarcarea datelor: '+e.message+'</div>';
+  }
+}
+loadData();
+
+// ============================================================
+// STATE
+// ============================================================
+let GRILE=[], S3=[], FIGS={};
+let gIdx=0,gScore=0,gResults=[],s3Points=0,s3Results=[],timerInt=null,timerSec=0,startTs=null,modalMode=false;
+
+function updateTestInfo(){} // placeholder, info statică
+
+function startTest(){
+  const n=document.getElementById('inp-n').value.trim();
+  const c=document.getElementById('inp-c').value.trim();
+  const tid=document.getElementById('inp-test').value;
+  if(!n||!c){showErr('Completează numele și clasa!');return}
+  const t=TESTS[tid];
+  GRILE=t.grile; S3=t.s3; FIGS=t.figs;
+  document.getElementById('hdr-info').textContent=n+' · '+c+' · '+t.label;
+  gIdx=0;gScore=0;gResults=[];s3Points=0;s3Results=[];timerSec=0;startTs=Date.now();
+  startTimer();buildS3();show('scr-quiz');renderGrila();
+}
+
+function startTimer(){
+  const tot=120*60,el=document.getElementById('timer');el.style.display='block';clearInterval(timerInt);
+  timerInt=setInterval(()=>{timerSec++;const rem=tot-timerSec,m=Math.floor(rem/60).toString().padStart(2,'0'),s=(rem%60).toString().padStart(2,'0');el.textContent=m+':'+s;if(rem<300)el.classList.add('urgent');if(rem<=0){clearInterval(timerInt);showResult()}},1000);
+}
+
+function renderGrila(){
+  const q=GRILE[gIdx];
+  document.getElementById('prog').style.width=Math.round(gIdx/GRILE.length*100)+'%';
+  document.getElementById('q-ctr').textContent=(gIdx+1)+' / '+GRILE.length;
+  document.getElementById('sub-badge').textContent='SUBIECTUL '+q.sub;
+  if(q.figKey){
+    modalMode=true;
+    document.getElementById('m-ttl').textContent='SUBIECTUL '+q.sub+' · Întrebarea '+q.nr;
+    document.getElementById('m-q').textContent=q.q;
+    const figEl=document.getElementById('m-fig');
+    if(FIGS[q.figKey]){document.getElementById('m-img').src=FIGS[q.figKey];figEl.style.display='block'}else{figEl.style.display='none'}
+    document.getElementById('m-fb').style.display='none';document.getElementById('m-next').style.display='none';
+    buildOpts(q,'m-opts','m-fb','m-next');document.getElementById('overlay').classList.add('active');
+  }else{
+    modalMode=false;
+    document.getElementById('q-lbl').textContent='Subiectul '+q.sub+' · Întrebarea '+q.nr;
+    document.getElementById('q-text').textContent=q.q;
+    document.getElementById('fb').style.display='none';document.getElementById('btn-next').style.display='none';
+    buildOpts(q,'opts','fb','btn-next');
+  }
+}
+
+function buildOpts(q,oId,fId,nId){
+  const el=document.getElementById(oId);el.innerHTML='';
+  q.opts.forEach((o,i)=>{const b=document.createElement('button');b.className='opt';b.textContent=o;b.onclick=()=>answerGrila(q,i,oId,fId,nId);el.appendChild(b)});
+}
+
+function answerGrila(q,i,oId,fId,nId){
+  document.querySelectorAll('#'+oId+' .opt').forEach(b=>b.disabled=true);
+  const ok=i===q.ok;if(ok)gScore++;
+  gResults.push({sub:q.sub,nr:q.nr,ok,chosen:q.opts[i],right:q.opts[q.ok]});
+  document.querySelectorAll('#'+oId+' .opt')[i].classList.add(ok?'correct':'wrong');
+  document.querySelectorAll('#'+oId+' .opt')[q.ok].classList.add('correct');
+  const fb=document.getElementById(fId);fb.className='fb '+(ok?'ok':'err');
+  fb.textContent=ok?q.exOk:q.exGr;fb.style.display='block';document.getElementById(nId).style.display='inline-block';
+}
+
+function nextGrila(){
+  if(modalMode)document.getElementById('overlay').classList.remove('active');
+  gIdx++;
+  if(gIdx>=GRILE.length){show('scr-s3')}
+  else{document.getElementById('fb').style.display='none';document.getElementById('btn-next').style.display='none';renderGrila()}
+}
+
+function buildS3(){
+  const wrap=document.getElementById('s3-cards');wrap.innerHTML='';
+  S3.forEach(prob=>{
+    const card=document.createElement('div');card.className='s3-card';
+    const figHtml=(prob.figKey&&FIGS[prob.figKey])?`<div class="fig-wrap" style="margin-bottom:1rem"><img src="${FIGS[prob.figKey]}" style="max-width:100%;height:auto"></div>`:'';
+    card.innerHTML=`<div class="s3-enunt">${prob.enunt}</div>${figHtml}`;
+    prob.subs.forEach(sub=>{
+      const sq=document.createElement('div');sq.className='sub-q';
+      sq.innerHTML=`<div class="sub-q-text">${sub.cerinta}</div>
+        <div class="ans-row">
+          <input type="text" class="ans-input" id="inp-${sub.id}" placeholder="Introdu răspunsul...">
+          <button class="btn-trimite" id="btn-${sub.id}" onclick="submitS3('${sub.id}')">Trimite</button>
+        </div>
+        <div class="s3-fb" id="fb-${sub.id}">
+          <div class="corect-lbl" id="fb-lbl-${sub.id}"></div>
+          <div class="fb-msg" id="fb-msg-${sub.id}"></div>
+          <div class="rezolvare-box" id="rez-${sub.id}"></div>
+        </div>`;
+      card.appendChild(sq);
+    });
+    wrap.appendChild(card);
+  });
+}
+
+function submitS3(id){
+  const prob=S3.flatMap(p=>p.subs).find(s=>s.id===id);if(!prob)return;
+  const inp=document.getElementById('inp-'+id),val=inp.value.trim();if(!val)return;
+  inp.disabled=true;document.getElementById('btn-'+id).disabled=true;
+  const norm=v=>v.toLowerCase().replace(/\s/g,'').replace(',','.');
+  const ok=prob.accept.some(a=>norm(a)===norm(val));
+  const pts=ok?prob.pts:0;s3Points+=pts;s3Results.push({id,ok,pts,max:prob.pts});
+  const fb=document.getElementById('fb-'+id);
+  fb.className='s3-fb '+(ok?'ok':'err');
+  document.getElementById('fb-lbl-'+id).textContent=ok?
+    'CORECT — Ai obținut '+pts+'p / '+prob.pts+'p':
+    'DE REVĂZUT — Ai obținut 0p / '+prob.pts+'p. Răspuns corect: '+prob.accept[0];
+  document.getElementById('fb-msg-'+id).textContent=ok?prob.exOk:prob.exGr;
+  document.getElementById('rez-'+id).textContent=prob.rezolvare||'';
+  fb.style.display='block';
+}
+
+function showResult(){
+  clearInterval(timerInt);document.getElementById('timer').style.display='none';
+  const elapsed=Math.round((Date.now()-startTs)/1000),m=Math.floor(elapsed/60),s=elapsed%60;
+  const grilaP=gScore*5,totalP=grilaP+s3Points+10,nota=(totalP/10).toFixed(2);
+  const tid=document.getElementById('inp-test').value;
+  document.getElementById('res-sub').textContent=
+    document.getElementById('inp-n').value+' · '+document.getElementById('inp-c').value+
+    ' · '+TESTS[tid].label+' · '+m+'m '+s+'s';
+  document.getElementById('rv-total').textContent=totalP+' / 100p';
+  document.getElementById('rv-nota').textContent='~'+nota;
+  document.getElementById('rv-grila').textContent=gScore+'/12 → '+grilaP+'p';
+  document.getElementById('rv-s3').textContent=s3Results.filter(r=>r.ok).length+'/'+s3Results.length+' → '+s3Points+'p';
+  const msg=document.getElementById('res-msg');
+  if(totalP>=70){msg.className='rmsg ok';msg.textContent='Felicitări! Notă estimată '+nota+'.';}
+  else if(totalP>=50){msg.className='rmsg ok';msg.textContent='Notă estimată '+nota+'. Continuă antrenamentul!';}
+  else{msg.className='rmsg fail';msg.textContent='Notă estimată '+nota+'. Revizuiește și reia simularea.';}
+  const dlG=document.getElementById('dl-grila');dlG.innerHTML='';
+  gResults.forEach(r=>{const d=document.createElement('div');d.className='dl-item '+(r.ok?'ok':'err');d.innerHTML=`<span class="dl-nr">S${r.sub} Q${r.nr}</span><span>${r.ok?'\u2713':('\u2717 → '+r.right)}</span>`;dlG.appendChild(d)});
+  const dlS=document.getElementById('dl-s3');dlS.innerHTML='';
+  s3Results.forEach(r=>{const d=document.createElement('div');d.className='dl-item '+(r.ok?'ok':'err');d.innerHTML=`<span class="dl-nr">${r.id.toUpperCase()}</span><span>${r.ok?'\u2713 '+r.pts+'p':'\u2717 0p / '+r.max+'p'}</span>`;dlS.appendChild(d)});
+  show('scr-result');
+}
+
+function resetAll(){
+  clearInterval(timerInt);
+  document.getElementById('inp-n').value='';
+  document.getElementById('inp-c').value='';
+  document.getElementById('hdr-info').textContent='';
+  document.getElementById('timer').style.display='none';
+  document.getElementById('timer').classList.remove('urgent');
+  show('scr-start');
+}
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+function showErr(msg){const el=document.getElementById('err-start');el.textContent=msg;el.style.display='block';setTimeout(()=>el.style.display='none',3000)}
+</script>
+</body>
+</html>
